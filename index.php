@@ -1,7 +1,6 @@
 <?php
 include("db.php");
 
-
 // Upit za izvlačenje podataka
 $query = "SELECT * FROM proizvodi";
 $result = $connection->query($query);
