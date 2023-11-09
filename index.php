@@ -1,18 +1,20 @@
-<?php
-include("db.php");
-
-// Upit za izvlačenje podataka
-$query = "SELECT * FROM proizvodi";
-$result = $connection->query($query);
-
-if ($result->num_rows > 0) {
-    echo "<h1>Proizvodi:</h1>";
-    while ($row = $result->fetch_assoc()) {
-        echo "ID: " . $row["id"] . " - Naziv: " . $row["name"] . " - Description: " . $row["description"]. " - Price: " . $row["price"]. "<br>" ;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Bravarija RIS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+    <?php require_once 'config.php' ?>
+    <?php require_once 'css/style.php' ?>
+<style>
+    body {
+        height : 1000px;
     }
-} else {
-    echo "Nema rezultata.";
-}
-
-$connection->close();
-?>
+</style>
+<body>
+    <?php require_once 'components/navigation/navigation_1.php' ?>
+</body>
+</html>
