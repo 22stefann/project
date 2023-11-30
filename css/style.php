@@ -1,6 +1,8 @@
 <style>
     :root {
         --font: <?php echo $googleFont; ?>; /* Ovde postavite font */
+        --navigationColumn: <?php echo $navigation_column; ?>;
+        --navigationFlexDirection: <?php echo $navFlexDirection; ?>;
         --navPosition: <?php echo $navigationPosition; ?>; /* Ovde postavite poziciju navigacije fixed, static ... */
         --navFlexPosition: <?php echo $navigationFlexPosition; ?>; /* Ovde postavite flex navigacije center, start ... */
         --navigationTabsPositionMargin: <?php echo $navigationTabsPositionMargin; ?>; /* Ovde se podesava ul tabova da bude levo desno na sredini*/
@@ -18,5 +20,7 @@
         --navTabsFont: <?php echo $navTabsFont; ?>; /* Ovde postavite font navigacije */
         --navTabFontWeight: <?php echo $navTabFontWeight; ?>; /* Ovde postavite font navigacije */
         --navTabSize: <?php echo $navTabSize; ?>; /* Ovde postavite font navigacije */
+        --phoneEmailPositionRight: <?php echo $phoneEmailPositionRight; ?>;
+        --phoneEmailPositionLeft: <?php echo $phoneEmailPositionLeft; ?>;
     }
 </style>

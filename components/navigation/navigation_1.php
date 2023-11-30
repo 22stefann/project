@@ -28,6 +28,7 @@ header nav .container {
     align-items: center;
     justify-content: var(--navFlexPosition);
     height: inherit;
+    flex-direction: var(--navigationFlexDirection);
 }
 
 header nav .container img {
@@ -107,13 +108,127 @@ header nav.scrolled .container ul li a:hover {
     color: var(--navTabScrollHoverColor);
 }
 
+/*navigation column */
+
+header nav .container .nav-column {
+    display: flex;
+}
+
+header nav .container .logo-column {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+header nav .container .logo-column a:has(img) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header nav .container .logo-column .phone-email-div {
+    flex-direction: column;
+    position: absolute;
+    right: var(--phoneEmailPositionRight);
+    left: var(--phoneEmailPositionLeft);
+    top: 50%;
+    padding: 5px;
+    transform: translateY(-50%);
+}
+
+header nav .container .logo-column .phone-email-div li {
+    padding: 0;
+}
+
 /*navigation end*/
 </style>
 <header>
 <nav>
     <div class="container">
-        <img src="custom/<?php echo $logoUrl; ?>" alt="logo">
-        <ul class="navigation-tabs">
+        <?php if ( $navigation_column ) { ?>
+            <div class="logo-column">
+                <a href="/#">
+                    <img src="custom/<?php echo $logoUrl; ?>" alt="logo">
+                </a>
+                <?php if ( $phoneEmailInNav ) {?>
+                    <ul class="phone-email-div">
+                        <?php if ( !empty($phoneNumber) ) { ?>
+                            <li>
+                                    <a href="tel:<?php echo $phoneNumber; ?>"><?php echo $phoneNumber; ?></a>
+                            </li>
+                        <?php } ?>
+                        <?php if ( !empty($email) ) { ?>
+                            <li>
+                                    <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                <?php } ?>
+            </div>
+            <div class="nav-column">
+                <ul class="navigation-tabs">
+                    <?php
+                        if($dynamicTab) {
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<li><p><a href='#'> ".$row["naziv"]."</a></p></li>";
+                                }
+                            } else {
+                                echo "Nema rezultata.";
+                            }
+                        } else {
+                            foreach ($navTabs as $tab) {
+                                $arrow = "";
+                                if (strpos($tab['class'], 'dropdown-tab') !== false) {
+                                    $arrow = '<i class="fa fa-arrow-down" aria-hidden="true"></i>';
+                                }
+                                echo "<li class=\"{$tab['class']}\" ><p><a href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a></p>";
+                                if (strpos($tab['class'], 'dropdown-tab') !== false) {
+                                    echo "<div class=\"submenu\">";
+                                    foreach ($subTabs as $sub) {
+                                        if ( $tab["type"] ==  $sub["type"]) {
+                                            echo "<a class=\"{$sub["class"]}\" href=\"{$sub['link']}\" target=\"{$sub['target']}\">{$sub['name']}</a> <br />";
+                                        }
+                                    }
+                                    echo "</div>";
+                                }
+                                echo "</li>";
+                            }
+                        }
+                    ?>
+                </ul>
+                <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+                    <ul>
+                        <?php if (!empty($fbLink)) {
+                            echo '<li>';
+                            echo '<a class="social-icon" href="'.$fbLink.'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span class="no-view-text">facebook</span></a>';
+                            echo '</li>';
+                        } ?>
+                    
+                        <?php if (!empty($instaLink)) {
+                            echo '<li>';
+                            echo '<a class="social-icon" href="'.$instaLink.'" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="no-view-text">instagram</span></a>';
+                            echo '</li>';
+                        } ?>
+
+                        <?php if (!empty($twitterLink)) {
+                            echo '<li>';
+                            echo '<a class="social-icon" href="'.$twitterLink.'" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="no-view-text">twitter</span></a>';
+                            echo '</li>';
+                        } ?>
+                        <?php if (!empty($ytLink)) {
+                            echo '<li>';
+                            echo '<a class="social-icon" href="'.$ytLink.'" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i><span class="no-view-text">youtube</span></a>';
+                            echo '</li>';
+                        } ?>
+                    </ul>
+                <?php } ?>
+            </div>
+        <?php } else { ?>
+            <a href="/#">
+                <img src="custom/<?php echo $logoUrl; ?>" alt="logo">
+            </a>
+            <ul class="navigation-tabs">
             <?php
                 if($dynamicTab) {
                     if ($result->num_rows > 0) {
@@ -145,32 +260,33 @@ header nav.scrolled .container ul li a:hover {
                 }
 
             ?>
-        </ul>
-        <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
-            <ul>
-                <?php if (!empty($fbLink)) {
-                    echo '<li>';
-                    echo '<a class="social-icon" href="'.$fbLink.'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span class="no-view-text">facebook</span></a>';
-                    echo '</li>';
-                } ?>
-            
-                <?php if (!empty($instaLink)) {
-                    echo '<li>';
-                    echo '<a class="social-icon" href="'.$instaLink.'" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="no-view-text">instagram</span></a>';
-                    echo '</li>';
-                } ?>
-
-                <?php if (!empty($twitterLink)) {
-                    echo '<li>';
-                    echo '<a class="social-icon" href="'.$twitterLink.'" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="no-view-text">twitter</span></a>';
-                    echo '</li>';
-                } ?>
-                <?php if (!empty($ytLink)) {
-                    echo '<li>';
-                    echo '<a class="social-icon" href="'.$ytLink.'" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i><span class="no-view-text">youtube</span></a>';
-                    echo '</li>';
-                } ?>
             </ul>
+            <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+                <ul>
+                    <?php if (!empty($fbLink)) {
+                        echo '<li>';
+                        echo '<a class="social-icon" href="'.$fbLink.'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span class="no-view-text">facebook</span></a>';
+                        echo '</li>';
+                    } ?>
+                
+                    <?php if (!empty($instaLink)) {
+                        echo '<li>';
+                        echo '<a class="social-icon" href="'.$instaLink.'" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="no-view-text">instagram</span></a>';
+                        echo '</li>';
+                    } ?>
+
+                    <?php if (!empty($twitterLink)) {
+                        echo '<li>';
+                        echo '<a class="social-icon" href="'.$twitterLink.'" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="no-view-text">twitter</span></a>';
+                        echo '</li>';
+                    } ?>
+                    <?php if (!empty($ytLink)) {
+                        echo '<li>';
+                        echo '<a class="social-icon" href="'.$ytLink.'" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i><span class="no-view-text">youtube</span></a>';
+                        echo '</li>';
+                    } ?>
+                </ul>
+            <?php } ?>
         <?php } ?>
     </div>
 </nav>
@@ -179,11 +295,9 @@ header nav.scrolled .container ul li a:hover {
 
 <script>
 
-  $(document).ready(function() {
-    // Pratimo skrolovanje stranice
+$(document).ready(function() {
     window.addEventListener("scroll", function() {
         var navigation = document.querySelector("nav");
-        // Dodajemo ili uklanjamo klasu 'scrolled' u zavisnosti od položaja skrolovanja
         if (window.scrollY > 50) {
         navigation.classList.add("scrolled");
         } else {
@@ -195,10 +309,9 @@ header nav.scrolled .container ul li a:hover {
 
     $('li.dropdown-tab a').on("click", function(event){
         event.preventDefault();
-        $('li.dropdown-tab .submenu').toggle();
+        $(this).parent().parent().find(".submenu").toggle();
     });
 
-    // Zatvori dropdown ako se klikne bilo gde na stranici (osim na sam dropdown)
     $(document).on("click", function(event) {
         if (!$(event.target).closest("li.dropdown-tab").length) {
             $("li.dropdown-tab .submenu").hide();
@@ -211,6 +324,5 @@ header nav.scrolled .container ul li a:hover {
         }
     });
 
-
-  });
+});
 </script>
