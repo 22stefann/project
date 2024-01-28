@@ -174,7 +174,7 @@
     $navSocialColor = "#000";
 
     //cover video, section, slideshow
-    $cover_content ="slideshow";
+    $cover_content ="video";
     //video margin-top on desktop
     $desktop_video_margin_top = "80px";
     //video margin-top on mobile
