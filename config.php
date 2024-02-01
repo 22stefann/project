@@ -174,7 +174,7 @@
     $navSocialColor = "#000";
 
     //cover video, section, slideshow
-    $cover_content ="video";
+    $cover_content ="slideshow";
     //video margin-top on desktop
     $desktop_video_margin_top = "80px";
     //video margin-top on mobile
@@ -182,7 +182,7 @@
     //slideshow autoplay
     $slideshowAutoplay = "false";
     //slideshow delay
-    $slideshowDelay = "4000";
+    $slideshowDelay = "6000";
     //show hide arrow
     $slideshowArrow = "true";
     //slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11

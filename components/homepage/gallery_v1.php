@@ -1,12 +1,12 @@
 <div id="gallery" class="all-section-style">
   <?php if ( !empty($gallery_section_title) ) { ?>
-    <h2 class="title-h1 text-center">Gallery</h2>
+    <h2 class="title-h1 text-center animated-element animate-left">Gallery</h2>
   <?php } ?>
   <div class="container">
     <div id="image-gallery">
       <div class="row">
       <?php $br=0; foreach ($gallery_array as $image) { ?>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image animated-element animate-left">
           <div class="img-wrapper">
             <a href="custom/gallery/<?php echo $image["img"]; ?>"><img src="custom/gallery/<?php echo $image["img"]; ?>" class="img-responsive" alt="<?php echo $image["alt"]; echo $br++; ?>"></a>
             <div class="img-overlay">

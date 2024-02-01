@@ -137,7 +137,7 @@
     <?php if ( $bootstrap_nav_justify == "space-around" ) { echo "justify-content-lg-between"; } 
     elseif( $bootstrap_nav_justify == "center" ) { echo "justify-content-lg-center"; }
     elseif( $bootstrap_nav_justify == "evenly" ) { echo "justify-content-lg-evenly"; } ?>"> 
-        <a class="navbar-brand d-flex align-items-center" href="/#">
+        <a class="navbar-brand d-flex align-items-center animated-element animate-left" href="/#">
             <img src="custom/logo.png" alt="<?php echo $companyName; ?> logo" />
         </a> 
         <div class="d-flex">
@@ -182,11 +182,11 @@
                     foreach ($navTabs as $tab) {
                         if (strpos($tab['class'], 'dropdown-tab') == false) { ?>
                             <li class="nav-item active px-lg-<?php echo $bootstrap_padding_tabs; ?>"> 
-                                <a class="nav-link" href="<?php echo $tab['link']; ?>" target="<?php echo $tab['target']; ?>"><?php echo $tab['name']; ?></a> 
+                                <a class="nav-link animated-element animate-left" href="<?php echo $tab['link']; ?>" target="<?php echo $tab['target']; ?>"><?php echo $tab['name']; ?></a> 
                             </li>
                         <?php } else { ?>
                             <li class="nav-item px-lg-<?php echo $bootstrap_padding_tabs; ?> dropdown d-menu">
-                                <a class="nav-link dropdown-toggle" href="<?php echo $tab['link']; ?>" id="dropdown<?php echo $br++; ?>" target="<?php echo $tab['target']; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $tab['name']; ?>
+                                <a class="nav-link dropdown-toggle animated-element animate-left" href="<?php echo $tab['link']; ?>" id="dropdown<?php echo $br++; ?>" target="<?php echo $tab['target']; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $tab['name']; ?>
                                 <svg  id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg>
@@ -205,25 +205,25 @@
             <ul class="navbar-nav ml-auto mt-3 mt-lg-0 social-display-none social-icon">
                 <?php if ( !empty($twitterLink) ) { ?>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo $twitterLink; ?>"><i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span></a> 
+                        <a class="nav-link animated-element animate-left" href="<?php echo $twitterLink; ?>"><i class="fab fa-twitter"></i><span class="d-lg-none ml-3">Twitter</span></a> 
                     </li>
                 <?php } ?>
 
                 <?php if ( !empty($fbLink) ) { ?>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo $fbLink; ?>"><i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span></a> 
+                        <a class="nav-link animated-element animate-left" href="<?php echo $fbLink; ?>"><i class="fab fa-facebook"></i><span class="d-lg-none ml-3">Facebook</span></a> 
                     </li>
                 <?php } ?>
 
                 <?php if ( !empty($instaLink) ) { ?>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo $instaLink; ?>"><i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span></a> 
+                        <a class="nav-link animated-element animate-left" href="<?php echo $instaLink; ?>"><i class="fab fa-instagram"></i><span class="d-lg-none ml-3">Instagram</span></a> 
                     </li>
                 <?php } ?>
 
                 <?php if ( !empty($ytLink) ) { ?>
                     <li class="nav-item"> 
-                        <a class="nav-link" href="<?php echo $ytLink; ?>"><i class="fab fa-youtube"></i><span class="d-lg-none ml-3">Youtube</span></a> 
+                        <a class="nav-link animated-element animate-left" href="<?php echo $ytLink; ?>"><i class="fab fa-youtube"></i><span class="d-lg-none ml-3">Youtube</span></a> 
                     </li>
                 <?php } ?>
 
