@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--slideshowAlpha);
 }
 
 .cover-content .slide:not(.current, .prev) {
@@ -20,7 +20,7 @@
 }
 
 .cover-content .title {
-  color: white;
+  color: var(--slideshow_text_color);
   text-align: center;
   padding: 20px;
 }
@@ -157,15 +157,16 @@
   }
   
   .cover-content .slide-buttons li {
-    padding: 20px;
-    color: white;
+    padding: 15px 22px;
+    color: var(--slideshow_arrow_color);
+    background-color: var(--slideshow_bg_arrow_color);
     cursor: pointer;
+    border-radius: 50%;
   }
   
   .cover-content .slide-buttons li:hover {
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.6);
-      color: #000;
+    color: var(--slideshow_hover_arrow_color);
+    background-color: var(--slideshow_bg_hover_arrow_color);
   }
 
 /*slideshow on cover end*/

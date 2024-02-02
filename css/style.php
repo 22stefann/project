@@ -23,14 +23,18 @@
         --navigationFlexDirection: <?php echo $navFlexDirection; ?>;
         --navPosition: <?php echo $navigationPosition; ?>;
         --navFlexPosition: <?php echo $navigationFlexPosition; ?>;
+        --navigation_container_padding: <?php echo $navigation_container_padding; ?>;
         --navigationTabsPositionMargin: <?php echo $navigationTabsPositionMargin; ?>;
         --navigationTabsPositionMarginRight: <?php echo $navigationTabsPositionMarginRight; ?>;
         --navHeight: <?php echo $heightNav; ?>;
         --logoWidth: <?php echo $widthLogo; ?>;
         --logoScrollResize: <?php echo $logoScrollResize; ?>;
         --logoTopPosition: <?php echo $logoTopPosition; ?>;
-        --navBgColor: <?php echo $nabBgColor; ?>;
+        --navBgColor : <?php echo $nabBgColor; ?>;
         --navBgColorScroll: <?php echo $navBgColorScroll; ?>;
+        --hamburgerColor : <?php echo $hamburgerColor; ?>;
+        --hamburgerScrollColor : <?php echo $hamburgerScrollColor; ?>;
+        --hamburger_menu_side_bg : <?php echo $hamburger_menu_side_bg; ?>;
         --navPadding: <?php echo $tabPadding; ?>;
         --navTextTransform: <?php echo $navTextTransform; ?>;
         --navTabColor: <?php echo $navTabColor; ?>;
@@ -40,11 +44,12 @@
         --navTabsFont: <?php echo $navTabsFont; ?>;
         --navTabFontWeight: <?php echo $navTabFontWeight; ?>;
         --navTabSize: <?php echo $navTabSize; ?>;
+        --hamburger_menu_tabs_bg : <?php echo $hamburger_menu_tabs_bg; ?>;
         --phoneEmailPositionRight: <?php echo $phoneEmailPositionRight; ?>;
         --phoneEmailPositionLeft: <?php echo $phoneEmailPositionLeft; ?>;
         --disableSocial: <?php echo $disableSocial; ?>;
         --hamburgerMobileNavigationIcon: <?php echo $hamburgerMobileNavigationIcon; ?>;
-        --mobileLogoSize: <?php echo $mobileLogoSize; ?>;
+        --mobileWidthLogo: <?php echo $mobileWidthLogo; ?>;
         --mobileNavHeight: <?php echo $mobileNavHeight; ?>;
         --mobileNavPosition: <?php echo $mobileNavPosition; ?>;
         --mobileNavWidth: <?php echo $mobileNavWidth; ?>;
@@ -58,8 +63,14 @@
         /*video cover*/
         --desktop_video_margin_top : <?php echo $desktop_video_margin_top; ?>;
         --mobile_video_margin_top : <?php echo $mobile_video_margin_top; ?>;
-        /*slideshow mobile height*/
+        /*slideshow*/
         --slideshow_height_mobile : <?php echo $slideshow_height_mobile; ?>;
+        --slideshowAlpha : <?php echo $slideshowAlpha; ?>;
+        --slideshow_text_color : <?php echo $slideshow_text_color; ?>;
+        --slideshow_arrow_color : <?php echo $slideshow_arrow_color; ?>;
+        --slideshow_hover_arrow_color : <?php echo $slideshow_hover_arrow_color; ?>;
+        --slideshow_bg_arrow_color : <?php echo $slideshow_bg_arrow_color; ?>;
+        --slideshow_bg_hover_arrow_color : <?php echo $slideshow_bg_hover_arrow_color; ?>;
         /*under cover section*/
         --underCoverBgImage : url('<?php echo $underCoverBgImage; ?>');
         --underCoverBgColor : <?php echo $underCoverBgColor; ?>;

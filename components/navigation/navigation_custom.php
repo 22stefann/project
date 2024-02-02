@@ -31,6 +31,8 @@ header nav.desktop-navigation .container {
     justify-content: var(--navFlexPosition);
     height: inherit;
     flex-direction: var(--navigationFlexDirection);
+    max-width: 100%;
+    padding: var(--navigation_container_padding);
 }
 
 header nav.desktop-navigation .container img {
@@ -107,10 +109,12 @@ header nav.desktop-navigation .container ul li a {
     font-family: var(--navTabsFont);
     font-weight: var(--navTabFontWeight);
     font-size: var(--navTabSize);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
 header nav.desktop-navigation .container ul li a:hover {
     color: var(--navTabHoverColor);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
 header nav.desktop-navigation.scrolled .container ul li a {
@@ -130,6 +134,8 @@ header nav.desktop-navigation .container ul.social-icons-div li a:hover {
 
 header nav.desktop-navigation .container .nav-column {
     display: flex;
+    align-items: center;
+    padding: 5px 0;
 }
 
 header nav.desktop-navigation .container .logo-column {
@@ -159,11 +165,15 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     padding: 0;
 }
 <?php
-    echo '@media (max-width: '.$disableSocial.') {';
-        echo 'header nav.desktop-navigation .container ul.social-icons-div {';
-        echo 'display: none';
+    if ( $disableSocial != "" ) {
+
+        echo '@media only screen and (min-width: 768px) and (max-width: '.$disableSocial.') {';
+            echo 'nav ul.social-icons-div {';
+            echo 'display: none !important';
+            echo '}';
         echo '}';
-    echo '}';
+
+    }
 ?>
 
 
@@ -230,7 +240,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         right: -5px;
         width: 40px;
         height: 40px;
-        margin: 10px;
+        margin: 7px;
         z-index: 100;
         transform: translateY(6%);
         transition: transform 0.3s;
@@ -254,16 +264,30 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         transform: translate(0, 0);
         width: 100%;
         height: 4px;
-        background: var(--hamburgerMobileNavigationIcon);
+        background: var(--hamburgerColor);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .scrolled .nav-container .nav-toggle:before,
+    .scrolled .nav-container .nav-toggle:after {
+        background: var(--hamburgerScrollColor);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .nav-container .nav-toggle:before {
-        box-shadow: 0 13.3333333333px 0 0 var(--hamburgerMobileNavigationIcon);
+        box-shadow: 0 13.3333333333px 0 0 var(--hamburgerColor);
+    }
+
+    .scrolled .nav-container .nav-toggle:before {
+        box-shadow: 0 13.3333333333px 0 0 var(--hamburgerScrollColor);
     }
 
     .nav-container .nav-toggle:after {
-        box-shadow: 0 -13.3333333333px 0 0 var(--hamburgerMobileNavigationIcon);
+        box-shadow: 0 -13.3333333333px 0 0 var(--hamburgerColor);
+    }
+
+    .scrolled .nav-container .nav-toggle:after {
+        box-shadow: 0 -13.3333333333px 0 0 var(--hamburgerScrollColor);
     }
 
     .nav-container .nav-items {
@@ -336,12 +360,18 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     }
 
     .mobile-navigation.mobile-logo-navigation {
-        width: 101%;
-        height: 70px;
+        width: 100%;
+        height: var(--mobileNavHeight);
         position: fixed;
         top: 0;
         background: var(--navBgColor);
         transition: height 0.3s;
+        padding: 3px;
+        .logo-holder {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
     .mobile-navigation.mobile-logo-navigation.scrolled {
         height: 60px;
@@ -350,12 +380,12 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     }
 
     .mobile-navigation.mobile-logo-navigation .logo-holder img {
-        width:var(--mobileLogoSize);
+        width:var(--mobileWidthLogo);
         transition: width 0.3s;
     }
 
     .mobile-navigation.mobile-logo-navigation.scrolled .logo-holder img {
-        width:calc(var(--mobileLogoSize) - 10px);
+        width:calc(var(--mobileWidthLogo) - <?php echo $logoMobileScrollResize; ?>);
         transition: width 0.3s;
     }
 
@@ -372,6 +402,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     .mobile-navigation .social-icons-div li a {
         font-size: calc(var(--navTabSize) + 0.1em);
         padding: 5px;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     }
 
     .mobile-navigation .social-icons-div li a:hover  {
@@ -379,6 +410,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         i {
             color: var(--navSocialColor);
         }
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     }
 
     .mobile-navigation .social-icons-div li a i {
@@ -389,6 +421,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
 <?php }  elseif ( $mobileNavType == 'v2' ) { ?>
 @media (max-width: 767px) {
     .mobile-nav-v2 {
+        top: 0;
         display: flex !important;
         z-index: 99;
         background-color: var(--navBgColor);
@@ -408,8 +441,14 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     }
 
     .mobile-nav-v2 img.mobile-logo {
-        width: var(--mobileLogoSize);
+        width: var(--mobileWidthLogo);
         margin-right: 10px;
+        transition: width 0.3s;
+    }
+
+    .scrolled.mobile-nav-v2 img.mobile-logo {
+        width: calc( var(--mobileWidthLogo) - <?php echo $logoMobileScrollResize; ?>);
+        transition: width 0.3s;
     }
 
     .mobile-nav-v2 .mobile-nav-v2 .submenu {
@@ -422,6 +461,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
 
     .mobile-nav-v2 ul {
         list-style-type: none;
+        margin-bottom: 0;
     }
 
     .mobile-nav-v2 ul:not(.social-icons-div) {
@@ -433,6 +473,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         font-size: calc( var(--navTabSize) + 0.1em);
         padding: 5px;
         color: var(--navTabColor);
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     }
 
     .mobile-nav-v2.scrolled .soc-logo ul a {
@@ -442,15 +483,16 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     .mobile-nav-v2 .soc-logo ul a:hover {
         color: var(--navSocialColor);
         background-color: var(--navSocialBgColor);
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     }
 
     .mobile-nav-v2 .menu {
-        margin: 7px 0 0 0;
+        margin: 4px 0 0 0;
         padding-left: 1.25em;
         cursor: pointer;
         position: relative;
-        width: 30px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         text-align: right;
         overflow: hidden;
     }
@@ -495,8 +537,12 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         background-color: var(--navBgColorScroll);
     }
 
+    .menu-global:not(.expand) {
+        background-color: var(--hamburgerColor);
+    }
+
     .scrolled .menu-global:not(.expand) {
-        background-color: var(--navTabScrollColor);
+        background-color: var(--hamburgerScrollColor);
     }
 
     .menu-global.expand:has(.submenu) {
@@ -554,7 +600,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         position: relative;
         color: var(--navTabColor);
         text-transform: var(--navTextTransform);
-        text-decoration: none;
+        text-decoration: none !important;
         opacity: 0.8;
         padding: 10px;
         top: 28%;
@@ -577,14 +623,14 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
 
         .mobile-nav-v3 {
             display: block !important;
-            z-index: 99;
+            z-index: 999;
             background-color: var(--navBgColor);
             position: var(--mobileNavPosition);
             width: 100%;
             height: var(--mobileNavHeight);
             transition: height 0.3s;
             img {
-                width: calc( var(--mobileLogoSize) - 10px );
+                width: var(--mobileWidthLogo);
                 transition: width 0.3s;
             }
         }
@@ -605,18 +651,19 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
             height: calc( var(--mobileNavHeight) - 10px );
             transition: height 0.3s;
             img {
-                width: calc( var(--mobileLogoSize) - 10px );
+                width: calc( var(--mobileWidthLogo) - <?php echo $logoMobileScrollResize; ?> );
                 transition: width 0.3s;
             }
         }
 
         .mobile-nav-v3 img.mobile-logo {
-            width: var(--mobileLogoSize);
+            width: var(--mobileWidthLogo);
             margin-right: 10px;
         }
 
         .mobile-nav-v3 ul {
             list-style-type: none;
+            margin-bottom: 0;
         }
 
         .mobile-nav-v3 ul.submenu {
@@ -632,11 +679,13 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
             font-size: calc( var(--navTabSize) + 0.1em);
             padding: 5px;
             color: var(--navTabScrollColor);
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
         }
 
         .mobile-nav-v3 .soc-logo ul a:hover {
             color: var(--navSocialColor);
             background-color: var(--navSocialBgColor);
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
         }
 
         /* .scrolled.mobile-nav-v3 .soc-logo ul a {
@@ -648,6 +697,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         } */
 
         .mobile-wrapper {
+            top: 0;
             width: 100%;
             margin: 0 auto;
             text-align: center;
@@ -739,21 +789,21 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         .strip div {
             height: 3px;
             border-radius: 2px;
-            background: var(--navTabScrollColor);
+            background: var(--hamburgerColor);
             margin: 10px;
             width: 40px;
         }
 
         .scrolled .strip div {
-            background: var(--navTabScrollColor);
+            background: var(--hamburgerScrollColor);
         }
-        .burger:hover .strip div {
+        /* .burger:hover .strip div {
             background: var(--navTabHoverColor);
-        }
+        } */
 
-        .scrolled .burger:hover .strip div {
+        /* .scrolled .burger:hover .strip div {
             background: var(--navTabScrollHoverColor);
-        }
+        } */
         .burger-strip div:first-child {
             width: 16px;
         }
@@ -986,7 +1036,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                     foreach ($navTabs as $tab) {
                         $arrow = "";
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
-                            $arrow = '<i class="fa-solid fa-angle-right" aria-hidden="true"></i>';
+                            $arrow = '<i class="fa-solid fa-arrow-custom fa-angle-right" aria-hidden="true"></i>';
                         }
                         echo "<li class=\"menu-global menu-item-{$br}\"><a class=\"menu-text nav-item {$tab['class']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
@@ -1292,7 +1342,7 @@ $(document).ready(function() {
         $(document).on('click', function(event) {
             if (!$(event.target).closest('.mobile-nav-v2 ul.submenu').length) {
                 $('.mobile-nav-v2 ul.submenu').css('display', 'none');
-                var i = $(this).find('i');
+                var i = $(this).find('i.fa-arrow-custom');
                 $('.mobile-nav-v2 li:has(ul.submenu)').css({
                     'left': '',
                     'height': '',
