@@ -71,6 +71,10 @@
         --slideshow_hover_arrow_color : <?php echo $slideshow_hover_arrow_color; ?>;
         --slideshow_bg_arrow_color : <?php echo $slideshow_bg_arrow_color; ?>;
         --slideshow_bg_hover_arrow_color : <?php echo $slideshow_bg_hover_arrow_color; ?>;
+        /*custom cover section*/
+        --custom_cover_bg_color : <?php echo $custom_cover_bg_color; ?>;
+        --custom_cover_section_text_color : <?php echo $custom_cover_section_text_color; ?>;
+        --custom_cover_section_play_btn_color : <?php echo $custom_cover_section_play_btn_color; ?>;
         /*under cover section*/
         --underCoverBgImage : url('<?php echo $underCoverBgImage; ?>');
         --underCoverBgColor : <?php echo $underCoverBgColor; ?>;

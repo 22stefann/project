@@ -1,6 +1,9 @@
-<style>
+<?php if ( $cover_content == "slideshow" ) : ?>
 
-    /*slideshow on cover start*/
+<style>
+.cover-content .slide-texts-container {
+    position: relative;
+}
 
 .cover-content .main-slideshow,
 .cover-content .slide-container {
@@ -491,3 +494,202 @@
 
 <?php } ?>
 </style>
+
+<?php elseif ( $cover_content == "video" ) : ?>
+
+  <style>
+    
+  .video-on-cover {
+      margin-top: var(--desktop_video_margin_top);
+  }
+
+  video#cover-video {
+      position: relative;
+  }
+  .cover-content {
+      width: 100%;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+  }
+
+.cover-content #audio-control {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    i {
+        font-size: 2.5em;
+        color: #fff;
+        opacity: 0.7;
+    }
+    i:hover {
+        opacity: 1;
+    }
+}
+
+  @media (max-width: 991px) {
+    .video-on-cover {
+          margin-top : var(--mobile_video_margin_top);
+      }
+  }
+
+  </style>
+
+<?php elseif ( $cover_content == "custom_cover" ) : ?>
+
+  <style>
+.cover-content {
+    height: 100vh;
+    .hero-contain::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .5;
+        background: url("https://img.freepik.com/free-photo/landscape-mountain-view_198169-126.jpg?w=1380&t=st=1706909588~exp=1706910188~hmac=608d7ec95ebdd46b05236c11bf7d0caa4dc382b42d1213fc4954da0df57fffa3") center/cover;
+    }
+    .hero-contain{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background: var(--custom_cover_bg_color);
+        overflow: hidden;
+    }
+    .circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: var(--custom_cover_section_text_color);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    .circle:before{
+        content: '';
+        height: 100px;
+        width: 100px;
+        background-color: var(--custom_cover_section_text_color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 0;
+        opacity: 0;
+        animation: ribble 2s infinite;
+    }
+    .circle-text{
+        display: block;
+        margin-top: 44px;
+    }
+
+    .hr-style{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 800px;
+        border: 0;
+        height: 2px;
+        z-index: 0;
+        transform: translate(-50%, -50%) rotate(135deg);
+        transition: all 0.2s;
+        transform-origin: center center;
+        background-color: var(--custom_cover_section_text_color);
+    }
+    .circle-icon {
+        font-size: 3em;
+        color: var(--custom_cover_section_play_btn_color);
+    }
+    .hr-rotate{
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .text-1-tleft{
+        width: 200px;
+        position: absolute;
+        top: 12%;
+        left: 10%;
+        opacity: 1;
+        color: var(--custom_cover_section_text_color);
+        text-transform: uppercase;
+        transition: all .3s;
+    }
+    .t1thide{
+        opacity: 0;
+        left: -5%;
+    }
+    .text-1-bright{
+        width: 200px;
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        text-transform: uppercase;
+        transition: all .3s;
+        color: var(--custom_cover_section_text_color);
+    }
+    .t1bhide{
+        opacity: 0;
+        right: -5%;
+    }
+    .text-2-tright{
+        font-weight: 600;
+        width: 200px;
+        position: absolute;
+        top: 12%;
+        right: -5%;
+        opacity: 0;
+        text-transform: uppercase;
+        transition: all .3s;
+        color: var(--custom_cover_section_text_color);
+    }
+    .t2tshow{
+        opacity: 1;
+        right: 10%;
+    }
+    .text-2-bleft{
+        width: 200px;
+        position: absolute;
+        bottom: 10%;
+        left: -5%;
+        opacity: 0;
+        text-transform: uppercase;
+        transition: all .3s;
+        color: var(--custom_cover_section_text_color);
+    }
+    .t2bshow{
+        opacity: 1;
+        left: 10%;
+    }
+    .syedshihab{
+        text-decoration: none;
+        display: block;
+        float: right;
+        margin: 8px;
+        color: blueviolet;
+        position: relative;
+    }
+}
+@keyframes ribble{
+    0%{
+        transform: scale(1);
+        opacity:1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity:0;
+    }
+} 
+</style>
+
+<?php else: ?>
+
+
+<?php endif; ?>

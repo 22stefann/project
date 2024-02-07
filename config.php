@@ -222,20 +222,23 @@
     ####################################################################
     #################### COVER SECTION #################################
     ####################################################################
-
-    $cover_content ="slideshow";
+    //video, custom_cover, slideshow
+    $cover_content ="custom_cover";
     //video margin-top on desktop
     $desktop_video_margin_top = "70px";
     //video margin-top on mobile
     $mobile_video_margin_top = "70px";
+    #################################
+    ############SLIDESHOW############
+    #################################
     //slideshow autoplay
     $slideshowAutoplay = "true";
     //slideshow delay
-    $slideshowDelay = "6000";
+    $slideshowDelay = "3000";
     //show hide arrow
     $slideshowArrow = "true";
     //slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11
-    $slideshowAnimation = 3;
+    $slideshowAnimation = 1;
     //slideshow mobile height
     $slideshow_height_mobile = "60vh";
     //slideshow alpha
@@ -250,12 +253,33 @@
     $slideshow_bg_arrow_color = "rgba(255, 255, 255, 0.4)";
     //slideshow arrow bg color hover
     $slideshow_bg_hover_arrow_color = "rgba(255, 255, 255, 0.7)";
+    #################################
+    ############VIDEO################
+    #################################
     //video url
     $video_url = "custom/video.mp4";
     //video poster
     $video_poster = "";
     //if video have a sound
     $video_sound = true;
+    #################################
+    ############CUSTOM COVER#########
+    #################################
+    //custom cover bg color
+    $custom_cover_bg_color = "#000";
+    //text color on the cover section
+    $custom_cover_section_text_color = "#fff";
+    //play stop button color
+    $custom_cover_section_play_btn_color = "#000";
+    //custom cover section interval
+    $custom_cover_interval = "4000";
+    //custom cover section text
+    $custom_cover_array = array(
+        array("text" => "What you dream", "class" => "text-1-tleft"),
+        array("text" => "We make it", "class" => "text-1-bright"),
+        array("text" => "Your satisfaction", "class" => "text-2-tright"),
+        array("text" => "is our target", "class" => "text-2-bleft"),
+    );
     //slideshow content
     $slideshow_array = array(
         array("img" => "slide1.jpg","h2" => "&nbsp;The world is a book, and those who do <br /> not travel read only one page.&nbsp;", "text"=> "Saint Augustine", "data-id" => "0"),

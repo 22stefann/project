@@ -16,8 +16,8 @@
 <style>
     @import url(<?php echo $googleFont; ?>);
 </style>
-<?php if ( $cover_content == "slideshow" ) { 
-    require_once 'css/css.php';
+<?php if ( !empty($cover_content) ) { 
+    require_once 'css/cover_css.php';
 } ?>
 <body>
     <?php require_once 'components/navigation/navigation_'.$type_of_navigation.'.php' ?>

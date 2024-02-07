@@ -1,5 +1,4 @@
 
-
 <div class="video-btn-cover">
     <video poster="<?php if ( !empty($video_poster) ) { echo $video_poster; } ?>" id="cover-video" width="100%" height="" autoplay muted loop>
         <source src="<?php if ( !empty($video_url) ) { echo $video_url; } ?>" type="video/mp4">
@@ -35,7 +34,7 @@
              //console.log(`Window Height: ${windowHeight}px`);
 
             if (videoHeight < windowHeight) {
-                console.log(videoHeight);
+                //console.log(videoHeight);
                 $ ( ".cover-content" ).css("height", videoHeight);
                 $ ( ".cover-content" ).addClass("video-on-cover");
             } else {
