@@ -524,8 +524,22 @@
 
 .cover-content #audio-control {
     position: absolute;
-    bottom: 35px;
-    right: 35px;
+    bottom: 30px;
+    right: 16px;
+    i {
+        font-size: 2.5em;
+        color: #fff;
+        opacity: 0.7;
+    }
+    i:hover {
+        opacity: 1;
+    }
+}
+
+.cover-content #play-stop-control {
+    position: absolute;
+    bottom: 30px;
+    left: 16px;
     i {
         font-size: 2.5em;
         color: #fff;

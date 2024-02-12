@@ -479,7 +479,7 @@
     }
 }
 </style>
-<div class="navbar nav-holder d-flex align-items-center px-2 justify-content-<?php echo $hamburger_menu_logo_position; ?>">
+<div class="navbar nav-holder d-flex align-items-center pr-2 pl-2 pt-0 pb-0 justify-content-<?php echo $hamburger_menu_logo_position; ?>">
     
     <div class="logo_content d-flex align-items-center justify-content-center position-absolute">
         <div class="three col" id="btn">

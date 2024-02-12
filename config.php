@@ -239,7 +239,7 @@
     //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "70px";
     //video, slideshow, custom section margin-top on mobile
-    $mobile_video_margin_top = "70px";
+    $mobile_video_margin_top = "50px";
     #################################
     ############SLIDESHOW cover######
     #################################
