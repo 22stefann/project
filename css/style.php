@@ -83,5 +83,13 @@
         --underCoverTitleColor : <?php echo $underCoverTitleColor; ?>;
         /* gallery v1 section */
         --gallery_section_title_color : <?php echo $gallery_section_title_color; ?>;
+        /*slideshow section*/
+        --slideshowSectionDesktopHeight : <?php echo $slideshowSectionDesktopHeight; ?>;
+        --slideshowSectionMobileHeight : <?php echo $slideshowSectionMobileHeight; ?>;
+        --slideshowBootstrapTextAlign : <?php echo $slideshowBootstrapTextAlign; ?>;
+        --slideshowBootstrapHorizontalAlign : <?php echo $slideshowBootstrapHorizontalAlign; ?>;
+        --slideshowBootstrapVerticalAlign : <?php echo $slideshowBootstrapVerticalAlign; ?>;
+        --bootstrapSlideshowBg : <?php echo $bootstrapSlideshowBg; ?>;
+        --slideshowBootstrapAlpha : <?php echo $slideshowBootstrapAlpha; ?>;
     }
 </style>

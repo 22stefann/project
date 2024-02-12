@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
     <!-- Lightbox2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
     <?php require_once 'config.php'; ?>
     <?php require_once 'css/style.php'; ?>
@@ -29,14 +32,11 @@
             require_once 'components/cover/cover_content.php';
         } ?>
     </section>
-    <section>
-        <?php
-            require_once 'components/homepage/under_cover.php';
-        ?>
-        <?php
-            require_once 'components/homepage/gallery_v1.php';
-        ?>
-    </section>
+    <?php foreach( $homepageSection as $one_section ) : ?>
+        <section>
+            <?php require_once 'components/homepage/'.$one_section.'.php'; ?>
+        </section>
+    <?php endforeach; ?>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script>

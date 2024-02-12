@@ -58,7 +58,7 @@
     ####################################################################
 
     //define type of navigation bootstrap, custom, hamburger
-    $type_of_navigation = "bootstrap";
+    $type_of_navigation = "hamburger";
     //define logo width
     $widthLogo = "60px";
     //logo resize value set in px
@@ -220,39 +220,53 @@
     );
 
     ####################################################################
+    #################### ALL SECTION ARRAY #############################
+    ####################################################################
+
+    $homepageSection = array (
+        "under_cover",
+        "slideshow_bootstrap",
+        #"slideshow_v1",
+        "gallery_v1",
+        #"gallery_v2"
+    );
+
+    ####################################################################
     #################### COVER SECTION #################################
     ####################################################################
-    //video, custom_cover, slideshow
-    $cover_content ="custom_cover";
-    //video margin-top on desktop
+    //video, custom_cover, slideshow, slideshow_bootstrap
+    $cover_content ="video";
+    //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "70px";
-    //video margin-top on mobile
+    //video, slideshow, custom section margin-top on mobile
     $mobile_video_margin_top = "70px";
     #################################
-    ############SLIDESHOW############
+    ############SLIDESHOW cover######
     #################################
     //slideshow autoplay
-    $slideshowAutoplay = "true";
+    $slideshowAutoplay = false;
     //slideshow delay
     $slideshowDelay = "3000";
     //show hide arrow
-    $slideshowArrow = "true";
+    $slideshowArrow = true;
     //slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11
     $slideshowAnimation = 1;
-    //slideshow mobile height
+    //slideshow mobile height *bootstrap
     $slideshow_height_mobile = "60vh";
-    //slideshow alpha
-    $slideshowAlpha = "rgba(0, 0, 0, 0.7)";
-    //slideshow text color
+    //slideshow alpha can be brightness(0.5), opacity(0.5),blur(3px), contrast(0.5),grayscale(1),  if bootstrap if not set rgba(0,0,0,0.5);*bootstrap
+    $slideshowAlpha = "rgba(0,0,0,0.5)";
+    //slideshow text color *bootstrap
     $slideshow_text_color = "#fff";
-    //slideshow arrow color
-    $slideshow_arrow_color = "#000";
+    //slideshow arrow color rgba(255,255,255,0.8);*bootstrap
+    $slideshow_arrow_color = '#000';
     //slideshow arrow color hover
     $slideshow_hover_arrow_color = "#000";
-    //slideshow arrow bg color
-    $slideshow_bg_arrow_color = "rgba(255, 255, 255, 0.4)";
+    //slideshow arrow bg color 
+    $slideshow_bg_arrow_color = "rgba(255, 255, 255, 0.7)";
     //slideshow arrow bg color hover
     $slideshow_bg_hover_arrow_color = "rgba(255, 255, 255, 0.7)";
+    //slideshow remove arrow on mobile
+    $slideshowMobileArrow = false;
     #################################
     ############VIDEO################
     #################################
@@ -304,6 +318,32 @@
     $underCoverTitleColor = "#22228f";
     //under cover section h2 color
     $underCoverSubtitleColor = "#592d73";
+
+    ####################################################################
+    #################### SLIDESHOW v1 SECTION ##########################
+    ####################################################################
+
+    //set slideshow height
+    $slideshowSectionDesktopHeight = "700px";
+    //set mobile version slideshow height
+    $slideshowSectionMobileHeight = "400px";
+
+    ####################################################################
+    #################### SLIDESHOW bootstrap SECTION ###################
+    ####################################################################
+
+    //slideshow bootstrap autoplay
+    $slideshowBootstrapAutoplay = $slideshowAutoplay;
+    //slideshow bootstrap bg color
+    $bootstrapSlideshowBg = "#fff";
+    //slideshow text align
+    $slideshowBootstrapTextAlign = "center";
+    //slideshow content horizontal align left, center
+    $slideshowBootstrapHorizontalAlign = "center";
+    //slideshow content vertical align top, center, bottom
+    $slideshowBootstrapVerticalAlign = "center";
+    //filter
+    $slideshowBootstrapAlpha = "brightness(0.5)";
     
     ####################################################################
     #################### GALLERY SECTION ###############################

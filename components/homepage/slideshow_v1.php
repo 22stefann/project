@@ -1,40 +1,41 @@
-<?php if ( $cover_content == "slideshow" ) : ?>
-
 <style>
-.cover-content .slide-texts-container {
+
+.slideshow_v1_section,
+.slideshow_v1_section .main-slideshow {
+    height: var(--slideshowSectionDesktopHeight);
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow_v1_section .slide-texts-container {
+    height: var(--slideshowSectionDesktopHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--slideshowAlpha);
+}
+
+.slideshow_v1_section .slide {
     position: relative;
 }
 
-.cover-content .main-slideshow,
-.cover-content .slide-container {
-  height: max-content;
+.slideshow_v1_section .slide:not(.current, .prev) {
+    visibility: hidden;
 }
 
-.cover-content .slide-texts-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--slideshowAlpha);
+.slideshow_v1_section .title {
+    color: var(--slideshow_text_color);
+    text-align: center;
+    padding: 20px;
+    width: 85%;
 }
 
-.cover-content .slide:not(.current, .prev) {
-  visibility: hidden;
+.slideshow_v1_section .slide-image,
+.slideshow_v1_section .title {
+    position: absolute;
 }
 
-.cover-content .title {
-  color: var(--slideshow_text_color);
-  text-align: center;
-  padding: 20px;
-  width: 85%;
-}
-
-.cover-content .slide-image,
-.cover-content .title {
-  position: absolute;
-}
-
-.cover-content .slideshow-h2 {
+.slideshow_v1_section .slideshow-h2 {
     padding-top: 24px;
     position: absolute;
     bottom: 35%;
@@ -43,24 +44,24 @@
     font-size: 2em;
 }
 
-.cover-content .slide-image {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-  background-size: cover;
+.slideshow_v1_section .slide-image {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    height: var(--slideshowSectionDesktopHeight);
 }
 
-.cover-content .slide-container .current .slide-image {
-  transform: translateY(100%);
-  clip-path: circle(25% at 50% 50%);
-  animation: slide-entry 0.5s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards, expand 1s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
+.slideshow_v1_section .slide-container .current .slide-image {
+    transform: translateY(100%);
+    clip-path: circle(25% at 50% 50%);
+    animation: slide-entry-section 0.5s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards, expand-section 1s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
 }
 
-@keyframes slide-entry {
+@keyframes slide-entry-section {
     0% {
     opacity: 0;
     transform: translate(100%, 100%);
@@ -77,115 +78,122 @@
     }
 }
 
-.cover-content .slide-container .prev .slide-image {
+.slideshow_v1_section .slide-container .prev .slide-image {
     opacity: 1;
     clip-path: circle(100%);
-    animation: contract 0.5s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards, slide-exit 1s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
-  }
-  
-  @keyframes slide-exit {
-    0% {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-    25% {
-      opacity: 0.8;
-    }
-    75% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-100%, 100%);
-    }
-  }
-  
-  .sub-slide {
+    animation: contract-section 0.5s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards, slide-exit-section 1s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
+}
+
+@keyframes slide-exit-section {
+0% {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+25% {
+    opacity: 0.8;
+}
+75% {
+    opacity: 0.2;
+}
+100% {
+    opacity: 0;
+    transform: translate(-100%, 100%);
+}
+}
+
+.slideshow_v1_section .sub-slide {
     display: none;
-  }
-  
-  .sub-slide[data-id="0"] {
+}
+
+.slideshow_v1_section .sub-slide[data-id="0"] {
     display: block;
     opacity: 0;
-    animation: current-title-entry 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
-  }
-  
-  .cover-content .title.current,
-  .cover-content .sub-slide.current {
+    animation: current-title-entry-section 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
+}
+
+.slideshow_v1_section .title.current,
+.slideshow_v1_section .sub-slide.current {
     opacity: 0;
-    animation: current-title-entry 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
-  }
-  
-  @keyframes current-title-entry {
+    animation: current-title-entry-section 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
+}
+
+@keyframes current-title-entry-section {
     0% {
-      opacity: 0;
-      transform: translateX(20%);
+    opacity: 0;
+    transform: translateX(20%);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .cover-content .title.prev,
-  .cover-content .sub-slide.prev  {
     opacity: 1;
-    animation: prev-title-exit 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
-  }
-  
-  @keyframes prev-title-exit {
+    transform: translateX(0);
+    }
+}
+
+.slideshow_v1_section .title.prev,
+.slideshow_v1_section .sub-slide.prev  {
+    opacity: 1;
+    animation: prev-title-exit-section 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
+}
+
+@keyframes prev-title-exit-section {
     0% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
     }
-  
+
     100% {
-      opacity: 0;
-      transform: translateX(-20%);
+    opacity: 0;
+    transform: translateX(-20%);
     }
-  }
-  
-  .cover-content .slide-buttons {
+}
+
+.slideshow_v1_section .slide-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: fit-content;
     width: 100%;
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     color: white;
-    transform: translateY(-50vh);
+    transform: translateY(-50%);
+    top: 50%;
     padding: 0 20px;
-  }
-  
-  .cover-content .slide-buttons li {
+}
+
+.slideshow_v1_section .slide-buttons li {
     padding: 15px 22px;
     color: var(--slideshow_arrow_color);
     background-color: var(--slideshow_bg_arrow_color);
     cursor: pointer;
     border-radius: 50%;
-  }
-  
-  .cover-content .slide-buttons li:hover {
+}
+
+.slideshow_v1_section .slide-buttons li:hover {
     color: var(--slideshow_hover_arrow_color);
     background-color: var(--slideshow_bg_hover_arrow_color);
-  }
-
-  
+}
 
 @media (max-width: 767px) {
-    .cover-content .slide-buttons li {
+    .slideshow_v1_section,
+    .slideshow_v1_section .main-slideshow,
+    .slideshow_v1_section .slide-texts-container,
+    .slideshow_v1_section .slide-image {
+        height: var(--slideshowSectionMobileHeight);
+    }
+
+    .slideshow_v1_section .slide-buttons li {
         padding: 6px 13px;
+    }
+
+    .slideshow_v1_section .slide-buttons {
+        padding: 0 5px;
     }
 }
 
-/*slideshow on cover end*/
-
 <?php if ( $slideshowAnimation == 1 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: circle(25% at 50% 50%);
         }
@@ -194,7 +202,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         0% {
         clip-path: circle(100%);
         }
@@ -206,7 +214,7 @@
 
 <?php } elseif ( $slideshowAnimation == 2 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: circle(100%);
         }
@@ -215,7 +223,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         0% {
         clip-path: circle(100%);
         }
@@ -227,7 +235,7 @@
 
 <?php } elseif ( $slideshowAnimation == 3 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         }
@@ -236,7 +244,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         0% {
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
         }
@@ -247,7 +255,7 @@
 
 <?php } elseif ( $slideshowAnimation == 4 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
         }
@@ -259,7 +267,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
@@ -267,7 +275,7 @@
 
 <?php } elseif ( $slideshowAnimation == 5 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         50% {
         clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 0% 25%, 0% 50%, 100% 50%, 100% 75%, 0% 75%, 0% 100%, 100% 100%, 100% 0%, 75% 0%, 75% 100%, 50% 100%, 50% 0%, 25% 0%, 25% 100%, 0% 100%);
         }
@@ -276,7 +284,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
@@ -284,7 +292,7 @@
 
 <?php } elseif ( $slideshowAnimation == 6 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 50% 50%);
         }
@@ -305,7 +313,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 50% 50%);
         }
@@ -328,7 +336,7 @@
 
 <?php } elseif ( $slideshowAnimation == 7 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
         }
@@ -337,7 +345,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
         }
@@ -348,7 +356,7 @@
 
 <?php } elseif ( $slideshowAnimation == 8 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: circle(11.7% at 100% 100%);
         }
@@ -369,7 +377,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         0% {
         clip-path: circle(100%);
         }
@@ -381,7 +389,7 @@
 
 <?php } elseif ( $slideshowAnimation == 9 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 50% 50%);
         }
@@ -393,7 +401,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 50% 50%);
         }
@@ -407,7 +415,7 @@
 
 <?php } elseif ( $slideshowAnimation == 10 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
         }
@@ -425,7 +433,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0% 0%, 17% 0%, 17% 100%, 0% 100%);
         }
@@ -445,7 +453,7 @@
 
 <?php } elseif ( $slideshowAnimation == 11 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(31.25% 52.75%, 31.25% 30.75%, 70.13% 30.75%, 70.13% 69.63%, 31.25% 69.63%);
         }
@@ -463,7 +471,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(31.25% 52.75%, 31.25% 30.75%, 70.13% 30.75%, 70.13% 69.63%, 31.25% 69.63%);
         }
@@ -477,7 +485,7 @@
 
 <?php } elseif ( $slideshowAnimation == 12 ) { ?>
 
-    @keyframes expand {
+    @keyframes expand-section {
         0% {
         clip-path: polygon(0% 0%, 10% 0%, 10% 100%, 20% 100%, 20% 0%, 30% 0%, 30% 100%, 40% 100%, 40% 0%, 50% 0%, 50% 100%, 60% 100%, 60% 0%, 70% 0%, 70% 100%, 80% 100%, 80% 0%, 90% 0%, 90% 100%, 100% 100%, 100% 0%, 100% 10%, 0% 10%, 0% 20%, 100% 20%, 100% 30%, 0% 30%, 0% 40%, 100% 40%, 100% 50%, 0% 50%, 0% 60%, 100% 60%, 100% 70%, 0% 70%, 0% 80%, 100% 80%, 100% 90%, 0% 90%, 0% 100%);
         }
@@ -489,7 +497,7 @@
         }
     }
 
-    @keyframes contract {
+    @keyframes contract-section {
         100% {
         clip-path: polygon(0% 0%, 10% 0%, 10% 100%, 20% 100%, 20% 0%, 30% 0%, 30% 100%, 40% 100%, 40% 0%, 50% 0%, 50% 100%, 60% 100%, 60% 0%, 70% 0%, 70% 100%, 80% 100%, 80% 0%, 90% 0%, 90% 100%, 100% 100%, 100% 0%, 100% 10%, 0% 10%, 0% 20%, 100% 20%, 100% 30%, 0% 30%, 0% 40%, 100% 40%, 100% 50%, 0% 50%, 0% 60%, 100% 60%, 100% 70%, 0% 70%, 0% 80%, 100% 80%, 100% 90%, 0% 90%, 0% 100%);
         }
@@ -503,203 +511,155 @@
 
 <?php } ?>
 </style>
+<div id="slideshow_v1" class="slideshow_v1_section">
+    <div class="main-slideshow">
+        <div class="slide-container">
+            <?php foreach ($slideshow_array as $slide) { ?>
+            <div class="slide" data-id="<?php echo $slide["data-id"]; ?>">
+                <div class="slide-image" style="background-image: url(custom/<?php echo $slide["img"]; ?>);"></div>
+            </div>
+            <?php } ?>
+        </div>
+        <div class="slide-texts-container">
+            <?php foreach ($slideshow_array as $slide) { if ( $slide["data-id"] == "99" ) {?>
+            <h1 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
+                <?php echo $slide["h2"]; ?>
+            </h1>
+            <!-- <h2 class="slideshow-h2 sub-slide" data-id="<?php # echo $slide["data-id"]; ?>"><?php # echo $slide["text"]; ?></h2> -->
+            <?php } else { ?>
+                <h2 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
+                <?php echo $slide["h2"]; ?>
+                </h2>
+                <!-- <h3 class="slideshow-h2 sub-slide" data-id="<?php # echo $slide["data-id"]; ?>"><?php # echo $slide["text"]; ?></h3> -->
+            <?php } ?>
+            <?php } ?>
+        </div>
+        <?php if ( !empty($slideshowArrow) && $slideshowArrow == "true" ) { ?>
+            <ul class="slide-buttons">
+            <li class="btn-left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </li>
+            <li class="btn-right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            </ul>
+        <?php } ?>
+    </div>
+</div>
 
-<?php elseif ( $cover_content == "video" ) : ?>
+<script>
+const removeClassesSection = (allSlides) => {
+allSlides.forEach(el => {
+    el.classList.remove("prev", "current");
+});
+};
 
-  <style>
-    
-  .video-on-cover {
-      margin-top: var(--desktop_video_margin_top);
-  }
+const addClassesSection = (slideArr, className) => {
+slideArr.forEach(el => {
+    el.classList.add(className);
+});
+};
 
-  video#cover-video {
-      position: relative;
-  }
-  .cover-content {
-      width: 100%;
-      overflow: hidden;
-      height: 100vh;
-      position: relative;
-  }
+const CarouselSection = (autoplay) => {
+const slides = document.querySelectorAll(".slideshow_v1_section .slide");
+const slidesLength = slides.length / 2;
+let timerId;
+let prev = slidesLength - 1;
+let curr = 0;
 
-.cover-content #audio-control {
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-    i {
-        font-size: 2.5em;
-        color: #fff;
-        opacity: 0.7;
-    }
-    i:hover {
-        opacity: 1;
-    }
+const getSlides = (slideIndex) => {
+    return [...slides].filter((item) => slideIndex == item.dataset.id);
 }
 
-  @media (max-width: 991px) {
-    .video-on-cover {
-          margin-top : var(--mobile_video_margin_top);
-      }
-  }
+const changeSlide = (direction) => {
+    removeClassesSection(slides);
 
-  </style>
+    prev = curr;
 
-<?php elseif ( $cover_content == "custom_cover" ) : ?>
-
-  <style>
-.cover-content {
-    height: 100vh;
-    .hero-contain::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: .5;
-        background: url("https://img.freepik.com/free-photo/landscape-mountain-view_198169-126.jpg?w=1380&t=st=1706909588~exp=1706910188~hmac=608d7ec95ebdd46b05236c11bf7d0caa4dc382b42d1213fc4954da0df57fffa3") center/cover;
-    }
-    .hero-contain{
-        height: 100%;
-        width: 100%;
-        position: relative;
-        background: var(--custom_cover_bg_color);
-        overflow: hidden;
-        margin-top: var(--desktop_video_margin_top);
-    }
-    .circle{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        background-color: var(--custom_cover_section_text_color);
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        text-transform: uppercase;
-        z-index: 1;
-    }
-    .circle:before{
-        content: '';
-        height: 100px;
-        width: 100px;
-        background-color: var(--custom_cover_section_text_color);
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        z-index: 0;
-        opacity: 0;
-        animation: ribble 2s infinite;
-    }
-    .circle-text{
-        display: block;
-        margin-top: 44px;
+    if (direction === "right") {
+        curr = (curr + 1) % (slidesLength);
+    } else {
+        curr = (slidesLength + curr - 1) % (slidesLength);
     }
 
-    .hr-style{
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 800px;
-        border: 0;
-        height: 2px;
-        z-index: 0;
-        transform: translate(-50%, -50%) rotate(135deg);
-        transition: all 0.2s;
-        transform-origin: center center;
-        background-color: var(--custom_cover_section_text_color);
-    }
-    .circle-icon {
-        font-size: 2em;
-        color: var(--custom_cover_section_play_btn_color);
-    }
-    .hr-rotate{
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    .text-1-tleft{
-        width: 200px;
-        position: absolute;
-        top: 12%;
-        left: 10%;
-        opacity: 1;
-        color: var(--custom_cover_section_text_color);
-        text-transform: uppercase;
-        transition: all .3s;
-    }
-    .t1thide{
-        opacity: 0;
-        left: -5%;
-    }
-    .text-1-bright{
-        width: 200px;
-        position: absolute;
-        bottom: 10%;
-        right: 10%;
-        text-transform: uppercase;
-        transition: all .3s;
-        color: var(--custom_cover_section_text_color);
-    }
-    .t1bhide{
-        opacity: 0;
-        right: -5%;
-    }
-    .text-2-tright{
-        font-weight: 600;
-        width: 200px;
-        position: absolute;
-        top: 12%;
-        right: -5%;
-        opacity: 0;
-        text-transform: uppercase;
-        transition: all .3s;
-        color: var(--custom_cover_section_text_color);
-    }
-    .t2tshow{
-        opacity: 1;
-        right: 10%;
-    }
-    .text-2-bleft{
-        width: 200px;
-        position: absolute;
-        bottom: 10%;
-        left: -5%;
-        opacity: 0;
-        text-transform: uppercase;
-        transition: all .3s;
-        color: var(--custom_cover_section_text_color);
-    }
-    .t2bshow{
-        opacity: 1;
-        left: 10%;
-    }
-    .syedshihab{
-        text-decoration: none;
-        display: block;
-        float: right;
-        margin: 8px;
-        color: blueviolet;
-        position: relative;
-    }
-}
-@keyframes ribble{
-    0%{
-        transform: scale(1);
-        opacity:1;
-    }
-    100%{
-        transform: scale(1.5);
-        opacity:0;
-    }
-} 
-</style>
+    const prevSlides = getSlides(prev);
+    const currentSlides = getSlides(curr);
 
-<?php else: ?>
+    addClassesSection(prevSlides, "prev");
+    addClassesSection(currentSlides, "current");
 
+};
 
-<?php endif; ?>
+const nextSlide = () => {
+    changeSlide('right');
+    const currentSlides = getSlides(curr);
+    const currentSlidesText = $(".slideshow_v1_section .sub-slide").toArray();
+    currentSlidesText.forEach((h3Element) => {
+        const dataId = h3Element.getAttribute("data-id");
+        if (dataId === currentSlides[0].getAttribute("data-id")) {
+            h3Element.style.display = "block";
+            h3Element.classList.add("current");
+        } else {
+            h3Element.classList.remove("current");
+            h3Element.style.display = "none";
+        }
+    });
+};
+
+const previousSlide = () => {
+    changeSlide('left');
+    const currentSlides = getSlides(curr);
+    const currentSlidesText = $(".slideshow_v1_section .sub-slide").toArray();
+    currentSlidesText.forEach((h3Element) => {
+        const dataId = h3Element.getAttribute("data-id");
+        if (dataId === currentSlides[0].getAttribute("data-id")) {
+            h3Element.style.display = "block";
+            h3Element.classList.add("current");
+        } else {
+            h3Element.classList.remove("current");
+            h3Element.style.display = "none";
+        }
+    });
+};
+
+const handleAutoplay = () => {
+    if (autoplay) {
+        timerId = setInterval(() => {
+            nextSlide();
+        }, <?php echo $slideshowDelay; ?>);
+    }
+};
+
+const stopAutoplay = () => {
+    clearInterval(timerId);
+};
+
+const init = () => {
+    slides[0].classList.add("current");
+    slides[slidesLength].classList.add("current");
+
+    const buttonLeft = document.querySelector(".slideshow_v1_section .btn-left");
+    const buttonRight = document.querySelector(".slideshow_v1_section .btn-right");
+    var showArrow = '<?php echo $slideshowArrow; ?>';
+    if ( showArrow ) {
+        buttonLeft.addEventListener("click", previousSlide);
+        buttonRight.addEventListener("click", nextSlide);
+    }
+
+    const slideContainer = document.querySelector(".slideshow_v1_section .slide-container");
+
+    slideContainer.addEventListener("mouseenter", stopAutoplay);
+    slideContainer.addEventListener("mouseleave", handleAutoplay);
+
+    handleAutoplay();
+};
+
+return { init };
+};
+
+window.addEventListener("load", () => {
+    const autoplay = '<?php echo $slideshowAutoplay; ?>';
+    CarouselSection(autoplay).init();
+});
+</script>
+

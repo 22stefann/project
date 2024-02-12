@@ -48,7 +48,7 @@
   };
 
   const Carousel = (autoplay) => {
-    const slides = document.querySelectorAll(".slide");
+    const slides = document.querySelectorAll(".cover-slideshow .slide");
     const slidesLength = slides.length / 2;
     let timerId;
     let prev = slidesLength - 1;
@@ -125,15 +125,15 @@
         slides[0].classList.add("current");
         slides[slidesLength].classList.add("current");
 
-        const buttonLeft = document.querySelector(".btn-left");
-        const buttonRight = document.querySelector(".btn-right");
+        const buttonLeft = document.querySelector(".cover-slideshow .btn-left");
+        const buttonRight = document.querySelector(".cover-slideshow .btn-right");
         var showArrow = <?php echo $slideshowArrow; ?>;
         if ( showArrow ) {
             buttonLeft.addEventListener("click", previousSlide);
             buttonRight.addEventListener("click", nextSlide);
         }
 
-        const slideContainer = document.querySelector(".slide-container");
+        const slideContainer = document.querySelector(".cover-slideshow .slide-container");
 
         slideContainer.addEventListener("mouseenter", stopAutoplay);
         slideContainer.addEventListener("mouseleave", handleAutoplay);
@@ -145,7 +145,7 @@
   };
 
   window.addEventListener("load", () => {
-    const autoplay = <?php echo $slideshowAutoplay; ?>;
+    const autoplay = '<?php echo $slideshowAutoplay; ?>';
     Carousel(autoplay).init();
   });
 </script>

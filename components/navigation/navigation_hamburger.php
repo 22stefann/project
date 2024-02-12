@@ -352,7 +352,7 @@
 .navbar .logo_content {
     top: 50%;
     transform: translateY(-50%);
-    left: 20px;
+    left: 5px;
     z-index: 999;
 }
 
@@ -479,7 +479,7 @@
     }
 }
 </style>
-<div class="navbar nav-holder d-flex align-items-center justify-content-<?php echo $hamburger_menu_logo_position; ?>">
+<div class="navbar nav-holder d-flex align-items-center px-2 justify-content-<?php echo $hamburger_menu_logo_position; ?>">
     
     <div class="logo_content d-flex align-items-center justify-content-center position-absolute">
         <div class="three col" id="btn">

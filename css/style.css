@@ -278,7 +278,7 @@ p {
 @media (max-width: 991px) {
 
     .cover-content.slideshow-on-cover {
-        /* margin-top: 70px; */
+        margin-top: 70px;
         .slide-buttons {
             bottom: -40%;
             padding: 0 10px;
