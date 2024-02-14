@@ -415,6 +415,7 @@
         nav.navbar .container {
             max-width: 100%;
             margin: 0;
+            padding-left: 5px;
         }
         nav.navbar a.navbar-brand img {
             width: <?php echo $mobileWidthLogo; ?>;

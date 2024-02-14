@@ -45,13 +45,21 @@
     //set twitter link
     $twitterLink = "";
     //set yt link
-    $ytLink = "https://www.w3schools.com/icons/fontawesome_icons_intro.asp#";
+    $ytLink = "";
+    //whatsapp link
+    $whatsappLink = true;
+    //viber link
+    $viberLink = false;
     //set true if want show phone and email in navigation
     $phoneEmailInNav = false;
     //set phone number
     $phoneNumber = "+381695151702";
     //set email address
     $email = "stefanstanisavljevic777@gmail.com";
+    //set side social icons
+    $sideSocialIcons = true;
+    // set left or right
+    $sideSocialIconsAlign = "right";
 
     ####################################################################
     #################### ALL NAVIGATION STYLE ##########################
@@ -60,9 +68,9 @@
     //define type of navigation bootstrap, custom, hamburger
     $type_of_navigation = "hamburger";
     //define logo width
-    $widthLogo = "60px";
+    $widthLogo = "80px";
     //logo resize value set in px
-    $logoScrollResize = "35px";
+    $logoScrollResize = "25px";
     //navigation container padding
     $navigation_container_padding = "3px 3px";
     //set nav bg color in top position
@@ -86,7 +94,7 @@
     //define font weight in navigation
     $navTabFontWeight = "200";
     //define font size of navigation tabs
-    $navTabSize = "1.3em";
+    $navTabSize = "1.2em";
     //set logo name
     $logoUrl = "logo.png";
     //disable social icon *(enter resolution in px)
@@ -141,7 +149,7 @@
     //hamburger icon color
     $hamburgerMobileNavigationIcon = "#fff";
     //enter mobile nav type (v1,v2,v3)
-    $mobileNavType = "v1";
+    $mobileNavType = "v3";
     //nav height
     $mobileNavHeight = "70px";
     //mobile nav position (static, relative, fixed)
@@ -244,7 +252,7 @@
     ############SLIDESHOW cover######
     #################################
     //slideshow autoplay
-    $slideshowAutoplay = false;
+    $slideshowAutoplay = true;
     //slideshow delay
     $slideshowDelay = "3000";
     //show hide arrow

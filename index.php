@@ -24,6 +24,11 @@
 } ?>
 <body>
     <?php require_once 'components/navigation/navigation_'.$type_of_navigation.'.php' ?>
+    <?php 
+        if ( $sideSocialIcons ) {
+            require_once 'components/homepage/social_side.php';
+        }
+    ?>
     <main>
 
     </main>

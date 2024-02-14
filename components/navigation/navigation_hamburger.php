@@ -335,7 +335,7 @@
 .sidebar {
     position: fixed;
     top: 0;
-    left: -80px;
+    left: -100px;
     height: 100%;
     width: 78px;
     background: var(--hamburger_menu_side_bg);
@@ -346,7 +346,8 @@
 }
 
 .sidebar.active{
-    width: 240px
+    width: 240px;
+    left: -80px
 }
 
 .navbar .logo_content {
@@ -430,6 +431,7 @@
 
 .sidebar ul li a {
     color: var(--navTabColor);
+    text-transform: var(--navTextTransform);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -464,7 +466,8 @@
 .sidebar.active .links_name {
     transition: 0s;
     opacity: 1;
-    pointer-events: auto
+    pointer-events: auto;
+    font-size: var(--navTabSize);
 }
 
 @media (max-width: 767px) {
