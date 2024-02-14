@@ -233,16 +233,19 @@
 
     $homepageSection = array (
         "under_cover",
+        #"simple_section_3",
         "slideshow_bootstrap",
         #"slideshow_v1",
+        #"simple_section_2",
         "gallery_v1",
+        "simple_section_1",
         #"gallery_v2"
     );
 
     ####################################################################
     #################### COVER SECTION #################################
     ####################################################################
-    //video, custom_cover, slideshow, slideshow_bootstrap
+    //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
     $cover_content ="video";
     //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "70px";
@@ -370,5 +373,107 @@
         // array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
     );
 
-    
+####################################################################
+#################### SIMPLE SECTION 1 ##############################
+####################################################################
+//simple section title color
+$simple_section_1_title_color = "#fff";
+//simple section subtitle color
+$simple_section_1_subtitle_color = "#fff";
+//simple section text color
+$simple_section_1_text_color = "#fff";
+//simple section bg color
+$simple_section_1_bg_color = "#000";
+//simple section image url
+$simple_section_1_bg_url = "default_section_back.jpg";
+//simple section image attachment
+$simple_section_1_bg_attachment = "fixed";
+//simple section image size
+$simple_section_1_bg_size = "cover";
+//simple section image repeat
+$simple_section_1_bg_repeat = "no-repeat";
+//simple section html
+$simple_section_1_html = <<<HTML
+
+<img class="d-block mx-auto mb-4" src="custom/logo.png" alt="" width="72" height="">
+<h2 class="subtitle-h2">Simple section 1</h2>
+<h3 class="title-h3">Simple section 1</h3>
+<div class="col-lg-8 mx-auto">
+    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">button</button>
+    </div>
+</div>
+
+HTML;
+
+####################################################################
+#################### SIMPLE SECTION 2 ##############################
+####################################################################
+//simple section title color
+$simple_section_2_title_color = "#fff";
+//simple section subtitle color
+$simple_section_2_subtitle_color = "#fff";
+//simple section text color
+$simple_section_2_text_color = "#fff";
+//simple section bg color
+$simple_section_2_bg_color = "#000";
+//simple section image url
+$simple_section_2_bg_url = "default_section_back.jpg";
+//simple section image attachment
+$simple_section_2_bg_attachment = "fixed";
+//simple section image size
+$simple_section_2_bg_size = "cover";
+//simple section image repeat
+$simple_section_2_bg_repeat = "no-repeat";
+//simple section html
+$simple_section_2_html = <<<HTML
+
+<img class="d-block mx-auto mb-4" src="custom/logo.png" alt="" width="72" height="">
+<h2 class="subtitle-h2">Simple section 2</h2>
+<h3 class="title-h3">Simple section 2</h3>
+<div class="col-lg-8 mx-auto">
+    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">button</button>
+    </div>
+</div>
+
+HTML;
+
+####################################################################
+#################### SIMPLE SECTION 3 ##############################
+####################################################################
+//simple section title color
+$simple_section_3_title_color = "#fff";
+//simple section subtitle color
+$simple_section_3_subtitle_color = "#fff";
+//simple section text color
+$simple_section_3_text_color = "#fff";
+//simple section bg color
+$simple_section_3_bg_color = "#000";
+//simple section image url
+$simple_section_3_bg_url = "default_section_back.jpg";
+//simple section image attachment
+$simple_section_3_bg_attachment = "fixed";
+//simple section image size
+$simple_section_3_bg_size = "cover";
+//simple section image repeat
+$simple_section_3_bg_repeat = "no-repeat";
+//simple section html
+$simple_section_3_html = <<<HTML
+
+<img class="d-block mx-auto mb-4" src="custom/logo.png" alt="" width="72" height="">
+<h2 class="subtitle-h2">Simple section 3</h2>
+<h3 class="title-h3">Simple section 3</h3>
+<div class="col-lg-8 mx-auto">
+    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">button</button>
+    </div>
+</div>
+
+HTML;
+
+
 ?>
