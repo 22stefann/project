@@ -237,8 +237,10 @@
         "slideshow_bootstrap",
         #"slideshow_v1",
         #"simple_section_2",
+        "text_image_section_2",
         "gallery_v1",
         "simple_section_1",
+        "text_image_section",
         #"gallery_v2"
     );
 
@@ -475,5 +477,108 @@ $simple_section_3_html = <<<HTML
 
 HTML;
 
+
+####################################################################
+#################### TEXT IMAGE SECTION 1 ##########################
+####################################################################
+//simple section title color
+$text_image_section_1_title_color = "#fff";
+//simple section subtitle color
+$text_image_section_1_subtitle_color = "#fff";
+//simple section text color
+$text_image_section_1_text_color = "#fff";
+//simple section bg color
+$text_image_section_1_bg_color = "#000";
+//simple section image url
+$text_image_section_1_bg_url = "default_section_back.jpg";
+//simple section image attachment
+$text_image_section_1_bg_attachment = "fixed";
+//simple section image size
+$text_image_section_1_bg_size = "cover";
+//simple section image repeat
+$text_image_section_1_bg_repeat = "no-repeat";
+//simple section html
+$text_image_section_1_html = <<<HTML
+
+<div class="row align-items-center g-5 py-5">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-6">
+    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
+    <h3 class="title-h3">Text image section 1</h3>
+    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    </div>
+    </div>
+</div>
+<div class="row align-items-center g-5 py-5">
+    <div class="col-12 col-sm-6 col-lg-6">
+    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
+    <h3 class="title-h3">Text image section 1</h3>
+    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-6 m-auto">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+</div>
+
+HTML;
+
+
+####################################################################
+#################### TEXT IMAGE SECTION 1 ##########################
+####################################################################
+//simple section title color
+$text_image_section_2_title_color = "#fff";
+//simple section subtitle color
+$text_image_section_2_subtitle_color = "#fff";
+//simple section text color
+$text_image_section_2_text_color = "#fff";
+//simple section bg color
+$text_image_section_2_bg_color = "#000";
+//simple section image url
+$text_image_section_2_bg_url = "default_section_back.jpg";
+//simple section image attachment
+$text_image_section_2_bg_attachment = "fixed";
+//simple section image size
+$text_image_section_2_bg_size = "cover";
+//simple section image repeat
+$text_image_section_2_bg_repeat = "no-repeat";
+//simple section html
+$text_image_section_2_html = <<<HTML
+
+<div class="row align-items-center g-5 py-5">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-6">
+    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
+    <h3 class="title-h3">Text image section 2</h3>
+    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    </div>
+    </div>
+</div>
+<div class="row align-items-center g-5 py-5">
+    <div class="col-12 col-sm-6 col-lg-6">
+    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
+    <h3 class="title-h3">Text image section 2</h3>
+    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-6 m-auto">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+</div>
+
+HTML;
 
 ?>

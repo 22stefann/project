@@ -38,7 +38,7 @@
         } ?>
     </section>
     <?php foreach( $homepageSection as $one_section ) : ?>
-        <section>
+        <section id="<?php echo $one_section; ?>">
             <?php require_once 'components/homepage/'.$one_section.'.php'; ?>
         </section>
     <?php endforeach; ?>
