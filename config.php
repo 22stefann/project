@@ -241,6 +241,8 @@
         "gallery_v1",
         "simple_section_1",
         "text_image_section",
+        "section_column",
+        #"form_section",
         #"gallery_v2"
     );
 
@@ -500,7 +502,7 @@ $text_image_section_1_bg_repeat = "no-repeat";
 //simple section html
 $text_image_section_1_html = <<<HTML
 
-<div class="row align-items-center g-5 py-5">
+<div class="row align-items-center py-5">
     <div class="col-12 col-sm-6 col-lg-6 m-auto">
     <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
@@ -513,7 +515,7 @@ $text_image_section_1_html = <<<HTML
     </div>
     </div>
 </div>
-<div class="row align-items-center g-5 py-5">
+<div class="row align-items-center py-5">
     <div class="col-12 col-sm-6 col-lg-6">
     <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
     <h3 class="title-h3">Text image section 1</h3>
@@ -531,7 +533,7 @@ HTML;
 
 
 ####################################################################
-#################### TEXT IMAGE SECTION 1 ##########################
+#################### TEXT IMAGE SECTION 2 ##########################
 ####################################################################
 //simple section title color
 $text_image_section_2_title_color = "#fff";
@@ -552,7 +554,7 @@ $text_image_section_2_bg_repeat = "no-repeat";
 //simple section html
 $text_image_section_2_html = <<<HTML
 
-<div class="row align-items-center g-5 py-5">
+<div class="row align-items-center py-5">
     <div class="col-12 col-sm-6 col-lg-6 m-auto">
     <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
@@ -565,7 +567,7 @@ $text_image_section_2_html = <<<HTML
     </div>
     </div>
 </div>
-<div class="row align-items-center g-5 py-5">
+<div class="row align-items-center py-5">
     <div class="col-12 col-sm-6 col-lg-6">
     <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
     <h3 class="title-h3">Text image section 2</h3>
@@ -576,6 +578,58 @@ $text_image_section_2_html = <<<HTML
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto">
     <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+</div>
+
+HTML;
+
+####################################################################
+#################### section column  ###############################
+####################################################################
+//simple section title color
+$section_column_title_color = "#fcfc";
+//simple section subtitle color
+$section_column_subtitle_color = "#acac";
+//simple section text color
+$section_column_text_color = "#fff";
+//simple section bg color
+$section_column_bg_color = "#000";
+//simple section image url
+$section_column_bg_url = "default_section_back.jpg";
+//simple section image attachment
+$section_column_bg_attachment = "fixed";
+//simple section image size
+$section_column_bg_size = "cover";
+//simple section image repeat
+$section_column_bg_repeat = "no-repeat";
+//simple section html
+$section_column_html = <<<HTML
+
+<h2 class="pb-2 border-bottom subtitle-h2">Columns with icons</h2>
+<div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+    <div class="">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <h3 class="title-h3">Featured title</h3>
+    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    </div>
+    <div class="feature col">
+    <div class="">
+        <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <h3 class="title-h3">Featured title</h3>
+    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    </div>
+    <div class="feature col">
+    <div class="">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <h3 class="title-h3">Featured title</h3>
+    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
     </div>
 </div>
 
