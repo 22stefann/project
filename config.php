@@ -242,7 +242,7 @@
         "simple_section_1",
         "text_image_section",
         "section_column",
-        #"form_section",
+        "album_section",
         #"gallery_v2"
     );
 
@@ -586,23 +586,23 @@ HTML;
 ####################################################################
 #################### section column  ###############################
 ####################################################################
-//simple section title color
+//section column title color
 $section_column_title_color = "#fcfc";
-//simple section subtitle color
+//section column subtitle color
 $section_column_subtitle_color = "#acac";
-//simple section text color
+//section column text color
 $section_column_text_color = "#fff";
-//simple section bg color
+//section column bg color
 $section_column_bg_color = "#000";
-//simple section image url
+//section column image url
 $section_column_bg_url = "default_section_back.jpg";
-//simple section image attachment
+//section column image attachment
 $section_column_bg_attachment = "fixed";
-//simple section image size
+//section column image size
 $section_column_bg_size = "cover";
-//simple section image repeat
+//section column image repeat
 $section_column_bg_repeat = "no-repeat";
-//simple section html
+//section column html
 $section_column_html = <<<HTML
 
 <h2 class="pb-2 border-bottom subtitle-h2">Columns with icons</h2>
@@ -634,5 +634,35 @@ $section_column_html = <<<HTML
 </div>
 
 HTML;
+
+####################################################################
+#################### section album  ################################
+####################################################################
+
+//section album title color
+$section_album_title_color = "#fcfc";
+//section album text color
+$section_album_text_color = "#000";
+//section album bg color
+$section_album_bg_color = "#000";
+//section album image url
+$section_album_bg_url = "default_section_back.jpg";
+//section album image attachment
+$section_album_bg_attachment = "fixed";
+//section album image size
+$section_album_bg_size = "cover";
+//section album image repeat
+$section_album_bg_repeat = "no-repeat";
+
+$album_section_items = array(
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+)
 
 ?>
