@@ -1,0 +1,16 @@
+a.btn-custom-style::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  a.btn-custom-style:hover::before {
+    width: 100%;
+    left: 50%;
+  }

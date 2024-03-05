@@ -91,5 +91,7 @@
         --slideshowBootstrapVerticalAlign : <?php echo $slideshowBootstrapVerticalAlign; ?>;
         --bootstrapSlideshowBg : <?php echo $bootstrapSlideshowBg; ?>;
         --slideshowBootstrapAlpha : <?php echo $slideshowBootstrapAlpha; ?>;
+        /* buttons 9 10 11 animation bg color */
+        --button_animation_bg_color : <?php echo $button_animation_bg_color; ?>;
     }
 </style>

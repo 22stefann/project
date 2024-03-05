@@ -286,16 +286,16 @@
                 </a>
             </li>
         <?php } ?>
-        <?php if ( !empty($viberLink) ) { ?>
+        <!-- <?php if ( !empty($viberLink) ) { ?>
             <li class=""> 
-                <a href="viber://chat?number=<?php echo $phoneNumber; ?>">
+                <a href="viber://chat?number=<?php echo str_replace("+", "", $phoneNumber); ?>">
                     <div class="social-btn color-viber">
                     <div class="icons8-viber"></div>
                     <p class="order-1 google-font margin-viber">viber</p>
                     </div>
                 </a>
             </li>
-        <?php } ?>
+        <?php } ?> -->
         <?php if ( !empty($phoneNumber) ) { ?>
             <li class=""> 
                 <a href="tel:<?php echo $phoneNumber; ?>">

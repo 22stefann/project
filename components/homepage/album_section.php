@@ -11,9 +11,16 @@
         p {
             color: <?php echo $section_album_text_color; ?>;
         }
+        .card {
+            background-color: <?php echo $section_card_bg_color; ?>;
+            border: unset;
+            p {
+                color: <?php echo $section_card_text_color; ?>;
+            }
+        }
     }
 </style>
-<div class="album album-section">
+<div class="album album-section all-section-style">
     <div class="container text-center">
         <h2 class="subtitle-h2">Album Section</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

@@ -1,0 +1,16 @@
+a.btn-custom-style:hover {
+  animation: pulse 1s infinite; /* Apply the pulse animation on hover */
+  background-color: var(--button_animation_bg_color);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,17 @@
+a.btn-custom-style::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 1s ease;
+  border-radius: 50%;
+}
+
+a.btn-custom-style:hover::before {
+  width: 200%; /* Increase width and height to cover the button */
+  height: 200%;
+}

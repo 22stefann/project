@@ -34,6 +34,11 @@
     //define h2 font
     $h2FontFamily = "'Smooch Sans', cursive";
 
+    //define buttons
+    $buttons_animation = 11;
+    //set bg color for 9 10 and 11 button animations
+    $button_animation_bg_color = "#eded";
+
     ####################################################################
     #################### BACK TO TOP BUTTON ############################
     ####################################################################
@@ -55,15 +60,15 @@
     //set fb link
     $fbLink = "https://www.w3schools.com/icons/fontawesome_icons_intro.asp";
     //set instagram link
-    $instaLink = "";
+    $instaLink = "www";
     //set twitter link
-    $twitterLink = "";
+    $twitterLink = "w";
     //set yt link
-    $ytLink = "";
+    $ytLink = "w";
     //whatsapp link
     $whatsappLink = true;
     //viber link
-    $viberLink = false;
+    $viberLink = true;
     //set true if want show phone and email in navigation
     $phoneEmailInNav = false;
     //set phone number
@@ -242,13 +247,13 @@
     );
 
     ####################################################################
-    #################### ALL SECTION ARRAY #############################
+    #################### ALL SECTIONS ARRAY ############################
     ####################################################################
 
     $homepageSection = array (
         "under_cover",
         #"simple_section_3",
-        "slideshow_bootstrap",
+        #"slideshow_bootstrap",
         #"slideshow_v1",
         #"simple_section_2",
         "text_image_section_2",
@@ -257,6 +262,9 @@
         "text_image_section",
         "section_column",
         "album_section",
+        "map_v1",
+        #"footer_v2",
+        "footer_v1",
         #"gallery_v2"
     );
 
@@ -264,7 +272,7 @@
     #################### COVER SECTION #################################
     ####################################################################
     //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-    $cover_content ="video";
+    $cover_content ="slideshow_bootstrap";
     //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "70px";
     //video, slideshow, custom section margin-top on mobile
@@ -340,13 +348,13 @@
     //under cover section bg image
     $underCoverBgImage = "";
     //under cover section bg color
-    $underCoverBgColor = "#fff";
+    $underCoverBgColor = "#11101d";
     //under cover section text color
-    $underCoverTextColor = "#000";
+    $underCoverTextColor = "#fff";
     //under cover section h1 color
-    $underCoverTitleColor = "#22228f";
+    $underCoverTitleColor = "#fff";
     //under cover section h2 color
-    $underCoverSubtitleColor = "#592d73";
+    $underCoverSubtitleColor = "#fff";
 
     ####################################################################
     #################### SLIDESHOW v1 SECTION ##########################
@@ -379,14 +387,15 @@
     ####################################################################
 
     $gallery_section_title = "gallery";
-    $gallery_section_title_color = "#22228f";
+    $gallery_section_title_color = "#fff";
+    $gallery_v1_bg_color = "#11101d";
     $gallery_array = array(
         array("img" => "gallery_1.jpg" , "alt" => "gallery photo 1"),
         array("img" => "gallery_2.jpg" , "alt" => "gallery photo 2"),
         array("img" => "gallery_3.jpg" , "alt" => "gallery photo 3"),
         array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
-        array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
-        array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
+        //array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
+        //array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
         // array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
         // array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
     );
@@ -401,9 +410,9 @@ $simple_section_1_subtitle_color = "#fff";
 //simple section text color
 $simple_section_1_text_color = "#fff";
 //simple section bg color
-$simple_section_1_bg_color = "#000";
+$simple_section_1_bg_color = "#11101d";
 //simple section image url
-$simple_section_1_bg_url = "default_section_back.jpg";
+$simple_section_1_bg_url = "";
 //simple section image attachment
 $simple_section_1_bg_attachment = "fixed";
 //simple section image size
@@ -418,9 +427,7 @@ $simple_section_1_html = <<<HTML
 <h3 class="title-h3">Simple section 1</h3>
 <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">button</button>
-    </div>
+    <a href="" class="btn btn-custom-style">Button</a>
 </div>
 
 HTML;
@@ -452,9 +459,7 @@ $simple_section_2_html = <<<HTML
 <h3 class="title-h3">Simple section 2</h3>
 <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">button</button>
-    </div>
+    <a href="" class="btn btn-custom-style">Button</a>
 </div>
 
 HTML;
@@ -486,9 +491,7 @@ $simple_section_3_html = <<<HTML
 <h3 class="title-h3">Simple section 3</h3>
 <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">button</button>
-    </div>
+    <a href="" class="btn btn-custom-style">Button</a>
 </div>
 
 HTML;
@@ -504,42 +507,39 @@ $text_image_section_1_subtitle_color = "#fff";
 //simple section text color
 $text_image_section_1_text_color = "#fff";
 //simple section bg color
-$text_image_section_1_bg_color = "#000";
+$text_image_section_1_bg_color = "#11101d";
 //simple section image url
-$text_image_section_1_bg_url = "default_section_back.jpg";
+$text_image_section_1_bg_url = "";
 //simple section image attachment
 $text_image_section_1_bg_attachment = "fixed";
 //simple section image size
 $text_image_section_1_bg_size = "cover";
 //simple section image repeat
 $text_image_section_1_bg_repeat = "no-repeat";
+//set width of section
+$text_image_section_1_width = "100%";
 //simple section html
 $text_image_section_1_html = <<<HTML
 
-<div class="row align-items-center py-5">
-    <div class="col-12 col-sm-6 col-lg-6 m-auto">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" 
+    style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;background-repeat:no-repeat;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
     <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
     <h3 class="title-h3">Text image section 1</h3>
     <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-    </div>
+    <a href="" class="btn btn-custom-style">Button</a>
     </div>
 </div>
-<div class="row align-items-center py-5">
-    <div class="col-12 col-sm-6 col-lg-6">
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
     <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
     <h3 class="title-h3">Text image section 1</h3>
     <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    <a href="" class="btn btn-custom-style">Button</a>
     </div>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-6 m-auto">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
 </div>
 
@@ -556,42 +556,41 @@ $text_image_section_2_subtitle_color = "#fff";
 //simple section text color
 $text_image_section_2_text_color = "#fff";
 //simple section bg color
-$text_image_section_2_bg_color = "#000";
+$text_image_section_2_bg_color = "#11101d";
 //simple section image url
-$text_image_section_2_bg_url = "default_section_back.jpg";
+$text_image_section_2_bg_url = "";
 //simple section image attachment
 $text_image_section_2_bg_attachment = "fixed";
 //simple section image size
 $text_image_section_2_bg_size = "cover";
 //simple section image repeat
 $text_image_section_2_bg_repeat = "no-repeat";
+//set width of section
+$text_image_section_2_width = "100%";
 //simple section html
 $text_image_section_2_html = <<<HTML
 
-<div class="row align-items-center py-5">
-    <div class="col-12 col-sm-6 col-lg-6 m-auto">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
     <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
-    <h3 class="title-h3">Text image section 2</h3>
+    <h3 class="title-h3">Text image section 1</h3>
     <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-    </div>
+
+    <a href="" class="btn btn-custom-style">Button</a>
+
     </div>
 </div>
-<div class="row align-items-center py-5">
-    <div class="col-12 col-sm-6 col-lg-6">
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
     <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
-    <h3 class="title-h3">Text image section 2</h3>
+    <h3 class="title-h3">Text image section 1</h3>
     <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+
+        <a href="" class="btn btn-custom-style">Button</a>
     </div>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-6 m-auto">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
 </div>
 
@@ -601,15 +600,15 @@ HTML;
 #################### section column  ###############################
 ####################################################################
 //section column title color
-$section_column_title_color = "#fcfc";
+$section_column_title_color = "#fff";
 //section column subtitle color
-$section_column_subtitle_color = "#acac";
+$section_column_subtitle_color = "#fff";
 //section column text color
 $section_column_text_color = "#fff";
 //section column bg color
-$section_column_bg_color = "#000";
+$section_column_bg_color = "#11101d";
 //section column image url
-$section_column_bg_url = "default_section_back.jpg";
+$section_column_bg_url = "";
 //section column image attachment
 $section_column_bg_attachment = "fixed";
 //section column image size
@@ -623,27 +622,27 @@ $section_column_html = <<<HTML
 <div class="row g-4 row-cols-1 row-cols-lg-3">
     <div class="feature col">
     <div class="">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
     <h3 class="title-h3">Featured title</h3>
     <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    <a href="" class="btn btn-custom-style">Button</a>
     </div>
     <div class="feature col">
     <div class="">
-        <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
     <h3 class="title-h3">Featured title</h3>
     <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    <a href="" class="btn btn-custom-style">Button</a>
     </div>
     <div class="feature col">
     <div class="">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
     <h3 class="title-h3">Featured title</h3>
     <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+    <a href="" class="btn btn-custom-style">Button</a>
     </div>
 </div>
 
@@ -654,13 +653,17 @@ HTML;
 ####################################################################
 
 //section album title color
-$section_album_title_color = "#fcfc";
+$section_album_title_color = "#fff";
 //section album text color
 $section_album_text_color = "#000";
 //section album bg color
-$section_album_bg_color = "#000";
+$section_album_bg_color = "#11101d";
 //section album image url
-$section_album_bg_url = "default_section_back.jpg";
+$section_album_bg_url = "";
+//card bg color
+$section_card_bg_color = "transparent";
+//card text color
+$section_card_text_color = "#fff";
 //section album image attachment
 $section_album_bg_attachment = "fixed";
 //section album image size
@@ -669,14 +672,40 @@ $section_album_bg_size = "cover";
 $section_album_bg_repeat = "no-repeat";
 
 $album_section_items = array(
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "test test test test test test test test test test test test test test test test test test test test tes", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-)
+    array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+);
+
+
+####################################################################
+#################### footer section v1  ############################
+####################################################################
+
+//set footer background color
+$footer_v1_bg_color = "#11101d";
+//set footer text color
+$footer_v1_text_color = "#fff";
+//social icon hover color
+$footer_v1_social_hover_color = "#000";
+//social icon hover bg color
+$footer_v1_social__bg_hover_color = "#fcfc";
+
+####################################################################
+#################### map section v1  ###############################
+####################################################################
+//set map style m - default k - satelit h
+$map_style = "m";
+// set map zoom 8 9 10 12 13 15 18 20 ...
+$map_zoom_level = 18;
+$address_map = "bravarija ris osecina";
+$latituda = '44.379265097376106';
+$longituda = '19.60514016282363';
+$dark_map = false;
 
 ?>
