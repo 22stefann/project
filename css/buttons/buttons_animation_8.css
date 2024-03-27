@@ -1,4 +1,5 @@
-a.btn-custom-style::before {
+a.btn-custom-style::before,
+button.btn-custom-style::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -11,7 +12,8 @@ a.btn-custom-style::before {
   border-radius: 50%;
 }
 
-a.btn-custom-style:hover::before {
+a.btn-custom-style:hover::before,
+button.btn-custom-style:hover::before {
   width: 200%; /* Increase width and height to cover the button */
   height: 200%;
 }

@@ -167,16 +167,17 @@
     }
 
     .social-btn:hover {
-        right: 100px;
+        right: 85px;
         transition: right 1s;
     }
 
     .social-side {
         position: fixed;
-        top: 50%;
+        top: <?php echo $socialSideFromTop; ?>;
         transform: translateY(-50%);
-        right: 0;
+        right: 183px;
         z-index: 10;
+        width: 0;
     }
 
     .social-btn p {
@@ -217,10 +218,11 @@
 
         .social-side {
             position: fixed;
-            top: 50%;
+            top: <?php echo $socialSideFromTop; ?>;
             left: 0;
             transform: translateY(-50%);
             z-index: 10;
+            width: 0;
         }
 
         .social-btn p {

@@ -43,7 +43,8 @@ p {
 
 /*all buttons style start*/
 
-a.btn {
+a.btn,
+button.form.btn {
     position: relative;
     display: inline-block;
     color: #fff;
@@ -58,10 +59,12 @@ a.btn {
     z-index: 0;
     width: 200px;
 }
-a.btn:hover {
+a.btn:hover,
+button.form.btn:hover {
     color: #11101d;
 }
-a.btn::before{
+a.btn::before,
+button.form.btn::before {
     background: #fff;
     content: "";
     position: absolute;
@@ -95,8 +98,25 @@ a.btn::before{
 /*all section style start*/
 .all-section-style {
     padding: 4em 0;
+    position: relative;
 }
 /*all section style end*/
+
+/*all top borders style start*/
+
+.top-svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.bottom-svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*all top borders style start*/
 
 /*cover section start*/
 

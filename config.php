@@ -60,15 +60,15 @@
     //set fb link
     $fbLink = "https://www.w3schools.com/icons/fontawesome_icons_intro.asp";
     //set instagram link
-    $instaLink = "www";
+    $instaLink = "";
     //set twitter link
-    $twitterLink = "w";
+    $twitterLink = "";
     //set yt link
-    $ytLink = "w";
+    $ytLink = "";
     //whatsapp link
-    $whatsappLink = true;
+    $whatsappLink = false;
     //viber link
-    $viberLink = true;
+    $viberLink = false;
     //set true if want show phone and email in navigation
     $phoneEmailInNav = false;
     //set phone number
@@ -77,15 +77,17 @@
     $email = "stefanstanisavljevic777@gmail.com";
     //set side social icons
     $sideSocialIcons = true;
+    //set social side from top
+    $socialSideFromTop = "65%";
     // set left or right
-    $sideSocialIconsAlign = "right";
+    $sideSocialIconsAlign = "left";
 
     ####################################################################
     #################### ALL NAVIGATION STYLE ##########################
     ####################################################################
 
     //define type of navigation bootstrap, custom, hamburger
-    $type_of_navigation = "hamburger";
+    $type_of_navigation = "bootstrap";
     //define logo width
     $widthLogo = "80px";
     //logo resize value set in px
@@ -252,6 +254,7 @@
 
     $homepageSection = array (
         "under_cover",
+        "form",
         #"simple_section_3",
         #"slideshow_bootstrap",
         #"slideshow_v1",
@@ -281,7 +284,7 @@
     ############SLIDESHOW cover######
     #################################
     //slideshow autoplay
-    $slideshowAutoplay = true;
+    $slideshowAutoplay = false;
     //slideshow delay
     $slideshowDelay = "3000";
     //show hide arrow
@@ -333,11 +336,11 @@
     );
     //slideshow content
     $slideshow_array = array(
-        array("img" => "slide1.jpg","h2" => "&nbsp;The world is a book, and those who do <br /> not travel read only one page.&nbsp;", "text"=> "Saint Augustine", "data-id" => "0"),
-        array("img" => "slide2.jpg","h2" => "&nbsp;We travel not to escape life, but <br /> for life not to escape us.&nbsp;", "text"=> "Anonymous", "data-id" => "1"),
-        array("img" => "slide3.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Tim Cahill", "data-id" => "2"),
-        array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
-        array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
+        array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "Saint Augustine", "data-id" => "0"),
+        array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "Anonymous", "data-id" => "1"),
+        array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "Tim Cahill", "data-id" => "2"),
+        #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
+        #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
     );
     
 
@@ -355,6 +358,14 @@
     $underCoverTitleColor = "#fff";
     //under cover section h2 color
     $underCoverSubtitleColor = "#fff";
+    //svg top
+    $under_cover_top_svg = false;
+    //top svg color
+    $under_cover_top_svg_color = "#000";
+    //svg bottom
+    $under_cover_bottom_svg = true;
+    //bottom svg color
+    $under_cover_bottom_svg_color = "#000";
 
     ####################################################################
     #################### SLIDESHOW v1 SECTION ##########################
@@ -426,7 +437,7 @@ $simple_section_1_html = <<<HTML
 <h2 class="subtitle-h2">Simple section 1</h2>
 <h3 class="title-h3">Simple section 1</h3>
 <div class="col-lg-8 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <p class="lead mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">Button</a>
 </div>
 
@@ -458,7 +469,7 @@ $simple_section_2_html = <<<HTML
 <h2 class="subtitle-h2">Simple section 2</h2>
 <h3 class="title-h3">Simple section 2</h3>
 <div class="col-lg-8 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <p class="lead mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">Button</a>
 </div>
 
@@ -490,7 +501,7 @@ $simple_section_3_html = <<<HTML
 <h2 class="subtitle-h2">Simple section 3</h2>
 <h3 class="title-h3">Simple section 3</h3>
 <div class="col-lg-8 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <p class="lead mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">Button</a>
 </div>
 
@@ -498,7 +509,7 @@ HTML;
 
 
 ####################################################################
-#################### TEXT IMAGE SECTION 1 ##########################
+#################### Podnaslov ##########################
 ####################################################################
 //simple section title color
 $text_image_section_1_title_color = "#fff";
@@ -521,23 +532,25 @@ $text_image_section_1_width = "100%";
 //simple section html
 $text_image_section_1_html = <<<HTML
 
-<div class="row align-items-center">
-    <div class="col-12 col-sm-6 col-lg-6 m-auto" 
-    style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;background-repeat:no-repeat;">
+<div class="row align-items-center pt-5">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
-    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
-    <h3 class="title-h3">Text image section 1</h3>
-    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-left">
+    <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
+    <h3 class="title-h3">Podnaslov</h3>
+    <p class="lead">Ovde ide neki takst</p>
+
     <a href="" class="btn btn-custom-style">Button</a>
+
     </div>
 </div>
-<div class="row align-items-center">
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
-    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
-    <h3 class="title-h3">Text image section 1</h3>
-    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+<div class="row align-items-center pt-5">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-right">
+    <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
+    <h3 class="title-h3">Podnaslov</h3>
+    <p class="lead">Ovde ide neki takst</p>
+
+        <a href="" class="btn btn-custom-style">Button</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
@@ -570,23 +583,23 @@ $text_image_section_2_width = "100%";
 //simple section html
 $text_image_section_2_html = <<<HTML
 
-<div class="row align-items-center">
-    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
+<div class="row align-items-center pt-5">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
-    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
-    <h3 class="title-h3">Text image section 1</h3>
-    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-left">
+    <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
+    <h3 class="title-h3">Podnaslov</h3>
+    <p class="lead">Ovde ide neki takst</p>
 
     <a href="" class="btn btn-custom-style">Button</a>
 
     </div>
 </div>
-<div class="row align-items-center">
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center">
-    <h2 class="display-5 fw-bold lh-1 mb-3 subtitle-h2">Responsive left-aligned hero with image</h2>
-    <h3 class="title-h3">Text image section 1</h3>
-    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+<div class="row align-items-center pt-5">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-right">
+    <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
+    <h3 class="title-h3">Podnaslov</h3>
+    <p class="lead">Ovde ide neki takst</p>
 
         <a href="" class="btn btn-custom-style">Button</a>
     </div>
@@ -618,30 +631,30 @@ $section_column_bg_repeat = "no-repeat";
 //section column html
 $section_column_html = <<<HTML
 
-<h2 class="pb-2 border-bottom subtitle-h2">Columns with icons</h2>
+<h2 class="pb-2 border-bottom subtitle-h2">Sekcija sa vise itema</h2>
 <div class="row g-4 row-cols-1 row-cols-lg-3">
     <div class="feature col">
     <div class="">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <img src="custom/gallery/gallery_1.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
-    <h3 class="title-h3">Featured title</h3>
-    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    <h3 class="title-h3">Naslov</h3>
+    <p>Ovde ide neki tekst</p>
     <a href="" class="btn btn-custom-style">Button</a>
     </div>
     <div class="feature col">
     <div class="">
-        <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img src="custom/gallery/gallery_2.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
-    <h3 class="title-h3">Featured title</h3>
-    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    <h3 class="title-h3">Naslov</h3>
+    <p>Ovde ide neki tekst</p>
     <a href="" class="btn btn-custom-style">Button</a>
     </div>
     <div class="feature col">
     <div class="">
-    <img src="custom/gallery/gallery_7.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <img src="custom/gallery/gallery_3.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
     </div>
-    <h3 class="title-h3">Featured title</h3>
-    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+    <h3 class="title-h3">Naslov</h3>
+    <p>Ovde ide neki tekst</p>
     <a href="" class="btn btn-custom-style">Button</a>
     </div>
 </div>
@@ -672,16 +685,29 @@ $section_album_bg_size = "cover";
 $section_album_bg_repeat = "no-repeat";
 
 $album_section_items = array(
-    array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
-    #array("text" => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    #array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
 );
 
+####################################################################
+#################### form section v1  ##############################
+####################################################################
+
+$formTitle = "Kontakt forma";
+$formText = "Molimo vas popunite polja ispod!";
+//center right left
+$formTextAlign = "center";
+$formWidth = "400px";
+$formBgColor = "#000";
+$formTextColor = "#fff";
+$formInputColorText = "#11101d";
+$formBgImage = "";
 
 ####################################################################
 #################### footer section v1  ############################
@@ -707,5 +733,25 @@ $address_map = "bravarija ris osecina";
 $latituda = '44.379265097376106';
 $longituda = '19.60514016282363';
 $dark_map = false;
+
+
+
+####################################################################
+#################### php function   ################################
+####################################################################
+
+function setVariable($variable, $element, $class = null) {
+    if ( !empty($variable) ) {
+        return '<'.$element.' class="'.$class.'">'.$variable.'</'.$element.'>';
+    }
+    return null;
+}
+
+function checkVariable($variable) {
+    if ( !empty($variable) ) {
+        return $variable;
+    }
+    return "";
+}
 
 ?>

@@ -22,7 +22,7 @@
 </style>
 <div class="album album-section all-section-style">
     <div class="container text-center">
-        <h2 class="subtitle-h2">Album Section</h2>
+        <h2 class="subtitle-h2">Selcija sa albumima</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <?php foreach( $album_section_items as $one_item ) : ?>
                 <div class="col">

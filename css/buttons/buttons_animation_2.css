@@ -1,8 +1,10 @@
-a.btn-custom-style::before{
+a.btn-custom-style::before,
+button.btn-custom-style::before {
     width: 100%;
     height: 0%;
 }
 
-a.btn-custom-style:hover::before{
+a.btn-custom-style:hover::before,
+button.btn-custom-style:hover::before {
     height: 100%;
 }
