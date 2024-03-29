@@ -1,8 +1,11 @@
 <style>
     .form-holder {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         background-color: <?php echo $formBgColor; ?>;
         color: <?php echo $formTextColor; ?>;
-        max-width: 100%;
+        max-width: 100% !important;
+        width: 100% !important;
         .form-floating {
             padding-left: 0;
             padding-right: 0;
@@ -19,6 +22,13 @@
             background-image: url("<?php echo $formBgImage; ?>");
         <?php endif; ?>
     }
+
+    .form-holder .top-svg {
+        fill: <?php echo $form_top_svg_color; ?>;
+    }
+    .form-holder .bottom-svg {
+        fill: <?php echo $form_bottom_svg_color; ?>;
+    }
     @media (max-width: 767px) {
         .form-holder {
             form {
@@ -28,6 +38,9 @@
     }
 </style>
 <div class="form-holder container mx-auto all-section-style text-<?php echo $formTextAlign; ?>">
+    <?php if ( $form_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <?php echo setVariable($formTitle,"h2","subtitle-h2"); ?>
     <?php echo setVariable($formText,"p"); ?>
     <form class="row g-3 needs-validation" novalidate>
@@ -80,6 +93,10 @@
         </div>
         <button class="btn btn-custom-style form" type="submit">Prosledi</button>
     </form>
+
+    <?php if ( $form_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 
 </div>
 

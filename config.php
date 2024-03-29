@@ -1,5 +1,6 @@
 <?php
 
+
     ####################################################################
     #################### DEFINE COMPANY NAME ###########################
     ####################################################################
@@ -230,9 +231,9 @@
     ####################################################################
 
     $navTabs = array(
-        array("type" => "HOME", "name" => "Pocetna", "link" => "#", "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "HOME", "name" => "Pocetna", "link" => "../index.php", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
-        array("type" => "HISTORY", "name" => "Istorija", "link" => "#", "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "HISTORY", "name" => "Istorija", "link" => "/about", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "CONTACT", "name" => "Kontakt", "link" => "#", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project#", "target" => "_self", "class" => "navigation-tab"),
@@ -708,6 +709,14 @@ $formBgColor = "#000";
 $formTextColor = "#fff";
 $formInputColorText = "#11101d";
 $formBgImage = "";
+//svg top
+$form_top_svg = false;
+//top svg color
+$form_top_svg_color = "#000";
+//svg bottom
+$form_bottom_svg = true;
+//bottom svg color
+$form_bottom_svg_color = "#11101d";
 
 ####################################################################
 #################### footer section v1  ############################
@@ -752,6 +761,26 @@ function checkVariable($variable) {
         return $variable;
     }
     return "";
+}
+
+// Dohvatanje URL-a
+$url = isset($_GET['url']) ? $_GET['url'] : '/';
+
+// Ovdje možete implementirati logiku za rute
+switch ($url) {
+    case '/':
+        // Prikaz početne stranice
+        include('index.php');
+        break;
+    case '/about':
+        // Prikaz stranice "O nama"
+        include('about.php');
+        break;
+    // Dodajte dodatne rute po potrebi
+    default:
+        // Prikaz stranice za 404 grešku
+        include('index.php');
+        break;
 }
 
 ?>
