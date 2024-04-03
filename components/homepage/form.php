@@ -100,62 +100,64 @@
 
 </div>
 
+<?php
 
-<script>
+$javaScripts[] = <<<JS
+
     // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
+    (function () {
+    'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            }
 
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        // Check if the form is valid before sending data
-        if (this.checkValidity()) {
-            // Your form data
-            var formData = new FormData(this);
+            // Check if the form is valid before sending data
+            if (this.checkValidity()) {
+                // Your form data
+                var formData = new FormData(this);
 
-            fetch('contactscript.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-                if (data.status === 'success') {
-                    // Optionally, you can reset the form
-                    this.reset();
-                    console.log(this);
-                    this.classList.remove("was-validated");
-                }
-            })
-            .catch(error => {
-                //console.error('Error:', error);
-                alert('Greška pri slanju poruke.');
-            });
-        } else {
-            // Handle the case where the form is not valid
-            alert('Molimo popunite sva obavezna polja ispravno.');
-        }
+                fetch('contactscript.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.status === 'success') {
+                        // Optionally, you can reset the form
+                        this.reset();
+                        console.log(this);
+                        this.classList.remove("was-validated");
+                    }
+                })
+                .catch(error => {
+                    //console.error('Error:', error);
+                    alert('Greška pri slanju poruke.');
+                });
+            } else {
+                // Handle the case where the form is not valid
+                alert('Molimo popunite sva obavezna polja ispravno.');
+            }
+        });
     });
-});
-</script>
+JS;
+
+?>

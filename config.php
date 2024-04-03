@@ -8,6 +8,19 @@
     $companyName = "Bravarija RiS";
 
     ####################################################################
+    #################### DEFINE URL ####################################
+    ####################################################################
+
+    
+
+    function defineUrl($urlPath) {
+        return $urlPath;
+    }
+
+
+    $javaScripts = [];
+
+    ####################################################################
     #################### DEFINE FONT START #############################
     ####################################################################
 
@@ -89,6 +102,8 @@
 
     //define type of navigation bootstrap, custom, hamburger
     $type_of_navigation = "bootstrap";
+    //show/hide social nav in navigation
+    $socNavShow = false;
     //define logo width
     $widthLogo = "80px";
     //logo resize value set in px
@@ -171,7 +186,7 @@
     //hamburger icon color
     $hamburgerMobileNavigationIcon = "#fff";
     //enter mobile nav type (v1,v2,v3)
-    $mobileNavType = "v3";
+    $mobileNavType = "v1";
     //nav height
     $mobileNavHeight = "70px";
     //mobile nav position (static, relative, fixed)
@@ -218,9 +233,9 @@
     ####################################################################
 
     #set type of hamburger menu 1,2,3,4,5,6,7
-    $hamburger_menu_type = 2;
+    $hamburger_menu_type = 5;
     #set tabs hover background color
-    $hamburger_menu_tabs_bg = "#fff";
+    $hamburger_menu_tabs_bg = "#000";
     #hamburger menu side bg color
     $hamburger_menu_side_bg = "#11101d";
     #hamburger menu logo position center, end
@@ -231,22 +246,22 @@
     ####################################################################
 
     $navTabs = array(
-        array("type" => "HOME", "name" => "Pocetna", "link" => "../index.php", "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
-        array("type" => "HISTORY", "name" => "Istorija", "link" => "/about", "target" => "_self", "class" => "navigation-tab"),
+        #array("type" => "HOME", "name" => "Pocetna", "link" => "index", "target" => "_self", "class" => "navigation-tab"),
+        #array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
+        array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("about"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "CONTACT", "name" => "Kontakt", "link" => "#", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project#", "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "TEST", "name" => "Test", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
+        #array("type" => "TEST", "name" => "Test", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
         array("type" => "CONTACT", "name" => "Kontakt", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab")
     );
 
     //array for submenu navigation tab
     $subTabs = array(
-        array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        array("type" => "TEST", "name" => "test", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        array("type" => "TEST", "name" => "test2", "link" => "#", "target" => "_self", "class" => "dropdown-sub")
+        #array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+        #array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+        #array("type" => "TEST", "name" => "test", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+        #array("type" => "TEST", "name" => "test2", "link" => "#", "target" => "_self", "class" => "dropdown-sub")
     );
 
     ####################################################################
@@ -761,26 +776,6 @@ function checkVariable($variable) {
         return $variable;
     }
     return "";
-}
-
-// Dohvatanje URL-a
-$url = isset($_GET['url']) ? $_GET['url'] : '/';
-
-// Ovdje možete implementirati logiku za rute
-switch ($url) {
-    case '/':
-        // Prikaz početne stranice
-        include('index.php');
-        break;
-    case '/about':
-        // Prikaz stranice "O nama"
-        include('about.php');
-        break;
-    // Dodajte dodatne rute po potrebi
-    default:
-        // Prikaz stranice za 404 grešku
-        include('index.php');
-        break;
 }
 
 ?>

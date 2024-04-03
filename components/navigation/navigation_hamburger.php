@@ -438,9 +438,11 @@
     border-radius: 12px;
     white-space: nowrap;
     transition: all 0.4s ease;
+    margin-left: -10px;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
     color: var(--navTabHoverColor);
     background: var(--hamburger_menu_tabs_bg);
 }
@@ -516,20 +518,21 @@
         }
         ?>
     </div>
-    <a class="navbar-brand d-flex align-items-center justify-content-<?php echo $hamburger_menu_logo_position; ?>" href="/#">
+    <a class="navbar-brand d-flex align-items-center justify-content-<?php echo $hamburger_menu_logo_position; ?>" href="index">
         <img src="custom/logo.png" alt="<?php echo $companyName; ?> logo" />
     </a> 
     <nav class="sidebar">
     <ul class="nav_list">
         <?php foreach ($navTabs as $tab) : ?>
             <li>
-                <a href="<?php echo $tab['link']; ?>" target="<?php echo $tab['target']; ?>" >
+                <a class="navigation-link" data-type="<?php echo $tab['type']; ?>" href="<?php echo $tab['link']; ?>" target="<?php echo $tab['target']; ?>" >
                     <i class='bx' ></i>
                     <span class="links_name"><?php echo $tab['name']; ?></span>
                 </a>
                 <span class="tooltip"><?php echo $tab['name']; ?></span>
             </li>
         <?php endforeach; ?>
+        <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) : ?>
         <?php if ( !empty($twitterLink) ) { ?>
             <li class=""> 
                 <a class="" target="_blank" href="<?php echo $twitterLink; ?>"><i class='bx' ></i><i class="fab fa-twitter links_name"></i><span class="links_name">Twitter</span></a> 
@@ -553,6 +556,7 @@
                 <a class="" target="_blank" href="<?php echo $ytLink; ?>"><i class='bx' ></i><i class="fab fa-youtube links_name"></i><span class="links_name">Youtube</span></a> 
             </li>
         <?php } ?>
+        <?php endif; ?>
     </ul>
     </nav>
 </div>
@@ -587,4 +591,20 @@ $(document).ready(function(){
         }
     });
 <?php } ?>
+</script>
+
+<script>
+    var all_tabs = $('nav a.navigation-link');
+    //console.log(all_tabs);
+    var activeTab = <?php echo json_encode($activeTab); ?>;
+    all_tabs.each(function( index ) {
+        //$( this ).data("type");
+        if ( $( this ).data("type") == activeTab ) {
+            $( this ).addClass("active");
+            $( this ).parent().addClass("active-li");
+        } else {
+            $( this ).removeClass("active");
+            $( this ).parent().removeClass("active-li");
+        }
+    });
 </script>

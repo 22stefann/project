@@ -307,11 +307,26 @@
             text-transform: var(--navTextTransform);
             font-size: var(--navTabSize);
             font-family: var(--navTabsFont);
+            padding-left: 5px;
         }
-        a.nav-link:hover {
+        .social-icon a.nav-link {
+            color: var(--navTabColor);
+            text-transform: var(--navTextTransform);
+            font-size: var(--navTabSize);
+            font-family: var(--navTabsFont);
+            padding-left: var(--bs-navbar-nav-link-padding-x);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a.nav-link:hover,
+        a.nav-link.active {
             color: var(--navTabHoverColor);
+            transition: 0.3s color;
         }
         .dropdown-menu {
+            border: unset;
+            border-radius: 0;
             background-color: var(--navBgColor);
             a {
                 color: var(--navTabColor);
@@ -319,9 +334,10 @@
                 font-size: var(--navTabSize);
                 font-family: var(--navTabsFont);
             }
-            a:hover {
-                background-color: var(--navTabColor);
-                color: var(--navBgColor);
+            a:hover,
+            a:focus {
+                background-color: var(--navTabHoverColor);
+                color: var(--nabBgColor);
             }
         }
     }
@@ -331,7 +347,8 @@
         a.nav-link {
             color: var(--navTabScrollColor);
         }
-        a.nav-link:hover {
+        a.nav-link:hover,
+        a.nav-link.active {
             color: var(--navTabScrollHoverColor);
         }
         .social-icon a.nav-link:hover {
@@ -342,9 +359,10 @@
             a {
                 color: var(--navTabScrollColor);
             }   
-            a:hover {
-                background-color: var(--navTabScrollColor);
-                color: var(--navBgColorScroll);
+            a:hover,
+            a:focus {
+                background-color: var(--navTabHoverColor);
+                color: var(--nabBgColor);
             } 
         }
     }
@@ -412,10 +430,31 @@
         } ?>
     }
     @media (max-width: 991px) {
+        nav#bootstrap-navigation {
+            padding: 0;
+            li.active-li,
+            li:hover {
+                background-color: var(--navTabHoverColor);
+                transition: 0.3s background-color;
+                a.nav-link.active,
+                a.nav-link {
+                    color: var(--navBgColor);
+                }
+            }
+        }
+        nav#bootstrap-navigation.scrolled {
+            li.active-li,
+            li:hover {
+                background-color: var(--navTabHoverColor);
+                a.nav-link.active,
+                a.nav-link {
+                    color: var(--navBgColor);
+                }
+            }
+        }
         nav.navbar .container {
             max-width: 100%;
             margin: 0;
-            padding-left: 5px;
         }
         nav.navbar a.navbar-brand img {
             width: <?php echo $mobileWidthLogo; ?>;
@@ -453,10 +492,11 @@
     <?php if ( $bootstrap_nav_justify == "space-around" ) { echo "justify-content-lg-between"; } 
     elseif( $bootstrap_nav_justify == "center" ) { echo "justify-content-lg-center"; }
     elseif( $bootstrap_nav_justify == "evenly" ) { echo "justify-content-lg-evenly"; } ?>"> 
-        <a class="navbar-brand d-flex align-items-center animated-element animate-left" href="/#">
+        <a class="navbar-brand d-flex align-items-center animated-element animate-left" href="index">
             <img src="custom/logo.png" alt="<?php echo $companyName; ?> logo" />
         </a> 
         <div class="d-flex">
+        <?php if ( $socNavShow ) : ?>
             <ul class="navbar-nav ml-auto mt-lg-0 social-display-block flex-row align-items-center social-icon">
                 <?php if ( !empty($twitterLink) ) { ?>
                     <li class="nav-item"> 
@@ -483,6 +523,8 @@
                 <?php } ?>
 
             </ul>
+            
+        <?php endif; ?>
             <?php if ( !$use_other_hamburger ) : ?>
             <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
                 <span class="navbar-toggler-line"></span>
@@ -530,12 +572,12 @@
                     foreach ($navTabs as $tab) {
                         if (strpos($tab['class'], 'dropdown-tab') == false) { ?>
                             <li class="nav-item active px-lg-<?php echo $bootstrap_padding_tabs; ?>"> 
-                                <a class="nav-link animated-element animate-left" href="<?php echo $tab['link']; ?>" target="<?php echo $tab['target']; ?>"><?php echo $tab['name']; ?></a> 
+                                <a class="nav-link animated-element animate-left navigation-link" data-type="<?php echo $tab['type']; ?>" href="<?php echo $tab['link']; ?>" target="<?php echo $tab['target']; ?>"><?php echo $tab['name']; ?></a> 
                             </li>
                         <?php } else { ?>
                             <li class="nav-item px-lg-<?php echo $bootstrap_padding_tabs; ?> dropdown d-menu">
                                 <a class="nav-link dropdown-toggle animated-element animate-left" href="<?php echo $tab['link']; ?>" id="dropdown<?php echo $br++; ?>" target="<?php echo $tab['target']; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $tab['name']; ?>
-                                <svg  id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg  class="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg>
                                 </a>
@@ -550,6 +592,7 @@
                         <?php } ?>
                 <?php } ?>
             </ul>
+        <?php if ( $socNavShow ) : ?>
             <ul class="navbar-nav ml-auto mt-3 mt-lg-0 social-display-none social-icon">
                 <?php if ( !empty($twitterLink) ) { ?>
                     <li class="nav-item"> 
@@ -576,6 +619,7 @@
                 <?php } ?>
 
             </ul>
+        <?php endif; ?>
         </div>
     </div>
 </nav>
@@ -618,5 +662,38 @@
                 }
             });
         <?php } ?>
+    });
+</script>
+<script>
+    $('#bootstrap-navigation li.dropdown  a').on("click", function(event) {
+        //event.preventDefault();
+        //console.log("aaa");
+        if ( $(this).parent().find('.dropdown-menu').css('display') == 'none' ) {
+            $ ( this ).find('svg.arrow').css('transform', 'translateY(-5%) rotate(180deg)');
+        } else {
+            $ ( this ).find('svg.arrow').css('transform', 'translateY(-5%) rotate(360deg)');
+        }
+        //$( this ).parent().find(".dropdown-menu").slideToggle();
+    });
+    $(document).on("click", function(event) {
+        if (!$(event.target).closest('#bootstrap-navigation li.dropdown  a').length) {
+            //$("#bootstrap-navigation li.dropdown  .dropdown-menu").hide();
+            $( this ).find('nav#bootstrap-navigation svg.arrow').css('transform', 'translateY(-5%) rotate(360deg)');
+        }
+    });
+</script>
+<script>
+    var all_tabs = $('nav a.navigation-link');
+    //console.log(all_tabs);
+    var activeTab = <?php echo json_encode($activeTab); ?>;
+    all_tabs.each(function( index ) {
+        //$( this ).data("type");
+        if ( $( this ).data("type") == activeTab ) {
+            $( this ).addClass("active");
+            $( this ).parent().addClass("active-li");
+        } else {
+            $( this ).removeClass("active");
+            $( this ).parent().removeClass("active-li");
+        }
     });
 </script>

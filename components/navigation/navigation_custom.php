@@ -1,6 +1,6 @@
 <?php 
     
-    require_once 'query/navigation.php';
+   # require_once 'query/navigation.php';
 
 ?>
 <style>
@@ -68,6 +68,9 @@ header nav.desktop-navigation .container ul.social-icons-div {
     padding-right: 5px;
     li a {
         padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -112,7 +115,8 @@ header nav.desktop-navigation .container ul li a {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
-header nav.desktop-navigation .container ul li a:hover {
+header nav.desktop-navigation .container ul li a:hover,
+header nav.desktop-navigation .container ul li a.active {
     color: var(--navTabHoverColor);
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
@@ -121,7 +125,8 @@ header nav.desktop-navigation.scrolled .container ul li a {
     color: var(--navTabScrollColor);
 }
 
-header nav.desktop-navigation.scrolled .container ul li a:hover {
+header nav.desktop-navigation.scrolled .container ul li a:hover,
+header nav.desktop-navigation.scrolled .container ul li a.active {
     color: var(--navTabScrollHoverColor);
 }
 
@@ -268,27 +273,27 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .scrolled .nav-container .nav-toggle:before,
+    /* .scrolled .nav-container .nav-toggle:before,
     .scrolled .nav-container .nav-toggle:after {
         background: var(--hamburgerScrollColor);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    } */
 
     .nav-container .nav-toggle:before {
         box-shadow: 0 13.3333333333px 0 0 var(--hamburgerColor);
     }
 
-    .scrolled .nav-container .nav-toggle:before {
+    /* .scrolled .nav-container .nav-toggle:before {
         box-shadow: 0 13.3333333333px 0 0 var(--hamburgerScrollColor);
-    }
+    } */
 
     .nav-container .nav-toggle:after {
         box-shadow: 0 -13.3333333333px 0 0 var(--hamburgerColor);
     }
 
-    .scrolled .nav-container .nav-toggle:after {
+    /* .scrolled .nav-container .nav-toggle:after {
         box-shadow: 0 -13.3333333333px 0 0 var(--hamburgerScrollColor);
-    }
+    } */
 
     .nav-container .nav-items {
         position: fixed;
@@ -316,6 +321,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         ul.submenu li {
             margin: 4px 0 5px 0;
         }
+        
         ul.submenu li:last-of-type {
             margin: 10px 0 10px 0;
         }
@@ -337,7 +343,8 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         }
     }
 
-    .nav-container .nav-items .nav-item:hover {
+    .nav-container .nav-items .nav-item:hover,
+    .nav-container .nav-items .nav-item.active {
         cursor: pointer;
         background: var(--mobileTabsBgHoverColor);
         color: var(--mobileTabsHoverColor);
@@ -582,18 +589,37 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         }
     }
 
+    
+    .menu-global.expand.active-li {
+        background-color: var(--navTabHoverColor);
+    }
+
+    .menu-global.expand.active-li a {
+        color: var(--navBgColor);
+    }
+
+    .menu-global.expand:hover {
+        background-color: var(--navTabHoverColor);
+        .submenu {
+            color: var(--navBgColor);
+        }
+        a {
+            color: var(--navBgColor);
+        }
+    }
+
     .expand a.dropdown-sub:hover  {
-        color: var(--navTabHoverColor);
+        color: var(--navBgColor);
     }
 
     .scrolled .expand:hover {
         a:not(.dropdown-sub) {
-            color: var(--navTabScrollHoverColor);
+            color: var(--navBgColor);
         }
     }
 
     .scrolled .expand a.dropdown-sub:hover  {
-        color: var(--navTabScrollHoverColor);
+        color: var(--navBgColor);
     }
 
     .menu-text-expand {
@@ -767,9 +793,18 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         .mobile-four .mobile-nav li a:hover {
             color: var(--navTabHoverColor);
         }
+        
+        .mobile-four .mobile-nav li.active-li,
+        .mobile-four .mobile-nav li:hover {
+            background-color: var(--navTabHoverColor);
+            a {
+                color: var(--navBgColor);
+            }
+            transition: 0.5s background-color;
+        }
 
         .scrolled .mobile-four .mobile-nav li a:hover {
-            color: var(--navTabScrollHoverColor);
+            color: var(--navBgColor);
         }
         
         .burger {
@@ -823,7 +858,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     <div class="container">
         <?php if ( $navigation_column ) { ?>
             <div class="logo-column">
-                <a href="/#">
+                <a href="index">
                     <img src="custom/<?php echo $logoUrl; ?>" alt="<?php echo $companyName; ?> logo">
                 </a>
                 <?php if ( $phoneEmailInNav ) {?>
@@ -858,7 +893,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                                 if (strpos($tab['class'], 'dropdown-tab') !== false) {
                                     $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
                                 }
-                                echo "<li class=\"{$tab['class']}\" ><a href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                                echo "<li class=\"{$tab['class']}\" ><a class=\"navigation-link\" data-type=\"{$tab['type']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
                                 if (strpos($tab['class'], 'dropdown-tab') !== false) {
                                     echo "<ul class=\"submenu\">";
                                     foreach ($subTabs as $sub) {
@@ -873,7 +908,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                         }
                     ?>
                 </ul>
-                <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+                <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
                     <ul class="social-icons-div mb-0">
                         <?php if (!empty($fbLink)) {
                             echo '<li>';
@@ -901,7 +936,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                 <?php } ?>
             </div>
         <?php } else { ?>
-            <a href="/#">
+            <a href="index">
                 <img src="custom/<?php echo $logoUrl; ?>" alt="<?php echo $companyName; ?> logo">
             </a>
             <ul class="navigation-tabs mb-0">
@@ -920,7 +955,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
                             $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
                         }
-                        echo "<li class=\"{$tab['class']}\" ><a href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                        echo "<li class=\"{$tab['class']}\" ><a class=\"navigation-link\" data-type=\"{$tab['type']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
                             echo "<ul class=\"submenu\">";
                             foreach ($subTabs as $sub) {
@@ -937,7 +972,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
 
             ?>
             </ul>
-            <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+            <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
                 <ul class="social-icons-div mb-0">
                     <?php if (!empty($fbLink)) {
                         echo '<li>';
@@ -969,10 +1004,10 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
 <!-- Mobile navigation start -->
 <?php if ( $mobileNavType == "v1" ) { ?>
 <div class="mobile-navigation mobile-logo-navigation">
-    <a class="logo-holder" href="/#">
+    <a class="logo-holder" href="index">
         <img src="custom/<?php echo $logoUrl; ?>" alt="<?php echo $companyName; ?> logo">
     </a>
-    <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+    <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
         <ul class="social-icons-div">
             <?php if (!empty($fbLink)) {
                 echo '<li>';
@@ -1009,7 +1044,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                             $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
                         }
                         echo '<ul>';
-                            echo "<li class=\"{$tab['class']} \"><a class=\"nav-item {$tab['class']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                            echo "<li class=\"{$tab['class']} \"><a data-type=\"{$tab['type']}\" class=\"nav-item {$tab['class']} navigation-link\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
                             if (strpos($tab['class'], 'dropdown-tab') !== false) {
                                 echo "<ul class=\"submenu\">";
                                 foreach ($subTabs as $sub) {
@@ -1038,7 +1073,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
                             $arrow = '<i class="fa-solid fa-arrow-custom fa-angle-right" aria-hidden="true"></i>';
                         }
-                        echo "<li class=\"menu-global menu-item-{$br}\"><a class=\"menu-text nav-item {$tab['class']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                        echo "<li class=\"menu-global menu-item-{$br}\"><a data-type=\"{$tab['type']}\" class=\"menu-text nav-item {$tab['class']} navigation-link\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
                             echo "<ul class=\"submenu\">";
                             foreach ($subTabs as $sub) {
@@ -1055,7 +1090,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
             ?>
         </ul>
         <div class="soc-logo flex-center-center" >
-        <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+        <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
             <ul class="social-icons-div flex-center-center">
                 <?php if (!empty($fbLink)) {
                     echo '<li>';
@@ -1081,7 +1116,9 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                 } ?>
             </ul>
         <?php } ?>
-        <img class="mobile-logo" src="custom/<?php echo $logoMobileUrl; ?>" alt="<?php echo $companyName; ?> mobile logo">
+        <a href="index">
+            <img class="mobile-logo" src="custom/<?php echo $logoMobileUrl; ?>" alt="<?php echo $companyName; ?> mobile logo">
+        </a>
         </div>
     </nav>
 <?php } elseif ( $mobileNavType == "v3" ) { ?>
@@ -1096,7 +1133,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                         </div>
                     </div>
                     <div class="soc-logo flex-center-center" >
-                        <?php if (!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) { ?>
+                        <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
                             <ul class="social-icons-div flex-center-center">
                                 <?php if (!empty($fbLink)) {
                                     echo '<li>';
@@ -1122,7 +1159,10 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                                 } ?>
                             </ul>
                         <?php } ?>
-                        <img class="mobile-logo" src="custom/<?php echo $logoMobileUrl; ?>" alt="<?php echo $companyName; ?> mobile logo">
+                        <a href="index">
+                            <img class="mobile-logo" src="custom/<?php echo $logoMobileUrl; ?>" alt="<?php echo $companyName; ?> mobile logo">
+                        </a>
+                        
                         </div>
                 </div>
                 <div class="mobile-nav">
@@ -1133,7 +1173,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
                             $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
                         }
-                        echo "<li class=\" {$tab['class']} \"><a class=\"nav-item {$tab['class']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                        echo "<li class=\" {$tab['class']} \"><a data-type=\"{$tab['type']}\" class=\"nav-item {$tab['class']} navigation-link\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
                         if (strpos($tab['class'], 'dropdown-tab') !== false) {
                             echo "<ul class=\"submenu\">";
                             foreach ($subTabs as $sub) {
@@ -1201,7 +1241,7 @@ $(document).ready(function() {
 
     $('.desktop-navigation li.dropdown-tab a').on("click", function(event) {
         event.preventDefault();
-        console.log("aaa");
+        //console.log("aaa");
         if ( $(this).parent().find('.submenu').css('display') == 'none' ) {
             $ ( this ).find('i.fa-angle-down').css('transform', 'translateY(-50%) rotate(180deg)');
         } else {
@@ -1424,3 +1464,19 @@ $(document).ready(function() {
     </script>
 
 <?php } ?>
+
+<script>
+    var all_tabs = $('nav a.navigation-link');
+    //console.log(all_tabs);
+    var activeTab = <?php echo json_encode($activeTab); ?>;
+    all_tabs.each(function( index ) {
+        //$( this ).data("type");
+        if ( $( this ).data("type") == activeTab ) {
+            $( this ).addClass("active");
+            $( this ).parent().addClass("active-li");
+        } else {
+            $( this ).removeClass("active");
+            $( this ).parent().removeClass("active-li");
+        }
+    });
+</script>

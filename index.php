@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bravarija RIS</title>
+    <?php require_once 'favicon.php'; ?>
     <?php require_once 'css/all_pages_css.php'; ?>
     <?php require_once 'scripts/scripts.php'; ?>
     <!-- Lightbox2 CSS -->
@@ -26,6 +27,7 @@
     require_once 'css/cover_css.php';
 } ?>
 <body>
+    <?php $activeTab = "HOME"; ?>
     <?php require_once 'components/navigation/navigation_'.$type_of_navigation.'.php' ?>
     <?php 
         if ( $sideSocialIcons ) {
@@ -69,5 +71,10 @@
             checkInView();
         });
     </script>
+    <?php
+        foreach ($javaScripts as $oneScript) {
+            echo "<script>{$oneScript}</script>";
+        }
+    ?>
 </body>
 </html>
