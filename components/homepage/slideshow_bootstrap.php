@@ -2,7 +2,7 @@
 #carouselSlideshow-v2 {
     overflow: hidden;
     background-color: var(--bootstrapSlideshowBg);
-    .title-h1, .subtitle-h2 {
+    .title-h1, .subtitle-h2, .title-h3, p {
         color: var(--slideshow_text_color);
     }
     .carousel-indicators [data-bs-target] {
@@ -177,8 +177,10 @@
                 <div class="carousel-caption d-md-block">
                     <?php if ($slide["data-id"] == "0") : ?>
                         <h1 class="title-h1"><?php echo $slide["h2"]; ?></h1>
+                        <?php echo $slide["text"]; ?>
                     <?php else: ?>
                         <h2 class="subtitle-h2"><?php echo $slide["h2"]; ?></h2>
+                        <?php echo $slide["text"]; ?>
                     <?php endif; ?>
                 </div>
             </div>

@@ -46,7 +46,7 @@
     <form class="row g-3 needs-validation" novalidate>
         <div class="form-floating pb-2">
             <input type="text" class="form-control" id="name" name="name" placeholder="" required>
-            <label for="last-name">Ime</label>
+            <label for="name">Ime</label>
             <div class="valid-feedback">
                 Ime je dobro!
             </div>

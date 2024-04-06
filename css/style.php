@@ -94,4 +94,35 @@
         /* buttons 9 10 11 animation bg color */
         --button_animation_bg_color : <?php echo $button_animation_bg_color; ?>;
     }
+    <?php
+    
+    foreach ($all_buttons_style as $button) {
+        $button_bg_color = ${'button_' . $button['initial-state'] . '_bg_color'};
+        $button_border_color = ${'button_' . $button['initial-state'] . '_border_color'};
+        $button_text_color = ${'button_' . $button['initial-state'] . '_text_color'};
+        $button_border_radius = ${'button_' . $button['initial-state'] . '_border_radius'};
+
+        $button_bg_color_hover = ${'button_' . $button['hover-state'] . '_bg_color_hover'};
+        $button_border_color_hover = ${'button_' . $button['hover-state'] . '_border_color_hover'};
+        $button_text_color_hover = ${'button_' . $button['hover-state'] . '_text_color_hover'};
+
+        echo "
+            .{$button['section-class']} .btn-custom-style {
+                background-color: {$button_bg_color};
+                border: 2px solid {$button_border_color};
+                color: {$button_text_color};
+                border-radius: {$button_border_radius};
+            }
+            .{$button['section-class']} .btn-custom-style:hover,
+            .{$button['section-class']} .btn-custom-style:focus,
+            .{$button['section-class']} .btn-custom-style:hover:before,
+            .{$button['section-class']} .btn-custom-style:focus:before  {
+                background-color: {$button_bg_color_hover};
+                border-color: {$button_border_color_hover};
+                color: {$button_text_color_hover};
+            }
+        ";
+    }
+
+    ?>
 </style>

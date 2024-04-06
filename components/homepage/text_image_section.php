@@ -26,6 +26,6 @@
         }
     }
 </style>
-<div class="container col-xxl-12">
+<div class="container col-xxl-12 text_image_section_1">
     <?php echo !empty( $text_image_section_1_html ) ? $text_image_section_1_html : ""; ?>
 </div>

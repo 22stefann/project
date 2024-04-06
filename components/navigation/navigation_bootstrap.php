@@ -650,6 +650,7 @@
         });
 
         $('.navbar-toggler').click(function () {
+            $('#navbar4').slideToggle();
             $('#navbar4').toggleClass('show');
         });
         <?php if ( $bootstrap_nav_height_scroll_change ) { ?>

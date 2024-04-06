@@ -28,6 +28,6 @@
         }
     }
 </style>
-<div class="container col-xxl-8 all-section-style">
+<div class="container col-xxl-8 all-section-style text_image_section_2">
     <?php echo !empty( $text_image_section_2_html ) ? $text_image_section_2_html : ""; ?>
 </div>

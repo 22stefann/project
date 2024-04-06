@@ -13,11 +13,14 @@
     <!-- Lightbox2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
     
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!--map script -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--map script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <!--map Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
     <?php require_once 'css/style.php'; ?>
 <style>
@@ -61,7 +64,7 @@
                 if (inView && !element.classList.contains('in')) {
                 element.classList.add('in');
                 } else if (!inView && element.classList.contains('in')) {
-                element.classList.remove('in');
+                //element.classList.remove('in');
                 element.style.transform = 'translateX(' + originalPosition + '%)';
                 }
             });
@@ -71,6 +74,18 @@
             checkInView();
         });
     </script>
+<script>
+    var all_section_animation = <?php echo $all_section_animation; ?>;
+    all_section_animation.forEach(function(sectionClass) {
+        var elements = document.querySelectorAll('.' + sectionClass + ' *');
+        elements.forEach(function(element) {
+            // Dodajemo klasu .animate
+            element.classList.add('animated-element');
+            element.classList.add('animate-left');
+        });
+    });
+</script>
+
     <?php
         foreach ($javaScripts as $oneScript) {
             echo "<script>{$oneScript}</script>";

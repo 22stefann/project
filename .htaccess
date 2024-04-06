@@ -1,3 +1,5 @@
 RewriteEngine On
 RewriteRule ^(.*)index$ index.php [L]
 RewriteRule ^(.*)about$ pages/first_pages.php [L]
+# RewriteRule ^(.*)mapa$ pages/mapa.php [L]
+RewriteRule ^(.*)mapa$ pages/google_mapa.php [L]

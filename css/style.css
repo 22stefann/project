@@ -57,7 +57,6 @@ button.form.btn {
     overflow: hidden;
     transition: 1s all ease;
     z-index: 0;
-    width: 200px;
 }
 a.btn:hover,
 button.form.btn:hover {

@@ -39,8 +39,16 @@
     position: absolute;
     bottom: 35%;
     font-family: var(--h2FontFamily);
-    color: #fff;
+    color: var(--slideshow_text_color);
     font-size: 2em;
+}
+
+.cover-content .title-h3 {
+    position: absolute;
+    font-family: var(--h2FontFamily);
+    color: var(--slideshow_text_color);
+    font-size: 2em;
+    top: 52%;
 }
 
 .cover-content .slide-image {
@@ -526,6 +534,7 @@
     position: absolute;
     bottom: 30px;
     right: 16px;
+    z-index: 1;
     i {
         font-size: 2.5em;
         color: #fff;
@@ -540,6 +549,7 @@
     position: absolute;
     bottom: 30px;
     left: 16px;
+    z-index: 1;
     i {
         font-size: 2.5em;
         color: #fff;
@@ -581,7 +591,6 @@
         position: relative;
         background: var(--custom_cover_bg_color);
         overflow: hidden;
-        margin-top: var(--desktop_video_margin_top);
     }
     .circle{
         position: absolute;
@@ -639,7 +648,7 @@
     .text-1-tleft{
         width: 200px;
         position: absolute;
-        top: 12%;
+        top: 150px;
         left: 10%;
         opacity: 1;
         color: var(--custom_cover_section_text_color);
@@ -653,7 +662,7 @@
     .text-1-bright{
         width: 200px;
         position: absolute;
-        bottom: 10%;
+        bottom: 60px;
         right: 10%;
         text-transform: uppercase;
         transition: all .3s;
@@ -667,7 +676,7 @@
         font-weight: 600;
         width: 200px;
         position: absolute;
-        top: 12%;
+        top: 150px;
         right: -5%;
         opacity: 0;
         text-transform: uppercase;
@@ -681,7 +690,7 @@
     .text-2-bleft{
         width: 200px;
         position: absolute;
-        bottom: 10%;
+        bottom: 60px;
         left: -5%;
         opacity: 0;
         text-transform: uppercase;

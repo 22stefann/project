@@ -16,7 +16,7 @@
                   <a href="custom/gallery/' + item.img + '" data-lightbox="gallery" data-title="' + item.alt + '"> \
                     <div class="overflow"> \
                       <div class="content-art"> \
-                        <h4>' + item.alt + '</h4> \
+                        <h3>' + item.alt + '</h3> \
                       </div> \
                       <img style="width:100%;" src="custom/gallery/' + item.img + '" alt="' + item.alt + '" class="img-responsive"/> \
                     </div> \

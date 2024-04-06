@@ -10,14 +10,7 @@
     <?php if ( $under_cover_top_svg ) : ?>
         <?php require "components/top_svg.php" ?>
     <?php endif; ?>
-    <div class="">
-        <h2 class="subtitle-h2 animated-element animate-left">Under cover section</h2>
-        <h3 class="title-h3 animated-element animate-left">subtitle</h3>
-        <div class="col-lg-6 mx-auto">
-        <p class="animated-element animate-left">text</p>
-        <a href="" class="btn btn-custom-style">Button</a>
-        </div>
-    </div>
+        <?php echo $under_cover_section_html; ?>
     <?php if ( $under_cover_bottom_svg ) : ?>
         <?php require "components/bottom_svg.php" ?>
     <?php endif; ?>

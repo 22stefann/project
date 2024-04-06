@@ -49,9 +49,76 @@
     $h2FontFamily = "'Smooch Sans', cursive";
 
     //define buttons
-    $buttons_animation = 11;
+    $buttons_animation = 1;
     //set bg color for 9 10 and 11 button animations
-    $button_animation_bg_color = "#eded";
+    $button_animation_bg_color = "#fff";
+    //button 1 colors
+    $button_1_bg_color = "#fff";
+    $button_1_border_color = "#fff";
+    $button_1_text_color = "#000";
+    $button_1_border_radius = "10px 20px";
+
+    $button_1_bg_color_hover = "#eb4034";
+    $button_1_border_color_hover = "#fff";
+    $button_1_text_color_hover = "#fff";
+
+    //button 2 colors
+    $button_2_bg_color = "#145287";
+    $button_2_border_color = "#fff";
+    $button_2_text_color = "#fff";
+    $button_2_border_radius = "20px 10px";
+
+    $button_2_bg_color_hover = "#078afa";
+    $button_2_border_color_hover = "#fff";
+    $button_2_text_color_hover = "#fff";
+
+    // "under_cover",
+    // "form",
+    // #"simple_section_3",
+    // #"slideshow_bootstrap",
+    // #"slideshow_v1",
+    // #"simple_section_2",
+    // "text_image_section_2",
+    // "gallery_v1",
+    // "simple_section_1",
+    // "text_image_section",
+    // "section_column",
+    // "album_section",
+    // "map_v1",
+    // #"footer_v2",
+    // "footer_v1",
+    // #"gallery_v2"
+
+    $all_buttons_style = array(
+        array( "section-class" => "under-cover-section", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+        array( "section-class" => "form-holder", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 2 ),
+        array( "section-class" => "simple-section-1", "initial-state" => 1 , "hover-state" => 2, "border-radius" => 1 ),
+        array( "section-class" => "simple-section-2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+        array( "section-class" => "simple-section-3", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+        array( "section-class" => "cover-content", "initial-state" => 2 , "hover-state" => 1, "border-radius" => 1 ),
+        array( "section-class" => "text_image_section_1", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+        array( "section-class" => "text_image_section_2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+        array( "section-class" => "section-column", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+        #array( "section-class" => "album-section", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+    );
+
+    //define animation on text in sections
+
+    $all_section_animation = [
+        "under-cover-section",
+        "form-holder",
+        "simple-section-1",
+        "simple-section-2",
+        "simple-section-3",
+        "text_image_section_1",
+        "text_image_section_2",
+        "section-column",
+        "album-section",
+        "gallery-v1"
+    ];
+
+    $all_section_animation = json_encode($all_section_animation);
+
 
     ####################################################################
     #################### BACK TO TOP BUTTON ############################
@@ -247,9 +314,9 @@
 
     $navTabs = array(
         #array("type" => "HOME", "name" => "Pocetna", "link" => "index", "target" => "_self", "class" => "navigation-tab"),
-        #array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
+        array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
         array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("about"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "CONTACT", "name" => "Kontakt", "link" => "#", "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project#", "target" => "_self", "class" => "navigation-tab"),
         #array("type" => "TEST", "name" => "Test", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
@@ -258,8 +325,8 @@
 
     //array for submenu navigation tab
     $subTabs = array(
-        #array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        #array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+        array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+        array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
         #array("type" => "TEST", "name" => "test", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
         #array("type" => "TEST", "name" => "test2", "link" => "#", "target" => "_self", "class" => "dropdown-sub")
     );
@@ -270,47 +337,49 @@
 
     $homepageSection = array (
         "under_cover",
-        "form",
+        #"form",
         #"simple_section_3",
-        #"slideshow_bootstrap",
         #"slideshow_v1",
         #"simple_section_2",
         "text_image_section_2",
-        "gallery_v1",
-        "simple_section_1",
-        "text_image_section",
-        "section_column",
-        "album_section",
+        #"slideshow_bootstrap",
+        #"gallery_v1",
+        #"gallery_v2",
+        #"simple_section_1",
+        #"text_image_section",
+        #"section_column",
+        #"album_section",
         "map_v1",
-        #"footer_v2",
-        "footer_v1",
-        #"gallery_v2"
+        #"map_v2",
+        #"map_v3",
+        "footer_v2",
+        #"footer_v1"
     );
 
     ####################################################################
     #################### COVER SECTION #################################
     ####################################################################
     //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-    $cover_content ="slideshow_bootstrap";
+    $cover_content ="video";
     //video, slideshow, custom section margin-top on desktop 
-    $desktop_video_margin_top = "70px";
+    $desktop_video_margin_top = "80px";
     //video, slideshow, custom section margin-top on mobile
-    $mobile_video_margin_top = "50px";
+    $mobile_video_margin_top = "60px";
     #################################
     ############SLIDESHOW cover######
     #################################
     //slideshow autoplay
-    $slideshowAutoplay = false;
+    $slideshowAutoplay = true;
     //slideshow delay
-    $slideshowDelay = "3000";
+    $slideshowDelay = "10000";
     //show hide arrow
     $slideshowArrow = true;
     //slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11
-    $slideshowAnimation = 1;
+    $slideshowAnimation = 7;
     //slideshow mobile height *bootstrap
     $slideshow_height_mobile = "60vh";
     //slideshow alpha can be brightness(0.5), opacity(0.5),blur(3px), contrast(0.5),grayscale(1),  if bootstrap if not set rgba(0,0,0,0.5);*bootstrap
-    $slideshowAlpha = "rgba(0,0,0,0.5)";
+    $slideshowAlpha = "rgba(0,0,0,0.8)";
     //slideshow text color *bootstrap
     $slideshow_text_color = "#fff";
     //slideshow arrow color rgba(255,255,255,0.8);*bootstrap
@@ -352,9 +421,9 @@
     );
     //slideshow content
     $slideshow_array = array(
-        array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "Saint Augustine", "data-id" => "0"),
-        array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "Anonymous", "data-id" => "1"),
-        array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "Tim Cahill", "data-id" => "2"),
+        array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<p><a class='btn btn-custom-style' href='#'>slide 1</a></p>", "data-id" => "0"),
+        array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "<p><a class='btn btn-custom-style' href='#'>slide 2</a></p>", "data-id" => "1"),
+        array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "<h3 class=\"title-h3\">slideshow subtitle</h3>", "data-id" => "2"),
         #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
         #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
     );
@@ -379,9 +448,19 @@
     //top svg color
     $under_cover_top_svg_color = "#000";
     //svg bottom
-    $under_cover_bottom_svg = true;
+    $under_cover_bottom_svg = false;
     //bottom svg color
     $under_cover_bottom_svg_color = "#000";
+    $under_cover_section_html = <<<HTML
+    <div class="">
+        <h1 class="subtitle-h2 animated-element animate-left">Under cover section</h1>
+        <h2 class="title-h3 animated-element animate-left">subtitle</h2>
+        <div class="col-lg-6 mx-auto">
+        <p class="animated-element animate-left">text</p>
+        <a href="" class="btn btn-custom-style animated-element animate-left">Under Cover</a>
+        </div>
+    </div>
+HTML;
 
     ####################################################################
     #################### SLIDESHOW v1 SECTION ##########################
@@ -407,20 +486,20 @@
     //slideshow content vertical align top, center, bottom
     $slideshowBootstrapVerticalAlign = "center";
     //filter
-    $slideshowBootstrapAlpha = "brightness(0.5)";
+    $slideshowBootstrapAlpha = "brightness(0.2)";
     
     ####################################################################
     #################### GALLERY SECTION ###############################
     ####################################################################
 
-    $gallery_section_title = "gallery";
-    $gallery_section_title_color = "#fff";
+    $gallery_section_title = "";
+    $gallery_section_title_color = "#000";
     $gallery_v1_bg_color = "#11101d";
     $gallery_array = array(
-        array("img" => "gallery_1.jpg" , "alt" => "gallery photo 1"),
-        array("img" => "gallery_2.jpg" , "alt" => "gallery photo 2"),
-        array("img" => "gallery_3.jpg" , "alt" => "gallery photo 3"),
-        array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
+        array("img" => "gallery_1.jpg" , "alt" => "forest"),
+        array("img" => "gallery_2.jpg" , "alt" => "city"),
+        array("img" => "gallery_3.jpg" , "alt" => "rain"),
+        #array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
         //array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
         //array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
         // array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
@@ -454,7 +533,7 @@ $simple_section_1_html = <<<HTML
 <h3 class="title-h3">Simple section 1</h3>
 <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">Ovde ide neki takst</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">simple section</a>
 </div>
 
 HTML;
@@ -486,7 +565,7 @@ $simple_section_2_html = <<<HTML
 <h3 class="title-h3">Simple section 2</h3>
 <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">Ovde ide neki takst</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">section 2</a>
 </div>
 
 HTML;
@@ -518,7 +597,7 @@ $simple_section_3_html = <<<HTML
 <h3 class="title-h3">Simple section 3</h3>
 <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">Ovde ide neki takst</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">section 3</a>
 </div>
 
 HTML;
@@ -556,7 +635,7 @@ $text_image_section_1_html = <<<HTML
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
 
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">text-image 1</a>
 
     </div>
 </div>
@@ -566,7 +645,7 @@ $text_image_section_1_html = <<<HTML
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
 
-        <a href="" class="btn btn-custom-style">Button</a>
+        <a href="" class="btn btn-custom-style">text-image 1</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
@@ -607,7 +686,7 @@ $text_image_section_2_html = <<<HTML
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
 
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">text-image 2</a>
 
     </div>
 </div>
@@ -617,7 +696,7 @@ $text_image_section_2_html = <<<HTML
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
 
-        <a href="" class="btn btn-custom-style">Button</a>
+        <a href="" class="btn btn-custom-style">text-image 2</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
@@ -651,27 +730,27 @@ $section_column_html = <<<HTML
 <div class="row g-4 row-cols-1 row-cols-lg-3">
     <div class="feature col">
     <div class="">
-    <img src="custom/gallery/gallery_1.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <img src="custom/gallery/gallery_1.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Forest" width="700" height="500" loading="lazy">
     </div>
     <h3 class="title-h3">Naslov</h3>
     <p>Ovde ide neki tekst</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">item 1</a>
     </div>
     <div class="feature col">
     <div class="">
-        <img src="custom/gallery/gallery_2.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img src="custom/gallery/gallery_2.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="City" width="700" height="500" loading="lazy">
     </div>
     <h3 class="title-h3">Naslov</h3>
     <p>Ovde ide neki tekst</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">item 2</a>
     </div>
     <div class="feature col">
     <div class="">
-    <img src="custom/gallery/gallery_3.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <img src="custom/gallery/gallery_3.jpg" class="d-block mx-lg-auto img-fluid mt-4 mb-4" alt="rain" width="700" height="500" loading="lazy">
     </div>
     <h3 class="title-h3">Naslov</h3>
     <p>Ovde ide neki tekst</p>
-    <a href="" class="btn btn-custom-style">Button</a>
+    <a href="" class="btn btn-custom-style">item 3</a>
     </div>
 </div>
 
@@ -756,7 +835,21 @@ $map_zoom_level = 18;
 $address_map = "bravarija ris osecina";
 $latituda = '44.379265097376106';
 $longituda = '19.60514016282363';
-$dark_map = false;
+$dark_map = true;
+$map_v1_height = "550px";
+
+####################################################################
+#################### map section v2  ###############################
+####################################################################
+//set map style light , color, dark
+$map_v2_style = "dark";
+// set map zoom 8 9 10 12 13 15 18 20 ...
+$map_v2_zoom_level = 19;
+$address_map_v2 = "Bravarija RIS Osecina";
+$coordinates = '44.37926393246601, 19.60505969658644';
+$map_v2_height = "550px";
+$map_v2_link = "https://maps.app.goo.gl/DAYSkea73XEjE2GJA";
+
 
 
 
