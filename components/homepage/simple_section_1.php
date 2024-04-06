@@ -14,8 +14,20 @@
         p {
             color: <?php echo $simple_section_1_text_color; ?>;
         }
+        .top-svg {
+            fill: <?php echo $simple_section_1_top_svg_color; ?>;
+        }
+        .bottom-svg {
+            fill: <?php echo $simple_section_1_bottom_svg_color; ?>;
+        }
     }
 </style>
 <div class="all-section-style text-center simple-section-1">
+    <?php if ( $simple_section_1_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <?php echo !empty( $simple_section_1_html ) ? $simple_section_1_html : ""; ?>
+    <?php if ( $simple_section_1_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 </div>

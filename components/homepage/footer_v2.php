@@ -2,8 +2,15 @@
 .footer-v2 {
     background-color: <?php echo $footer_v1_bg_color; ?>;
     padding: 1em 0;
+    position: relative;
     p, span, a, i {
         color: <?php echo $footer_v1_text_color; ?>;
+    }
+    .top-svg {
+            fill: <?php echo $footer_top_svg_color; ?>;
+    }
+    .bottom-svg {
+        fill: <?php echo $footer_bottom_svg_color; ?>;
     }
 }
 .footer-v2 ul li {
@@ -37,6 +44,9 @@
 }
 </style>
 <div id="footer_v2" class="footer-v2" >
+    <?php if ( $footer_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <div class="container">
     <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3 navbar-nav ml-auto mt-lg-0 social-display-block flex-row align-items-center social-icon">
@@ -93,4 +103,7 @@
         <p class="text-center">© 2024 Company, Inc</p>
     </footer>
     </div>
+    <?php if ( $footer_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 </div>

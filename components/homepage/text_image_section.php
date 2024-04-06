@@ -24,8 +24,20 @@
                 padding: 0;
             }
         }
+        .top-svg {
+            fill: <?php echo $text_image_section_1_top_svg_color; ?>;
+        }
+        .bottom-svg {
+            fill: <?php echo $text_image_section_1_bottom_svg_color; ?>;
+        }
     }
 </style>
-<div class="container col-xxl-12 text_image_section_1">
+<div class="container col-xxl-12 text_image_section_1 all-section-style">
+    <?php if ( $text_image_section_1_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <?php echo !empty( $text_image_section_1_html ) ? $text_image_section_1_html : ""; ?>
+    <?php if ( $text_image_section_1_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 </div>

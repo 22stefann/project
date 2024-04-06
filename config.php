@@ -337,30 +337,30 @@
 
     $homepageSection = array (
         "under_cover",
-        #"form",
+        "form",
         #"simple_section_3",
         #"slideshow_v1",
         #"simple_section_2",
-        "text_image_section_2",
-        #"slideshow_bootstrap",
+        #"text_image_section_2",
+        "slideshow_bootstrap",
         #"gallery_v1",
-        #"gallery_v2",
-        #"simple_section_1",
-        #"text_image_section",
+        "gallery_v2",
+        "simple_section_1",
+        "text_image_section",
         #"section_column",
         #"album_section",
-        "map_v1",
-        #"map_v2",
+        #"map_v1",
+        "map_v2",
         #"map_v3",
-        "footer_v2",
-        #"footer_v1"
+        #"footer_v2",
+        "footer_v1"
     );
 
     ####################################################################
     #################### COVER SECTION #################################
     ####################################################################
     //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-    $cover_content ="video";
+    $cover_content ="slideshow";
     //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "80px";
     //video, slideshow, custom section margin-top on mobile
@@ -470,6 +470,14 @@ HTML;
     $slideshowSectionDesktopHeight = "700px";
     //set mobile version slideshow height
     $slideshowSectionMobileHeight = "400px";
+    //svg top
+    $slideshow_v1_top_svg = false;
+    //top svg color
+    $slideshow_v1_top_svg_color = "#000";
+    //svg bottom
+    $slideshow_v1_bottom_svg = false;
+    //bottom svg color
+    $slideshow_v1_bottom_svg_color = "#000";
 
     ####################################################################
     #################### SLIDESHOW bootstrap SECTION ###################
@@ -487,12 +495,20 @@ HTML;
     $slideshowBootstrapVerticalAlign = "center";
     //filter
     $slideshowBootstrapAlpha = "brightness(0.2)";
+    //svg top
+    $slideshow_bootstrap_top_svg = false;
+    //top svg color
+    $slideshow_bootstrap_top_svg_color = "#000";
+    //svg bottom
+    $slideshow_bootstrap_bottom_svg = false;
+    //bottom svg color
+    $slideshow_bootstrap_bottom_svg_color = "#000";
     
     ####################################################################
     #################### GALLERY SECTION ###############################
     ####################################################################
 
-    $gallery_section_title = "";
+    $gallery_section_title = "Galerija";
     $gallery_section_title_color = "#000";
     $gallery_v1_bg_color = "#11101d";
     $gallery_array = array(
@@ -505,6 +521,14 @@ HTML;
         // array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
         // array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
     );
+    //svg top
+    $gallery_top_svg = false;
+    //top svg color
+    $gallery_top_svg_color = "#000";
+    //svg bottom
+    $gallery_bottom_svg = false;
+    //bottom svg color
+    $gallery_bottom_svg_color = "#000";
 
 ####################################################################
 #################### SIMPLE SECTION 1 ##############################
@@ -525,6 +549,14 @@ $simple_section_1_bg_attachment = "fixed";
 $simple_section_1_bg_size = "cover";
 //simple section image repeat
 $simple_section_1_bg_repeat = "no-repeat";
+//svg top
+$simple_section_1_top_svg = false;
+//top svg color
+$simple_section_1_top_svg_color = "#000";
+//svg bottom
+$simple_section_1_bottom_svg = false;
+//bottom svg color
+$simple_section_1_bottom_svg_color = "#000";
 //simple section html
 $simple_section_1_html = <<<HTML
 
@@ -557,6 +589,14 @@ $simple_section_2_bg_attachment = "fixed";
 $simple_section_2_bg_size = "cover";
 //simple section image repeat
 $simple_section_2_bg_repeat = "no-repeat";
+//svg top
+$simple_section_2_top_svg = false;
+//top svg color
+$simple_section_2_top_svg_color = "#000";
+//svg bottom
+$simple_section_2_bottom_svg = false;
+//bottom svg color
+$simple_section_1_bottom_svg_color = "#000";
 //simple section html
 $simple_section_2_html = <<<HTML
 
@@ -589,6 +629,14 @@ $simple_section_3_bg_attachment = "fixed";
 $simple_section_3_bg_size = "cover";
 //simple section image repeat
 $simple_section_3_bg_repeat = "no-repeat";
+//svg top
+$simple_section_3_top_svg = false;
+//top svg color
+$simple_section_3_top_svg_color = "#000";
+//svg bottom
+$simple_section_3_bottom_svg = false;
+//bottom svg color
+$simple_section_3_bottom_svg_color = "#000";
 //simple section html
 $simple_section_3_html = <<<HTML
 
@@ -604,7 +652,7 @@ HTML;
 
 
 ####################################################################
-#################### Podnaslov ##########################
+#################### text_image_section_1 ##########################
 ####################################################################
 //simple section title color
 $text_image_section_1_title_color = "#fff";
@@ -624,6 +672,14 @@ $text_image_section_1_bg_size = "cover";
 $text_image_section_1_bg_repeat = "no-repeat";
 //set width of section
 $text_image_section_1_width = "100%";
+//svg top
+$text_image_section_1_top_svg = false;
+//top svg color
+$text_image_section_1_top_svg_color = "#000";
+//svg bottom
+$text_image_section_1_bottom_svg = false;
+//bottom svg color
+$text_image_section_1_bottom_svg_color = "#000";
 //simple section html
 $text_image_section_1_html = <<<HTML
 
@@ -675,10 +731,18 @@ $text_image_section_2_bg_size = "cover";
 $text_image_section_2_bg_repeat = "no-repeat";
 //set width of section
 $text_image_section_2_width = "100%";
+//svg top
+$text_image_section_2_top_svg = false;
+//top svg color
+$text_image_section_2_top_svg_color = "#000";
+//svg bottom
+$text_image_section_2_bottom_svg = false;
+//bottom svg color
+$text_image_section_2_bottom_svg_color = "#000";
 //simple section html
 $text_image_section_2_html = <<<HTML
 
-<div class="row align-items-center pt-5">
+<div class="row align-items-center">
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
     <div class="col-12 col-sm-6 col-lg-6 px-5 text-left">
@@ -723,6 +787,14 @@ $section_column_bg_attachment = "fixed";
 $section_column_bg_size = "cover";
 //section column image repeat
 $section_column_bg_repeat = "no-repeat";
+//svg top
+$section_column_top_svg = false;
+//top svg color
+$section_column_top_svg_color = "#000";
+//svg bottom
+$section_column_bottom_svg = false;
+//bottom svg color
+$section_column_bottom_svg_color = "#000";
 //section column html
 $section_column_html = <<<HTML
 
@@ -778,6 +850,14 @@ $section_album_bg_attachment = "fixed";
 $section_album_bg_size = "cover";
 //section album image repeat
 $section_album_bg_repeat = "no-repeat";
+//svg top
+$section_album_top_svg = false;
+//top svg color
+$section_album_top_svg_color = "#000";
+//svg bottom
+$section_album_bottom_svg = false;
+//bottom svg color
+$section_album_bottom_svg_color = "#000";
 
 $album_section_items = array(
     array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
@@ -808,7 +888,7 @@ $form_top_svg = false;
 //top svg color
 $form_top_svg_color = "#000";
 //svg bottom
-$form_bottom_svg = true;
+$form_bottom_svg = false;
 //bottom svg color
 $form_bottom_svg_color = "#11101d";
 
@@ -824,6 +904,14 @@ $footer_v1_text_color = "#fff";
 $footer_v1_social_hover_color = "#000";
 //social icon hover bg color
 $footer_v1_social__bg_hover_color = "#fcfc";
+//svg top
+$footer_top_svg = false;
+//top svg color
+$footer_top_svg_color = "#000";
+//svg bottom
+$footer_bottom_svg = false;
+//bottom svg color
+$footer_bottom_svg_color = "#000";
 
 ####################################################################
 #################### map section v1  ###############################

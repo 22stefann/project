@@ -1,5 +1,13 @@
 <style>
 #carouselSlideshow-v2 {
+    .top-svg {
+        fill: <?php echo $slideshow_bootstrap_top_svg_color; ?>;
+        z-index: 1;
+    }
+    .bottom-svg {
+        fill: <?php echo $slideshow_bootstrap_bottom_svg_color; ?>;
+        z-index: 1;
+    }
     overflow: hidden;
     background-color: var(--bootstrapSlideshowBg);
     .title-h1, .subtitle-h2, .title-h3, p {
@@ -162,6 +170,9 @@
 }
 </style>
 <div id="carouselSlideshow-v2" class="carousel carousel-dark slide">
+    <?php if ( $slideshow_bootstrap_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <div class="carousel-indicators">
         <?php $slideBr=0; ?>
         <?php foreach ($slideshow_array as $slide) : ?>
@@ -201,6 +212,10 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    <?php endif; ?>
+    
+    <?php if ( $slideshow_bootstrap_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
     <?php endif; ?>
 </div>
 

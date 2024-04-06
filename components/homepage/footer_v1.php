@@ -4,6 +4,12 @@
     p, span, a, i {
         color: <?php echo $footer_v1_text_color; ?>;
     }
+    .top-svg {
+            fill: <?php echo $footer_top_svg_color; ?>;
+    }
+    .bottom-svg {
+        fill: <?php echo $footer_bottom_svg_color; ?>;
+    }
 }
 .footer-v1 ul li {
     width: 40px;
@@ -36,6 +42,10 @@
 }
 </style>
 <div id="footer_v1" class="footer-v1 all-section-style" >
+    
+    <?php if ( $footer_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <div  class="container">
         <footer  class="d-flex flex-wrap justify-content-between align-items-center ">
             <div class="col-xs-12 col-md-4 d-flex align-items-center justify-content-center">
@@ -95,4 +105,8 @@
             </ul>
         </footer>
     </div>
+    
+    <?php if ( $footer_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 </div>

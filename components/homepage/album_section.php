@@ -18,9 +18,19 @@
                 color: <?php echo $section_card_text_color; ?>;
             }
         }
+        .top-svg {
+            fill: <?php echo $section_album_top_svg_color; ?>;
+        }
+        .bottom-svg {
+            fill: <?php echo $section_album_bottom_svg_color; ?>;
+        }
     }
 </style>
 <div class="album album-section all-section-style">
+    
+    <?php if ( $section_album_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
     <div class="container text-center">
         <h2 class="subtitle-h2">Selcija sa albumima</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -36,4 +46,8 @@
             <?php endforeach; ?>
         </div>
     </div>
+    
+    <?php if ( $section_album_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 </div>

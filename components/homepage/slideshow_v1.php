@@ -1,5 +1,14 @@
 <style>
 
+    #slideshow_v1 {
+        .top-svg {
+            fill: <?php echo $slideshow_v1_top_svg_color; ?>;
+        }
+        .bottom-svg {
+            fill: <?php echo $slideshow_v1_bottom_svg_color; ?>;
+        }
+    }
+
 .slideshow_v1_section,
 .slideshow_v1_section .main-slideshow {
     height: var(--slideshowSectionDesktopHeight);
@@ -512,6 +521,10 @@
 <?php } ?>
 </style>
 <div id="slideshow_v1" class="slideshow_v1_section">
+    <?php if ( $slideshow_v1_top_svg ) : ?>
+        <?php require "components/top_svg.php" ?>
+    <?php endif; ?>
+
     <div class="main-slideshow">
         <div class="slide-container">
             <?php foreach ($slideshow_array as $slide) { ?>
@@ -545,6 +558,10 @@
             </ul>
         <?php } ?>
     </div>
+    
+    <?php if ( $slideshow_v1_bottom_svg ) : ?>
+        <?php require "components/bottom_svg.php" ?>
+    <?php endif; ?>
 </div>
 
 <script>
