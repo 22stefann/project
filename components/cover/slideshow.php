@@ -12,12 +12,12 @@
           <h1 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
             <?php echo $slide["h2"]; ?>
           </h1>
-           <p class="title-h3 sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></p>
+           <div class="sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></div>
           <?php } else { ?>
             <h2 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
               <?php echo $slide["h2"]; ?>
             </h2>
-            <p class="title-h3 sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></p>
+            <div class="sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></div>
           <?php } ?>
         <?php } ?>
       </div>

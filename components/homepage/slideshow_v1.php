@@ -1,14 +1,12 @@
 <style>
-
-    #slideshow_v1 {
-        .top-svg {
-            fill: <?php echo $slideshow_v1_top_svg_color; ?>;
-        }
-        .bottom-svg {
-            fill: <?php echo $slideshow_v1_bottom_svg_color; ?>;
-        }
+#slideshow_v1 {
+    .top-svg {
+        fill: <?php echo $slideshow_v1_top_svg_color; ?>;
     }
-
+    .bottom-svg {
+        fill: <?php echo $slideshow_v1_bottom_svg_color; ?>;
+    }
+}
 .slideshow_v1_section,
 .slideshow_v1_section .main-slideshow {
     height: var(--slideshowSectionDesktopHeight);
@@ -22,6 +20,7 @@
     justify-content: center;
     align-items: center;
     background: var(--slideshowAlpha);
+    flex-direction: column;
 }
 
 .slideshow_v1_section .slide {
@@ -36,14 +35,19 @@
     color: var(--slideshow_text_color);
     text-align: center;
     padding: 20px;
-    width: 85%;
 }
 
-.slideshow_v1_section .slide-image,
-.slideshow_v1_section .title {
+.slideshow_v1_section span.title-h3 {
+    color: var(--slideshow_text_color);
+}
+
+.slideshow_v1_section .title:not(.current) {
+    display: none;
+}
+
+.slideshow_v1_section .slide-image {
     position: absolute;
 }
-
 .slideshow_v1_section .slideshow-h2 {
     padding-top: 24px;
     position: absolute;
@@ -94,20 +98,20 @@
 }
 
 @keyframes slide-exit-section {
-0% {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-25% {
-    opacity: 0.8;
-}
-75% {
-    opacity: 0.2;
-}
-100% {
-    opacity: 0;
-    transform: translate(-100%, 100%);
-}
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    25% {
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-100%, 100%);
+    }
 }
 
 .slideshow_v1_section .sub-slide {
@@ -124,6 +128,7 @@
 .slideshow_v1_section .sub-slide.current {
     opacity: 0;
     animation: current-title-entry-section 0.7s cubic-bezier(0.694, 0, 0.335, 1) 0s forwards;
+    text-align: center;
 }
 
 @keyframes current-title-entry-section {
@@ -524,41 +529,39 @@
     <?php if ( $slideshow_v1_top_svg ) : ?>
         <?php require "components/top_svg.php" ?>
     <?php endif; ?>
-
     <div class="main-slideshow">
-        <div class="slide-container">
-            <?php foreach ($slideshow_array as $slide) { ?>
-            <div class="slide" data-id="<?php echo $slide["data-id"]; ?>">
-                <div class="slide-image" style="background-image: url(custom/<?php echo $slide["img"]; ?>);"></div>
-            </div>
-            <?php } ?>
-        </div>
-        <div class="slide-texts-container">
-            <?php foreach ($slideshow_array as $slide) { if ( $slide["data-id"] == "99" ) {?>
-            <h1 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
-                <?php echo $slide["h2"]; ?>
-            </h1>
-            <!-- <h2 class="slideshow-h2 sub-slide" data-id="<?php # echo $slide["data-id"]; ?>"><?php # echo $slide["text"]; ?></h2> -->
-            <?php } else { ?>
-                <h2 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
-                <?php echo $slide["h2"]; ?>
-                </h2>
-                <!-- <h3 class="slideshow-h2 sub-slide" data-id="<?php # echo $slide["data-id"]; ?>"><?php # echo $slide["text"]; ?></h3> -->
-            <?php } ?>
-            <?php } ?>
-        </div>
-        <?php if ( !empty($slideshowArrow) && $slideshowArrow == "true" ) { ?>
-            <ul class="slide-buttons">
-            <li class="btn-left">
-                <i class="fa-solid fa-chevron-left"></i>
-            </li>
-            <li class="btn-right">
-                <i class="fa-solid fa-chevron-right"></i>
-            </li>
-            </ul>
+      <div class="slide-container">
+        <?php foreach ($slideshow_array as $slide) { ?>
+          <div class="slide" data-id="<?php echo $slide["data-id"]; ?>">
+            <div class="slide-image" style="background-image: url(custom/<?php echo $slide["img"]; ?>);"></div>
+          </div>
         <?php } ?>
-    </div>
-    
+      </div>
+      <div class="slide-texts-container">
+        <?php foreach ($slideshow_array as $slide) { if ( $slide["data-id"] == "0" ) {?>
+          <h1 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
+            <?php echo $slide["h2"]; ?>
+          </h1>
+           <div class="sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></div>
+          <?php } else { ?>
+            <h2 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
+              <?php echo $slide["h2"]; ?>
+            </h2>
+            <div class="sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></div>
+          <?php } ?>
+        <?php } ?>
+      </div>
+      <?php if ( !empty($slideshowArrow) && $slideshowArrow == "true" ) { ?>
+        <ul class="slide-buttons">
+          <li class="btn-left">
+              <i class="fa-solid fa-chevron-left"></i>
+          </li>
+          <li class="btn-right">
+              <i class="fa-solid fa-chevron-right"></i>
+          </li>
+        </ul>
+      <?php } ?>
+  </div>
     <?php if ( $slideshow_v1_bottom_svg ) : ?>
         <?php require "components/bottom_svg.php" ?>
     <?php endif; ?>

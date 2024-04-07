@@ -339,10 +339,10 @@
         "under_cover",
         "form",
         #"simple_section_3",
-        #"slideshow_v1",
         #"simple_section_2",
         #"text_image_section_2",
         "slideshow_bootstrap",
+        #"slideshow_v1",
         #"gallery_v1",
         "gallery_v2",
         "simple_section_1",
@@ -360,7 +360,7 @@
     #################### COVER SECTION #################################
     ####################################################################
     //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-    $cover_content ="slideshow";
+    $cover_content ="slideshow_bootstrap";
     //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "80px";
     //video, slideshow, custom section margin-top on mobile
@@ -371,7 +371,7 @@
     //slideshow autoplay
     $slideshowAutoplay = true;
     //slideshow delay
-    $slideshowDelay = "10000";
+    $slideshowDelay = "6000";
     //show hide arrow
     $slideshowArrow = true;
     //slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11
@@ -379,7 +379,7 @@
     //slideshow mobile height *bootstrap
     $slideshow_height_mobile = "60vh";
     //slideshow alpha can be brightness(0.5), opacity(0.5),blur(3px), contrast(0.5),grayscale(1),  if bootstrap if not set rgba(0,0,0,0.5);*bootstrap
-    $slideshowAlpha = "rgba(0,0,0,0.8)";
+    $slideshowAlpha = "rgba(0,0,0,0.2)";
     //slideshow text color *bootstrap
     $slideshow_text_color = "#fff";
     //slideshow arrow color rgba(255,255,255,0.8);*bootstrap
@@ -391,7 +391,9 @@
     //slideshow arrow bg color hover
     $slideshow_bg_hover_arrow_color = "rgba(255, 255, 255, 0.7)";
     //slideshow remove arrow on mobile
-    $slideshowMobileArrow = false;
+    $slideshowMobileArrow = true;
+    //custom slideshow text align
+    $custom_slideshow_align = "center";
     #################################
     ############VIDEO################
     #################################
@@ -412,6 +414,8 @@
     $custom_cover_section_play_btn_color = "#000";
     //custom cover section interval
     $custom_cover_interval = "4000";
+    //custom_slideshow_padding_right
+    $custom_slideshow_padding_right = "20px";
     //custom cover section text
     $custom_cover_array = array(
         array("text" => "What you dream", "class" => "text-1-tleft"),
@@ -421,9 +425,9 @@
     );
     //slideshow content
     $slideshow_array = array(
-        array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<p><a class='btn btn-custom-style' href='#'>slide 1</a></p>", "data-id" => "0"),
-        array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "<p><a class='btn btn-custom-style' href='#'>slide 2</a></p>", "data-id" => "1"),
-        array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "<h3 class=\"title-h3\">slideshow subtitle</h3>", "data-id" => "2"),
+        array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
+        array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
+        array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
         #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
         #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
     );
@@ -486,7 +490,7 @@ HTML;
     //slideshow bootstrap autoplay
     $slideshowBootstrapAutoplay = $slideshowAutoplay;
     //slideshow bootstrap bg color
-    $bootstrapSlideshowBg = "#fff";
+    $bootstrapSlideshowBg = "#000";
     //slideshow text align
     $slideshowBootstrapTextAlign = "center";
     //slideshow content horizontal align left, center
@@ -494,7 +498,7 @@ HTML;
     //slideshow content vertical align top, center, bottom
     $slideshowBootstrapVerticalAlign = "center";
     //filter
-    $slideshowBootstrapAlpha = "brightness(0.2)";
+    $slideshowBootstrapAlpha = "brightness(0.4)";
     //svg top
     $slideshow_bootstrap_top_svg = false;
     //top svg color
@@ -923,14 +927,14 @@ $map_zoom_level = 18;
 $address_map = "bravarija ris osecina";
 $latituda = '44.379265097376106';
 $longituda = '19.60514016282363';
-$dark_map = true;
+$dark_map = false;
 $map_v1_height = "550px";
 
 ####################################################################
 #################### map section v2  ###############################
 ####################################################################
 //set map style light , color, dark
-$map_v2_style = "dark";
+$map_v2_style = "light";
 // set map zoom 8 9 10 12 13 15 18 20 ...
 $map_v2_zoom_level = 19;
 $address_map_v2 = "Bravarija RIS Osecina";
