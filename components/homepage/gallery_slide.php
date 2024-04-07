@@ -72,6 +72,7 @@
     }
 }
 </style>
+    <h2 class="title-h1 text-center">Galerija</h2>
 <div id="gallery-slide" class="gallery-slide-section">
     <?php if ( $gallery_slide_top_svg ) : ?>
         <?php require "components/top_svg.php" ?>

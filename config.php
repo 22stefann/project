@@ -7,6 +7,12 @@
 
     $companyName = "Bravarija RiS";
 
+    $companyAddress = "Podgorska 26, <br /> Osecina, <br /> 14253";
+    
+    $companyPhone = "+381695151702";
+
+    $companyEmail = "stefanstanisavljevic777@gmail.com";
+
     ####################################################################
     #################### DEFINE URL ####################################
     ####################################################################
@@ -153,9 +159,9 @@
     //set true if want show phone and email in navigation
     $phoneEmailInNav = false;
     //set phone number
-    $phoneNumber = "+381695151702";
+    $phoneNumber = $companyPhone;
     //set email address
-    $email = "stefanstanisavljevic777@gmail.com";
+    $email = $companyEmail;
     //set side social icons
     $sideSocialIcons = true;
     //set social side from top
@@ -317,8 +323,8 @@
         array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
         array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("about"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "CONTACT", "name" => "Kontakt", "link" => "#", "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "GALLERY", "name" => "Galerija", "link" => "https://github.com/22stefann/project#", "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "KONTAKT", "name" => "Kontakt", "link" => defineUrl("kontakt"), "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "GALERIJA", "name" => "Galerija", "link" => defineUrl("galerija"), "target" => "_self", "class" => "navigation-tab"),
         #array("type" => "TEST", "name" => "Test", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
         array("type" => "CONTACT", "name" => "Kontakt", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab")
     );
@@ -339,14 +345,15 @@
         "under_cover",
         "form",
         #"images_crop",
-        "gallery_slide",
+        #"gallery_slide",
+        "gallery_swap",
         #"simple_section_3",
         #"simple_section_2",
         #"text_image_section_2",
-        "slideshow_bootstrap",
+        #"slideshow_bootstrap",
         #"slideshow_v1",
         #"gallery_v1",
-        "gallery_v2",
+        #"gallery_v2",
         "simple_section_1",
         "text_image_section",
         #"section_column",
@@ -521,11 +528,11 @@ HTML;
         array("img" => "gallery_1.jpg" , "alt" => "forest"),
         array("img" => "gallery_2.jpg" , "alt" => "city"),
         array("img" => "gallery_3.jpg" , "alt" => "rain"),
-        #array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
-        //array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
-        //array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
-        // array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
-        // array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
+        array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
+        array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
+        array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
+        array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
+        array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
     );
     //svg top
     $gallery_top_svg = false;
@@ -579,6 +586,14 @@ $gallery_slide_top_svg_color = "#000";
 $gallery_slide_bottom_svg = false;
 //bottom svg color
 $gallery_slide_bottom_svg_color = "#000";
+
+####################################################################
+#################### gallery swap SECTION #########################
+####################################################################
+
+$gallery_swap_width ="70%";
+$gallery_swap_bg_color = "#000";
+$gallery_swap_title_color = "#000";
 
 ####################################################################
 #################### SIMPLE SECTION 1 ##############################
@@ -980,7 +995,7 @@ $map_v1_height = "550px";
 #################### map section v2  ###############################
 ####################################################################
 //set map style light , color, dark
-$map_v2_style = "light";
+$map_v2_style = "dark";
 // set map zoom 8 9 10 12 13 15 18 20 ...
 $map_v2_zoom_level = 19;
 $address_map_v2 = "Bravarija RIS Osecina";
@@ -989,6 +1004,50 @@ $map_v2_height = "550px";
 $map_v2_link = "https://maps.app.goo.gl/DAYSkea73XEjE2GJA";
 
 
+####################################################################
+############################# pages  ###############################
+####################################################################
+
+#######################################
+############## contact  ###############
+#######################################
+
+$contact_page_bg_color = "#000";
+$contact_page_bg_filter = "rgba(0,0,0,0.8)";
+$contact_page_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+$contact_page_text_color = "#fff";
+$contact_page_subtitle_color = "#1da9c0";
+$contact_page_form_bg_color = "#fff";
+$contact_page_form_text_color = "#333";
+
+//set map_v1 or map_v2 if want map
+$contact_page_show_map = "map_v1";
+$contact_page_h1 = "Kontakt";
+$contact_page_text = "Ovo je kontakt forma ako zelite nesto da nas pitate molimo vas da popunite polja koja se nalaze ispod";
+
+
+#######################################
+############## gallery  ###############
+#######################################
+
+$gallery_page_array = array(
+    array("img" => "gallery_1.jpg" , "alt" => "forest"),
+    array("img" => "gallery_2.jpg" , "alt" => "city"),
+    array("img" => "gallery_3.jpg" , "alt" => "rain"),
+    array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
+    array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
+    array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
+    array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
+    array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
+);
+
+#######################################
+#####gallery from component page ######
+#######################################
+
+$gallery_page_array = $gallery_page_array;
+//insert gallery component
+$gallery_component_page = "gallery_swap";//gallery_v1  gallery_v2 gallery_slide gallery_swap
 
 
 ####################################################################

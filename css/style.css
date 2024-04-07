@@ -18,6 +18,12 @@ p {
     font-weight:  var(--all_p_font_weight);
 }
 
+/*all pages style*/
+
+.all-page-padding-top {
+    padding-top: 100px;
+}
+
 /*animation element start*/
 
 
@@ -87,7 +93,8 @@ button.form.btn::before {
     font-weight:  var(--all_h1_font_weight);
 }
 
-.title-h3 {
+.title-h3,
+.title-h2 {
     font-size: var(--all_h2_font_size);
     font-family: var(--all_h2_font);
     text-transform: var(--all_h2_transform);
