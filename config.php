@@ -338,6 +338,7 @@
     $homepageSection = array (
         "under_cover",
         "form",
+        "images_crop",
         #"simple_section_3",
         #"simple_section_2",
         #"text_image_section_2",
@@ -533,6 +534,30 @@ HTML;
     $gallery_bottom_svg = false;
     //bottom svg color
     $gallery_bottom_svg_color = "#000";
+
+
+####################################################################
+#################### IMAGES CROP SECTION ###############################
+####################################################################
+
+$images_crop_array = array(
+    #array("img" => "gallery_1.jpg" , "text" => "forest"),
+    array("img" => "gallery_3.jpg" , "text" => "rain"),
+    array("img" => "gallery_2.jpg" , "text" => "city"),
+    array("img" => "gallery_4.jpg" , "text" => "gallery photo 4 "),
+    //array("img" => "gallery_5.jpg" , "text" => "gallery photo 5"),
+    //array("img" => "gallery_6.jpg" , "text" => "gallery photo 6"),
+    // array("img" => "gallery_7.jpg" , "text" => "gallery photo"),
+    // array("img" => "gallery_8.jpg" , "text" => "gallery photo")
+);
+//svg top
+$gallery_top_svg = false;
+//top svg color
+$gallery_top_svg_color = "#000";
+//svg bottom
+$gallery_bottom_svg = false;
+//bottom svg color
+$gallery_bottom_svg_color = "#000";
 
 ####################################################################
 #################### SIMPLE SECTION 1 ##############################
