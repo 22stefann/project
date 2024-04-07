@@ -550,6 +550,7 @@ $images_crop_array = array(
     // array("img" => "gallery_7.jpg" , "text" => "gallery photo"),
     // array("img" => "gallery_8.jpg" , "text" => "gallery photo")
 );
+$image_crop_height = "500px";
 //svg top
 $gallery_top_svg = false;
 //top svg color

@@ -1,7 +1,7 @@
 <style>
 .blocks {
     display: flex;
-    height: 500px;
+    height: <?php echo $image_crop_height; ?>;
     overflow: clip;
 }
 .blocks img {
@@ -19,7 +19,7 @@
     will-change: flex;
     position: relative;
 }
-.blocks .block a div {
+.blocks .block  div {
     position: absolute;
     bottom: 1rem;
     left: 2rem;
@@ -52,13 +52,11 @@
 
 </style>
 
-<div class="blocks">
+<div id="images-crop-section" class="blocks">
 <?php foreach ($images_crop_array as $image) : ?>
   <div class="block">
-    <a href="">
       <div><?php echo $image["text"]; ?></div>
       <img src="custom/gallery/<?php echo $image["img"]; ?>" alt="">
-    </a>
   </div>
 <?php endforeach; ?>
 </div>
