@@ -338,7 +338,8 @@
     $homepageSection = array (
         "under_cover",
         "form",
-        "images_crop",
+        #"images_crop",
+        "gallery_slide",
         #"simple_section_3",
         #"simple_section_2",
         #"text_image_section_2",
@@ -537,7 +538,7 @@ HTML;
 
 
 ####################################################################
-#################### IMAGES CROP SECTION ###############################
+#################### IMAGES CROP SECTION ###########################
 ####################################################################
 
 $images_crop_array = array(
@@ -551,6 +552,33 @@ $images_crop_array = array(
     // array("img" => "gallery_8.jpg" , "text" => "gallery photo")
 );
 $image_crop_height = "500px";
+
+####################################################################
+#################### gallery slideshow SECTION #####################
+####################################################################
+
+$gallery_slideshow_array = array(
+    #array("img" => "gallery_1.jpg" , "text" => "forest"),
+    #array("img" => "gallery_3.jpg" , "text" => "rain"),
+    array("img" => "gallery_2.jpg" , "text" => "city"),
+    array("img" => "gallery_4.jpg" , "text" => "gallery photo 4 "),
+    array("img" => "gallery_5.jpg" , "text" => "gallery photo 5"),
+    array("img" => "gallery_6.jpg" , "text" => "gallery photo 6"),
+    array("img" => "gallery_7.jpg" , "text" => "gallery photo"),
+    array("img" => "gallery_8.jpg" , "text" => "gallery photo")
+);
+
+$gallery_slideshow_bg_color = "#000";
+$gallery_slideshow_height = "50vh";
+$gallery_slideshow_height_mobile = "250px";
+//svg top
+$gallery_slide_top_svg = false;
+//top svg color
+$gallery_slide_top_svg_color = "#000";
+//svg bottom
+$gallery_slide_bottom_svg = false;
+//bottom svg color
+$gallery_slide_bottom_svg_color = "#000";
 
 ####################################################################
 #################### SIMPLE SECTION 1 ##############################
