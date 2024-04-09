@@ -26,13 +26,6 @@
     background-size: cover;
     background-position: center;
 
-    &:nth-of-type(1) { background-image: url('https://source.unsplash.com/j7AMlh2MMHc'); }
-    &:nth-of-type(2) { background-image: url('https://source.unsplash.com/Um9AkOiIDcU'); }
-    &:nth-of-type(3) { background-image: url('https://source.unsplash.com/3InMDrsuYrk'); }
-    &:nth-of-type(4) { background-image: url('https://source.unsplash.com/9XngoIpxcEo'); }
-    &:nth-of-type(5) { background-image: url('https://source.unsplash.com/knVn7YXfvkE'); }
-    &:nth-of-type(6) { background-image: url('https://source.unsplash.com/BzuUDHCi_vo'); }
-
     &:hover:not(li[data-pos="1"]) { cursor: pointer; }
   }
 }
@@ -53,15 +46,12 @@
   }
 }
 </style>
-<div class="gallery-swap">
+<div class="gallery-swap all-section-style">
   <h2 class="title-h1 text-center">Galerija</h2>
-  <ul class='gallery'>
-    <li class='item' data-pos='1'></li>
-    <li class='item' data-pos='2'></li>
-    <li class='item' data-pos='3'></li>
-    <li class='item' data-pos='4'></li>
-    <li class='item' data-pos='5'></li>
-    <li class='item' data-pos='6'></li>
+  <ul id="gallery-swap" class='gallery'>
+    <?php $br=1; foreach ($gallery_swap_array as $image) : ?>
+        <li class='item' style="background-image: url('custom/gallery/<?php echo $image["img"] ?>')" data-pos='<?php echo $br++; ?>'></li>
+    <?php endforeach; ?>
   </ul>
 </div>
 
@@ -80,7 +70,7 @@
     [hero.dataset.pos,target.dataset.pos] = [target.dataset.pos,hero.dataset.pos];
   }
 
-  function init(e) {
+  function initSwap(e) {
     if (!e.target.matches('.gallery-swap li')) return;
     insertViewTransitionName();
     !document.startViewTransition
@@ -88,5 +78,5 @@
       : document.startViewTransition(() => animateItem(e));
   }
 
-  window.addEventListener('click',init,false);
+  window.addEventListener('click',initSwap,false);
 </script>

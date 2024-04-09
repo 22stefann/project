@@ -346,7 +346,7 @@
         "form",
         #"images_crop",
         #"gallery_slide",
-        "gallery_swap",
+        #"gallery_swap",
         #"simple_section_3",
         #"simple_section_2",
         #"text_image_section_2",
@@ -593,7 +593,18 @@ $gallery_slide_bottom_svg_color = "#000";
 
 $gallery_swap_width ="70%";
 $gallery_swap_bg_color = "#000";
-$gallery_swap_title_color = "#000";
+$gallery_swap_title_color = "#fff";
+
+$gallery_swap_array = array(
+    #array("img" => "gallery_1.jpg" , "text" => "forest"),
+    #array("img" => "gallery_3.jpg" , "text" => "rain"),
+    array("img" => "gallery_2.jpg" , "text" => "city"),
+    array("img" => "gallery_4.jpg" , "text" => "gallery photo 4 "),
+    array("img" => "gallery_5.jpg" , "text" => "gallery photo 5"),
+    array("img" => "gallery_6.jpg" , "text" => "gallery photo 6"),
+    array("img" => "gallery_7.jpg" , "text" => "gallery photo"),
+    array("img" => "gallery_8.jpg" , "text" => "gallery photo")
+);
 
 ####################################################################
 #################### SIMPLE SECTION 1 ##############################
