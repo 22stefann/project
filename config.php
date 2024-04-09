@@ -325,7 +325,7 @@
         array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "KONTAKT", "name" => "Kontakt", "link" => defineUrl("kontakt"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALERIJA", "name" => "Galerija", "link" => defineUrl("galerija"), "target" => "_self", "class" => "navigation-tab"),
-        #array("type" => "TEST", "name" => "Test", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
+        array("type" => "FAQ", "name" => "Pitanja i odgovori", "link" => defineUrl("pitanja-i-odgovori"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "CONTACT", "name" => "Kontakt", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab")
     );
 
@@ -359,6 +359,7 @@
         #"section_column",
         #"album_section",
         #"map_v1",
+        "faq",
         "map_v2",
         #"map_v3",
         #"footer_v2",
@@ -1014,6 +1015,32 @@ $coordinates = '44.37926393246601, 19.60505969658644';
 $map_v2_height = "550px";
 $map_v2_link = "https://maps.app.goo.gl/DAYSkea73XEjE2GJA";
 
+####################################################################
+#################### faq section  ##################################
+####################################################################
+
+$faq_bg_color = "#11101d";
+$faq_bg_image = "";
+$faq_title_color="#acdfac";
+$faq_text_color = "#fff";
+$faq_question_hover_color = "#acdfac";
+$faq_title="Frekfentna pitanja";
+
+$faq_array = array(
+    array("question" => "Ko ste vi i sta radite?", "answer" => "Mi smo IT firma i pravimo sajtove."),
+    array("question" => "Kakve sajtove pravite?", "answer" => "Imamo svoj templejt i pravimo sajtove pomocu njega."),
+    array("question" => "Za koje oblasti pravite sajtove?", "answer" => "Za sve oblasti.", "alt"=> "Bootstrap Themes"),
+);
+
+//svg top
+$faq_top_svg = false;
+//top svg color
+$faq_top_svg_color = "#000";
+//svg bottom
+$faq_bottom_svg = false;
+//bottom svg color
+$faq_bottom_svg_color = "#000";
+
 
 ####################################################################
 ############################# pages  ###############################
@@ -1036,6 +1063,14 @@ $contact_page_show_map = "map_v1";
 $contact_page_h1 = "Kontakt";
 $contact_page_text = "Ovo je kontakt forma ako zelite nesto da nas pitate molimo vas da popunite polja koja se nalaze ispod";
 
+#######################################
+############## faq page  ##############
+#######################################
+
+$faq_page_bg_color = "#000";
+$faq_page_bg_filter = "rgba(0,0,0,0.8)";
+$faq_page_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+$faq_page_text_color = "#fff";
 
 #######################################
 ############## gallery  ###############
