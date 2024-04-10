@@ -46,6 +46,9 @@
             require_once 'components/cover/cover_content.php';
         } ?>
     </section>
+    <?php if (!empty($cover_content)) {
+        require_once 'popup/popup.php';
+    } ?>
     <?php foreach( $homepageSection as $one_section ) : ?>
         <section id="<?php echo $one_section; ?>">
             <?php require_once 'components/homepage/'.$one_section.'.php'; ?>

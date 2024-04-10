@@ -26,6 +26,33 @@
 
     $javaScripts = [];
 
+####################################################################
+#################### DEFINE POPUP ##################################
+####################################################################
+
+$popup_delay = "10000";
+
+$show_one_popup = false;
+
+$show_popup_button = false;
+
+$popup_close_bg_color = "#fff";
+
+$popup_close_x_color = "#000";
+
+$popup_html = <<<HTML
+
+<div class="popup__photo">
+    <img src="https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?ixlib=rb-0.3.5&s=9980646201037d28700d826b1bd096c4&auto=format&fit=crop&w=700&q=80" alt="">
+</div>
+<div class="popup__text">
+    <h2 class="title-h1">Popup</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. </p>
+</div>
+<a class="popup__close" href="#">X</a>
+
+HTML;
+
     ####################################################################
     #################### DEFINE FONT START #############################
     ####################################################################
