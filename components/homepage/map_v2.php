@@ -1,5 +1,10 @@
 
-<div id="map" style="height: <?php echo $map_v2_height; ?>;"></div>
+<style>
+.map-v2-section {
+    z-index: 0;
+}
+</style>
+<div id="map" class="map-v2-section" style="height: <?php echo $map_v2_height; ?>;"></div>
 
 <script>
     var map = L.map('map').setView([<?php echo $coordinates; ?>], <?php echo $map_v2_zoom_level; ?>);

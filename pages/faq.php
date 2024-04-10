@@ -49,6 +49,9 @@
         .accordion button:focus {
             color: <?php echo $faq_page_text_color; ?>;
         }
+        #faq-section {
+            padding-top: 0;
+        }
         .faq_section .accordion .accordion-item button[aria-expanded='true'] {
             border-bottom-color: <?php echo $faq_page_text_color; ?>;
         }

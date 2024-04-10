@@ -344,6 +344,7 @@
     $homepageSection = array (
         "under_cover",
         "form",
+        #"item_slide",
         #"images_crop",
         #"gallery_slide",
         #"gallery_swap",
@@ -354,14 +355,14 @@
         #"slideshow_v1",
         #"gallery_v1",
         #"gallery_v2",
+        "cool_section",
         "simple_section_1",
         "text_image_section",
         #"section_column",
         #"album_section",
-        #"map_v1",
-        "faq",
-        "map_v2",
-        #"map_v3",
+        "map_v1",
+        #"faq",
+        #"map_v2",
         #"footer_v2",
         "footer_v1"
     );
@@ -1041,6 +1042,61 @@ $faq_bottom_svg = false;
 //bottom svg color
 $faq_bottom_svg_color = "#000";
 
+####################################################################
+#################### item slide section  ###########################
+####################################################################
+
+$item_slide_section_bg_color = "#fff";
+$item_slide_section_title_color = "#000";
+$item_slide_section_subtitle_color = "#3e4543";
+$item_slide_section_text_color = "#fff";
+$item_slide_section_bg_image = "";
+
+$item_slide_array = array(
+    #array("img" => "gallery_1.jpg" , "text" => "forest"),
+    #array("img" => "gallery_3.jpg" , "text" => "rain"),
+    array("img" => "custom/gallery/gallery_2.jpg" , "text" => "city" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "gallery photo 4 " , "title" => "title"),
+    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "gallery photo 5" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "gallery photo 6" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "gallery photo" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_8.jpg" , "text" => "gallery photo" , "title" => "title")
+);
+
+//svg top
+$item_slide_top_svg = false;
+//top svg color
+$item_slide_top_svg_color = "#000";
+//svg bottom
+$item_slide_bottom_svg = false;
+//bottom svg color
+$item_slide_bottom_svg_color = "#000";
+
+
+####################################################################
+#################### cool section  #################################
+####################################################################
+$cool_section_bg_color = "#000";
+$cool_section_text_color = "#fff";
+$cool_section_height = "65vh";
+
+$cool_array = array(
+    array("img" => "custom/gallery/gallery_2.jpg" , "text" => "test"),
+    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "test"),
+    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "test"),
+    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "test"),
+    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "test"),
+    #array("img" => "custom/gallery/gallery_8.jpg" , "text" => "test")
+);
+
+//svg top
+$cool_top_svg = false;
+//top svg color
+$cool_top_svg_color = "#fff";
+//svg bottom
+$cool_bottom_svg = false;
+//bottom svg color
+$cool_bottom_svg_color = "#000";
 
 ####################################################################
 ############################# pages  ###############################
