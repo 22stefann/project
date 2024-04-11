@@ -26,7 +26,6 @@
 <?php require_once '../css/style.php'; ?>
 <style>
     @import url(<?php echo $googleFont; ?>);
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
     * {
         padding: 0;
@@ -34,10 +33,20 @@
         box-sizing: border-box;
     }
 
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        filter: <?php echo $contact_page_bg_filter ?>;
+        background-image: url('<?php echo $contact_page_bg_image; ?>');
+    }
     body {
         min-height: 100vh;
         width: 100%;
-        background-image: url('<?php echo $contact_page_bg_image; ?>');
         background-color: <?php echo $contact_page_bg_color; ?>;
         background-size: cover;
         background-position: center;
@@ -45,20 +54,9 @@
         background-attachment: fixed;
     }
 
-    body::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: <?php echo $contact_page_bg_filter; ?>;
-    }
-
     section {
         position: relative;
         z-index: 3;
-        padding-top: 50px;
         padding-bottom: 50px;
         h1 {
             color: <?php echo $contact_page_text_color; ?>;

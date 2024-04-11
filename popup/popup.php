@@ -41,11 +41,12 @@
         right: -100vh;
         display: flex;
         align-items: center;
-        max-width: 800px;
-        max-height: 600px;
-        width: 60%;
-        height: 80%;
-        background-color: #fff;
+        justify-content: space-between;
+        max-width: 80%;
+        max-height: 70vh;
+        /* width: 60%; */
+        /* height: 80%; */
+        background-color: <?php echo $popup_bg_color; ?>;
         transform: rotate(32deg);
         transition: 0.64s ease-in-out;
     }
@@ -58,28 +59,21 @@
         overflow: hidden;
     }
     .popup__photo img {
-        width: auto;
-        height: 100%;
+        width: 100%;
     }
     .popup__text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60%;
         height: 100%;
-        padding: 4rem;
+        width: -webkit-fill-available;
+        padding: 2rem 1rem;
+        p, h2 {
+            color: <?php echo $popup_text_color; ?>;
+        }
     }
     .popup__text h1 {
-        font-size: 2rem;
-        font-weight: 600;
         margin-bottom: 2rem;
-        text-transform: uppercase;
-        color: #0a0a0a;
-    }
-    .popup__text p {
-        font-size: 0.875rem;
-        color: #686868;
-        line-height: 1.5;
     }
     .popup:target {
         visibility: visible;

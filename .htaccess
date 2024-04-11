@@ -1,9 +1,9 @@
 RewriteEngine On
 RewriteRule ^(.*)index$ index.php [L]
-RewriteRule ^(.*)about$ pages/first_pages.php [L]
+RewriteRule ^(.*)istorija$ pages/history.php [L]
 RewriteRule ^(.*)mapa$ pages/mapa.php [L]
 #RewriteRule ^(.*)mapa$ pages/google_mapa.php [L]
 RewriteRule ^(.*)kontakt$ pages/contact.php [L]
-#RewriteRule ^(.*)galerija$ pages/gallery_v1_page.php [L]
-RewriteRule ^(.*)galerija$ pages/gallery_component_page.php [L]
+RewriteRule ^(.*)galerija$ pages/gallery_v1_page.php [L]
+#RewriteRule ^(.*)galerija$ pages/gallery_component_page.php [L]
 RewriteRule ^(.*)pitanja-i-odgovori$ pages/faq.php [L]

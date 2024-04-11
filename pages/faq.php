@@ -24,21 +24,23 @@
 <style>
     @import url(<?php echo $googleFont; ?>);
     body::before {
-        content: "";
-        position: absolute;
+        content: '';
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        min-height: 100vh;
-        background-color: <?php echo $contact_page_bg_filter; ?>;
+        height: 100%;
+        background-size: cover;
+        filter: <?php echo $faq_page_bg_filter ?>;
+        background-image: url('<?php echo $faq_page_bg_image ?>;');
     }
-    .faq-page {
-        background-color: <?php echo $faq_page_bg_color; ?>;
-        background-image: url('<?php echo $faq_page_bg_image; ?>');
+    body {
         background-repeat: no-repeat;
         background-size: cover;
-        filter: <?php echo $faq_page_bg_filter; ?>;
         min-height: 100vh;
+        background-color: <?php echo $faq_page_bg_color ?>;
+    }
+    .faq-page {
         .faq_section.container h1,
         .faq_section.container p,
         .faq_section.container h2,

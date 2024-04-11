@@ -32,13 +32,17 @@
 
 $popup_delay = "10000";
 
-$show_one_popup = false;
+$show_one_popup = true;
 
 $show_popup_button = false;
 
 $popup_close_bg_color = "#fff";
 
 $popup_close_x_color = "#000";
+
+$popup_bg_color = "#e56754";
+
+$popup_text_color = "#1a2a3a";
 
 $popup_html = <<<HTML
 
@@ -47,7 +51,7 @@ $popup_html = <<<HTML
 </div>
 <div class="popup__text">
     <h2 class="title-h1">Popup</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. </p>
 </div>
 <a class="popup__close" href="#">X</a>
 
@@ -347,13 +351,13 @@ HTML;
 
     $navTabs = array(
         #array("type" => "HOME", "name" => "Pocetna", "link" => "index", "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
-        array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("about"), "target" => "_self", "class" => "navigation-tab"),
+        #array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
+        array("type" => "CONTACT", "name" => "O nama", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("istorija"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "KONTAKT", "name" => "Kontakt", "link" => defineUrl("kontakt"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "GALERIJA", "name" => "Galerija", "link" => defineUrl("galerija"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "FAQ", "name" => "Pitanja i odgovori", "link" => defineUrl("pitanja-i-odgovori"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "CONTACT", "name" => "Kontakt", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab")
+        array("type" => "FAQ", "name" => "Pitanja i odgovori", "link" => defineUrl("pitanja-i-odgovori"), "target" => "_self", "class" => "navigation-tab")
     );
 
     //array for submenu navigation tab
@@ -1134,7 +1138,7 @@ $cool_bottom_svg_color = "#000";
 #######################################
 
 $contact_page_bg_color = "#000";
-$contact_page_bg_filter = "rgba(0,0,0,0.8)";
+$contact_page_bg_filter = "opacity(0.2)";
 $contact_page_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 $contact_page_text_color = "#fff";
 $contact_page_subtitle_color = "#1da9c0";
@@ -1151,7 +1155,7 @@ $contact_page_text = "Ovo je kontakt forma ako zelite nesto da nas pitate molimo
 #######################################
 
 $faq_page_bg_color = "#000";
-$faq_page_bg_filter = "rgba(0,0,0,0.8)";
+$faq_page_bg_filter = "opacity(0.2)";
 $faq_page_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 $faq_page_text_color = "#fff";
 
@@ -1176,7 +1180,37 @@ $gallery_page_array = array(
 
 $gallery_page_array = $gallery_page_array;
 //insert gallery component
-$gallery_component_page = "gallery_swap";//gallery_v1  gallery_v2 gallery_slide gallery_swap
+$gallery_component_page = "gallery_v2";//gallery_v1  gallery_v2 gallery_slide gallery_swap
+
+
+#######################################
+############## history  ###############
+#######################################
+
+$history_bg_color = "#000";
+
+$history_text_color = "#fff";
+
+$history_line_color = "#fff";
+
+$history_box_bg_color = "#fff";
+
+$history_box_color = "#000";
+//blur(5px) grayscale(50%)
+$history_bg_filter = "opacity(0.2)";
+
+$history_page_intro_bg_color = "transparent";
+
+$history_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+
+$history_array = array(
+    array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),
+    array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),
+    array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),
+    array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),
+    array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),
+    array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign")
+);
 
 
 ####################################################################
