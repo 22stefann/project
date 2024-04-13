@@ -31,6 +31,16 @@
             fill: <?php echo $text_image_section_1_bottom_svg_color; ?>;
         }
     }
+    @media (max-width: 767px) {
+
+        <?php if (!empty($text_image_section_1_reverse)) { ?>
+            <?php foreach($text_image_section_1_reverse as $item) { ?>
+                .text_image_section_1 .row:nth-of-type(<?php echo $item; ?>) {
+                    <?php echo "flex-direction: column-reverse;"; ?>
+                }
+            <?php } ?>
+        <?php } ?>
+    }
 </style>
 <div class="container col-xxl-12 text_image_section_1 all-section-style">
     <?php if ( $text_image_section_1_top_svg ) : ?>

@@ -1,4 +1,5 @@
 RewriteEngine On
+
 RewriteRule ^(.*)index$ index.php [L]
 RewriteRule ^(.*)istorija$ pages/history.php [L]
 RewriteRule ^(.*)mapa$ pages/mapa.php [L]
@@ -7,3 +8,4 @@ RewriteRule ^(.*)kontakt$ pages/contact.php [L]
 RewriteRule ^(.*)galerija$ pages/gallery_v1_page.php [L]
 #RewriteRule ^(.*)galerija$ pages/gallery_component_page.php [L]
 RewriteRule ^(.*)pitanja-i-odgovori$ pages/faq.php [L]
+RewriteRule ^(.*)o-nama$ pages/about.php [L]

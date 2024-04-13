@@ -136,7 +136,7 @@ HTML;
         array( "section-class" => "text_image_section_1", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
         array( "section-class" => "text_image_section_2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
         array( "section-class" => "section-column", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
-        #array( "section-class" => "album-section", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+        array( "section-class" => "about-page-content", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
     );
 
     //define animation on text in sections
@@ -205,7 +205,7 @@ HTML;
     ####################################################################
 
     //define type of navigation bootstrap, custom, hamburger
-    $type_of_navigation = "bootstrap";
+    $type_of_navigation = "hamburger";
     //show/hide social nav in navigation
     $socNavShow = false;
     //define logo width
@@ -352,7 +352,7 @@ HTML;
     $navTabs = array(
         #array("type" => "HOME", "name" => "Pocetna", "link" => "index", "target" => "_self", "class" => "navigation-tab"),
         #array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
-        array("type" => "CONTACT", "name" => "O nama", "link" => "https://github.com/22stefann/project", "target" => "_self", "class" => "navigation-tab"),
+        array("type" => "ABOUT", "name" => "O nama", "link" => defineUrl("o-nama"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("istorija"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
         array("type" => "KONTAKT", "name" => "Kontakt", "link" => defineUrl("kontakt"), "target" => "_self", "class" => "navigation-tab"),
@@ -789,13 +789,15 @@ $text_image_section_1_top_svg_color = "#000";
 $text_image_section_1_bottom_svg = false;
 //bottom svg color
 $text_image_section_1_bottom_svg_color = "#000";
+//set in array item to be flex-direction column-reverse
+$text_image_section_1_reverse = array(2);
 //simple section html
 $text_image_section_1_html = <<<HTML
 
-<div class="row align-items-center pt-5">
+<div class="row align-items-center">
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-left">
+    <div class="col-12 col-sm-6 col-lg-6 p-5 text-left custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
@@ -804,8 +806,8 @@ $text_image_section_1_html = <<<HTML
 
     </div>
 </div>
-<div class="row align-items-center pt-5">
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-right">
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 p-5 text-right custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
@@ -848,13 +850,15 @@ $text_image_section_2_top_svg_color = "#000";
 $text_image_section_2_bottom_svg = false;
 //bottom svg color
 $text_image_section_2_bottom_svg_color = "#000";
+//set in array item to be flex-direction column-reverse
+$text_image_section_2_reverse = array(2);
 //simple section html
 $text_image_section_2_html = <<<HTML
 
 <div class="row align-items-center">
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-left">
+    <div class="col-12 col-sm-6 col-lg-6 p-5 text-left custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
@@ -863,8 +867,8 @@ $text_image_section_2_html = <<<HTML
 
     </div>
 </div>
-<div class="row align-items-center pt-5">
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-right">
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 p-5 text-right custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
     <h3 class="title-h3">Podnaslov</h3>
     <p class="lead">Ovde ide neki takst</p>
@@ -1211,6 +1215,58 @@ $history_array = array(
     array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),
     array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign")
 );
+
+
+#######################################
+############## aboutus  ###############
+#######################################
+
+$about_us_page_bg_color = "#000";
+
+$about_us_page_bg_image = "custom/gallery/gallery_7.jpg";
+
+$about_us_page_bg_filter = "opacity(0.4)";
+
+$about_us_page_title_color = "#fff";
+
+$about_us_page_items_bg_color = "#fff";
+
+$about_page_map_show = true;
+
+$about_page_map = "map_v1";
+
+$about_page_gallery_show = true;
+
+$about_us_page_content = <<<HTML
+<div class="col-lg-8 mx-auto text-center all-section-style">
+    <h2 class="subtitle-h2">Simple section 3</h2>
+    <h3 class="title-h3">Simple section 3</h3>
+    <p class="lead mb-4">Ovde ide neki takst</p>
+    <a href="" class="btn btn-custom-style">section 3</a>
+</div>
+
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center custom-class xs-text-center">
+        <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
+        <h3 class="title-h3">Podnaslov</h3>
+        <p class="lead">Ovde ide neki takst</p>
+        <a href="" class="btn btn-custom-style">text-image 2</a>
+    </div>
+</div>
+<div class="row align-items-center">
+    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center custom-class xs-text-center">
+        <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
+        <h3 class="title-h3">Podnaslov</h3>
+        <p class="lead">Ovde ide neki takst</p>
+        <a href="" class="btn btn-custom-style">text-image 2</a>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
+    </div>
+</div>
+
+HTML;
 
 
 ####################################################################

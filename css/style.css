@@ -151,7 +151,6 @@ button.form.btn::before {
 }
 
 /*Under Cover section end*/
-
 /*gallery v1 section*/
 
 #gallery {
@@ -354,6 +353,9 @@ button.form.btn::before {
     }
 }
 @media (max-width: 767px) {
+    .custom-class.xs-text-center {
+        text-align: center !important;
+    }
     p {
         font-size: calc( var(--all_p_font_size) - var(--all_p_font_resize) );
     }
