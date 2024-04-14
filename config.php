@@ -245,6 +245,12 @@ $all_section_animation = [
 
 $all_section_animation = json_encode($all_section_animation);
 
+//define wave section linear-gradient(60deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+
+$waveBgColor = "#11101d";
+//set value in rgb();
+$waveBgColorFill = "0,0,0";
+
 
 ####################################################################
 #################### BACK TO TOP BUTTON ############################
@@ -455,6 +461,7 @@ $subTabs = array(
 
 $homepageSection = array (
     "under_cover",
+    "wave",
     "form",
     #"item_slide",
     #"images_crop",
