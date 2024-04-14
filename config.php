@@ -52,6 +52,11 @@ $galleryMetaKeywords = "Slike proizvoda, montaze, teren";
 $faqMetaDescription = "Pogledajte najcesca pitanja koje dobijamo i nase odgovore.";
 $faqMetaKeywords = "Najcesca pitanja, odgovori";
 
+//custom page meta description, keywords, 
+
+$customMetaDescription = "Pogledajte kastom stranu.";
+$customMetaKeywords = "kastom strana";
+
 ####################################################################
 #################### DEFINE URL ####################################
 ####################################################################
@@ -160,7 +165,7 @@ $navTabSize_1024 = "0.1em";
 // 0 < x < 768
 $navTabSize_767 = "1.1em";
 
-//define buttons
+//define all buttons
 $all_button_font = "'Oswald', sans-serif";
 $allButtonsFontSize = "1.1em";
 $allButtonsFontSizeMobile = "1em";
@@ -260,7 +265,7 @@ $font_color_back_to_top_button = "#000";
 ####################################################################
 
 //set fb link
-$fbLink = "https://www.w3schools.com/icons/fontawesome_icons_intro.asp";
+$fbLink = "";
 //set instagram link
 $instaLink = "";
 //set twitter link
@@ -438,8 +443,8 @@ $navTabs = array(
 
 //array for submenu navigation tab
 $subTabs = array(
-    array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-    array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+    #array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+    #array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
     #array("type" => "TEST", "name" => "test", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
     #array("type" => "TEST", "name" => "test2", "link" => "#", "target" => "_self", "class" => "dropdown-sub")
 );
@@ -478,7 +483,7 @@ $homepageSection = array (
 #################### COVER SECTION #################################
 ####################################################################
 //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-$cover_content ="slideshow";
+$cover_content ="cover_html";
 //video, slideshow, custom section margin-top on desktop 
 $desktop_video_margin_top = "80px";
 //video, slideshow, custom section margin-top on mobile
@@ -541,6 +546,15 @@ $custom_cover_array = array(
     array("text" => "Your satisfaction", "class" => "text-2-tright"),
     array("text" => "is our target", "class" => "text-2-bleft"),
 );
+#################################
+############COVER HTML ##########
+#################################
+$customCoverBgColor = "#000";
+$customCoverBgImage = "custom/gallery/gallery_7.jpg";
+$customCoverBgAttachment = "fixed";
+$customCoverBgFilter = "opacity(0.5)";
+$customCoverBgPosition = "bottom";
+$customCoverBgPositionY = "60%";
 //slideshow content
 $slideshow_array = array(
     array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
@@ -1349,6 +1363,27 @@ $about_us_page_content = <<<HTML
 </div>
 
 HTML;
+
+#######################################
+############## custom page  ###########
+#######################################
+
+$custom_page_bg_color = "#000";
+
+$custom_page_bg_image = "custom/gallery/gallery_6.jpg";
+
+$custom_page_bg_filter = "opacity(0.4)";
+
+$custom_page_text_color = "#fff";
+
+$custom_page_bg_attachment = "fixed";
+
+$customPageHtml = <<<HTML
+
+<h1 class="title-h1 text-center">Kastom</h1>
+
+HTML;
+
 
 
 ####################################################################
