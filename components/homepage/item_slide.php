@@ -150,12 +150,8 @@
         /***** responsive css Start ******/
 
         @media (min-width: 992px) and (max-width: 1199px) {
-        h2 {
-            margin-bottom: 32px;
-        }
-        h3 {
+        .game-section h3 {
             margin: 0 0 8px;
-            font-size: 24px;
             line-height: 32px;
         }
 
@@ -178,16 +174,9 @@
         }
 
         @media (min-width: 768px) and (max-width: 991px) {
-        h2 {
-            margin-bottom: 32px;
-        }
-        h3 {
+        .game-section h3 {
             margin: 0 0 8px;
-            font-size: 24px;
             line-height: 32px;
-        }
-        .line-title {
-            width: 330px;
         }
 
         /* -------- Landing page ------- */
@@ -209,19 +198,9 @@
         }
 
         @media (max-width: 767px) {
-        body {
-            font-size: 14px;
-        }
-        h2 {
-            margin-bottom: 20px;
-        }
-        h3 {
+        .game-section h3 {
             margin: 0 0 8px;
-            font-size: 19px;
             line-height: 24px;
-        }
-        .line-title {
-            width: 250px;
         }
 
         /* -------- Landing page ------- */
@@ -260,7 +239,7 @@
         <?php $br=0; foreach ($item_slide_array as $image) { ?>
             <div class="item <?php if ( $br == 0 ) { echo "active"; } $br++; ?>" style="background-image: url('<?php echo $image["img"]; ?>');">
                 <div class="item-desc">
-                    <h3><?php echo $image["title"]; ?></h3>
+                    <h3 class="title-h3"><?php echo $image["title"]; ?></h3>
                     <p><?php echo $image["text"]; ?></p>
                 </div>
             </div>

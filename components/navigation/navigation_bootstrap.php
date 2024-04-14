@@ -307,6 +307,7 @@
             text-transform: var(--navTextTransform);
             font-size: var(--navTabSize);
             font-family: var(--navTabsFont);
+            font-weight: <?php echo $navTabFontWeight; ?>;
             padding-left: 5px;
         }
         .social-icon a.nav-link {
@@ -314,6 +315,7 @@
             text-transform: var(--navTextTransform);
             font-size: var(--navTabSize);
             font-family: var(--navTabsFont);
+            font-weight: <?php echo $navTabFontWeight; ?>;
             padding-left: var(--bs-navbar-nav-link-padding-x);
             display: flex;
             align-items: center;
@@ -333,6 +335,7 @@
                 text-transform: var(--navTextTransform);
                 font-size: var(--navTabSize);
                 font-family: var(--navTabsFont);
+                font-weight: <?php echo $navTabFontWeight; ?>;
             }
             a:hover,
             a:focus {
@@ -469,6 +472,42 @@
             display: none;
         }
     }
+    <?php if ( !empty($navTabSize_1400) ) : ?>
+        @media (max-width: 1400px) {
+            nav#bootstrap-navigation a.navigation-link,
+            nav#bootstrap-navigation .social-icon a.nav-link,
+            nav#bootstrap-navigation .dropdown-menu {
+                font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($navTabSize_1200) ) : ?>
+        @media (max-width: 1200px) {
+            nav#bootstrap-navigation a.navigation-link,
+            nav#bootstrap-navigation .social-icon a.nav-link,
+            nav#bootstrap-navigation .dropdown-menu {
+                font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ." - ". $navTabSize_1200 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($navTabSize_1024) ) : ?>
+        @media (max-width: 1024px) {
+            nav#bootstrap-navigation a.navigation-link,
+            nav#bootstrap-navigation .social-icon a.nav-link,
+            nav#bootstrap-navigation .dropdown-menu {
+                font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ." - ". $navTabSize_1200." - ". $navTabSize_1024 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($navTabSize_767) ) : ?>
+        @media (max-width: 767px) {
+            nav#bootstrap-navigation a.navigation-link,
+            nav#bootstrap-navigation .social-icon a.nav-link,
+            nav#bootstrap-navigation .dropdown-menu {
+                font-size: <?php echo $navTabSize_767;?>;
+            }
+        }
+    <?php endif; ?>
     <?php
         if ( $disableSocial != "" ) {
 

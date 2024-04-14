@@ -24,9 +24,6 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
     <?php require_once 'css/style.php'; ?>
-<style>
-    @import url(<?php echo $googleFont; ?>);
-</style>
 <?php if ( !empty($cover_content) ) { 
     require_once 'css/cover_css.php';
 } ?>

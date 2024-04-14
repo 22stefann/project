@@ -133,13 +133,11 @@
 
     .contact-info-content h2 {
         color: <?php echo $contact_page_subtitle_color; ?>;
-        font-size: 1.4em;
         margin-bottom: 5px;
     }
 
     .contact-info-content p {
         color: <?php echo $contact_page_text_color; ?>;
-        font-size: 1em;
     }
 
     .contact-form {
@@ -151,8 +149,6 @@
     }
 
     .contact-form h2 {
-        font-weight: bold;
-        font-size: 2em;
         margin-bottom: 10px;
         color: <?php echo $contact_page_form_text_color; ?>;
     }
@@ -195,21 +191,11 @@
 
     .contact-form .input-box button[type="submit"] {
         width: 100%;
-        background: #00bcd4;
-        color: #FFF;
         border: none;
         cursor: pointer;
         padding: 10px;
-        font-size: 18px;
-        border: 1px solid #00bcd4;
         transition: 0.5s;
     }
-
-    .contact-form .input-box button[type="submit"]:hover {
-        background: #FFF;
-        color: #00bcd4;
-    }
-
     @media (max-width: 991px) {
         section {
             padding-top: 50px;

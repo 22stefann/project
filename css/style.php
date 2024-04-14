@@ -1,11 +1,14 @@
 <style>
+    
+    <?php
+        echo "@import url($googleFont);"
+    ?>
     :root {
         --font: <?php echo $googleFont; ?>; 
         /* h1 */
         --all_h1_font : <?php echo $all_h1_font; ?>;
         --all_h1_transform : <?php echo $all_h1_transform; ?>;
         --all_h1_font_size : <?php echo $all_h1_font_size; ?>;
-        --all_h1_font_resize : <?php echo $all_h1_font_resize; ?>;
         --all_h1_font_weight : <?php echo $all_h1_font_weight; ?>;
         /* h2 */
         --all_h2_font : <?php echo $all_h2_font; ?>;
@@ -18,6 +21,13 @@
         --all_p_font_size : <?php echo $all_p_font_size; ?>;
         --all_p_font_resize : <?php echo $all_p_font_resize; ?>;
         --all_p_font_weight : <?php echo $all_p_font_weight; ?>;
+        /* all buttons */
+        --allButtonsFontFamily : <?php echo $all_button_font; ?>;
+        --allButtonsFontSize : <?php echo $allButtonsFontSize; ?>;
+        --allButtonsFontSizeMobile : <?php echo $allButtonsFontSizeMobile; ?>;
+        --all_button_transform : <?php echo $all_button_transform; ?>;
+        --buttonsPaddingDesktop : <?php echo $buttonsPaddingDesktop; ?>;
+        --buttonsPaddingMobile : <?php echo $buttonsPaddingMobile; ?>;
         /* custom navigation */
         --navigationColumn: <?php echo $navigation_column; ?>;
         --navigationFlexDirection: <?php echo $navFlexDirection; ?>;
@@ -125,4 +135,128 @@
     }
 
     ?>
+    /* all h1 resize */ 
+    <?php if ( !empty($all_h1_font_size_1400) ) : ?>
+        @media (max-width: 1400px) {
+            .title-h1,
+            .subtitle-h2 {
+                font-size: calc(<?php echo $all_h1_font_size ." - ". $all_h1_font_size_1400 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_h1_font_size_1200) ) : ?>
+        @media (max-width: 1200px) {
+            .title-h1,
+            .subtitle-h2 {
+                font-size: calc(<?php echo $all_h1_font_size ." - ". $all_h1_font_size_1400 ." - ". $all_h1_font_size_1200 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_h1_font_size_1024) ) : ?>
+        @media (max-width: 1024px) {
+            .title-h1,
+            .subtitle-h2 {
+                font-size: calc(<?php echo $all_h1_font_size ." - ". $all_h1_font_size_1400 ." - ". $all_h1_font_size_1200." - ". $all_h1_font_size_1024 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_h1_font_size_767) ) : ?>
+        @media (max-width: 767px) {
+            .title-h1,
+            .subtitle-h2 {
+                font-size: <?php echo $all_h1_font_size_767;?>;
+            }
+        }
+    <?php endif; ?>
+    /* all h2 resize */ 
+    <?php if ( !empty($all_h2_font_size_1400) ) : ?>
+        @media (max-width: 1400px) {
+            .title-h3,
+            .title-h2 {
+                font-size: calc(<?php echo $all_h2_font_size ." - ". $all_h2_font_size_1400 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_h2_font_size_1200) ) : ?>
+        @media (max-width: 1200px) {
+            .title-h3,
+            .title-h2 {
+                font-size: calc(<?php echo $all_h2_font_size ." - ". $all_h2_font_size_1400 ." - ". $all_h2_font_size_1200 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_h2_font_size_1024) ) : ?>
+        @media (max-width: 1024px) {
+            .title-h3,
+            .title-h2 {
+                font-size: calc(<?php echo $all_h2_font_size ." - ". $all_h2_font_size_1400 ." - ". $all_h2_font_size_1200." - ". $all_h2_font_size_1024 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_h2_font_size_767) ) : ?>
+        @media (max-width: 767px) {
+            .title-h3,
+            .title-h2 {
+                font-size: <?php echo $all_h2_font_size_767;?>;
+            }
+        }
+    <?php endif; ?>
+    /* all h3 resize */ 
+    <?php if ( !empty($all_p_font_size_1400) ) : ?>
+        @media (max-width: 1400px) {
+            .title-h4 {
+                font-size: calc(<?php echo $all_p_font_size ." - ". $all_p_font_size_1400 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_p_font_size_1200) ) : ?>
+        @media (max-width: 1200px) {
+            .title-h4 {
+                font-size: calc(<?php echo $all_p_font_size ." - ". $all_p_font_size_1400 ." - ". $all_p_font_size_1200 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_p_font_size_1024) ) : ?>
+        @media (max-width: 1024px) {
+            .title-h4 {
+                font-size: calc(<?php echo $all_p_font_size ." - ". $all_p_font_size_1400 ." - ". $all_p_font_size_1200." - ". $all_p_font_size_1024 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_p_font_size_767) ) : ?>
+        @media (max-width: 767px) {
+            .title-h4 {
+                font-size: <?php echo $all_p_font_size_767;?>;
+            }
+        }
+    <?php endif; ?>
+    /* all p resize */ 
+    <?php if ( !empty($all_p_font_size_1400) ) : ?>
+        @media (max-width: 1400px) {
+            p {
+                font-size: calc(<?php echo $all_p_font_size ." - ". $all_p_font_size_1400 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_p_font_size_1200) ) : ?>
+        @media (max-width: 1200px) {
+            p {
+                font-size: calc(<?php echo $all_p_font_size ." - ". $all_p_font_size_1400 ." - ". $all_p_font_size_1200 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_p_font_size_1024) ) : ?>
+        @media (max-width: 1024px) {
+            p {
+                font-size: calc(<?php echo $all_p_font_size ." - ". $all_p_font_size_1400 ." - ". $all_p_font_size_1200." - ". $all_p_font_size_1024 ?>);
+            }
+        }
+    <?php endif; ?>
+    <?php if ( !empty($all_p_font_size_767) ) : ?>
+        @media (max-width: 767px) {
+            p {
+                font-size: <?php echo $all_p_font_size_767;?>;
+            }
+        }
+    <?php endif; ?>
 </style>

@@ -61,32 +61,76 @@ HTML;
     #################### DEFINE FONT START #############################
     ####################################################################
 
-    $googleFont = "'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&family=Smooch+Sans:wght@100;300&display=swap'";
-    //set p
-    $all_p_font = "'Exo 2', sans-serif";
+    $googleFont = "'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,700;1,700&display=swap'";
+    //set p font-family: "Oswald", sans-serif;
+    $all_p_font = "'Oswald', sans-serif";
     $all_p_font_weight = "300";
     $all_p_font_size = "1.3em";
-    $all_p_font_resize = "0.1em";
+    $all_p_font_size_1400 = "0em";
+    $all_p_font_size_1200 = "0em";
+    $all_p_font_size_1024 = "0.1em";
+    $all_p_font_size_767 = "1.1em";
 
-    //set all h1 font
-    $all_h1_font = "'Exo 2', sans-serif";
-    $all_h1_transform = "capitalize";     //h1 text transform capitalize, uppercase, lowercase, none
+    //set all h1 font font-family: "Raleway", sans-serif;
+    $all_h1_font = "'Raleway', sans-serif";
+    $all_h1_transform = "uppercase";     //h1 text transform capitalize, uppercase, lowercase, none
     $all_h1_font_weight = "300";
     $all_h1_font_size = "3.5em";
-    $all_h1_font_resize = "0.4em";
+    $all_h1_font_size_1400 = "0.4em";
+    $all_h1_font_size_1200 = "0em";
+    $all_h1_font_size_1024 = "0.4em";
+    $all_h1_font_size_767 = "2em";
 
-    //set all h2 font
-    $all_h2_font = "'Exo 2', sans-serif";
-    $all_h2_transform = "uppercase";     //h2 text transform capitalize, uppercase, lowercase, none
-    $all_h2_font_weight = "700";
-    $all_h2_font_size = "1.8em";
+
+    //set all h2 font font-family: "Oswald", sans-serif;
+    $all_h2_font = "'Oswald', sans-serif";
+    $h2FontFamily = $all_h2_font;
+    $all_h2_transform = "lowercase";     //h2 text transform capitalize, uppercase, lowercase, none
+    $all_h2_font_weight = "300";
+    $all_h2_font_size = "1.6em";
     $all_h2_font_resize = "0.2em";
+    $all_h2_font_size_1400 = "0.2em";
+    $all_h2_font_size_1200 = "0em";
+    $all_h2_font_size_1024 = "0.2em";
+    $all_h2_font_size_767 = "1.2em";
 
-    //define h2 font
-    $h2FontFamily = "'Smooch Sans', cursive";
+    //set all h3 font font-family: "Oswald", sans-serif;
+    $all_h3_font = "'Oswald', sans-serif";
+    $h2FontFamily = $all_h2_font;
+    $all_h3_transform = "none";     //h3 text transform capitalize, uppercase, lowercase, none
+    $all_h3_font_weight = "300";
+    $all_h3_font_size = "1.4em";
+    $all_h3_font_resize = "0em";
+    $all_h3_font_size_1400 = "0em";
+    $all_h3_font_size_1200 = "0em";
+    $all_h3_font_size_1024 = "0.2em";
+    $all_h3_font_size_767 = "1.1em";
+
+    //navigation font
+    $navTabsFont = "'Oswald', sans-serif";
+    // >1400
+    $navTabSize = "1.2em";
+    $navTabFontWeight = "400";
+    $navTextTransform ="capitalize";
+    // 1200 < x < 1400
+    $navTabSize_1400 = "0.1em";
+    // 1024 < x < 1200
+    $navTabSize_1200 = "0.1em";
+    // 768 < x < 1024
+    $navTabSize_1024 = "0.1em";
+    // 0 < x < 768
+    $navTabSize_767 = "1.1em";
 
     //define buttons
-    $buttons_animation = 1;
+    $all_button_font = "'Oswald', sans-serif";
+    $allButtonsFontSize = "1.1em";
+    $allButtonsFontSizeMobile = "1em";
+    $all_button_transform = "uppercase";     //button text transform capitalize, uppercase, lowercase, none
+    $buttonsPaddingDesktop = "14px 60px;";
+    $buttonsPaddingMobile = "10px 30px;";
+    $all_button_font_weight = "700";
+
+    $buttons_animation = 10;
     //set bg color for 9 10 and 11 button animations
     $button_animation_bg_color = "#fff";
     //button 1 colors
@@ -137,6 +181,7 @@ HTML;
         array( "section-class" => "text_image_section_2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
         array( "section-class" => "section-column", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
         array( "section-class" => "about-page-content", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+        array( "section-class" => "contact-form", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
     );
 
     //define animation on text in sections
@@ -205,7 +250,7 @@ HTML;
     ####################################################################
 
     //define type of navigation bootstrap, custom, hamburger
-    $type_of_navigation = "hamburger";
+    $type_of_navigation = "bootstrap";
     //show/hide social nav in navigation
     $socNavShow = false;
     //define logo width
@@ -218,10 +263,10 @@ HTML;
     $nabBgColor = "#11101d";
     //set nav bg color in scroll position
     $navBgColorScroll = "#11101d";
-    //set padding between the tabs
+    //set padding between the tabs onlz custom navigation
     $tabPadding = "20px";
     //set text-transform can be uppercase lowercase capitalize
-    $navTextTransform = "capitalize";
+    //$navTextTransform = "uppercase";
     //set color of tabs in top position
     $navTabColor = "#fff";
     //set colors of tabs in scroll position
@@ -231,11 +276,11 @@ HTML;
     //set color of tabs in hover state in scroll position
     $navTabScrollHoverColor = "#fcba03";
     //define font for navigation
-    $navTabsFont = "'Smooch Sans', sans-serif";
+    //$navTabsFont = "'Smooch Sans', sans-serif";
     //define font weight in navigation
-    $navTabFontWeight = "200";
+    //$navTabFontWeight = "200";
     //define font size of navigation tabs
-    $navTabSize = "1.2em";
+    //$navTabSize = "1.2em";
     //set logo name
     $logoUrl = "logo.png";
     //disable social icon *(enter resolution in px)
@@ -255,9 +300,9 @@ HTML;
     ####################################################################
 
     //set true if want navigation in column true/false
-    $navigation_column = false;
+    $navigation_column = true;
     //set column if $navigation_column set column, if not set unset
-    $navFlexDirection = "unset";
+    $navFlexDirection = "column-reverse";
     //set position of nav. Can be fixed, static, relative
     $navigationPosition = "fixed";
     //can be space-round between center left right (this affect to whole navigation container) navigationTabsPositionMarginRight and navigationTabsPositionMargin == unset
@@ -290,7 +335,7 @@ HTML;
     //hamburger icon color
     $hamburgerMobileNavigationIcon = "#fff";
     //enter mobile nav type (v1,v2,v3)
-    $mobileNavType = "v1";
+    $mobileNavType = "v3";
     //nav height
     $mobileNavHeight = "70px";
     //mobile nav position (static, relative, fixed)
@@ -381,18 +426,18 @@ HTML;
         #"gallery_swap",
         #"simple_section_3",
         #"simple_section_2",
-        #"text_image_section_2",
+        "text_image_section_2",
         #"slideshow_bootstrap",
         #"slideshow_v1",
-        #"gallery_v1",
+        "gallery_v1",
         #"gallery_v2",
         "cool_section",
         "simple_section_1",
-        "text_image_section",
+        #"text_image_section",
         #"section_column",
         #"album_section",
         "map_v1",
-        #"faq",
+        "faq",
         #"map_v2",
         #"footer_v2",
         "footer_v1"
@@ -402,7 +447,7 @@ HTML;
     #################### COVER SECTION #################################
     ####################################################################
     //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-    $cover_content ="slideshow_bootstrap";
+    $cover_content ="slideshow";
     //video, slideshow, custom section margin-top on desktop 
     $desktop_video_margin_top = "80px";
     //video, slideshow, custom section margin-top on mobile
@@ -421,7 +466,7 @@ HTML;
     //slideshow mobile height *bootstrap
     $slideshow_height_mobile = "60vh";
     //slideshow alpha can be brightness(0.5), opacity(0.5),blur(3px), contrast(0.5),grayscale(1),  if bootstrap if not set rgba(0,0,0,0.5);*bootstrap
-    $slideshowAlpha = "rgba(0,0,0,0.2)";
+    $slideshowAlpha = "rgba(0,0,0,0.6)";
     //slideshow text color *bootstrap
     $slideshow_text_color = "#fff";
     //slideshow arrow color rgba(255,255,255,0.8);*bootstrap
@@ -555,7 +600,7 @@ HTML;
     ####################################################################
 
     $gallery_section_title = "Galerija";
-    $gallery_section_title_color = "#000";
+    $gallery_section_title_color = "#fff";
     $gallery_v1_bg_color = "#11101d";
     $gallery_array = array(
         array("img" => "gallery_1.jpg" , "alt" => "forest"),
@@ -673,7 +718,7 @@ $simple_section_1_html = <<<HTML
 <h2 class="subtitle-h2">Simple section 1</h2>
 <h3 class="title-h3">Simple section 1</h3>
 <div class="col-lg-8 mx-auto">
-    <p class="lead mb-4">Ovde ide neki takst</p>
+    <p class=" mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">simple section</a>
 </div>
 
@@ -713,7 +758,7 @@ $simple_section_2_html = <<<HTML
 <h2 class="subtitle-h2">Simple section 2</h2>
 <h3 class="title-h3">Simple section 2</h3>
 <div class="col-lg-8 mx-auto">
-    <p class="lead mb-4">Ovde ide neki takst</p>
+    <p class=" mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">section 2</a>
 </div>
 
@@ -753,7 +798,7 @@ $simple_section_3_html = <<<HTML
 <h2 class="subtitle-h2">Simple section 3</h2>
 <h3 class="title-h3">Simple section 3</h3>
 <div class="col-lg-8 mx-auto">
-    <p class="lead mb-4">Ovde ide neki takst</p>
+    <p class=" mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">section 3</a>
 </div>
 
@@ -800,7 +845,7 @@ $text_image_section_1_html = <<<HTML
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-left custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
     <h3 class="title-h3">Podnaslov</h3>
-    <p class="lead">Ovde ide neki takst</p>
+    <p class="">Ovde ide neki takst</p>
 
     <a href="" class="btn btn-custom-style">text-image 1</a>
 
@@ -810,7 +855,7 @@ $text_image_section_1_html = <<<HTML
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-right custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
     <h3 class="title-h3">Podnaslov</h3>
-    <p class="lead">Ovde ide neki takst</p>
+    <p class="">Ovde ide neki takst</p>
 
         <a href="" class="btn btn-custom-style">text-image 1</a>
     </div>
@@ -861,7 +906,7 @@ $text_image_section_2_html = <<<HTML
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-left custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
     <h3 class="title-h3">Podnaslov</h3>
-    <p class="lead">Ovde ide neki takst</p>
+    <p class="">Ovde ide neki takst</p>
 
     <a href="" class="btn btn-custom-style">text-image 2</a>
 
@@ -871,7 +916,7 @@ $text_image_section_2_html = <<<HTML
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-right custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
     <h3 class="title-h3">Podnaslov</h3>
-    <p class="lead">Ovde ide neki takst</p>
+    <p class="">Ovde ide neki takst</p>
 
         <a href="" class="btn btn-custom-style">text-image 2</a>
     </div>
@@ -1237,29 +1282,32 @@ $about_page_map = "map_v1";
 
 $about_page_gallery_show = true;
 
+//set in array item to be flex-direction column-reverse
+$about_page_reverse = array(3);
+
 $about_us_page_content = <<<HTML
 <div class="col-lg-8 mx-auto text-center all-section-style">
     <h2 class="subtitle-h2">Simple section 3</h2>
     <h3 class="title-h3">Simple section 3</h3>
-    <p class="lead mb-4">Ovde ide neki takst</p>
+    <p class=" mb-4">Ovde ide neki takst</p>
     <a href="" class="btn btn-custom-style">section 3</a>
 </div>
 
 <div class="row align-items-center">
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center custom-class xs-text-center">
+    <div class="col-12 col-sm-6 col-lg-6 p-5 text-center custom-class xs-text-center">
         <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
         <h3 class="title-h3">Podnaslov</h3>
-        <p class="lead">Ovde ide neki takst</p>
+        <p class="">Ovde ide neki takst</p>
         <a href="" class="btn btn-custom-style">text-image 2</a>
     </div>
 </div>
 <div class="row align-items-center">
-    <div class="col-12 col-sm-6 col-lg-6 px-5 text-center custom-class xs-text-center">
+    <div class="col-12 col-sm-6 col-lg-6 p-5 text-center custom-class xs-text-center">
         <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
         <h3 class="title-h3">Podnaslov</h3>
-        <p class="lead">Ovde ide neki takst</p>
+        <p class="">Ovde ide neki takst</p>
         <a href="" class="btn btn-custom-style">text-image 2</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">

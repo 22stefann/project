@@ -67,6 +67,16 @@
         left: 7px;
         right: unset !important;
     }
+    @media (max-width: 767px) {
+
+        <?php if (!empty($about_page_reverse)) { ?>
+            <?php foreach($about_page_reverse as $item) { ?>
+                .about-page-content .row:nth-of-type(<?php echo $item; ?>) {
+                    <?php echo "flex-direction: column-reverse;"; ?>
+                }
+            <?php } ?>
+        <?php } ?>
+    }
 </style>
 <body>
     <?php $activeTab = "ABOUT"; ?>

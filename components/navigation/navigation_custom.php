@@ -188,6 +188,35 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     display:none !important;
 }
 
+<?php if ( !empty($navTabSize_1400) ) : ?>
+    @media (max-width: 1400px) {
+        header nav.desktop-navigation .container ul li a  {
+            font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ?>);
+        }
+    }
+<?php endif; ?>
+<?php if ( !empty($navTabSize_1200) ) : ?>
+    @media (max-width: 1200px) {
+        header nav.desktop-navigation .container ul li a  {
+            font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ." - ". $navTabSize_1200 ?>);
+        }
+    }
+<?php endif; ?>
+<?php if ( !empty($navTabSize_1024) ) : ?>
+    @media (max-width: 1024px) {
+        header nav.desktop-navigation .container ul li a  {
+            font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ." - ". $navTabSize_1200." - ". $navTabSize_1024 ?>);
+        }
+    }
+<?php endif; ?>
+<?php if ( !empty($navTabSize_767) ) : ?>
+    @media (max-width: 767px) {
+        header nav.desktop-navigation .container ul li a {
+            font-size: <?php echo $navTabSize_767;?>;
+        }
+    }
+<?php endif; ?>
+
 /*Desktop navigation end*/
 
 /*Mobile navigation start */
@@ -328,7 +357,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     }
 
     .nav-container .nav-items .nav-item {
-        font-size: var(--navTabSize);
+        font-size: <?php echo $navTabSize_767;?>;
         color: var(--mobileTabsColor);
         background-color: var(--mobileTabsBgColor);
         padding: 10px 0 10px 5px;
@@ -630,7 +659,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
         opacity: 0.8;
         padding: 10px;
         top: 28%;
-        font-size: var(--navTabSize);
+        font-size: <?php echo $navTabSize_767;?>;
         font-family: var(--navTabsFont);
         -webkit-transition: all 0.2s 0.2s, font-size 0.1s;
                 transition: all 0.2s 0.2s, font-size 0.1s;
@@ -779,7 +808,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
             text-decoration: none;
             text-transform: var(--navTextTransform);
             font-family: var(--navTabsFont);
-            font-size: var(--navTabSize);
+            font-size: <?php echo $navTabSize_767;?>;
             font-weight: var(--navTabFontWeight);
         }
 

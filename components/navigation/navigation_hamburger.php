@@ -346,7 +346,7 @@
 }
 
 .sidebar.active{
-    width: 240px;
+    width: max-content;
     left: -80px
 }
 
@@ -483,6 +483,46 @@
         justify-content: end !important;
     }
 }
+
+
+nav a.navigation-link,
+nav li.hamburger-social a {
+    font-family: <?php echo $navTabsFont; ?>;
+    font-size: <?php echo $navTabSize; ?>;
+    font-weight: <?php echo $navTabFontWeight; ?>;
+}
+<?php if ( !empty($navTabSize_1400) ) : ?>
+    @media (max-width: 1400px) {
+        nav a.navigation-link,
+        nav li.hamburger-social a {
+            font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ?>);
+        }
+    }
+<?php endif; ?>
+<?php if ( !empty($navTabSize_1200) ) : ?>
+    @media (max-width: 1200px) {
+        nav a.navigation-link,
+        nav li.hamburger-social a {
+            font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ." - ". $navTabSize_1200 ?>);
+        }
+    }
+<?php endif; ?>
+<?php if ( !empty($navTabSize_1024) ) : ?>
+    @media (max-width: 1024px) {
+        nav a.navigation-link,
+        nav li.hamburger-social a {
+            font-size: calc(<?php echo $navTabSize ." - ". $navTabSize_1400 ." - ". $navTabSize_1200." - ". $navTabSize_1024 ?>);
+        }
+    }
+<?php endif; ?>
+<?php if ( !empty($navTabSize_767) ) : ?>
+    @media (max-width: 767px) {
+        nav a.navigation-link,
+        nav li.hamburger-social a {
+            font-size: <?php echo $navTabSize_767;?>;
+        }
+    }
+<?php endif; ?>
 </style>
 <div class="navbar nav-holder d-flex align-items-center pr-2 pl-2 pt-0 pb-0 justify-content-<?php echo $hamburger_menu_logo_position; ?>">
     
@@ -534,25 +574,25 @@
         <?php endforeach; ?>
         <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) : ?>
         <?php if ( !empty($twitterLink) ) { ?>
-            <li class=""> 
+            <li class="hamburger-social"> 
                 <a class="" target="_blank" href="<?php echo $twitterLink; ?>"><i class='bx' ></i><i class="fab fa-twitter links_name"></i><span class="links_name">Twitter</span></a> 
             </li>
         <?php } ?>
 
         <?php if ( !empty($fbLink) ) { ?>
-            <li class=""> 
+            <li class="hamburger-social"> 
                 <a class="" target="_blank" href="<?php echo $fbLink; ?>"><i class='bx' ></i><i class="fab fa-facebook links_name"></i><span class="links_name">Facebook</span></a> 
             </li>
         <?php } ?>
 
         <?php if ( !empty($instaLink) ) { ?>
-            <li class=""> 
+            <li class="hamburger-social"> 
                 <a class="" target="_blank" href="<?php echo $instaLink; ?>"><i class='bx' ></i><i class="fab fa-instagram links_name"></i><span class="links_name">Instagram</span></a> 
             </li>
         <?php } ?>
 
         <?php if ( !empty($ytLink) ) { ?>
-            <li class=""> 
+            <li class="hamburger-social"> 
                 <a class="" target="_blank" href="<?php echo $ytLink; ?>"><i class='bx' ></i><i class="fab fa-youtube links_name"></i><span class="links_name">Youtube</span></a> 
             </li>
         <?php } ?>
