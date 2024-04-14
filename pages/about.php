@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Title for every pages -->
     <title><?php echo $companyName; ?> - O Nama</title>
-    <!--Description for every pages -->
-    <meta name="description" content="Istorijat nase kompanije za proizvodnju izdjubravanja.">
-    <!--Keywords for all pages -->
-    <meta name="keywords" content="istorija, porodicna firma, izdjubravanje">
+    <meta name="description" content="<?php echo $aboutMetaDescription; ?>">
+    <meta name="keywords" content="<?php echo $aboutMetaKeywords; ?>">
+    <meta name="robots" content="index, follow">
     <meta property="og:title" content="<?php echo $companyName; ?> - O Nama">
-    <meta property="og:description" content="Istorijat nase kompanije za proizvodnju izdjubravanja, poreklom iz osecine.">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="../custom/logo.png">
+    <meta property="og:description" content="<?php echo $aboutMetaDescription; ?>">
+    <meta property="og:image" content="<?php echo $socialShareImage; ?>">
+    <meta name="twitter:title" content="<?php echo $companyName; ?>">
+    <meta name="twitter:description" content="<?php echo $aboutMetaDescription; ?>">
+    <meta name="twitter:image" content="<?php echo $socialShareImage; ?>">
+    <meta name="twitter:card" content="summary" />
     <?php require_once '../favicon.php'; ?>
     <?php require_once '../css/all_pages_css.php'; ?>
     <?php require_once '../scripts/scripts.php'; ?>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--map script -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!--map Leaflet.js -->
@@ -27,56 +26,55 @@
 </head>
 <?php require_once '../css/style.php'; ?>
 <style>
-    @import url(<?php echo $googleFont; ?>);
-    .about-cover::before {
-        content: '';
+.about-cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: <?php echo $about_us_page_bg_filter ?>;
+    background-image: url('<?php echo $about_us_page_bg_image ?>');
+}
+.about-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    background-color: <?php echo $about_us_page_bg_color ?>;
+    h1 {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-        background-attachment: fixed;
-        filter: <?php echo $about_us_page_bg_filter ?>;
-        background-image: url('<?php echo $about_us_page_bg_image ?>');
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: <?php echo $about_us_page_title_color; ?>;
     }
-    .about-cover {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        height: 100vh;
-        position: relative;
-        background-color: <?php echo $about_us_page_bg_color ?>;
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            color: <?php echo $about_us_page_title_color; ?>;
-        }
-    }
-    .row {
-        margin: 0;
-    }
-    .about-page-content {
-        background-color: <?php echo $about_us_page_items_bg_color; ?>;
-    }
-    #btn-back-to-top {
-        bottom: 70px !important;
-        left: 7px;
-        right: unset !important;
-    }
-    @media (max-width: 767px) {
+}
+.row {
+    margin: 0;
+}
+.about-page-content {
+    background-color: <?php echo $about_us_page_items_bg_color; ?>;
+}
+#btn-back-to-top {
+    bottom: 70px !important;
+    left: 7px;
+    right: unset !important;
+}
+@media (max-width: 767px) {
 
-        <?php if (!empty($about_page_reverse)) { ?>
-            <?php foreach($about_page_reverse as $item) { ?>
-                .about-page-content .row:nth-of-type(<?php echo $item; ?>) {
-                    <?php echo "flex-direction: column-reverse;"; ?>
-                }
-            <?php } ?>
+    <?php if (!empty($about_page_reverse)) { ?>
+        <?php foreach($about_page_reverse as $item) { ?>
+            .about-page-content .row:nth-of-type(<?php echo $item; ?>) {
+                <?php echo "flex-direction: column-reverse;"; ?>
+            }
         <?php } ?>
-    }
+    <?php } ?>
+}
 </style>
 <body>
     <?php $activeTab = "ABOUT"; ?>

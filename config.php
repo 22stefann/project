@@ -1,30 +1,69 @@
 <?php
 
 
-    ####################################################################
-    #################### DEFINE COMPANY NAME ###########################
-    ####################################################################
+####################################################################
+#################### DEFINE COMPANY NAME ###########################
+####################################################################
 
-    $companyName = "Bravarija RiS";
+$companyName = "Bravarija RiS";
 
-    $companyAddress = "Podgorska 26, <br /> Osecina, <br /> 14253";
-    
-    $companyPhone = "+381695151702";
+$companyAddress = "Podgorska 26, <br /> Osecina, <br /> 14253";
 
-    $companyEmail = "stefanstanisavljevic777@gmail.com";
+$companyPhone = "+381695151702";
 
-    ####################################################################
-    #################### DEFINE URL ####################################
-    ####################################################################
+$companyEmail = "stefanstanisavljevic777@gmail.com";
 
-    
+//define social share image
 
-    function defineUrl($urlPath) {
-        return $urlPath;
-    }
+$socialShareImage = "custom/gallery/gallery_1.jpg";
+
+//index page meta description, keywords, 
+
+$indexMetaDescription = "Bravarija Ris je porodicna firma iz Osecine koja se bavi bravarijom. Prvenstveno se bavimo izdradom izdjubravanja za stale.";
+$indexMetaKeywords = "bravarija, izdjubravanje, izdjubravanja, stala, Osecina, porodicna firma";
+
+//about page meta description, keywords, 
+
+$aboutMetaDescription = "Upoznajte nas - saznajte više o našoj strasti, misiji i predanosti. Otkrijte ko smo, šta radimo i zašto to radimo. Posvetite se našoj priči i saznajte kako vam možemo pomoć.";
+$aboutMetaKeywords = "O nama, strast, misija, stala, predanost";
+
+//history page meta description, keywords, 
+
+$historyMetaDescription = "Saznajte nasu istoriju, korake koje smo pravili dok smo rasli kao bravarska firma za izdjubravanja. ";
+$historyMetaKeywords = "bravarska firma, izdjubravanja, istorija";
+
+//map page meta description, keywords, 
+
+$mapMetaDescription = "Otkrijte nas na mapi, saznajte gde se nalazi Bravarija RIS firma za izvodjenje bravarskih radova prvenstveno izdjubravanja.";
+$mapMetaKeywords = "Otkrijte nas, Bravarija RIS, Bravarija, izdjubravanja";
+
+//contact page meta description, keywords, 
+
+$contactMetaDescription = "Kontaktirajte nas putem forme, pozivom, slanjem poruke ako vam trebaju neke informacije ili neki od nasih proizvoda.";
+$contactMetaKeywords = "Kontaktirajte nas, informacije, proizvod";
+
+//gallery page meta description, keywords, 
+
+$galleryMetaDescription = "Pogledajte nase slike proizvoda i nacina na koji radimo montaze.";
+$galleryMetaKeywords = "Slike proizvoda, montaze, teren";
+
+//faq page meta description, keywords, 
+
+$faqMetaDescription = "Pogledajte najcesca pitanja koje dobijamo i nase odgovore.";
+$faqMetaKeywords = "Najcesca pitanja, odgovori";
+
+####################################################################
+#################### DEFINE URL ####################################
+####################################################################
 
 
-    $javaScripts = [];
+
+function defineUrl($urlPath) {
+    return $urlPath;
+}
+
+
+$javaScripts = [];
 
 ####################################################################
 #################### DEFINE POPUP ##################################
@@ -32,17 +71,17 @@
 
 $popup_delay = "10000";
 
-$show_one_popup = true;
+$show_one_popup = false;
 
 $show_popup_button = false;
 
-$popup_close_bg_color = "#fff";
+$popup_close_bg_color = "#000";
 
-$popup_close_x_color = "#000";
+$popup_close_x_color = "#fff";
 
-$popup_bg_color = "#e56754";
+$popup_bg_color = "#fff";
 
-$popup_text_color = "#1a2a3a";
+$popup_text_color = "#000";
 
 $popup_html = <<<HTML
 
@@ -57,569 +96,561 @@ $popup_html = <<<HTML
 
 HTML;
 
-    ####################################################################
-    #################### DEFINE FONT START #############################
-    ####################################################################
+####################################################################
+#################### DEFINE FONT START #############################
+####################################################################
 
-    $googleFont = "'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,700;1,700&display=swap'";
-    //set p font-family: "Oswald", sans-serif;
-    $all_p_font = "'Oswald', sans-serif";
-    $all_p_font_weight = "300";
-    $all_p_font_size = "1.3em";
-    $all_p_font_size_1400 = "0em";
-    $all_p_font_size_1200 = "0em";
-    $all_p_font_size_1024 = "0.1em";
-    $all_p_font_size_767 = "1.1em";
+$googleFont = "'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,700;1,700&display=swap'";
+//set p font-family: "Oswald", sans-serif;
+$all_p_font = "'Oswald', sans-serif";
+$all_p_font_weight = "300";
+$all_p_font_size = "1.3em";
+$all_p_font_size_1400 = "0em";
+$all_p_font_size_1200 = "0em";
+$all_p_font_size_1024 = "0.1em";
+$all_p_font_size_767 = "1.1em";
 
-    //set all h1 font font-family: "Raleway", sans-serif;
-    $all_h1_font = "'Raleway', sans-serif";
-    $all_h1_transform = "uppercase";     //h1 text transform capitalize, uppercase, lowercase, none
-    $all_h1_font_weight = "300";
-    $all_h1_font_size = "3.5em";
-    $all_h1_font_size_1400 = "0.4em";
-    $all_h1_font_size_1200 = "0em";
-    $all_h1_font_size_1024 = "0.4em";
-    $all_h1_font_size_767 = "2em";
-
-
-    //set all h2 font font-family: "Oswald", sans-serif;
-    $all_h2_font = "'Oswald', sans-serif";
-    $h2FontFamily = $all_h2_font;
-    $all_h2_transform = "lowercase";     //h2 text transform capitalize, uppercase, lowercase, none
-    $all_h2_font_weight = "300";
-    $all_h2_font_size = "1.6em";
-    $all_h2_font_resize = "0.2em";
-    $all_h2_font_size_1400 = "0.2em";
-    $all_h2_font_size_1200 = "0em";
-    $all_h2_font_size_1024 = "0.2em";
-    $all_h2_font_size_767 = "1.2em";
-
-    //set all h3 font font-family: "Oswald", sans-serif;
-    $all_h3_font = "'Oswald', sans-serif";
-    $h2FontFamily = $all_h2_font;
-    $all_h3_transform = "none";     //h3 text transform capitalize, uppercase, lowercase, none
-    $all_h3_font_weight = "300";
-    $all_h3_font_size = "1.4em";
-    $all_h3_font_resize = "0em";
-    $all_h3_font_size_1400 = "0em";
-    $all_h3_font_size_1200 = "0em";
-    $all_h3_font_size_1024 = "0.2em";
-    $all_h3_font_size_767 = "1.1em";
-
-    //navigation font
-    $navTabsFont = "'Oswald', sans-serif";
-    // >1400
-    $navTabSize = "1.2em";
-    $navTabFontWeight = "400";
-    $navTextTransform ="capitalize";
-    // 1200 < x < 1400
-    $navTabSize_1400 = "0.1em";
-    // 1024 < x < 1200
-    $navTabSize_1200 = "0.1em";
-    // 768 < x < 1024
-    $navTabSize_1024 = "0.1em";
-    // 0 < x < 768
-    $navTabSize_767 = "1.1em";
-
-    //define buttons
-    $all_button_font = "'Oswald', sans-serif";
-    $allButtonsFontSize = "1.1em";
-    $allButtonsFontSizeMobile = "1em";
-    $all_button_transform = "uppercase";     //button text transform capitalize, uppercase, lowercase, none
-    $buttonsPaddingDesktop = "14px 60px;";
-    $buttonsPaddingMobile = "10px 30px;";
-    $all_button_font_weight = "700";
-
-    $buttons_animation = 10;
-    //set bg color for 9 10 and 11 button animations
-    $button_animation_bg_color = "#fff";
-    //button 1 colors
-    $button_1_bg_color = "#fff";
-    $button_1_border_color = "#fff";
-    $button_1_text_color = "#000";
-    $button_1_border_radius = "10px 20px";
-
-    $button_1_bg_color_hover = "#eb4034";
-    $button_1_border_color_hover = "#fff";
-    $button_1_text_color_hover = "#fff";
-
-    //button 2 colors
-    $button_2_bg_color = "#145287";
-    $button_2_border_color = "#fff";
-    $button_2_text_color = "#fff";
-    $button_2_border_radius = "20px 10px";
-
-    $button_2_bg_color_hover = "#078afa";
-    $button_2_border_color_hover = "#fff";
-    $button_2_text_color_hover = "#fff";
-
-    // "under_cover",
-    // "form",
-    // #"simple_section_3",
-    // #"slideshow_bootstrap",
-    // #"slideshow_v1",
-    // #"simple_section_2",
-    // "text_image_section_2",
-    // "gallery_v1",
-    // "simple_section_1",
-    // "text_image_section",
-    // "section_column",
-    // "album_section",
-    // "map_v1",
-    // #"footer_v2",
-    // "footer_v1",
-    // #"gallery_v2"
-
-    $all_buttons_style = array(
-        array( "section-class" => "under-cover-section", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
-        array( "section-class" => "form-holder", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 2 ),
-        array( "section-class" => "simple-section-1", "initial-state" => 1 , "hover-state" => 2, "border-radius" => 1 ),
-        array( "section-class" => "simple-section-2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
-        array( "section-class" => "simple-section-3", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
-        array( "section-class" => "cover-content", "initial-state" => 2 , "hover-state" => 1, "border-radius" => 1 ),
-        array( "section-class" => "text_image_section_1", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
-        array( "section-class" => "text_image_section_2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
-        array( "section-class" => "section-column", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
-        array( "section-class" => "about-page-content", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
-        array( "section-class" => "contact-form", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
-    );
-
-    //define animation on text in sections
-
-    $all_section_animation = [
-        "under-cover-section",
-        "form-holder",
-        "simple-section-1",
-        "simple-section-2",
-        "simple-section-3",
-        "text_image_section_1",
-        "text_image_section_2",
-        "section-column",
-        "album-section",
-        "gallery-v1"
-    ];
-
-    $all_section_animation = json_encode($all_section_animation);
+//set all h1 font font-family: "Raleway", sans-serif;
+$all_h1_font = "'Raleway', sans-serif";
+$all_h1_transform = "uppercase";     //h1 text transform capitalize, uppercase, lowercase, none
+$all_h1_font_weight = "300";
+$all_h1_font_size = "3.5em";
+$all_h1_font_size_1400 = "0.4em";
+$all_h1_font_size_1200 = "0em";
+$all_h1_font_size_1024 = "0.4em";
+$all_h1_font_size_767 = "2em";
 
 
-    ####################################################################
-    #################### BACK TO TOP BUTTON ############################
-    ####################################################################
+//set all h2 font font-family: "Oswald", sans-serif;
+$all_h2_font = "'Oswald', sans-serif";
+$h2FontFamily = $all_h2_font;
+$all_h2_transform = "lowercase";     //h2 text transform capitalize, uppercase, lowercase, none
+$all_h2_font_weight = "300";
+$all_h2_font_size = "1.6em";
+$all_h2_font_resize = "0.2em";
+$all_h2_font_size_1400 = "0.2em";
+$all_h2_font_size_1200 = "0em";
+$all_h2_font_size_1024 = "0.2em";
+$all_h2_font_size_767 = "1.2em";
 
-    $show_back_to_top_button = true;
+//set all h3 font font-family: "Oswald", sans-serif;
+$all_h3_font = "'Oswald', sans-serif";
+$h2FontFamily = $all_h2_font;
+$all_h3_transform = "none";     //h3 text transform capitalize, uppercase, lowercase, none
+$all_h3_font_weight = "300";
+$all_h3_font_size = "1.4em";
+$all_h3_font_resize = "0em";
+$all_h3_font_size_1400 = "0em";
+$all_h3_font_size_1200 = "0em";
+$all_h3_font_size_1024 = "0.2em";
+$all_h3_font_size_767 = "1.1em";
 
-    $side_back_to_top_button = "right";
+//navigation font
+$navTabsFont = "'Oswald', sans-serif";
+// >1400
+$navTabSize = "1.2em";
+$navTabFontWeight = "400";
+$navTextTransform ="capitalize";
+// 1200 < x < 1400
+$navTabSize_1400 = "0.1em";
+// 1024 < x < 1200
+$navTabSize_1200 = "0.1em";
+// 768 < x < 1024
+$navTabSize_1024 = "0.1em";
+// 0 < x < 768
+$navTabSize_767 = "1.1em";
 
-    $bg_color_back_to_top_button = "#fff";
+//define buttons
+$all_button_font = "'Oswald', sans-serif";
+$allButtonsFontSize = "1.1em";
+$allButtonsFontSizeMobile = "1em";
+$all_button_transform = "uppercase";     //button text transform capitalize, uppercase, lowercase, none
+$buttonsPaddingDesktop = "14px 60px;";
+$buttonsPaddingMobile = "10px 30px;";
+$all_button_font_weight = "700";
 
-    $border_color_back_to_top_button = "#000";
+$buttons_animation = 10;
+//set bg color for 9 10 and 11 button animations
+$button_animation_bg_color = "#fff";
+//button 1 colors
+$button_1_bg_color = "#fff";
+$button_1_border_color = "#fff";
+$button_1_text_color = "#000";
+$button_1_border_radius = "10px 20px";
 
-    $font_color_back_to_top_button = "#000";
+$button_1_bg_color_hover = "#eb4034";
+$button_1_border_color_hover = "#fff";
+$button_1_text_color_hover = "#fff";
 
-    ####################################################################
-    #################### DEFINE SOCIAL PHONE EMAIL #####################
-    ####################################################################
+//button 2 colors
+$button_2_bg_color = "#145287";
+$button_2_border_color = "#fff";
+$button_2_text_color = "#fff";
+$button_2_border_radius = "20px 10px";
 
-    //set fb link
-    $fbLink = "https://www.w3schools.com/icons/fontawesome_icons_intro.asp";
-    //set instagram link
-    $instaLink = "";
-    //set twitter link
-    $twitterLink = "";
-    //set yt link
-    $ytLink = "";
-    //whatsapp link
-    $whatsappLink = false;
-    //viber link
-    $viberLink = false;
-    //set true if want show phone and email in navigation
-    $phoneEmailInNav = false;
-    //set phone number
-    $phoneNumber = $companyPhone;
-    //set email address
-    $email = $companyEmail;
-    //set side social icons
-    $sideSocialIcons = true;
-    //set social side from top
-    $socialSideFromTop = "65%";
-    // set left or right
-    $sideSocialIconsAlign = "left";
+$button_2_bg_color_hover = "#078afa";
+$button_2_border_color_hover = "#fff";
+$button_2_text_color_hover = "#fff";
 
-    ####################################################################
-    #################### ALL NAVIGATION STYLE ##########################
-    ####################################################################
+// "under_cover",
+// "form",
+// #"simple_section_3",
+// #"slideshow_bootstrap",
+// #"slideshow_v1",
+// #"simple_section_2",
+// "text_image_section_2",
+// "gallery_v1",
+// "simple_section_1",
+// "text_image_section",
+// "section_column",
+// "album_section",
+// "map_v1",
+// #"footer_v2",
+// "footer_v1",
+// #"gallery_v2"
 
-    //define type of navigation bootstrap, custom, hamburger
-    $type_of_navigation = "bootstrap";
-    //show/hide social nav in navigation
-    $socNavShow = false;
-    //define logo width
-    $widthLogo = "80px";
-    //logo resize value set in px
-    $logoScrollResize = "25px";
-    //navigation container padding
-    $navigation_container_padding = "3px 3px";
-    //set nav bg color in top position
-    $nabBgColor = "#11101d";
-    //set nav bg color in scroll position
-    $navBgColorScroll = "#11101d";
-    //set padding between the tabs onlz custom navigation
-    $tabPadding = "20px";
-    //set text-transform can be uppercase lowercase capitalize
-    //$navTextTransform = "uppercase";
-    //set color of tabs in top position
-    $navTabColor = "#fff";
-    //set colors of tabs in scroll position
-    $navTabScrollColor = "#fff";
-    //set color of tabs in hover state in top position
-    $navTabHoverColor = "#fcba03";
-    //set color of tabs in hover state in scroll position
-    $navTabScrollHoverColor = "#fcba03";
-    //define font for navigation
-    //$navTabsFont = "'Smooch Sans', sans-serif";
-    //define font weight in navigation
-    //$navTabFontWeight = "200";
-    //define font size of navigation tabs
-    //$navTabSize = "1.2em";
-    //set logo name
-    $logoUrl = "logo.png";
-    //disable social icon *(enter resolution in px)
-    $disableSocial = "991px";
-    //set true if want show navigation from database(API)
-    $dynamicTab = false;
-    //define mobile logo width
-    $mobileWidthLogo = "50px";
-    //logo mobile scroll resize
-    $logoMobileScrollResize = "20px";
-    //hamburger menu color
-    $hamburgerColor = "#fff";
-    //hamburger scroll menu color
-    $hamburgerScrollColor = "#fff";
-    ####################################################################
-    #################### CUSTOM NAVIGATION V1 START ####################
-    ####################################################################
+$all_buttons_style = array(
+    array( "section-class" => "under-cover-section", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+    array( "section-class" => "form-holder", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 2 ),
+    array( "section-class" => "simple-section-1", "initial-state" => 1 , "hover-state" => 2, "border-radius" => 1 ),
+    array( "section-class" => "simple-section-2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+    array( "section-class" => "simple-section-3", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+    array( "section-class" => "cover-content", "initial-state" => 2 , "hover-state" => 1, "border-radius" => 1 ),
+    array( "section-class" => "text_image_section_1", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+    array( "section-class" => "text_image_section_2", "initial-state" => 1 , "hover-state" => 1, "border-radius" => 1 ),
+    array( "section-class" => "section-column", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+    array( "section-class" => "about-page-content", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+    array( "section-class" => "contact-form", "initial-state" => 2 , "hover-state" => 2, "border-radius" => 1 ),
+);
 
-    //set true if want navigation in column true/false
-    $navigation_column = true;
-    //set column if $navigation_column set column, if not set unset
-    $navFlexDirection = "column-reverse";
-    //set position of nav. Can be fixed, static, relative
-    $navigationPosition = "fixed";
-    //can be space-round between center left right (this affect to whole navigation container) navigationTabsPositionMarginRight and navigationTabsPositionMargin == unset
-    $navigationFlexPosition = "space-around";
-    //can be auto or unset (this affect to tabs list)
-    $navigationTabsPositionMargin = "auto";
-    //can be auto or unset (this affect to tabs list)
-    $navigationTabsPositionMarginRight = "unset";
-    //set navigation height value, in scroll this height is smaller for 30px
-    $heightNav = "unset";
-    //logo top position
-    $logoTopPosition = "0";
-    //social nav bg hover color
-    $navSocialBgColor = "#fcba03";
-    //social nav hover color
-    $navSocialColor = "#000";
-    //set 0 if want phone and email in nav be on right side ($phoneEmailPositionLeft must be sit unset)
-    $phoneEmailPositionRight = "0";
-    //set 0 if want phone and email in nav be on left side ($phoneEmailPositionRight must be sit unset)
-    $phoneEmailPositionLeft = "unset";
+//define animation on text in sections
 
-    ####################################################################
-    #################### CUSTOM ON MOBILE NAVIGATION ###################
-    ####################################################################
+$all_section_animation = [
+    "under-cover-section",
+    "form-holder",
+    "simple-section-1",
+    "simple-section-2",
+    "simple-section-3",
+    "text_image_section_1",
+    "text_image_section_2",
+    "section-column",
+    "album-section",
+    "gallery-v1"
+];
 
-    //mobile logo
-    $logoMobileUrl = $logoUrl;
-    //mobile navigation logo size
-    $mobileWidthLogo = "60px";
-    //hamburger icon color
-    $hamburgerMobileNavigationIcon = "#fff";
-    //enter mobile nav type (v1,v2,v3)
-    $mobileNavType = "v3";
-    //nav height
-    $mobileNavHeight = "70px";
-    //mobile nav position (static, relative, fixed)
-    $mobileNavPosition = "fixed";
-    //v1 tabs background color
-    $mobileTabsBgColor = "#fcba03";
-    //v1 tabs color
-    $mobileTabsColor = "#000";
-    //v1 tabs hover bg color
-    $mobileTabsBgHoverColor = "#755600";
-    //v1 tabs hover color
-    $mobileTabsHoverColor = "#ffffff";
-    //v2 mobile tabs width
-    $mobileNavWidth = "130px";
-
-    ####################################################################
-    #################### BOOTSTRAP NAVIGATION STYLE ####################
-    ####################################################################
-
-    #set navigation column, row, column-reverse
-    $bootstrap_nav_flex_direction = "row";
-    #set max-width for container true/false (%)
-    $bootstrap_nav_full_width = true;
-    #set width for container 25, 50, 75, 100 (%) or empty if want full width
-    $bootstrap_nav_container_width = "100";
-    #set tabs and social align start, center, end
-    $bootstrap_nav_tabs_align = "end";
-    #set justify-content in navigation space-around, center, evenly
-    $bootstrap_nav_justify = "space-around";
-    #set if want changed nav height in scroll true/false
-    $bootstrap_nav_height_scroll_change = true;
-    #set if want logo not in nav
-    $bootstrap_logo_out = false;
-    #set top absolute position
-    $bootstrap_top_position = "0";
-    #set padding around tabs 0,1,2,3,4
-    $bootstrap_padding_tabs = 2;
-    #use other hamburger true/false
-    $use_other_hamburger = false;
+$all_section_animation = json_encode($all_section_animation);
 
 
-    ####################################################################
-    #################### HAMBURGER NAVIGATION STYLE ####################
-    ####################################################################
+####################################################################
+#################### BACK TO TOP BUTTON ############################
+####################################################################
 
-    #set type of hamburger menu 1,2,3,4,5,6,7
-    $hamburger_menu_type = 5;
-    #set tabs hover background color
-    $hamburger_menu_tabs_bg = "#000";
-    #hamburger menu side bg color
-    $hamburger_menu_side_bg = "#11101d";
-    #hamburger menu logo position center, end
-    $hamburger_menu_logo_position = "center";
+$show_back_to_top_button = true;
 
-    ####################################################################
-    #################### NAVIGATION TABS ARRAY #########################
-    ####################################################################
+$side_back_to_top_button = "right";
 
-    $navTabs = array(
-        #array("type" => "HOME", "name" => "Pocetna", "link" => "index", "target" => "_self", "class" => "navigation-tab"),
-        #array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
-        array("type" => "ABOUT", "name" => "O nama", "link" => defineUrl("o-nama"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("istorija"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "KONTAKT", "name" => "Kontakt", "link" => defineUrl("kontakt"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "GALERIJA", "name" => "Galerija", "link" => defineUrl("galerija"), "target" => "_self", "class" => "navigation-tab"),
-        array("type" => "FAQ", "name" => "Pitanja i odgovori", "link" => defineUrl("pitanja-i-odgovori"), "target" => "_self", "class" => "navigation-tab")
-    );
+$bg_color_back_to_top_button = "#fff";
 
-    //array for submenu navigation tab
-    $subTabs = array(
-        array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        #array("type" => "TEST", "name" => "test", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
-        #array("type" => "TEST", "name" => "test2", "link" => "#", "target" => "_self", "class" => "dropdown-sub")
-    );
+$border_color_back_to_top_button = "#000";
 
-    ####################################################################
-    #################### ALL SECTIONS ARRAY ############################
-    ####################################################################
+$font_color_back_to_top_button = "#000";
 
-    $homepageSection = array (
-        "under_cover",
-        "form",
-        #"item_slide",
-        #"images_crop",
-        #"gallery_slide",
-        #"gallery_swap",
-        #"simple_section_3",
-        #"simple_section_2",
-        "text_image_section_2",
-        #"slideshow_bootstrap",
-        #"slideshow_v1",
-        "gallery_v1",
-        #"gallery_v2",
-        "cool_section",
-        "simple_section_1",
-        #"text_image_section",
-        #"section_column",
-        #"album_section",
-        "map_v1",
-        "faq",
-        #"map_v2",
-        #"footer_v2",
-        "footer_v1"
-    );
+####################################################################
+#################### DEFINE SOCIAL PHONE EMAIL #####################
+####################################################################
 
-    ####################################################################
-    #################### COVER SECTION #################################
-    ####################################################################
-    //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-    $cover_content ="slideshow";
-    //video, slideshow, custom section margin-top on desktop 
-    $desktop_video_margin_top = "80px";
-    //video, slideshow, custom section margin-top on mobile
-    $mobile_video_margin_top = "60px";
-    #################################
-    ############SLIDESHOW cover######
-    #################################
-    //slideshow autoplay
-    $slideshowAutoplay = true;
-    //slideshow delay
-    $slideshowDelay = "6000";
-    //show hide arrow
-    $slideshowArrow = true;
-    //slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11
-    $slideshowAnimation = 7;
-    //slideshow mobile height *bootstrap
-    $slideshow_height_mobile = "60vh";
-    //slideshow alpha can be brightness(0.5), opacity(0.5),blur(3px), contrast(0.5),grayscale(1),  if bootstrap if not set rgba(0,0,0,0.5);*bootstrap
-    $slideshowAlpha = "rgba(0,0,0,0.6)";
-    //slideshow text color *bootstrap
-    $slideshow_text_color = "#fff";
-    //slideshow arrow color rgba(255,255,255,0.8);*bootstrap
-    $slideshow_arrow_color = '#000';
-    //slideshow arrow color hover
-    $slideshow_hover_arrow_color = "#000";
-    //slideshow arrow bg color 
-    $slideshow_bg_arrow_color = "rgba(255, 255, 255, 0.7)";
-    //slideshow arrow bg color hover
-    $slideshow_bg_hover_arrow_color = "rgba(255, 255, 255, 0.7)";
-    //slideshow remove arrow on mobile
-    $slideshowMobileArrow = true;
-    //custom slideshow text align
-    $custom_slideshow_align = "center";
-    #################################
-    ############VIDEO################
-    #################################
-    //video url
-    $video_url = "custom/video.mp4";
-    //video poster
-    $video_poster = "";
-    //if video have a sound
-    $video_sound = true;
-    #################################
-    ############CUSTOM COVER#########
-    #################################
-    //custom cover bg color
-    $custom_cover_bg_color = "#000";
-    //text color on the cover section
-    $custom_cover_section_text_color = "#fff";
-    //play stop button color
-    $custom_cover_section_play_btn_color = "#000";
-    //custom cover section interval
-    $custom_cover_interval = "4000";
-    //custom_slideshow_padding_right
-    $custom_slideshow_padding_right = "20px";
-    //custom cover section text
-    $custom_cover_array = array(
-        array("text" => "What you dream", "class" => "text-1-tleft"),
-        array("text" => "We make it", "class" => "text-1-bright"),
-        array("text" => "Your satisfaction", "class" => "text-2-tright"),
-        array("text" => "is our target", "class" => "text-2-bleft"),
-    );
-    //slideshow content
-    $slideshow_array = array(
-        array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
-        array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
-        array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
-        #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
-        #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
-    );
-    
+//set fb link
+$fbLink = "https://www.w3schools.com/icons/fontawesome_icons_intro.asp";
+//set instagram link
+$instaLink = "";
+//set twitter link
+$twitterLink = "";
+//set yt link
+$ytLink = "";
+//whatsapp link
+$whatsappLink = false;
+//viber link
+$viberLink = false;
+//set true if want show phone and email in navigation
+$phoneEmailInNav = false;
+//set phone number
+$phoneNumber = $companyPhone;
+//set email address
+$email = $companyEmail;
+//set side social icons
+$sideSocialIcons = true;
+//set social side from top
+$socialSideFromTop = "65%";
+// set left or right
+$sideSocialIconsAlign = "left";
 
-    ####################################################################
-    #################### UNDER COVER SECTION ###########################
-    ####################################################################
+####################################################################
+#################### ALL NAVIGATION STYLE ##########################
+####################################################################
 
-    //under cover section bg image
-    $underCoverBgImage = "";
-    //under cover section bg color
-    $underCoverBgColor = "#11101d";
-    //under cover section text color
-    $underCoverTextColor = "#fff";
-    //under cover section h1 color
-    $underCoverTitleColor = "#fff";
-    //under cover section h2 color
-    $underCoverSubtitleColor = "#fff";
-    //svg top
-    $under_cover_top_svg = false;
-    //top svg color
-    $under_cover_top_svg_color = "#000";
-    //svg bottom
-    $under_cover_bottom_svg = false;
-    //bottom svg color
-    $under_cover_bottom_svg_color = "#000";
-    $under_cover_section_html = <<<HTML
-    <div class="">
-        <h1 class="subtitle-h2 animated-element animate-left">Under cover section</h1>
-        <h2 class="title-h3 animated-element animate-left">subtitle</h2>
-        <div class="col-lg-6 mx-auto">
-        <p class="animated-element animate-left">text</p>
-        <a href="" class="btn btn-custom-style animated-element animate-left">Under Cover</a>
-        </div>
+//define type of navigation bootstrap, custom, hamburger
+$type_of_navigation = "bootstrap";
+//show/hide social nav in navigation
+$socNavShow = false;
+//define logo width
+$widthLogo = "80px";
+//logo resize value set in px
+$logoScrollResize = "25px";
+//navigation container padding
+$navigation_container_padding = "3px 3px";
+//set nav bg color in top position
+$nabBgColor = "#11101d";
+//set nav bg color in scroll position
+$navBgColorScroll = "#11101d";
+//set padding between the tabs onlz custom navigation
+$tabPadding = "20px";
+//set color of tabs in top position
+$navTabColor = "#fff";
+//set colors of tabs in scroll position
+$navTabScrollColor = "#fff";
+//set color of tabs in hover state in top position
+$navTabHoverColor = "#fcba03";
+//set color of tabs in hover state in scroll position
+$navTabScrollHoverColor = "#fcba03";
+//set logo name
+$logoUrl = "logo.png";
+//disable social icon *(enter resolution in px)
+$disableSocial = "991px";
+//set true if want show navigation from database(API)
+$dynamicTab = false;
+//define mobile logo width
+$mobileWidthLogo = "50px";
+//logo mobile scroll resize
+$logoMobileScrollResize = "20px";
+//hamburger menu color
+$hamburgerColor = "#fff";
+//hamburger scroll menu color
+$hamburgerScrollColor = "#fff";
+####################################################################
+#################### CUSTOM NAVIGATION V1 START ####################
+####################################################################
+
+//set true if want navigation in column true/false
+$navigation_column = true;
+//set column if $navigation_column set column, if not set unset
+$navFlexDirection = "column-reverse";
+//set position of nav. Can be fixed, static, relative
+$navigationPosition = "fixed";
+//can be space-round between center left right (this affect to whole navigation container) navigationTabsPositionMarginRight and navigationTabsPositionMargin == unset
+$navigationFlexPosition = "space-around";
+//can be auto or unset (this affect to tabs list)
+$navigationTabsPositionMargin = "auto";
+//can be auto or unset (this affect to tabs list)
+$navigationTabsPositionMarginRight = "unset";
+//set navigation height value, in scroll this height is smaller for 30px
+$heightNav = "unset";
+//logo top position
+$logoTopPosition = "0";
+//social nav bg hover color
+$navSocialBgColor = "#fcba03";
+//social nav hover color
+$navSocialColor = "#000";
+//set 0 if want phone and email in nav be on right side ($phoneEmailPositionLeft must be sit unset)
+$phoneEmailPositionRight = "0";
+//set 0 if want phone and email in nav be on left side ($phoneEmailPositionRight must be sit unset)
+$phoneEmailPositionLeft = "unset";
+
+####################################################################
+#################### CUSTOM ON MOBILE NAVIGATION ###################
+####################################################################
+
+//mobile logo
+$logoMobileUrl = $logoUrl;
+//mobile navigation logo size
+$mobileWidthLogo = "60px";
+//hamburger icon color
+$hamburgerMobileNavigationIcon = "#fff";
+//enter mobile nav type (v1,v2,v3)
+$mobileNavType = "v3";
+//nav height
+$mobileNavHeight = "70px";
+//mobile nav position (static, relative, fixed)
+$mobileNavPosition = "fixed";
+//v1 tabs background color
+$mobileTabsBgColor = "#fcba03";
+//v1 tabs color
+$mobileTabsColor = "#000";
+//v1 tabs hover bg color
+$mobileTabsBgHoverColor = "#755600";
+//v1 tabs hover color
+$mobileTabsHoverColor = "#ffffff";
+//v2 mobile tabs width
+$mobileNavWidth = "130px";
+
+####################################################################
+#################### BOOTSTRAP NAVIGATION STYLE ####################
+####################################################################
+
+#set navigation column, row, column-reverse
+$bootstrap_nav_flex_direction = "row";
+#set max-width for container true/false (%)
+$bootstrap_nav_full_width = true;
+#set width for container 25, 50, 75, 100 (%) or empty if want full width
+$bootstrap_nav_container_width = "100";
+#set tabs and social align start, center, end
+$bootstrap_nav_tabs_align = "end";
+#set justify-content in navigation space-around, center, evenly
+$bootstrap_nav_justify = "space-around";
+#set if want changed nav height in scroll true/false
+$bootstrap_nav_height_scroll_change = true;
+#set if want logo not in nav
+$bootstrap_logo_out = false;
+#set top absolute position
+$bootstrap_top_position = "0";
+#set padding around tabs 0,1,2,3,4
+$bootstrap_padding_tabs = 2;
+#use other hamburger true/false
+$use_other_hamburger = false;
+
+
+####################################################################
+#################### HAMBURGER NAVIGATION STYLE ####################
+####################################################################
+
+#set type of hamburger menu 1,2,3,4,5,6,7
+$hamburger_menu_type = 5;
+#set tabs hover background color
+$hamburger_menu_tabs_bg = "#000";
+#hamburger menu side bg color
+$hamburger_menu_side_bg = "#11101d";
+#hamburger menu logo position center, end
+$hamburger_menu_logo_position = "center";
+
+####################################################################
+#################### NAVIGATION TABS ARRAY #########################
+####################################################################
+
+$navTabs = array(
+    #array("type" => "HOME", "name" => "Pocetna", "link" => "index", "target" => "_self", "class" => "navigation-tab"),
+    #array("type" => "ABOUT", "name" => "O Nama", "link" => "#", "target" => "_self", "class" => "navigation-tab dropdown-tab"),
+    array("type" => "ABOUT", "name" => "O nama", "link" => defineUrl("o-nama"), "target" => "_self", "class" => "navigation-tab"),
+    array("type" => "HISTORY", "name" => "Istorija", "link" => defineUrl("istorija"), "target" => "_self", "class" => "navigation-tab"),
+    array("type" => "MAPA", "name" => "Mapa", "link" => defineUrl("mapa"), "target" => "_self", "class" => "navigation-tab"),
+    array("type" => "KONTAKT", "name" => "Kontakt", "link" => defineUrl("kontakt"), "target" => "_self", "class" => "navigation-tab"),
+    array("type" => "GALERIJA", "name" => "Galerija", "link" => defineUrl("galerija"), "target" => "_self", "class" => "navigation-tab"),
+    array("type" => "FAQ", "name" => "Pitanja i odgovori", "link" => defineUrl("pitanja-i-odgovori"), "target" => "_self", "class" => "navigation-tab")
+);
+
+//array for submenu navigation tab
+$subTabs = array(
+    array("type" => "ABOUT", "name" => "sub1", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+    array("type" => "ABOUT", "name" => "sub2", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+    #array("type" => "TEST", "name" => "test", "link" => "#", "target" => "_self", "class" => "dropdown-sub"),
+    #array("type" => "TEST", "name" => "test2", "link" => "#", "target" => "_self", "class" => "dropdown-sub")
+);
+
+####################################################################
+#################### ALL SECTIONS ARRAY ############################
+####################################################################
+
+$homepageSection = array (
+    "under_cover",
+    "form",
+    #"item_slide",
+    #"images_crop",
+    #"gallery_slide",
+    #"gallery_swap",
+    #"simple_section_3",
+    #"simple_section_2",
+    "text_image_section_2",
+    #"slideshow_bootstrap",
+    #"slideshow_v1",
+    "gallery_v1",
+    #"gallery_v2",
+    "cool_section",
+    "simple_section_1",
+    #"text_image_section",
+    #"section_column",
+    #"album_section",
+    "map_v1",
+    "faq",
+    #"map_v2",
+    #"footer_v2",
+    "footer_v1"
+);
+
+####################################################################
+#################### COVER SECTION #################################
+####################################################################
+//video, custom_cover, slideshow, slideshow_bootstrap, cover_html
+$cover_content ="slideshow";
+//video, slideshow, custom section margin-top on desktop 
+$desktop_video_margin_top = "80px";
+//video, slideshow, custom section margin-top on mobile
+$mobile_video_margin_top = "60px";
+#################################
+############SLIDESHOW cover######
+#################################
+//slideshow autoplay
+$slideshowAutoplay = true;
+//slideshow delay
+$slideshowDelay = "6000";
+//show hide arrow
+$slideshowArrow = true;
+//slideshow animation *(1-12) //1,2,3,4,5,6,7,8,9,10,11
+$slideshowAnimation = 7;
+//slideshow mobile height *bootstrap
+$slideshow_height_mobile = "60vh";
+//slideshow alpha can be brightness(0.5), opacity(0.5),blur(3px), contrast(0.5),grayscale(1),  if bootstrap if not set rgba(0,0,0,0.5);*bootstrap
+$slideshowAlpha = "rgba(0,0,0,0.6)";
+//slideshow text color *bootstrap
+$slideshow_text_color = "#fff";
+//slideshow arrow color rgba(255,255,255,0.8);*bootstrap
+$slideshow_arrow_color = '#000';
+//slideshow arrow color hover
+$slideshow_hover_arrow_color = "#000";
+//slideshow arrow bg color 
+$slideshow_bg_arrow_color = "rgba(255, 255, 255, 0.7)";
+//slideshow arrow bg color hover
+$slideshow_bg_hover_arrow_color = "rgba(255, 255, 255, 0.7)";
+//slideshow remove arrow on mobile
+$slideshowMobileArrow = true;
+//custom slideshow text align
+$custom_slideshow_align = "center";
+#################################
+############VIDEO################
+#################################
+//video url
+$video_url = "custom/video.mp4";
+//video poster
+$video_poster = "";
+//if video have a sound
+$video_sound = true;
+#################################
+############CUSTOM COVER#########
+#################################
+//custom cover bg color
+$custom_cover_bg_color = "#000";
+//text color on the cover section
+$custom_cover_section_text_color = "#fff";
+//play stop button color
+$custom_cover_section_play_btn_color = "#000";
+//custom cover section interval
+$custom_cover_interval = "4000";
+//custom_slideshow_padding_right
+$custom_slideshow_padding_right = "20px";
+//custom cover section text
+$custom_cover_array = array(
+    array("text" => "What you dream", "class" => "text-1-tleft"),
+    array("text" => "We make it", "class" => "text-1-bright"),
+    array("text" => "Your satisfaction", "class" => "text-2-tright"),
+    array("text" => "is our target", "class" => "text-2-bleft"),
+);
+//slideshow content
+$slideshow_array = array(
+    array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
+    array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
+    array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
+    #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
+    #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
+);
+
+
+####################################################################
+#################### UNDER COVER SECTION ###########################
+####################################################################
+
+//under cover section bg image
+$underCoverBgImage = "";
+//under cover section bg color
+$underCoverBgColor = "#11101d";
+//under cover section text color
+$underCoverTextColor = "#fff";
+//under cover section h1 color
+$underCoverTitleColor = "#fff";
+//under cover section h2 color
+$underCoverSubtitleColor = "#fff";
+//svg top
+$under_cover_top_svg = false;
+//top svg color
+$under_cover_top_svg_color = "#000";
+//svg bottom
+$under_cover_bottom_svg = false;
+//bottom svg color
+$under_cover_bottom_svg_color = "#000";
+$under_cover_section_html = <<<HTML
+<div class="">
+    <h1 class="subtitle-h2 animated-element animate-left">Under cover section</h1>
+    <h2 class="title-h3 animated-element animate-left">subtitle</h2>
+    <div class="col-lg-6 mx-auto">
+    <p class="animated-element animate-left">text</p>
+    <a href="" class="btn btn-custom-style animated-element animate-left">Under Cover</a>
     </div>
+</div>
 HTML;
 
-    ####################################################################
-    #################### SLIDESHOW v1 SECTION ##########################
-    ####################################################################
+####################################################################
+#################### SLIDESHOW v1 SECTION ##########################
+####################################################################
 
-    //set slideshow height
-    $slideshowSectionDesktopHeight = "700px";
-    //set mobile version slideshow height
-    $slideshowSectionMobileHeight = "400px";
-    //svg top
-    $slideshow_v1_top_svg = false;
-    //top svg color
-    $slideshow_v1_top_svg_color = "#000";
-    //svg bottom
-    $slideshow_v1_bottom_svg = false;
-    //bottom svg color
-    $slideshow_v1_bottom_svg_color = "#000";
+//set slideshow height
+$slideshowSectionDesktopHeight = "700px";
+//set mobile version slideshow height
+$slideshowSectionMobileHeight = "400px";
+//svg top
+$slideshow_v1_top_svg = false;
+//top svg color
+$slideshow_v1_top_svg_color = "#000";
+//svg bottom
+$slideshow_v1_bottom_svg = false;
+//bottom svg color
+$slideshow_v1_bottom_svg_color = "#000";
 
-    ####################################################################
-    #################### SLIDESHOW bootstrap SECTION ###################
-    ####################################################################
+####################################################################
+#################### SLIDESHOW bootstrap SECTION ###################
+####################################################################
 
-    //slideshow bootstrap autoplay
-    $slideshowBootstrapAutoplay = $slideshowAutoplay;
-    //slideshow bootstrap bg color
-    $bootstrapSlideshowBg = "#000";
-    //slideshow text align
-    $slideshowBootstrapTextAlign = "center";
-    //slideshow content horizontal align left, center
-    $slideshowBootstrapHorizontalAlign = "center";
-    //slideshow content vertical align top, center, bottom
-    $slideshowBootstrapVerticalAlign = "center";
-    //filter
-    $slideshowBootstrapAlpha = "brightness(0.4)";
-    //svg top
-    $slideshow_bootstrap_top_svg = false;
-    //top svg color
-    $slideshow_bootstrap_top_svg_color = "#000";
-    //svg bottom
-    $slideshow_bootstrap_bottom_svg = false;
-    //bottom svg color
-    $slideshow_bootstrap_bottom_svg_color = "#000";
-    
-    ####################################################################
-    #################### GALLERY SECTION ###############################
-    ####################################################################
+//slideshow bootstrap autoplay
+$slideshowBootstrapAutoplay = $slideshowAutoplay;
+//slideshow bootstrap bg color
+$bootstrapSlideshowBg = "#000";
+//slideshow text align
+$slideshowBootstrapTextAlign = "center";
+//slideshow content horizontal align left, center
+$slideshowBootstrapHorizontalAlign = "center";
+//slideshow content vertical align top, center, bottom
+$slideshowBootstrapVerticalAlign = "center";
+//filter
+$slideshowBootstrapAlpha = "brightness(0.4)";
+//svg top
+$slideshow_bootstrap_top_svg = false;
+//top svg color
+$slideshow_bootstrap_top_svg_color = "#000";
+//svg bottom
+$slideshow_bootstrap_bottom_svg = false;
+//bottom svg color
+$slideshow_bootstrap_bottom_svg_color = "#000";
 
-    $gallery_section_title = "Galerija";
-    $gallery_section_title_color = "#fff";
-    $gallery_v1_bg_color = "#11101d";
-    $gallery_array = array(
-        array("img" => "gallery_1.jpg" , "alt" => "forest"),
-        array("img" => "gallery_2.jpg" , "alt" => "city"),
-        array("img" => "gallery_3.jpg" , "alt" => "rain"),
-        array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
-        array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
-        array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
-        array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
-        array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
-    );
-    //svg top
-    $gallery_top_svg = false;
-    //top svg color
-    $gallery_top_svg_color = "#000";
-    //svg bottom
-    $gallery_bottom_svg = false;
-    //bottom svg color
-    $gallery_bottom_svg_color = "#000";
+####################################################################
+#################### GALLERY SECTION ###############################
+####################################################################
+
+$gallery_section_title = "Galerija";
+$gallery_section_title_color = "#fff";
+$gallery_v1_bg_color = "#11101d";
+$gallery_array = array(
+    array("img" => "gallery_1.jpg" , "alt" => "forest"),
+    array("img" => "gallery_2.jpg" , "alt" => "city"),
+    array("img" => "gallery_3.jpg" , "alt" => "rain"),
+    array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
+    array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
+    array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
+    array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
+    array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
+);
+//svg top
+$gallery_top_svg = false;
+//top svg color
+$gallery_top_svg_color = "#000";
+//svg bottom
+$gallery_bottom_svg = false;
+//bottom svg color
+$gallery_bottom_svg_color = "#000";
 
 
 ####################################################################
@@ -1188,7 +1219,7 @@ $cool_bottom_svg_color = "#000";
 
 $contact_page_bg_color = "#000";
 $contact_page_bg_filter = "opacity(0.2)";
-$contact_page_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+$contact_page_bg_image = "custom/gallery/gallery_8.jpg";
 $contact_page_text_color = "#fff";
 $contact_page_subtitle_color = "#1da9c0";
 $contact_page_form_bg_color = "#fff";
@@ -1205,7 +1236,7 @@ $contact_page_text = "Ovo je kontakt forma ako zelite nesto da nas pitate molimo
 
 $faq_page_bg_color = "#000";
 $faq_page_bg_filter = "opacity(0.2)";
-$faq_page_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+$faq_page_bg_image = "custom/gallery/gallery_8.jpg";
 $faq_page_text_color = "#fff";
 
 #######################################
@@ -1220,7 +1251,7 @@ $gallery_page_array = array(
     array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
     array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
     array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
-    array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
+    array("img" => "gallery_8.jpg" , "alt" => "gallery photo 33")
 );
 
 #######################################
@@ -1229,7 +1260,10 @@ $gallery_page_array = array(
 
 $gallery_page_array = $gallery_page_array;
 //insert gallery component
-$gallery_component_page = "gallery_v2";//gallery_v1  gallery_v2 gallery_slide gallery_swap
+$gallery_component_page = "gallery_swap";//gallery_v1  gallery_v2 gallery_slide gallery_swap
+
+$gallery_page_bg_color = "#fff";
+$gallery_page_text_color = "#000";
 
 
 #######################################
@@ -1250,7 +1284,7 @@ $history_bg_filter = "opacity(0.2)";
 
 $history_page_intro_bg_color = "transparent";
 
-$history_bg_image = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+$history_bg_image = "custom/gallery/gallery_7.jpg";
 
 $history_array = array(
     array("year"=> "2001", "text" => "At vero eos et accusamus et iusto odio dign"),

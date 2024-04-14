@@ -18,6 +18,17 @@ p {
     font-weight:  var(--all_p_font_weight);
 }
 
+.no-view-text {
+    position: absolute;
+    left: -10000px;
+}
+
+.flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*all pages style*/
 
 .all-page-padding-top {
@@ -109,6 +120,8 @@ button.form.btn::before {
     font-weight:  var(--all_h4_font_weight);
 }
 
+/*all title on website end*/
+
 /*all section style start*/
 .all-section-style {
     padding: 6em 0;
@@ -143,22 +156,6 @@ button.form.btn::before {
 
 /*cover section end*/
 
-/*Under Cover section start*/
-
-.under-cover-section {
-    background-color: var(--underCoverBgColor, #fff);
-    color: var(--underCoverTextColor, #000);
-    background-repeat: no-repeat;
-    background-size: cover;
-    h2 {
-        color: var(--underCoverTitleColor);
-    }
-    h3 {
-        color: var(--underCoverSubtitleColor);
-    }
-}
-
-/*Under Cover section end*/
 /*gallery v1 section*/
 
 #gallery {
@@ -344,17 +341,6 @@ button.form.btn::before {
             font-size: 1.8em;
         }
     }
-}
-
-.no-view-text {
-    position: absolute;
-    left: -10000px;
-}
-
-.flex-center-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 mobile-navigation {

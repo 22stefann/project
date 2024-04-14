@@ -4,28 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Title for every pages -->
     <title><?php echo $companyName; ?> - Kontakt</title>
-    <!--Description for every pages -->
-    <meta name="description" content="Mapa do nase kompanije za proizvodnju izdjubravanja.">
-    <!--Keywords for all pages -->
-    <meta name="keywords" content="istorija, porodicna firma, izdjubravanje">
-    <meta property="og:title" content="<?php echo $companyName; ?> - Kontakt">
-    <meta property="og:description" content="Istorijat nase kompanije za proizvodnju izdjubravanja, poreklom iz osecine.">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="../custom/logo.png">
+    <meta name="description" content="<?php echo $contactMetaDescription; ?>">
+    <meta name="keywords" content="<?php echo $contactMetaKeywords; ?>">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="<?php echo $companyName; ?>">
+    <meta property="og:description" content="<?php echo $contactMetaDescription; ?>">
+    <meta property="og:image" content="<?php echo $socialShareImage; ?>">
+    <meta name="twitter:title" content="<?php echo $companyName; ?> - Kontakt">
+    <meta name="twitter:description" content="<?php echo $contactMetaDescription; ?>">
+    <meta name="twitter:image" content="<?php echo $socialShareImage; ?>">
+    <meta name="twitter:card" content="summary" />
+
     <?php require_once '../favicon.php'; ?>
     <?php require_once '../css/all_pages_css.php'; ?>
     <?php require_once '../scripts/scripts.php'; ?>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--map Leaflet.js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
-<?php require_once '../css/style.php'; ?>
+    <?php require_once '../css/style.php'; ?>
 <style>
-    @import url(<?php echo $googleFont; ?>);
 
     * {
         padding: 0;
@@ -97,7 +96,7 @@
 
     .row  {
         display: flex;
-        flwx-wrap: wrap;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
     }
@@ -198,7 +197,6 @@
     }
     @media (max-width: 991px) {
         section {
-            padding-top: 50px;
             padding-bottom: 50px;
         }
         

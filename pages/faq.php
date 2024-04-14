@@ -4,25 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Title for every pages -->
     <title><?php echo $companyName; ?> - Pitanja I Odgovori</title>
-    <!--Description for every pages -->
-    <meta name="description" content="Istorijat nase kompanije za proizvodnju izdjubravanja.">
-    <!--Keywords for all pages -->
-    <meta name="keywords" content="istorija, porodicna firma, izdjubravanje">
+    <meta name="description" content="<?php echo $faqMetaDescription; ?>">
+    <meta name="keywords" content="<?php echo $faqMetaKeywords; ?>">
+    <meta name="robots" content="index, follow">
     <meta property="og:title" content="<?php echo $companyName; ?> - Pitanja I Odgovori">
-    <meta property="og:description" content="Istorijat nase kompanije za proizvodnju izdjubravanja, poreklom iz osecine.">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="../custom/logo.png">
+    <meta property="og:description" content="<?php echo $faqMetaDescription; ?>">
+    <meta property="og:image" content="<?php echo $socialShareImage; ?>">
+    <meta name="twitter:title" content="<?php echo $companyName; ?>">
+    <meta name="twitter:description" content="<?php echo $faqMetaDescription; ?>">
+    <meta name="twitter:image" content="<?php echo $socialShareImage; ?>">
+    <meta name="twitter:card" content="summary" />
+
     <?php require_once '../favicon.php'; ?>
     <?php require_once '../css/all_pages_css.php'; ?>
     <?php require_once '../scripts/scripts.php'; ?>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <?php require_once '../css/style.php'; ?>
 <style>
-    @import url(<?php echo $googleFont; ?>);
     body::before {
         content: '';
         position: fixed;
@@ -32,7 +31,7 @@
         height: 100%;
         background-size: cover;
         filter: <?php echo $faq_page_bg_filter ?>;
-        background-image: url('<?php echo $faq_page_bg_image ?>;');
+        background-image: url('<?php echo $faq_page_bg_image ?>');
     }
     body {
         background-repeat: no-repeat;
