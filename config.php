@@ -302,9 +302,9 @@ $sideSocialIconsAlign = "left";
 ####################################################################
 
 //define type of navigation bootstrap, custom, hamburger
-$type_of_navigation = "bootstrap";
+$type_of_navigation = "custom";
 //show/hide social nav in navigation
-$socNavShow = false;
+$socNavShow = true;
 //define logo width
 $widthLogo = "80px";
 //logo resize value set in px
@@ -329,8 +329,6 @@ $navTabScrollHoverColor = "#fcba03";
 $logoUrl = "logo.png";
 //disable social icon *(enter resolution in px)
 $disableSocial = "991px";
-//set true if want show navigation from database(API)
-$dynamicTab = false;
 //define mobile logo width
 $mobileWidthLogo = "50px";
 //logo mobile scroll resize
@@ -344,9 +342,9 @@ $hamburgerScrollColor = "#fff";
 ####################################################################
 
 //set true if want navigation in column true/false
-$navigation_column = true;
+$navigation_column = false;
 //set column if $navigation_column set column, if not set unset
-$navFlexDirection = "column-reverse";
+$navFlexDirection = "unset";
 //set position of nav. Can be fixed, static, relative
 $navigationPosition = "fixed";
 //can be space-round between center left right (this affect to whole navigation container) navigationTabsPositionMarginRight and navigationTabsPositionMargin == unset

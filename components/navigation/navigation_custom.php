@@ -1,8 +1,3 @@
-<?php 
-    
-   # require_once 'query/navigation.php';
-
-?>
 <style>
 /*Desktop navigation start*/
 
@@ -908,32 +903,22 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
             <div class="nav-column">
                 <ul class="navigation-tabs mb-0">
                     <?php
-                        if($dynamicTab) {
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    echo "<li><p><a href='#'> ".$row["naziv"]."</a></p></li>";
-                                }
-                            } else {
-                                echo "Nema rezultata.";
+                        foreach ($navTabs as $tab) {
+                            $arrow = "";
+                            if (strpos($tab['class'], 'dropdown-tab') !== false) {
+                                $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
                             }
-                        } else {
-                            foreach ($navTabs as $tab) {
-                                $arrow = "";
-                                if (strpos($tab['class'], 'dropdown-tab') !== false) {
-                                    $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
-                                }
-                                echo "<li class=\"{$tab['class']}\" ><a class=\"navigation-link\" data-type=\"{$tab['type']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
-                                if (strpos($tab['class'], 'dropdown-tab') !== false) {
-                                    echo "<ul class=\"submenu\">";
-                                    foreach ($subTabs as $sub) {
-                                        if ( $tab["type"] ==  $sub["type"]) {
-                                            echo "<li><a class=\"{$sub["class"]}\" href=\"{$sub['link']}\" target=\"{$sub['target']}\">{$sub['name']}</a></li>";
-                                        }
+                            echo "<li class=\"{$tab['class']}\" ><a class=\"navigation-link\" data-type=\"{$tab['type']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                            if (strpos($tab['class'], 'dropdown-tab') !== false) {
+                                echo "<ul class=\"submenu\">";
+                                foreach ($subTabs as $sub) {
+                                    if ( $tab["type"] ==  $sub["type"]) {
+                                        echo "<li><a class=\"{$sub["class"]}\" href=\"{$sub['link']}\" target=\"{$sub['target']}\">{$sub['name']}</a></li>";
                                     }
-                                    echo "</ul>";
                                 }
-                                echo "</li>";
+                                echo "</ul>";
                             }
+                            echo "</li>";
                         }
                     ?>
                 </ul>
@@ -970,35 +955,24 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
             </a>
             <ul class="navigation-tabs mb-0">
             <?php
-                if($dynamicTab) {
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<li><p><a href='#'> ".$row["naziv"]."</a></p></li>";
-                        }
-                    } else {
-                        echo "Nema rezultata.";
+                foreach ($navTabs as $tab) {
+                    $arrow = "";
+                    if (strpos($tab['class'], 'dropdown-tab') !== false) {
+                        $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
                     }
-                } else {
-                    foreach ($navTabs as $tab) {
-                        $arrow = "";
-                        if (strpos($tab['class'], 'dropdown-tab') !== false) {
-                            $arrow = '<i class="fa-solid fa-angle-down" aria-hidden="true"></i>';
-                        }
-                        echo "<li class=\"{$tab['class']}\" ><a class=\"navigation-link\" data-type=\"{$tab['type']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
-                        if (strpos($tab['class'], 'dropdown-tab') !== false) {
-                            echo "<ul class=\"submenu\">";
-                            foreach ($subTabs as $sub) {
-                                if ( $tab["type"] ==  $sub["type"]) {
-                                    echo "<a class=\"{$sub["class"]}\" href=\"{$sub['link']}\" target=\"{$sub['target']}\">{$sub['name']}</a> <br />";
-                                }
+                    echo "<li class=\"{$tab['class']}\" ><a class=\"navigation-link\" data-type=\"{$tab['type']}\" href=\"{$tab['link']}\" target=\"{$tab['target']}\">{$tab['name']} {$arrow}</a>";
+                    if (strpos($tab['class'], 'dropdown-tab') !== false) {
+                        echo "<ul class=\"submenu\">";
+                        foreach ($subTabs as $sub) {
+                            if ( $tab["type"] ==  $sub["type"]) {
+                                echo "<a class=\"{$sub["class"]}\" href=\"{$sub['link']}\" target=\"{$sub['target']}\">{$sub['name']}</a> <br />";
                             }
-                            echo "</ul>";
                         }
-
-                        echo "</li>";
+                        echo "</ul>";
                     }
-                }
 
+                    echo "</li>";
+                }
             ?>
             </ul>
             <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
