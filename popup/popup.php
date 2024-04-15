@@ -32,7 +32,7 @@
         z-index: 99;
         visibility: hidden;
         opacity: 0;
-        overflow: hiden;
+        overflow: hidden;
         transition: 0.64s ease-in-out;
     }
     .popup-inner {
@@ -129,7 +129,7 @@
     </div>
 </div>
 
-<?php if ( !empty( $popup_delay ) &&  $show_one_popup ) { ?>
+<?php if ( !empty( $popup_delay ) &&  $show_one_popup &&  $show_popup ) { ?>
     <script>
         var isPopup = localStorage.getItem('popup');
         if ( isPopup ) {
@@ -140,7 +140,7 @@
             }, "<?php echo $popup_delay; ?>");
         }
     </script>
-<?php } else { ?>
+<?php } elseif ($show_popup) { ?>
     <script>
         setTimeout(() => {
             document.getElementById("popup-button").click();

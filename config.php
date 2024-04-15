@@ -76,6 +76,8 @@ $javaScripts = [];
 
 $popup_delay = "10000";
 
+$show_popup = false;
+
 $show_one_popup = false;
 
 $show_popup_button = false;
@@ -231,16 +233,16 @@ $all_buttons_style = array(
 //define animation on text in sections
 
 $all_section_animation = [
-    "under-cover-section",
-    "form-holder",
-    "simple-section-1",
-    "simple-section-2",
-    "simple-section-3",
-    "text_image_section_1",
-    "text_image_section_2",
-    "section-column",
-    "album-section",
-    "gallery-v1"
+    // "under-cover-section",
+    // "form-holder",
+    // "simple-section-1",
+    // "simple-section-2",
+    // "simple-section-3",
+    // "text_image_section_1",
+    // "text_image_section_2",
+    // "section-column",
+    // "album-section",
+    // "gallery-v1"
 ];
 
 $all_section_animation = json_encode($all_section_animation);
@@ -474,7 +476,7 @@ $homepageSection = array (
     #"slideshow_v1",
     "gallery_v1",
     #"gallery_v2",
-    "cool_section",
+    #"cool_section",
     "simple_section_1",
     #"text_image_section",
     #"section_column",
@@ -482,8 +484,8 @@ $homepageSection = array (
     "map_v1",
     "faq",
     #"map_v2",
-    #"footer_v2",
-    "footer_v1"
+    "footer_v2",
+    #"footer_v1"
 );
 
 ####################################################################
@@ -596,11 +598,11 @@ $under_cover_bottom_svg = false;
 $under_cover_bottom_svg_color = "#000";
 $under_cover_section_html = <<<HTML
 <div class="">
-    <h1 class="subtitle-h2 animated-element animate-left">Under cover section</h1>
-    <h2 class="title-h3 animated-element animate-left">subtitle</h2>
+    <h1 class="subtitle-h2">Under cover section</h1>
+    <h2 class="title-h3">subtitle</h2>
     <div class="col-lg-6 mx-auto">
-    <p class="animated-element animate-left">text</p>
-    <a href="" class="btn btn-custom-style animated-element animate-left">Under Cover</a>
+    <p class="">text</p>
+    <a href="" class="btn btn-custom-style">Under Cover</a>
     </div>
 </div>
 HTML;
