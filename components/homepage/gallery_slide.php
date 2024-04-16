@@ -4,6 +4,13 @@
     --gallery-slide-offset: 0 -0.75rem;
 }
 
+#gallery_slide {
+    background-color: <?php echo $gallery_slideshow_bg_color; ?>;
+    h2 {
+        color: <?php echo $gallery_slideshow_title_color; ?>;
+    }
+}
+
 .gallery-slide-section * {
     margin: 0;
     padding: 0;

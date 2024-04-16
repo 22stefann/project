@@ -197,7 +197,7 @@
             </div>
             <style>
                 #carouselSlideshow-v2 .carousel-item:nth-of-type(<?php echo $slideBgBr++; ?>)::before {
-                    background-image: url('custom/<?php echo $slide["img"]; ?>');
+                    background-image: url('<?php echo $slide["img"]; ?>');
                 }
             </style>
             <?php $slideBr++; ?>

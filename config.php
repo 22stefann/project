@@ -233,8 +233,8 @@ $all_buttons_style = array(
 //define animation on text in sections
 
 $all_section_animation = [
-    // "under-cover-section",
-    // "form-holder",
+     "under-cover-section",
+     "form-holder",
     // "simple-section-1",
     // "simple-section-2",
     // "simple-section-3",
@@ -302,7 +302,7 @@ $sideSocialIconsAlign = "left";
 ####################################################################
 
 //define type of navigation bootstrap, custom, hamburger
-$type_of_navigation = "custom";
+$type_of_navigation = "hamburger";
 //show/hide social nav in navigation
 $socNavShow = true;
 //define logo width
@@ -465,23 +465,23 @@ $homepageSection = array (
     "form",
     #"item_slide",
     #"images_crop",
-    #"gallery_slide",
+    "gallery_slide",
     #"gallery_swap",
-    #"simple_section_3",
+    "simple_section_3",
     #"simple_section_2",
     "text_image_section_2",
-    #"slideshow_bootstrap",
+    "slideshow_bootstrap",
     #"slideshow_v1",
     "gallery_v1",
     #"gallery_v2",
-    #"cool_section",
+    "cool_section",
     "simple_section_1",
     #"text_image_section",
     #"section_column",
     #"album_section",
-    "map_v1",
+    #"map_v1",
     "faq",
-    #"map_v2",
+    "map_v2",
     "footer_v2",
     #"footer_v1"
 );
@@ -564,9 +564,9 @@ $customCoverBgPosition = "bottom";
 $customCoverBgPositionY = "60%";
 //slideshow content
 $slideshow_array = array(
-    array("img" => "slide1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
-    array("img" => "slide2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
-    array("img" => "slide3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
+    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
+    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
+    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
     #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "3"),
     #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "4"),
 );
@@ -706,6 +706,7 @@ $gallery_slideshow_array = array(
 );
 
 $gallery_slideshow_bg_color = "#000";
+$gallery_slideshow_title_color = "#fff";
 $gallery_slideshow_height = "50vh";
 $gallery_slideshow_height_mobile = "250px";
 //svg top
