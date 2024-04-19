@@ -79,14 +79,14 @@
     }
 }
 </style>
-    <h2 class="title-h1 text-center">Galerija</h2>
+    <?php if (!empty($gallery_slideshow_section_html)) { echo $gallery_slideshow_section_html; } ?>
 <div id="gallery-slide" class="gallery-slide-section">
     <?php if ( $gallery_slide_top_svg ) : ?>
         <?php require "components/top_svg.php" ?>
     <?php endif; ?>
     <ul class='list'>
         <?php foreach ($gallery_slideshow_array as $image) : ?>
-            <li class='item'><img src='custom/gallery/<?php echo $image["img"]; ?>' alt=""></li>
+            <li class='item'><img src='custom/gallery/<?php echo $image["img"]; ?>' alt="<?php echo $image["text"]; ?>"></li>
         <?php endforeach; ?>
     </ul>
     <?php if ( $gallery_slide_bottom_svg ) : ?>

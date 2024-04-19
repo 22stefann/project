@@ -1,5 +1,13 @@
 RewriteEngine On
 
+# Redirect from HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect index pages (.html and .php) to root URL
+RewriteCond %{THE_REQUEST} /index(\.html|\.php)? [NC]
+RewriteRule ^ / [L,R=301]
+
 RewriteRule ^(.*)index$ index.php [L]
 RewriteRule ^(.*)istorija$ pages/history.php [L]
 RewriteRule ^(.*)mapa$ pages/mapa.php [L]
