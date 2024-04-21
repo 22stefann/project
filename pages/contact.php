@@ -393,8 +393,14 @@
                     if (data.status === 'success') {
                         // Optionally, you can reset the form
                         this.reset();
-                        console.log(this);
+                        //console.log(this);
                         this.classList.remove("was-validated");
+                        // Ukloni klasu no-view-text sa labela
+                        const inputFields = this.querySelectorAll('.input-box input, .input-box textarea');
+                        inputFields.forEach(input => {
+                            const label = input.nextElementSibling.querySelector('label');
+                            label.classList.remove('no-view-text');
+                        });
                     }
                 })
                 .catch(error => {
@@ -412,7 +418,7 @@
 <script>
     function checkInput(input) {
         const label = input.nextElementSibling.querySelector('label');
-        console.log(label);
+        //console.log(label);
         if (input.value !== '') {
             label.classList.add('no-view-text');
         } else {
