@@ -558,7 +558,7 @@ nav li.hamburger-social a {
         }
         ?>
     </div>
-    <a class="navbar-brand d-flex align-items-center justify-content-<?php echo $hamburger_menu_logo_position; ?>" href="index">
+    <a class="navbar-brand d-flex align-items-center justify-content-<?php echo $hamburger_menu_logo_position; ?>" href="/#">
         <img src="custom/logo.png" alt="<?php echo $companyName; ?> logo" />
     </a> 
     <nav class="sidebar">

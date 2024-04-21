@@ -13,6 +13,9 @@ $companyPhone = "+381695151702";
 
 $companyEmail = "stefanstanisavljevic777@gmail.com";
 
+//leave empty if website no hosted
+$domain_name = "https://bravarija-ris.000webhostapp.com/";
+
 //define social share image
 
 $socialShareImage = "custom/gallery/gallery_1.jpg";
@@ -461,20 +464,20 @@ $subTabs = array(
 
 $homepageSection = array (
     "under_cover",
-    "wave",
+    #"wave",
     "form",
     #"item_slide",
     #"images_crop",
-    "gallery_slide",
+    #"gallery_slide",
     #"gallery_swap",
     "simple_section_3",
     #"simple_section_2",
     "text_image_section_2",
-    "slideshow_bootstrap",
+    #"slideshow_bootstrap",
     #"slideshow_v1",
     "gallery_v1",
     #"gallery_v2",
-    "cool_section",
+    #"cool_section",
     #"simple_section_1",
     #"text_image_section",
     #"section_column",
@@ -490,7 +493,7 @@ $homepageSection = array (
 #################### COVER SECTION #################################
 ####################################################################
 //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-$cover_content ="video";
+$cover_content ="slideshow_bootstrap";
 //video, slideshow, custom section margin-top on desktop 
 $desktop_video_margin_top = "80px";
 //video, slideshow, custom section margin-top on mobile
@@ -564,9 +567,9 @@ $customCoverBgPosition = "bottom";
 $customCoverBgPositionY = "60%";
 //slideshow content
 $slideshow_array = array(
-    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "1"),
-    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "2"),
-    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "3"),
+    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
+    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
+    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
     #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "4"),
     #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "5"),
 );
@@ -596,7 +599,7 @@ $under_cover_bottom_svg = false;
 $under_cover_bottom_svg_color = "#000";
 $under_cover_section_html = <<<HTML
 <div class="">
-    <h1 class="subtitle-h2">PREDSTAVLJAMO VAM BRAVARIJU RIS IZ OSECINE</h1>
+    <h2 class="subtitle-h2">PREDSTAVLJAMO VAM BRAVARIJU RIS IZ OSECINE</h2>
     <h2 class="title-h3">ko smo zapravo mi?</h2>
     <div class="col-lg-6 mx-auto">
     <p class="">Dobrodošli u Bravariju "Ris" – vašeg pouzdanog partnera za izradu i montažu bravarskih proizvoda u Osečini!</p>
