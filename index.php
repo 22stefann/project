@@ -87,11 +87,23 @@
     all_section_animation.forEach(function(sectionClass) {
         var elements = document.querySelectorAll('.' + sectionClass + ' *');
         elements.forEach(function(element) {
-            // Dodajemo klasu .animate
             element.classList.add('animated-element');
             element.classList.add('animate-left');
         });
     });
+</script>
+<script>
+$(document).ready(function(){
+    if ($('h1').length === 0) {
+        var firstH = $('h2, h3, h4, h5, h6').first();
+        if (firstH.length !== 0) {
+        var newH1 = $('<h1>').addClass(firstH.attr('class')).text(firstH.text());
+        firstH.replaceWith(newH1);
+        } else {
+        }
+    } else {
+    }
+});
 </script>
 <?php
     foreach ($javaScripts as $oneScript) {
