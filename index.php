@@ -62,10 +62,34 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script>
+    var all_section_animation = <?php echo $all_section_animation; ?>;
+    all_section_animation.forEach(function(sectionClass) {
+        var elements = document.querySelectorAll('.' + sectionClass + ' *');
+        elements.forEach(function(element) {
+            element.classList.add('animated-element');
+            element.classList.add('animate-left');
+        });
+    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if ($('h1').length === 0) {
+        var firstH = $('h2, h3, h4, h5, h6').first();
+        if (firstH.length !== 0) {
+        var newH1 = $('<h1>').addClass(firstH.attr('class')).text(firstH.text());
+        firstH.replaceWith(newH1);
+        } else {
+        }
+    } else {
+    }
+});
+</script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         var animatedElements = document.querySelectorAll('.animated-element');
         function checkInView() {
         animatedElements.forEach(function(element) {
+            console.log(element);
             var rect = element.getBoundingClientRect();
             var inView = (rect.top >= 0 && rect.bottom <= window.innerHeight);
             var originalPosition = parseFloat(element.getAttribute('data-original-position'));
@@ -81,29 +105,6 @@
         window.addEventListener('resize', checkInView);
         checkInView();
     });
-</script>
-<script>
-    var all_section_animation = <?php echo $all_section_animation; ?>;
-    all_section_animation.forEach(function(sectionClass) {
-        var elements = document.querySelectorAll('.' + sectionClass + ' *');
-        elements.forEach(function(element) {
-            element.classList.add('animated-element');
-            element.classList.add('animate-left');
-        });
-    });
-</script>
-<script>
-$(document).ready(function(){
-    if ($('h1').length === 0) {
-        var firstH = $('h2, h3, h4, h5, h6').first();
-        if (firstH.length !== 0) {
-        var newH1 = $('<h1>').addClass(firstH.attr('class')).text(firstH.text());
-        firstH.replaceWith(newH1);
-        } else {
-        }
-    } else {
-    }
-});
 </script>
 <?php
     foreach ($javaScripts as $oneScript) {

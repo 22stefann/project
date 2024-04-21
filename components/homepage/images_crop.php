@@ -1,8 +1,18 @@
 <style>
+#images_crop {
+    position: relative;
+    .top-svg {
+        fill: <?php echo $images_crop_top_svg_color; ?>;
+    }
+    .bottom-svg {
+        fill: <?php echo $images_crop_bottom_svg_color; ?>;
+    }
+}
 .images-crop {
     display: flex;
     height: <?php echo $image_crop_height; ?>;
     overflow: clip;
+    position: relative;
 }
 .images-crop img {
     height: 100%;
@@ -21,7 +31,7 @@
 }
 .images-crop .block  div {
     position: absolute;
-    bottom: 1rem;
+    bottom: <?php echo $images_crop_bottom; ?>;
     left: 2rem;
     color: #fff;
     font-size: clamp(12px, 5cqw, 32px);
@@ -52,6 +62,9 @@
 
 </style>
 
+<?php if ( $images_crop_top_svg ) : ?>
+    <?php require "components/top_svg.php" ?>
+<?php endif; ?>
 <div id="images-crop-section" class="blocks images-crop">
 <?php foreach ($images_crop_array as $image) : ?>
   <div class="block">
@@ -60,3 +73,6 @@
   </div>
 <?php endforeach; ?>
 </div>
+<?php if ( $images_crop_bottom_svg ) : ?>
+    <?php require "components/bottom_svg.php" ?>
+<?php endif; ?>

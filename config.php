@@ -489,15 +489,15 @@ $homepageSection = array (
     #"map_v1",
     "faq",
     "map_v2",
-    #"footer_v2",
-    "footer_v1"
+    "footer_v2",
+    #"footer_v1"
 );
 
 ####################################################################
 #################### COVER SECTION #################################
 ####################################################################
 //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
-$cover_content ="slideshow_bootstrap";
+$cover_content ="cover_html";
 //video, slideshow, custom section margin-top on desktop 
 $desktop_video_margin_top = "80px";
 //video, slideshow, custom section margin-top on mobile
@@ -571,9 +571,9 @@ $customCoverBgPosition = "bottom";
 $customCoverBgPositionY = "60%";
 //slideshow content
 $slideshow_array = array(
-    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "1"),
-    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "2"),
-    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "3"),
+    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
+    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
+    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
     #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "4"),
     #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "5"),
 );
@@ -657,7 +657,7 @@ $slideshow_bootstrap_bottom_svg = false;
 $slideshow_bootstrap_bottom_svg_color = "#000";
 
 ####################################################################
-#################### gallery_v1 section and v2 #####################
+#################### gallery_v1 section and gallery_v2 #############
 ####################################################################
 
 $gallery_section_title = <<<HTML
@@ -703,6 +703,17 @@ $images_crop_array = array(
     // array("img" => "gallery_8.jpg" , "text" => "salad")
 );
 $image_crop_height = "500px";
+//if border is enable set 4rem if not 1rem
+$images_crop_bottom = '1rem';
+
+//svg top
+$images_crop_top_svg = false;
+//top svg color
+$images_crop_top_svg_color = "#000";
+//svg bottom
+$images_crop_bottom_svg = false;
+//bottom svg color
+$images_crop_bottom_svg_color = "#000";
 
 ####################################################################
 #################### gallery_slide SECTION #####################
@@ -745,6 +756,14 @@ $gallery_slide_bottom_svg_color = "#000";
 $gallery_swap_width ="70%";
 $gallery_swap_bg_color = "#000";
 $gallery_swap_title_color = "#fff";
+//svg top
+$gallery_swap_top_svg = false;
+//top svg color
+$gallery_swap_top_svg_color = "#000";
+//svg bottom
+$gallery_swap_bottom_svg = false;
+//bottom svg color
+$gallery_swap_bottom_svg_color = "#000";
 $gallery_swap_section_html = <<<HTML
 
 <h2 class="title-h1 text-center">Galerija</h2>
@@ -1129,7 +1148,7 @@ $formBgImage = "";
 //svg top
 $form_top_svg = false;
 //top svg color
-$form_top_svg_color = "#000";
+$form_top_svg_color = "#11101d";
 //svg bottom
 $form_bottom_svg = false;
 //bottom svg color
@@ -1273,7 +1292,7 @@ $cool_array = array(
 //svg top
 $cool_top_svg = false;
 //top svg color
-$cool_top_svg_color = "#fff";
+$cool_top_svg_color = "#000";
 //svg bottom
 $cool_bottom_svg = false;
 //bottom svg color

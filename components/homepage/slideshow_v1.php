@@ -539,9 +539,9 @@
       </div>
       <div class="slide-texts-container">
         <?php foreach ($slideshow_array as $slide) { if ( $slide["data-id"] == "0" ) {?>
-          <h1 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
+          <h2 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">
             <?php echo $slide["h2"]; ?>
-          </h1>
+          </h2>
            <div class="sub-slide" data-id="<?php  echo $slide["data-id"]; ?>"><?php  echo $slide["text"]; ?></div>
           <?php } else { ?>
             <h2 class="title slide title-h1" data-id="<?php echo $slide["data-id"]; ?>">

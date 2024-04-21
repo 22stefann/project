@@ -7,6 +7,13 @@
 
 .gallery-swap {
   background-color: <?php echo $gallery_swap_bg_color; ?>;
+  position: relative;
+  .top-svg {
+    fill: <?php echo $gallery_swap_top_svg_color; ?>;
+  }
+  .bottom-svg {
+    fill: <?php echo $gallery_swap_bottom_svg_color; ?>;
+  }
   h2 {
     color: <?php echo $gallery_swap_title_color; ?>;
     padding-bottom: 70px;
@@ -47,6 +54,9 @@
 }
 </style>
 <div class="gallery-swap all-section-style">
+<?php if ( $gallery_swap_top_svg ) : ?>
+    <?php require "components/top_svg.php" ?>
+<?php endif; ?>
   
 <?php if (!empty($gallery_swap_section_html)) { echo $gallery_swap_section_html; } ?>
   <ul id="gallery-swap" class='gallery'>
@@ -54,6 +64,10 @@
         <li class='item' style="background-image: url('custom/gallery/<?php echo $image["img"] ?>')" data-pos='<?php echo $br++; ?>'></li>
     <?php endforeach; ?>
   </ul>
+
+<?php if ( $gallery_swap_bottom_svg ) : ?>
+    <?php require "components/bottom_svg.php" ?>
+<?php endif; ?>
 </div>
 
 <script>
