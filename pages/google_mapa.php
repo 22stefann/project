@@ -15,6 +15,7 @@
     <meta name="twitter:description" content="<?php echo $mapMetaDescription; ?>">
     <meta name="twitter:image" content="<?php echo $socialShareImage; ?>">
     <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="<?php echo $domain_name; ?>mapa">
     <?php require_once '../favicon.php'; ?>
     <?php require_once '../css/all_pages_css.php'; ?>
     <?php require_once '../scripts/scripts.php'; ?>
