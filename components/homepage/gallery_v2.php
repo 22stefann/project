@@ -14,7 +14,7 @@
         <?php require "components/top_svg.php" ?>
     <?php endif; ?>
     <?php if ( !empty($gallery_section_title) ) { ?>
-        <h2 class="title-h1 text-center">Gallery</h2>
+      <?php echo $gallery_section_title; ?>
     <?php } ?>
     <div class="container-fluid">
     <div id="content" class="row"></div>

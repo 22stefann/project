@@ -49,7 +49,9 @@
     <div  class="container">
         <footer  class="d-flex flex-wrap justify-content-between align-items-center ">
             <div class="col-xs-12 col-md-4 d-flex align-items-center justify-content-center">
-            <p class="mb-3 mb-md-0 ">© 2024 Company, Inc</p>
+            <?php if ( !empty($footer_v1_html) ) { ?>
+                <?php echo $footer_v1_html; ?>
+            <?php } ?>
             </div>
 
             <ul class="navbar-nav ml-auto mt-lg-0 social-display-block flex-row align-items-center social-icon">

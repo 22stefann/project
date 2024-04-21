@@ -47,7 +47,8 @@
 }
 </style>
 <div class="gallery-swap all-section-style">
-  <h2 class="title-h1 text-center">Galerija</h2>
+  
+<?php if (!empty($gallery_swap_section_html)) { echo $gallery_swap_section_html; } ?>
   <ul id="gallery-swap" class='gallery'>
     <?php $br=1; foreach ($gallery_swap_array as $image) : ?>
         <li class='item' style="background-image: url('custom/gallery/<?php echo $image["img"] ?>')" data-pos='<?php echo $br++; ?>'></li>
@@ -56,10 +57,10 @@
 </div>
 
 <script>
-  const items = document.querySelectorAll('.gallery-swap .item');
+  const items_swap = document.querySelectorAll('.gallery-swap .item');
 
   function insertViewTransitionName() {
-    items.forEach((item,i) => {
+    items_swap.forEach((item,i) => {
       item.style.viewTransitionName = `item-${i++}`;
     });
   }

@@ -4,7 +4,7 @@
     color: var(--underCoverTextColor, #000);
     background-repeat: no-repeat;
     background-size: cover;
-    h2 {
+    h2, h1 {
         color: var(--underCoverTitleColor);
     }
     h3 {

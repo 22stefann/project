@@ -7,6 +7,8 @@
 
 $companyName = "Bravarija Ris - Vaš pouzdan partner za bravarske proizvode";
 
+$shortCompanyName = "Bravarija Ris";
+
 $companyAddress = "Podgorska 26, <br /> Osecina, <br /> 14253";
 
 $companyPhone = "+381695151702";
@@ -72,6 +74,8 @@ function defineUrl($urlPath) {
 
 
 $javaScripts = [];
+
+
 
 ####################################################################
 #################### DEFINE POPUP ##################################
@@ -485,8 +489,8 @@ $homepageSection = array (
     #"map_v1",
     "faq",
     "map_v2",
-    "footer_v2",
-    #"footer_v1"
+    #"footer_v2",
+    "footer_v1"
 );
 
 ####################################################################
@@ -576,7 +580,7 @@ $slideshow_array = array(
 
 
 ####################################################################
-#################### UNDER COVER SECTION ###########################
+#################### under_cover SECTION ###########################
 ####################################################################
 
 //under cover section bg image
@@ -611,7 +615,7 @@ $under_cover_section_html = <<<HTML
 HTML;
 
 ####################################################################
-#################### SLIDESHOW v1 SECTION ##########################
+#################### slideshow_v1 SECTION ##########################
 ####################################################################
 
 //set slideshow height
@@ -628,7 +632,7 @@ $slideshow_v1_bottom_svg = false;
 $slideshow_v1_bottom_svg_color = "#000";
 
 ####################################################################
-#################### SLIDESHOW bootstrap SECTION ###################
+#################### slideshow_bootstrap SECTION ###################
 ####################################################################
 
 //slideshow bootstrap autoplay
@@ -653,10 +657,15 @@ $slideshow_bootstrap_bottom_svg = false;
 $slideshow_bootstrap_bottom_svg_color = "#000";
 
 ####################################################################
-#################### GALLERY SECTION ###############################
+#################### gallery_v1 section and v2 #####################
 ####################################################################
 
-$gallery_section_title = "Galerija";
+$gallery_section_title = <<<HTML
+
+<h2 class="title-h1 text-center">Galerija</h2>
+
+HTML;
+
 $gallery_section_title_color = "#fff";
 $gallery_v1_bg_color = "#11101d";
 $gallery_array = array(
@@ -680,7 +689,7 @@ $gallery_bottom_svg_color = "#000";
 
 
 ####################################################################
-#################### IMAGES CROP SECTION ###########################
+#################### images_crop SECTION ###########################
 ####################################################################
 
 $images_crop_array = array(
@@ -696,7 +705,7 @@ $images_crop_array = array(
 $image_crop_height = "500px";
 
 ####################################################################
-#################### gallery slideshow SECTION #####################
+#################### gallery_slide SECTION #####################
 ####################################################################
 
 $gallery_slideshow_section_html = <<<HTML
@@ -730,12 +739,17 @@ $gallery_slide_bottom_svg = false;
 $gallery_slide_bottom_svg_color = "#000";
 
 ####################################################################
-#################### gallery swap SECTION #########################
+#################### gallery_swap SECTION #########################
 ####################################################################
 
 $gallery_swap_width ="70%";
 $gallery_swap_bg_color = "#000";
 $gallery_swap_title_color = "#fff";
+$gallery_swap_section_html = <<<HTML
+
+<h2 class="title-h1 text-center">Galerija</h2>
+
+HTML;
 
 $gallery_swap_array = array(
     #array("img" => "gallery_1.jpg" , "text" => "forest"),
@@ -749,7 +763,7 @@ $gallery_swap_array = array(
 );
 
 ####################################################################
-#################### SIMPLE SECTION 1 ##############################
+#################### simple_section_1 ##############################
 ####################################################################
 //simple section title color
 $simple_section_1_title_color = "#fff";
@@ -789,7 +803,7 @@ $simple_section_1_html = <<<HTML
 HTML;
 
 ####################################################################
-#################### SIMPLE SECTION 2 ##############################
+#################### simple_section_2 ##############################
 ####################################################################
 //simple section title color
 $simple_section_2_title_color = "#fff";
@@ -829,7 +843,7 @@ $simple_section_2_html = <<<HTML
 HTML;
 
 ####################################################################
-#################### SIMPLE SECTION 3 ##############################
+#################### simple_section_3 ##############################
 ####################################################################
 //simple section title color
 $simple_section_3_title_color = "#fff";
@@ -932,7 +946,7 @@ HTML;
 
 
 ####################################################################
-#################### TEXT IMAGE SECTION 2 ##########################
+#################### text_image_section_2 ##########################
 ####################################################################
 //simple section title color
 $text_image_section_2_title_color = "#fff";
@@ -992,7 +1006,7 @@ $text_image_section_2_html = <<<HTML
 HTML;
 
 ####################################################################
-#################### section column  ###############################
+#################### section_column  ###############################
 ####################################################################
 //section column title color
 $section_column_title_color = "#fff";
@@ -1052,7 +1066,7 @@ $section_column_html = <<<HTML
 HTML;
 
 ####################################################################
-#################### section album  ################################
+#################### album_section  ################################
 ####################################################################
 
 //section album title color
@@ -1081,6 +1095,12 @@ $section_album_top_svg_color = "#000";
 $section_album_bottom_svg = false;
 //bottom svg color
 $section_album_bottom_svg_color = "#000";
+//set text or title for album section
+$album_section_title = <<<HTML
+
+<h2 class="subtitle-h2">Selcija sa albumima</h2>
+
+HTML;
 
 $album_section_items = array(
     array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
@@ -1116,8 +1136,14 @@ $form_bottom_svg = false;
 $form_bottom_svg_color = "#11101d";
 
 ####################################################################
-#################### footer section v1  ############################
+#################### footer_v1 section  ############################
 ####################################################################
+
+$footer_v1_html = <<<HTML
+
+<p class="mb-3 mb-md-0 ">© 2024 {$shortCompanyName}</p>
+
+HTML;
 
 //set footer background color
 $footer_v1_bg_color = "#11101d";
@@ -1135,6 +1161,16 @@ $footer_top_svg_color = "#000";
 $footer_bottom_svg = false;
 //bottom svg color
 $footer_bottom_svg_color = "#000";
+
+####################################################################
+#################### footer_v2 section  ############################
+####################################################################
+
+$footer_v2_html = <<<HTML
+
+<p class="text-center">© 2024 {$shortCompanyName}</p>
+
+HTML;
 
 ####################################################################
 #################### map section v1  ###############################
@@ -1188,7 +1224,7 @@ $faq_bottom_svg = false;
 $faq_bottom_svg_color = "#000";
 
 ####################################################################
-#################### item slide section  ###########################
+#################### item_slide section  ###########################
 ####################################################################
 
 $item_slide_section_bg_color = "#fff";
@@ -1219,7 +1255,7 @@ $item_slide_bottom_svg_color = "#000";
 
 
 ####################################################################
-#################### cool section  #################################
+#################### cool_section  #################################
 ####################################################################
 $cool_section_bg_color = "#000";
 $cool_section_text_color = "#fff";

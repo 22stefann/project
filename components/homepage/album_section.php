@@ -32,7 +32,9 @@
         <?php require "components/top_svg.php" ?>
     <?php endif; ?>
     <div class="container text-center">
-        <h2 class="subtitle-h2">Selcija sa albumima</h2>
+        <?php if ( !empty($album_section_title) ) : ?>
+            <?php echo $album_section_title; ?>
+        <?php endif; ?>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <?php foreach( $album_section_items as $one_item ) : ?>
                 <div class="col">

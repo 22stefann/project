@@ -100,7 +100,9 @@
             </li>
         <?php } ?>
         </ul>
-        <p class="text-center">© 2024 Company, Inc</p>
+        <?php if ( !empty($footer_v2_html) ) { ?>
+            <?php echo $footer_v2_html; ?>
+        <?php } ?>
     </footer>
     </div>
     <?php if ( $footer_bottom_svg ) : ?>
