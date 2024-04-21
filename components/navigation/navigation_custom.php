@@ -882,7 +882,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
     <div class="container">
         <?php if ( $navigation_column ) { ?>
             <div class="logo-column">
-                <a href="index">
+                <a href="/#">
                     <img src="custom/<?php echo $logoUrl; ?>" alt="<?php echo $companyName; ?> logo">
                 </a>
                 <?php if ( $phoneEmailInNav ) {?>
@@ -950,7 +950,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                 <?php } ?>
             </div>
         <?php } else { ?>
-            <a href="index">
+            <a href="/#">
                 <img src="custom/<?php echo $logoUrl; ?>" alt="<?php echo $companyName; ?> logo">
             </a>
             <ul class="navigation-tabs mb-0">
@@ -1007,7 +1007,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
 <!-- Mobile navigation start -->
 <?php if ( $mobileNavType == "v1" ) { ?>
 <div class="mobile-navigation mobile-logo-navigation">
-    <a class="logo-holder" href="index">
+    <a class="logo-holder" href="/#">
         <img src="custom/<?php echo $logoUrl; ?>" alt="<?php echo $companyName; ?> logo">
     </a>
     <?php if ((!empty($fbLink) || !empty($instaLink) || !empty($twitterLink) || !empty($ytLink)) && $socNavShow) { ?>
@@ -1119,7 +1119,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                 } ?>
             </ul>
         <?php } ?>
-        <a href="index">
+        <a href="/#">
             <img class="mobile-logo" src="custom/<?php echo $logoMobileUrl; ?>" alt="<?php echo $companyName; ?> mobile logo">
         </a>
         </div>
@@ -1162,7 +1162,7 @@ header nav.desktop-navigation .container .logo-column .phone-email-div li {
                                 } ?>
                             </ul>
                         <?php } ?>
-                        <a href="index">
+                        <a href="/#">
                             <img class="mobile-logo" src="custom/<?php echo $logoMobileUrl; ?>" alt="<?php echo $companyName; ?> mobile logo">
                         </a>
                         

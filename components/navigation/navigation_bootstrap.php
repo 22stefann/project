@@ -531,7 +531,7 @@
     <?php if ( $bootstrap_nav_justify == "space-around" ) { echo "justify-content-lg-between"; } 
     elseif( $bootstrap_nav_justify == "center" ) { echo "justify-content-lg-center"; }
     elseif( $bootstrap_nav_justify == "evenly" ) { echo "justify-content-lg-evenly"; } ?>"> 
-        <a class="navbar-brand d-flex align-items-center animated-element animate-left" href="index">
+        <a class="navbar-brand d-flex align-items-center animated-element animate-left" href="/#">
             <img src="custom/logo.png" alt="<?php echo $companyName; ?> logo" />
         </a> 
         <div class="d-flex">
