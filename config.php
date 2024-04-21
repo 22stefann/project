@@ -567,9 +567,9 @@ $customCoverBgPosition = "bottom";
 $customCoverBgPositionY = "60%";
 //slideshow content
 $slideshow_array = array(
-    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
-    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
-    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
+    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "1"),
+    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "2"),
+    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "3"),
     #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "4"),
     #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "5"),
 );
@@ -663,11 +663,11 @@ $gallery_array = array(
     array("img" => "gallery_1.jpg" , "alt" => "forest"),
     array("img" => "gallery_2.jpg" , "alt" => "city"),
     array("img" => "gallery_3.jpg" , "alt" => "rain"),
-    array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
-    array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
-    array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
-    array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
-    array("img" => "gallery_8.jpg" , "alt" => "gallery photo")
+    array("img" => "gallery_4.jpg" , "alt" => "car"),
+    array("img" => "gallery_5.jpg" , "alt" => "bridge"),
+    array("img" => "gallery_6.jpg" , "alt" => "view from top of building"),
+    array("img" => "gallery_7.jpg" , "alt" => "beautiful natural"),
+    array("img" => "gallery_8.jpg" , "alt" => "salad")
 );
 //svg top
 $gallery_top_svg = false;
@@ -687,11 +687,11 @@ $images_crop_array = array(
     #array("img" => "gallery_1.jpg" , "text" => "forest"),
     array("img" => "gallery_3.jpg" , "text" => "rain"),
     array("img" => "gallery_2.jpg" , "text" => "city"),
-    array("img" => "gallery_4.jpg" , "text" => "gallery photo 4 "),
-    //array("img" => "gallery_5.jpg" , "text" => "gallery photo 5"),
-    //array("img" => "gallery_6.jpg" , "text" => "gallery photo 6"),
-    // array("img" => "gallery_7.jpg" , "text" => "gallery photo"),
-    // array("img" => "gallery_8.jpg" , "text" => "gallery photo")
+    array("img" => "gallery_4.jpg" , "text" => "car"),
+    //array("img" => "gallery_5.jpg" , "text" => "bridge"),
+    //array("img" => "gallery_6.jpg" , "text" => "view from top of building"),
+    // array("img" => "gallery_7.jpg" , "text" => "beautiful natural"),
+    // array("img" => "gallery_8.jpg" , "text" => "salad")
 );
 $image_crop_height = "500px";
 
@@ -709,11 +709,11 @@ $gallery_slideshow_array = array(
     #array("img" => "gallery_1.jpg" , "text" => "forest"),
     #array("img" => "gallery_3.jpg" , "text" => "rain"),
     array("img" => "gallery_2.jpg" , "text" => "city"),
-    array("img" => "gallery_4.jpg" , "text" => "gallery photo 4 "),
-    array("img" => "gallery_5.jpg" , "text" => "gallery photo 5"),
-    array("img" => "gallery_6.jpg" , "text" => "gallery photo 6"),
-    array("img" => "gallery_7.jpg" , "text" => "gallery photo 7"),
-    array("img" => "gallery_8.jpg" , "text" => "gallery photo 8")
+    array("img" => "gallery_4.jpg" , "text" => "car"),
+    array("img" => "gallery_5.jpg" , "text" => "bridge"),
+    array("img" => "gallery_6.jpg" , "text" => "view from top of building"),
+    array("img" => "gallery_7.jpg" , "text" => "beautiful natural"),
+    array("img" => "gallery_8.jpg" , "text" => "salad")
 );
 
 $gallery_slideshow_bg_color = "#000";
@@ -741,11 +741,11 @@ $gallery_swap_array = array(
     #array("img" => "gallery_1.jpg" , "text" => "forest"),
     #array("img" => "gallery_3.jpg" , "text" => "rain"),
     array("img" => "gallery_2.jpg" , "text" => "city"),
-    array("img" => "gallery_4.jpg" , "text" => "gallery photo 4 "),
-    array("img" => "gallery_5.jpg" , "text" => "gallery photo 5"),
-    array("img" => "gallery_6.jpg" , "text" => "gallery photo 6"),
-    array("img" => "gallery_7.jpg" , "text" => "gallery photo"),
-    array("img" => "gallery_8.jpg" , "text" => "gallery photo")
+    array("img" => "gallery_4.jpg" , "text" => "car"),
+    array("img" => "gallery_5.jpg" , "text" => "bridge"),
+    array("img" => "gallery_6.jpg" , "text" => "view from top of building"),
+    array("img" => "gallery_7.jpg" , "text" => "beautiful natural"),
+    array("img" => "gallery_8.jpg" , "text" => "salad")
 );
 
 ####################################################################
@@ -1201,11 +1201,11 @@ $item_slide_array = array(
     #array("img" => "gallery_1.jpg" , "text" => "forest"),
     #array("img" => "gallery_3.jpg" , "text" => "rain"),
     array("img" => "custom/gallery/gallery_2.jpg" , "text" => "city" , "title" => "title"),
-    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "gallery photo 4 " , "title" => "title"),
-    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "gallery photo 5" , "title" => "title"),
-    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "gallery photo 6" , "title" => "title"),
-    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "gallery photo" , "title" => "title"),
-    array("img" => "custom/gallery/gallery_8.jpg" , "text" => "gallery photo" , "title" => "title")
+    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "car" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "bridge" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "view from top of building" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "beautiful natural" , "title" => "title"),
+    array("img" => "custom/gallery/gallery_8.jpg" , "text" => "salad" , "title" => "title")
 );
 
 //svg top
@@ -1226,12 +1226,12 @@ $cool_section_text_color = "#fff";
 $cool_section_height = "65vh";
 
 $cool_array = array(
-    array("img" => "custom/gallery/gallery_2.jpg" , "text" => "test"),
-    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "test"),
-    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "test"),
-    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "test"),
-    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "test"),
-    #array("img" => "custom/gallery/gallery_8.jpg" , "text" => "test")
+    array("img" => "custom/gallery/gallery_2.jpg" , "text" => "city"),
+    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "car"),
+    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "bridge"),
+    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "view from top of building"),
+    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "beautiful natural"),
+    #array("img" => "custom/gallery/gallery_8.jpg" , "text" => "salad")
 );
 
 //svg top
@@ -1275,17 +1275,17 @@ $faq_page_text_color = "#fff";
 
 #######################################
 ############## gallery  ###############
-#######################################
+#######################################x
 
 $gallery_page_array = array(
     array("img" => "gallery_1.jpg" , "alt" => "forest"),
     array("img" => "gallery_2.jpg" , "alt" => "city"),
     array("img" => "gallery_3.jpg" , "alt" => "rain"),
-    array("img" => "gallery_4.jpg" , "alt" => "gallery photo 4 "),
-    array("img" => "gallery_5.jpg" , "alt" => "gallery photo 5"),
-    array("img" => "gallery_6.jpg" , "alt" => "gallery photo 6"),
-    array("img" => "gallery_7.jpg" , "alt" => "gallery photo"),
-    array("img" => "gallery_8.jpg" , "alt" => "gallery photo 33")
+    array("img" => "gallery_4.jpg" , "alt" => "car"),
+    array("img" => "gallery_5.jpg" , "alt" => "bridge"),
+    array("img" => "gallery_6.jpg" , "alt" => "view from top of building"),
+    array("img" => "gallery_7.jpg" , "alt" => "beautiful natural"),
+    array("img" => "gallery_8.jpg" , "alt" => "salad")
 );
 
 #######################################

@@ -160,7 +160,7 @@
         <figure>
             <?php shuffle($gallery_page_array); ?>
             <?php foreach ($gallery_page_array as $image) { ?>
-                <img src="custom/gallery/<?php echo $image["img"]; ?>" class="img-responsive" alt="">
+                <img src="custom/gallery/<?php echo $image["img"]; ?>" class="img-responsive" alt="<?php echo $image["alt"]; ?>">
             <?php } ?>
         </figure>
     </main>

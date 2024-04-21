@@ -56,7 +56,7 @@
 <?php foreach ($images_crop_array as $image) : ?>
   <div class="block">
       <div><?php echo $image["text"]; ?></div>
-      <img src="custom/gallery/<?php echo $image["img"]; ?>" alt="">
+      <img src="custom/gallery/<?php echo $image["img"]; ?>" alt="<?php echo $image["text"]; ?> image ">
   </div>
 <?php endforeach; ?>
 </div>
