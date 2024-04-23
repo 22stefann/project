@@ -36,6 +36,7 @@
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
+    background-position-y: 50%;
     filter: <?php echo $about_us_page_bg_filter ?>;
     background-image: url('<?php echo $about_us_page_bg_image ?>');
 }

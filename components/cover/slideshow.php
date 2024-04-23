@@ -3,7 +3,7 @@
       <div class="slide-container">
         <?php foreach ($slideshow_array as $slide) { ?>
           <div class="slide" data-id="<?php echo $slide["data-id"]; ?>">
-            <div class="slide-image" style="background-image: url(custom/<?php echo $slide["img"]; ?>);"></div>
+            <div class="slide-image" style="background-image: url(<?php echo $slide["img"]; ?>);"></div>
           </div>
         <?php } ?>
       </div>

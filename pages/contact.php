@@ -41,6 +41,7 @@
         width: 100%;
         height: 100%;
         background-size: cover;
+        background-position-y: 50%;
         filter: <?php echo $contact_page_bg_filter ?>;
         background-image: url('<?php echo $contact_page_bg_image; ?>');
     }
@@ -191,7 +192,6 @@
 
     .contact-form .input-box button[type="submit"] {
         width: 100%;
-        border: none;
         cursor: pointer;
         padding: 10px;
         transition: 0.5s;

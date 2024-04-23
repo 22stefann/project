@@ -75,6 +75,13 @@ function defineUrl($urlPath) {
 
 $javaScripts = [];
 
+$about_page_link = defineUrl("o-nama");
+$history_page_link = defineUrl("istorija");
+$contact_page_link = defineUrl("kontakt");
+$map_page_link = defineUrl("mapa");
+$gallery_page_link = defineUrl("galerija");
+$faq_page_link = defineUrl("pitanja-i-odgovori");
+
 
 
 ####################################################################
@@ -106,7 +113,7 @@ $popup_html = <<<HTML
     <h2 class="title-h1">Popup</h2>
     <p>Ovde ce ici tekst za popup ako je potrebno. <br /> Takodje i slika moze da se doda. </p>
 </div>
-<a class="popup__close" href="#">X</a>
+<a class="popup__close" href="{$contact_page_link}">X</a>
 
 HTML;
 
@@ -239,20 +246,37 @@ $all_buttons_style = array(
 
 //define animation on text in sections
 
-$all_section_animation = [
-     "under-cover-section",
-     "form-holder",
-    // "simple-section-1",
-    // "simple-section-2",
-    // "simple-section-3",
-    // "text_image_section_1",
-    // "text_image_section_2",
-    // "section-column",
-    // "album-section",
-    // "gallery-v1"
+$all_section_animation_left = [
+    "under-cover-section",
+    #"form-holder",
+    "simple-section-1",
+    #"simple-section-2",
+    "simple-section-3",
+    #"text_image_section_1",
+    "text-simple-2-item-0",
+    #"section-column",
+    "image-gallery-v1-section .img-wrapper",
+    #"album-section",
+    #"gallery-v1"
 ];
 
-$all_section_animation = json_encode($all_section_animation);
+$all_section_animation_left = json_encode($all_section_animation_left);
+
+$all_section_animation_right = [
+    #"under-cover-section",
+    "form-holder",
+    #"simple-section-1",
+    "simple-section-2",
+    #"simple-section-3",
+    #"text_image_section_1",
+    "text-simple-2-item-1",
+    #"image-gallery-v1-section .img-wrapper",
+    #"map_v2",
+    #"footer_v2",
+    "faq_section"
+];
+
+$all_section_animation_right = json_encode($all_section_animation_right);
 
 //define wave section linear-gradient(60deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
 
@@ -571,9 +595,9 @@ $customCoverBgPosition = "bottom";
 $customCoverBgPositionY = "60%";
 //slideshow content
 $slideshow_array = array(
-    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Slideshow 1", "text"=> "<a class='btn btn-custom-style' data-id='0' href='#'>slide 1</a>", "data-id" => "0"),
-    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Slideshow 2", "text"=> "<a class='btn btn-custom-style' data-id='1' href='#'>slide 2</a>", "data-id" => "1"),
-    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Slideshow 3", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='#'>slide 2</a>", "data-id" => "2"),
+    array("img" => "custom/gallery/gallery_1.jpg","h2" => "Najčešća pitanja", "text"=> "<a class='btn btn-custom-style' data-id='0' href='$faq_page_link'>vidi</a>", "data-id" => "0"),
+    array("img" => "custom/gallery/gallery_2.jpg","h2" => "Pogledaj naše fotografije", "text"=> "<a class='btn btn-custom-style' data-id='1' href='$gallery_page_link'>vidi</a>", "data-id" => "1"),
+    array("img" => "custom/gallery/gallery_3.jpg","h2" => "Kontaktiraj nas", "text"=> "<span class='title-h3'>slideshow subtitle</span><br /><a class='btn btn-custom-style' href='$contact_page_link'>vidi</a>", "data-id" => "2"),
     #array("img" => "slide4.jpg","h2" => "&nbsp;Take only memories, leave <br /> only footprints.&nbsp;", "text"=> "Chief Seattle", "data-id" => "4"),
     #array("img" => "slide5.jpg","h2" => "&nbsp;Blessed are the curious for <br /> they shall have adventures.&nbsp;", "text"=> "Lovelle Drachman", "data-id" => "5"),
 );
@@ -609,7 +633,7 @@ $under_cover_section_html = <<<HTML
     <p class="">Dobrodošli u Bravariju "Ris" – vašeg pouzdanog partnera za izradu i montažu bravarskih proizvoda u Osečini!</p>
     <p>Sa ponosom predstavljamo našu firmu koja već godinama pruža vrhunsku uslugu u oblasti bravarije, nudeći kvalitetne proizvode i pouzdane usluge po meri vaših potreba.</p>
     
-    <a href="#" class="btn btn-custom-style">Under Cover</a>
+    <a href="{$about_page_link}" class="btn btn-custom-style">Under Cover</a>
     </div>
 </div>
 HTML;
@@ -816,7 +840,7 @@ $simple_section_1_html = <<<HTML
 <h3 class="title-h3">podnaslov sekcije Simple section 1</h3>
 <div class="col-lg-8 mx-auto">
     <p class=" mb-4">Ovde ide neki takst sekcije Simple section 1</p>
-    <a href="#" class="btn btn-custom-style">simple section</a>
+    <a href="{$map_page_link}" class="btn btn-custom-style">simple section</a>
 </div>
 
 HTML;
@@ -856,7 +880,7 @@ $simple_section_2_html = <<<HTML
 <h3 class="title-h3">Simple section 2</h3>
 <div class="col-lg-8 mx-auto">
     <p class=" mb-4">Ovde ide neki takst</p>
-    <a href="" class="btn btn-custom-style">section 2</a>
+    <a href="{$contact_page_link}" class="btn btn-custom-style">section 2</a>
 </div>
 
 HTML;
@@ -897,7 +921,7 @@ $simple_section_3_html = <<<HTML
 <div class="col-lg-8 mx-auto">
     <p class=" mb-4">Bravarija "Ris" je prepoznatljiva po izuzetnom kvalitetu i posvećenosti detaljima u svakom projektu koji preuzimamo. Bez obzira da li vam je potrebna izrada i montaža metalnih ograda, kapija, stepeništa ili drugih bravarskih proizvoda, možete računati na nas da vaše ideje pretvorimo u stvarnost.</p>
     <p>Naš tim visoko kvalifikovanih bravara poseduje bogato iskustvo i stručnost u radu sa različitim materijalima i tehnikama. Pružamo vam pouzdanost i sigurnost u svakom koraku procesa, od početne konsultacije i dizajna, pa sve do finalne montaže.</p>
-    <a href="#" class="btn btn-custom-style">section 3</a>
+    <a href="{$map_page_link}" class="btn btn-custom-style">section 3</a>
 </div>
 
 HTML;
@@ -945,7 +969,7 @@ $text_image_section_1_html = <<<HTML
     <h3 class="title-h3">Podnaslov</h3>
     <p class="">Ovde ide neki takst</p>
 
-    <a href="" class="btn btn-custom-style">text-image 1</a>
+    <a href="{$about_page_link}" class="btn btn-custom-style">text-image 1</a>
 
     </div>
 </div>
@@ -955,7 +979,7 @@ $text_image_section_1_html = <<<HTML
     <h3 class="title-h3">Podnaslov</h3>
     <p class="">Ovde ide neki takst</p>
 
-        <a href="" class="btn btn-custom-style">text-image 1</a>
+        <a href="{$history_page_link}" class="btn btn-custom-style">text-image 1</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
@@ -998,7 +1022,7 @@ $text_image_section_2_reverse = array(2);
 //simple section html
 $text_image_section_2_html = <<<HTML
 
-<div class="row align-items-center">
+<div class="row align-items-center text-simple-2-item-0">
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_8.jpg');height:500px;background-position:center;">
     </div>
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-left custom-class xs-text-center">
@@ -1006,17 +1030,17 @@ $text_image_section_2_html = <<<HTML
     <h3 class="title-h3">dodatno o nama</h3>
     <p class="">Osećajte se slobodno da nas kontaktirate kako biste razgovarali o vašim projektima i idejama. Naša adresa je [Adresa], a možete nas kontaktirati i putem telefona na [Broj telefona].</p>
 
-    <a href="#" class="btn btn-custom-style">text-image 2</a>
+    <a href="{$history_page_link}" class="btn btn-custom-style">text-image 2</a>
 
     </div>
 </div>
-<div class="row align-items-center">
+<div class="row align-items-center text-simple-2-item-1">
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-right custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">Kontaktirajte nas slobodno</h2>
     <h3 class="title-h3">kako je vama lakse</h3>
     <p class="">Za sve vaše bravarske potrebe u Osečini, Bravarija "Ris" je tu da vam pruži vrhunsku uslugu i zadovolji vaše zahteve sa stručnošću i pažnjom koju zaslužujete.</p>
 
-        <a href="#" class="btn btn-custom-style">text-image 2</a>
+        <a href="{$faq_page_link}" class="btn btn-custom-style">text-image 2</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>
@@ -1062,7 +1086,7 @@ $section_column_html = <<<HTML
     </div>
     <h3 class="title-h3">Naslov</h3>
     <p>Ovde ide neki tekst</p>
-    <a href="" class="btn btn-custom-style">item 1</a>
+    <a href="{$about_page_link}" class="btn btn-custom-style">item 1</a>
     </div>
     <div class="feature col">
     <div class="">
@@ -1070,7 +1094,7 @@ $section_column_html = <<<HTML
     </div>
     <h3 class="title-h3">Naslov</h3>
     <p>Ovde ide neki tekst</p>
-    <a href="" class="btn btn-custom-style">item 2</a>
+    <a href="{$faq_page_link}" class="btn btn-custom-style">item 2</a>
     </div>
     <div class="feature col">
     <div class="">
@@ -1078,7 +1102,7 @@ $section_column_html = <<<HTML
     </div>
     <h3 class="title-h3">Naslov</h3>
     <p>Ovde ide neki tekst</p>
-    <a href="" class="btn btn-custom-style">item 3</a>
+    <a href="{$gallery_page_link}" class="btn btn-custom-style">item 3</a>
     </div>
 </div>
 
@@ -1413,7 +1437,7 @@ $about_us_page_content = <<<HTML
     <h2 class="subtitle-h2">Simple section 3</h2>
     <h3 class="title-h3">Simple section 3</h3>
     <p class=" mb-4">Ovde ide neki takst</p>
-    <a href="" class="btn btn-custom-style">section 3</a>
+    <a href="{$about_page_link}" class="btn btn-custom-style">section 3</a>
 </div>
 
 <div class="row align-items-center">
@@ -1423,7 +1447,7 @@ $about_us_page_content = <<<HTML
         <h2 class="display-5 mb-3 subtitle-h2">O nama</h2>
         <h3 class="title-h3">Podnaslov</h3>
         <p class="">Ovde ide neki takst</p>
-        <a href="" class="btn btn-custom-style">text-image 2</a>
+        <a href="{$history_page_link}" class="btn btn-custom-style">text-image 2</a>
     </div>
 </div>
 <div class="row align-items-center">
@@ -1431,7 +1455,7 @@ $about_us_page_content = <<<HTML
         <h2 class="display-5 mb-3 subtitle-h2">Usluge</h2>
         <h3 class="title-h3">Podnaslov</h3>
         <p class="">Ovde ide neki takst</p>
-        <a href="" class="btn btn-custom-style">text-image 2</a>
+        <a href="{$contact_page_link}" class="btn btn-custom-style">text-image 2</a>
     </div>
     <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/gallery/gallery_7.jpg');height:500px;background-position:center;">
     </div>

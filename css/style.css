@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 ul {
@@ -61,7 +62,7 @@ p {
 /*all buttons style start*/
 
 a.btn,
-button.form.btn {
+.form.btn {
     position: relative;
     display: inline-block;
     color: #fff;
@@ -77,11 +78,11 @@ button.form.btn {
     z-index: 0;
 }
 a.btn:hover,
-button.form.btn:hover {
+.form.btn:hover {
     color: #11101d;
 }
 a.btn::before,
-button.form.btn::before {
+.form.btn::before {
     background: #fff;
     content: "";
     position: absolute;
@@ -133,13 +134,13 @@ button.form.btn::before {
 
 .top-svg {
     position: absolute;
-    top: 0;
+    top: -1px;
     width: 100%;
 }
 
 .bottom-svg {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
 }
 
@@ -387,7 +388,7 @@ mobile-navigation {
         display: none;
     }
     a.btn,
-    button.form.btn {
+    .form.btn {
         font-size: var(--allButtonsFontSizeMobile);
         padding: var(--buttonsPaddingMobile);
     }
