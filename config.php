@@ -7,7 +7,7 @@
 
 $companyName = "Bravarija Ris - Vaš pouzdan partner za bravarske proizvode";
 
-$shortCompanyName = "Bravarija Ris";
+$shortCompanyName = "Bravarija Ris ";
 
 $companyAddress = "Podgorska 26, <br /> Osecina, <br /> 14253";
 
