@@ -67,7 +67,6 @@ $customMetaKeywords = "kastom strana";
 ####################################################################
 
 
-
 function defineUrl($urlPath) {
     return $urlPath;
 }
