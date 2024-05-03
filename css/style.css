@@ -8,6 +8,7 @@ html {
     overflow-x: hidden;
 }
 
+
 body {
     margin: 0;
     overflow-x: hidden;
@@ -86,7 +87,7 @@ a.btn:hover,
     color: #11101d;
 }
 a.btn::before,
-.form.btn::before {
+button.form.btn::before {
     background: #fff;
     content: "";
     position: absolute;
@@ -392,7 +393,7 @@ mobile-navigation {
         display: none;
     }
     a.btn,
-    .form.btn {
+    button.form.btn {
         font-size: var(--allButtonsFontSizeMobile);
         padding: var(--buttonsPaddingMobile);
     }
