@@ -2,7 +2,6 @@
     #section_column {
         position: relative;
         background-color: <?php echo $section_column_bg_color; ?>;
-        background-image: url("custom/<?php echo $section_column_bg_url; ?>");
         background-size: <?php echo $section_column_bg_size; ?>;
         background-repeat: <?php echo $section_column_bg_repeat; ?>;
         background-attachment: <?php echo $section_column_bg_attachment; ?>;
@@ -21,6 +20,9 @@
         .bottom-svg {
             fill: <?php echo $section_column_bottom_svg_color; ?>;
         }
+        <?php if (!empty($section_column_bg_url)) : ?>
+        background-image: url("custom/<?php echo $section_column_bg_url; ?>");
+        <?php endif; ?>
     }
 </style>
     <?php if ( $section_column_top_svg ) : ?>

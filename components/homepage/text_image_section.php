@@ -1,7 +1,6 @@
 <style>
     #text_image_section {
         background-color: <?php echo $text_image_section_1_bg_color; ?>;
-        background-image: url("custom/<?php echo $text_image_section_1_bg_url; ?>");
         background-size: <?php echo $text_image_section_1_bg_size; ?>;
         background-attachment: <?php echo $text_image_section_1_bg_attachment; ?>;
         background-repeat: <?php echo $text_image_section_1_bg_repeat; ?>;
@@ -30,6 +29,9 @@
         .bottom-svg {
             fill: <?php echo $text_image_section_1_bottom_svg_color; ?>;
         }
+        <?php if (!empty($text_image_section_1_bg_url)) : ?>
+            background-image: url("custom/<?php echo $text_image_section_1_bg_url; ?>");
+        <?php endif; ?>
     }
     @media (max-width: 767px) {
 

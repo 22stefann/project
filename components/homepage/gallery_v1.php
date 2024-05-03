@@ -17,7 +17,7 @@
     <?php echo $gallery_section_title; ?>
   <?php } ?>
   <div class="container">
-  <div id="image-gallery" class="image-gallery-v1-section">
+    <div id="image-gallery" class="image-gallery-v1-section">
       <div class="row">
       <?php $br=0; foreach ($gallery_array as $image) { ?>
         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">

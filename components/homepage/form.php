@@ -37,7 +37,7 @@
         }
     }
 </style>
-<div class="form-holder container mx-auto all-section-style text-<?php echo $formTextAlign; ?>">
+<div class="form-holder pt-0 container mx-auto all-section-style text-<?php echo $formTextAlign; ?>">
     <?php if ( $form_top_svg ) : ?>
         <?php require "components/top_svg.php" ?>
     <?php endif; ?>
