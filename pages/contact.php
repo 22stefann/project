@@ -41,9 +41,9 @@
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-position-y: 50%;
         filter: <?php echo $contact_page_bg_filter ?>;
         background-image: url('<?php echo $contact_page_bg_image; ?>');
+        background-position-y: 50%;
     }
     body {
         min-height: 100vh;

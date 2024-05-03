@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bravarija-ris.000webhostapp.com/sitemap.xml
+Sitemap: https://sljivasavlasica.rs/sitemap.xml

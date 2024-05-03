@@ -28,7 +28,7 @@ try {
     $mail->Username = 'code.craft.mail.forwarder@gmail.com';
     $mail->Password = '097AA3ED2B19936496B24B9BC6C8E75EBEDA';
     $mail->SMTPSecure = 'tls';
-    $mail->Port = 2525;
+    $mail->Port = 587;
     
     $mail->setFrom('code.craft.mail.forwarder@gmail.com', "Forma sa sajta");
     $mail->addAddress($email, $companyName);
