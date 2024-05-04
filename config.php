@@ -1030,7 +1030,7 @@ $text_image_section_2_html = <<<HTML
 
         <a href="{$gallery_link}" class="btn btn-custom-style">pogledaj<span class="no-view-text">više o šljivi</span></a>
     </div>
-    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/about_right.jpg');height:500px;background-position:center;">
+    <div class="col-12 col-sm-6 col-lg-6 m-auto" style="background-image:url('custom/about_right_new.jpg');height:500px;background-position:center;">
     </div>
 </div>
 
