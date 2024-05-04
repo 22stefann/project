@@ -1,6 +1,9 @@
 RewriteEngine On
 
 # Redirect from HTTP to HTTPS
+# RewriteCond %{HTTP_HOST} !^sljivasavlasica.rs$
+# RewriteRule ^(.*)$ https://sljivasavlasica.rs/$1 [R=301,L]
+
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
@@ -10,8 +13,8 @@ RewriteRule ^ / [L,R=301]
 
 RewriteRule ^(.*)index$ index.php [L]
 RewriteRule ^(.*)istorija$ pages/history.php [L]
-RewriteRule ^(.*)mapa$ pages/mapa.php [L]
-#RewriteRule ^(.*)mapa$ pages/google_mapa.php [L]
+#RewriteRule ^(.*)mapa$ pages/mapa.php [L]
+RewriteRule ^(.*)mapa$ pages/google_mapa.php [L]
 RewriteRule ^(.*)kontakt$ pages/contact.php [L]
 RewriteRule ^(.*)galerija$ pages/gallery_v1_page.php [L]
 #RewriteRule ^(.*)galerija$ pages/gallery_component_page.php [L]

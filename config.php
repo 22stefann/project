@@ -9,7 +9,7 @@ $companyName = "Šljiva sa Vlašića - Kvalitet sa sela";
 
 $shortCompanyName = "Šljiva sa Vlašića";
 
-$companyAddress = "Podgorska 26, <br /> Osecina, <br /> 14253";
+$companyAddress = "Gornje Crniljevo BB, <br /> 14253";
 
 $companyPhone = "+381695151702";
 
@@ -25,7 +25,7 @@ $socialShareImage = "custom/gallery/gallery_1.jpg";
 
 //index page meta description, keywords, 
 
-$indexMetaDescription = "Šljiva sa Vlašića je porodična firma sa tradicijom dugom preko 40 godina, smeštena u srcu zapadne Srbije. Uz ljubav i pažnju prema šljivi sorte stenlej, proizvodimo vrhunske sveže šljive, suve šljive i tradicionalnu rakiju. Otkrijte kvalitet sa sela koji negujemo generacijama!.";
+$indexMetaDescription = "Šljiva sa Vlašića je porodična firma sa tradicijom dugom preko 40 godina, smeštena u srcu zapadne Srbije, uz ljubav i pažnju prema šljivi.";
 $indexMetaKeywords = "sljiva, suva sljiva, šljiva sa Vlašića, porodična firma, tradicija, šljive, stenlej, suve šljive, rakija, zapadna Srbija, Kolubarski okrug, Gornje Crniljevo, tradicionalne metode, kvalitet";
 
 //about page meta description, keywords, 
@@ -142,14 +142,14 @@ $all_h1_font_size_767 = "2em";
 //set all h2 font font-family: "Oswald", sans-serif;
 $all_h2_font = "'Oswald', sans-serif";
 $h2FontFamily = $all_h2_font;
-$all_h2_transform = "lowercase";     //h2 text transform capitalize, uppercase, lowercase, none
+$all_h2_transform = "capitalize";     //h2 text transform capitalize, uppercase, lowercase, none
 $all_h2_font_weight = "300";
-$all_h2_font_size = "1.9em";
-$all_h2_font_resize = "0.2em";
-$all_h2_font_size_1400 = "0.2em";
+$all_h2_font_size = "2.2em";
+$all_h2_font_resize = "0em";
+$all_h2_font_size_1400 = "0em";
 $all_h2_font_size_1200 = "0em";
 $all_h2_font_size_1024 = "0.2em";
-$all_h2_font_size_767 = "1.2em";
+$all_h2_font_size_767 = "1.7em";
 
 //set all h3 font font-family: "Oswald", sans-serif;
 $all_h3_font = "'Oswald', sans-serif";
@@ -277,11 +277,11 @@ $all_section_animation_right = [
 
 $all_section_animation_right = json_encode($all_section_animation_right);
 
-//define wave section linear-gradient(60deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+//define wave section linear-gradient(60deg, rgba(255,255,255,1) 0%, rgba(55, 65, 81,1) 100%);
 
-$waveBgColor = "#11101d";
+$waveBgColor = "#374151";
 //set value in rgb();
-$waveBgColorFill = "0,0,0";
+$waveBgColorFill = "222, 222, 222";
 
 
 ####################################################################
@@ -491,11 +491,13 @@ $subTabs = array(
 
 $homepageSection = array (
     "under_cover",
-    #"wave",
     #"item_slide",
     #"images_crop",
     #"gallery_slide",
     #"gallery_swap",
+    "cool_section",
+    "simple_section_1",
+    "wave",
     "simple_section_3",
     #"simple_section_2",
     "text_image_section_2",
@@ -505,13 +507,13 @@ $homepageSection = array (
     "text_image_section",
     "gallery_v1",
     #"gallery_v2",
-    #"cool_section",
     #"simple_section_1",
     #"text_image_section",
     #"album_section",
     "faq",
     "form",
     #"map_v2",
+    "simple_section_2",
     "map_v1",
     "footer_v2",
     #"footer_v1"
@@ -630,9 +632,8 @@ $under_cover_section_html = <<<HTML
     <h1 class="subtitle-h2">ŠLJIVA SA VLAŠIĆA</h1>
     <h2 class="title-h3">kvalitet sa sela</h2>
     <div class="col-lg-6 mx-auto">
-    <p class="">Proizvod koji već decenijama neguje naša porodica u selu Gornje Crniljevo.</p>
+    <p class="">Proizvod koji već decenijama neguje naša porodica u selu Gornje Crniljevo nadomak Osečine.</p>
     <p>Sa ponosom vam predstavljamo Šljivu sa Vlašića.</p>
-    
     <a href="{$about_link}#" class="btn btn-custom-style">više <span class="no-view-text">o našem proizvodu</span></a>
     </div>
 </div>
@@ -809,13 +810,13 @@ $gallery_swap_array = array(
 #################### simple_section_1 ##############################
 ####################################################################
 //simple section title color
-$simple_section_1_title_color = "#fff";
+$simple_section_1_title_color = "#dedede";
 //simple section subtitle color
-$simple_section_1_subtitle_color = "#fff";
+$simple_section_1_subtitle_color = "#dedede";
 //simple section text color
-$simple_section_1_text_color = "#fff";
+$simple_section_1_text_color = "#dedede";
 //simple section bg color
-$simple_section_1_bg_color = "#11101d";
+$simple_section_1_bg_color = "#374151";
 //simple section image url
 $simple_section_1_bg_url = "";
 //simple section image attachment
@@ -834,13 +835,13 @@ $simple_section_1_bottom_svg = false;
 $simple_section_1_bottom_svg_color = "#000";
 //simple section html
 $simple_section_1_html = <<<HTML
-
-<img class="d-block mx-auto mb-4" src="custom/logo.png" alt="company logo" width="72" height="">
-<h2 class="subtitle-h2">Simple section 1</h2>
-<h3 class="title-h3">podnaslov sekcije Simple section 1</h3>
 <div class="col-lg-8 mx-auto">
-    <p class=" mb-4">Ovde ide neki takst sekcije Simple section 1</p>
-    <a href="#" class="btn btn-custom-style">simple section</a>
+    
+<p>Bavimo se proizvodnjom šljive stenlej, sušenjem iste i pečenjem rakije. Takođe sve te naše proizvode nudimo kao finalne i prodajemo ih po preporuci naših kupaca.</p>
+    <p>Naš sajt ima za cilj upoznavanje ljudi sa značenjem šljive kao prirodni lek, odnosno upoznavanje ljudi sa svim benefitima sveže i suve šljive koliko dobrih stvari moze doneti samo par plodova ove biljke.</p>
+    <p>Takođe želimo da i drugi saznaju za nas i naš proizvod.</p>
+    <p>Iako je šljiva jedna od voćki koja se najviše gaji u našoj zemlji, mnogima se dešava da je zaborave u svojoj ishrani, posebno usled povećanja izbora voća koje se uvozi sa raznih meridijana.
+    Naravno, ni u kom slučaju ne želimo da kažemo kako drugo voće nije dobro – naprotiv, da bi organizam bio zdrav, u ishranu moramo uključiti što raznovrsnije namirnice, pre svega voće i povrće – ali želimo da podsetimo i na to koliko šljiva, sama po sebi, može biti korisna i lekovita namirnica.</p>
 </div>
 
 HTML;
@@ -849,15 +850,15 @@ HTML;
 #################### simple_section_2 ##############################
 ####################################################################
 //simple section title color
-$simple_section_2_title_color = "#fff";
+$simple_section_2_title_color = "#374151";
 //simple section subtitle color
-$simple_section_2_subtitle_color = "#fff";
+$simple_section_2_subtitle_color = "#374151";
 //simple section text color
-$simple_section_2_text_color = "#fff";
+$simple_section_2_text_color = "#374151";
 //simple section bg color
-$simple_section_2_bg_color = "#000";
+$simple_section_2_bg_color = "#dedede";
 //simple section image url
-$simple_section_2_bg_url = "default_section_back.jpg";
+$simple_section_2_bg_url = "";
 //simple section image attachment
 $simple_section_2_bg_attachment = "fixed";
 //simple section image size
@@ -875,12 +876,11 @@ $simple_section_1_bottom_svg_color = "#000";
 //simple section html
 $simple_section_2_html = <<<HTML
 
-<img class="d-block mx-auto mb-4" src="custom/logo.png" alt="company logo" width="72" height="">
-<h2 class="subtitle-h2">Simple section 2</h2>
-<h3 class="title-h3">Simple section 2</h3>
+<img class="d-block mx-auto mb-4" src="custom/logo.png" alt="sljiva sa vlasica logo" width="200px" height="">
+<h2 class="subtitle-h2">Cilj</h2>
 <div class="col-lg-8 mx-auto">
-    <p class=" mb-4">Ovde ide neki takst</p>
-    <a href="" class="btn btn-custom-style">section 2</a>
+    <p class=" mb-4">Šljiva za nas nije posao, to je nasleđe koje generacijski prenošeno kroz četiri decenije. Nikada sa našim proizvodom nismo išli na šire tržište, to želimo da promenimo. Unapredili smo sušaru pre samo 5 godina smo sušili jednu tonu a sad pet tona odjednom. Planiramo da povećamo zasade i da se proširimo na nivou države u odnosu na trenutno lokalno poslovanje. Takođe želimo da počnemo dublju preradu odnosno da izbijamo košpu i da pravimo druge prehrambene proizvode.<br />
+    Naši zasadi su pretežno sorte stenlej, ali imamo i nešto madzarke. Imamo sadnice takozvane ranovače šljive koje više da skoro i nema, ona je idealna za rakiju i dzem.<br />Locirani smo u selu Gornje Crniljevo koje je rodno mesto našeg heroja Milenka Pavlovića. Takođe kod nas se nalazi i izvor prirodne kisele vode. Kontaktirajte nas i sami se uverite u kvalitet sa sela. Spremni smo za svaki vid saradnje vezane za usluge koje nudimo. Možete nas kontaktirati putem forme, putem facebook stranice ili nas jednostavno pozovite na broj koji je na sajtu odnosno pošaljite poruku.</p>
 </div>
 
 HTML;
@@ -1026,7 +1026,7 @@ $text_image_section_2_html = <<<HTML
     <div class="col-12 col-sm-6 col-lg-6 p-5 text-right custom-class xs-text-center">
     <h2 class="display-5 mb-3 subtitle-h2">Ponuda</h2>
     <h3 class="title-h3">suva šljiva kao favorit</h3>
-    <p class="">Naša ponuda obuhvata sveže šljive stenlej, kao i suve šljive koje pažljivo sušimo kako bismo sačuvali svežinu i bogatstvo njenog ukusa. Takođe, ponosno ističemo našu tradicionalnu proizvodnju rakije od šljive, koja je postala sinonim za kvalitet i autentičan ukus.</p>
+    <p class="">Naša ponuda obuhvata sveže šljive stenlej, kao i suve šljive koje pažljivo sušimo kako bismo sačuvali svežinu i bogatstvo njenog ukusa. Takođe, ponosno ističemo našu tradicionalnu proizvodnju rakije od šljive, koja je postala sinonim za kvalitet i autentičan ukus. Godišnje osušimo u proseku oko 30-35t sveže šljive sto je oko 10 tona suve, zavisi od godine do godine. Suva šljiva isto kao i sveža jako je dobar prirodni lek, to možete pročitati i pronaci veoma lako na internetu ali i u drugom odeljku na našem sajtu.</p>
 
         <a href="{$gallery_link}" class="btn btn-custom-style">pogledaj<span class="no-view-text">više o šljivi</span></a>
     </div>
@@ -1294,27 +1294,27 @@ $item_slide_bottom_svg_color = "#000";
 ####################################################################
 #################### cool_section  #################################
 ####################################################################
-$cool_section_bg_color = "#000";
-$cool_section_text_color = "#fff";
-$cool_section_height = "65vh";
+$cool_section_bg_color = "#dedede";
+$cool_section_text_color = "#dedede";
+$cool_section_height = "70vh";
 
 $cool_array = array(
-    array("img" => "custom/gallery/gallery_2.jpg" , "text" => "city"),
-    array("img" => "custom/gallery/gallery_4.jpg" , "text" => "car"),
-    array("img" => "custom/gallery/gallery_5.jpg" , "text" => "bridge"),
-    array("img" => "custom/gallery/gallery_6.jpg" , "text" => "view from top of building"),
-    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "beautiful natural"),
+    array("img" => "custom/gallery/gallery_8.jpg" , "text" => "šljiva u cvatu"),
+    array("img" => "custom/about_left.jpg" , "text" => "šljiva u rodu"),
+    array("img" => "custom/gallery/gallery_9.jpg" , "text" => "zasad šljive"),
+    array("img" => "custom/gallery/gallery_10.jpg" , "text" => "početak kupljenja"),
+    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "rod šljive"),
     #array("img" => "custom/gallery/gallery_8.jpg" , "text" => "salad")
 );
 
 //svg top
-$cool_top_svg = false;
+$cool_top_svg = true;
 //top svg color
-$cool_top_svg_color = "#000";
+$cool_top_svg_color = "#374151";
 //svg bottom
-$cool_bottom_svg = false;
+$cool_bottom_svg = true;
 //bottom svg color
-$cool_bottom_svg_color = "#000";
+$cool_bottom_svg_color = "#374151";
 
 ####################################################################
 ############################# pages  ###############################
@@ -1333,7 +1333,7 @@ $contact_page_form_bg_color = "#dedede";
 $contact_page_form_text_color = "#374151";
 
 //set map_v1 or map_v2 if want map
-$contact_page_show_map = "map_v2";
+$contact_page_show_map = "map_v1";
 $contact_page_h1 = "Kontakt";
 $contact_page_text = "Ovo je kontakt forma ako zelite nesto da nas pitate molimo vas da popunite polja koja se nalaze ispod";
 
@@ -1419,7 +1419,7 @@ $about_us_page_items_bg_color = "#dedede";
 
 $about_page_map_show = true;
 
-$about_page_map = "map_v2";
+$about_page_map = "map_v1";
 
 $about_page_gallery_show = true;
 

@@ -1,7 +1,6 @@
 <style>
     .simple-section-2 {
         background-color: <?php echo $simple_section_2_bg_color; ?>;
-        background-image: url("custom/<?php echo $simple_section_2_bg_url; ?>");
         background-size: <?php echo $simple_section_2_bg_size; ?>;
         background-repeat: <?php echo $simple_section_2_bg_repeat; ?>;
         background-attachment: <?php echo $simple_section_2_bg_attachment; ?>;
@@ -20,6 +19,9 @@
         .bottom-svg {
             fill: <?php echo $simple_section_2_bottom_svg_color; ?>;
         }
+        <?php if (!empty($simple_section_2_bg_url)) : ?>
+            background-image: url("custom/<?php echo $simple_section_2_bg_url; ?>");
+        <?php endif; ?>
     }
 </style>
 <div class="all-section-style text-center simple-section-2">
