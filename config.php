@@ -16,7 +16,7 @@ $companyPhone = "+381695151702";
 $companyEmail = "sljivasavlasica@gmail.com";
 
 //leave empty if website no hosted
-$domain_name = "https://sljivasavlasica.rs/";
+$domain_name = "https://www.sljivasavlasica.rs/";
 
 $defineTitle = "Šljiva";
 
