@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $companyName; ?> - O Nama</title>
+    <title><?php echo $defineTitle; ?> - O Nama</title>
     <meta name="description" content="<?php echo $aboutMetaDescription; ?>">
     <meta name="keywords" content="<?php echo $aboutMetaKeywords; ?>">
     <meta name="robots" content="index, follow">

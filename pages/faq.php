@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $companyName; ?> - Pitanja I Odgovori</title>
+    <title><?php echo $defineTitle; ?> - Pitanja I Odgovori</title>
     <meta name="description" content="<?php echo $faqMetaDescription; ?>">
     <meta name="keywords" content="<?php echo $faqMetaKeywords; ?>">
     <meta name="robots" content="index, follow">

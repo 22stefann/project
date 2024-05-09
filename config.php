@@ -18,6 +18,8 @@ $companyEmail = "sljivasavlasica@gmail.com";
 //leave empty if website no hosted
 $domain_name = "https://sljivasavlasica.rs/";
 
+$defineTitle = "Šljiva";
+
 
 //define social share image
 

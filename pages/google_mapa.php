@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $companyName; ?> - Mapa</title>
+    <title><?php echo $defineTitle; ?> - Mapa</title>
     <meta name="description" content="<?php echo $mapMetaDescription; ?>">
     <meta name="keywords" content="<?php echo $mapMetaKeywords; ?>">
     <meta name="robots" content="index, follow">

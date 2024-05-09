@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $companyName; ?> - Galerija</title>
+    <title><?php echo $defineTitle; ?> - Galerija</title>
     <meta name="description" content="<?php echo $galleryMetaDescription; ?>">
     <meta name="keywords" content="<?php echo $galleryMetaKeywords; ?>">
     <meta name="robots" content="index, follow">

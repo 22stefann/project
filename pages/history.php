@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $companyName; ?> - Istorija</title>
+    <title><?php echo $defineTitle; ?> - Istorija</title>
     <meta name="description" content="<?php echo $historyMetaDescription; ?>">
     <meta name="keywords" content="<?php echo $historyMetaKeywords; ?>">
     <meta name="robots" content="index, follow">
