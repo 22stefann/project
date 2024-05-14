@@ -1,23 +1,40 @@
+
+#RewriteOptions inherit
 RewriteEngine On
 
 # Redirect from HTTP to HTTPS
-# RewriteCond %{HTTP_HOST} !^sljivasavlasica.rs$
-# RewriteRule ^(.*)$ https://sljivasavlasica.rs/$1 [R=301,L]
 
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ RewriteCond %{HTTPS} off
 
-# Redirect index pages (.html and .php) to root URL
+ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#RewriteCond %{HTTP_HOST} !^www.sljivasavlasica.rs$
+#RewriteRule ^(.*)$ https://www.sljivasavlasica.rs/$1 [R=301,L]
+
+#Redirect index pages (.html and .php) to root URL
+
 RewriteCond %{THE_REQUEST} /index(\.html|\.php)? [NC]
 RewriteRule ^ / [L,R=301]
 
 RewriteRule ^(.*)index$ index.php [L]
+
 RewriteRule ^(.*)istorija$ pages/history.php [L]
+
 #RewriteRule ^(.*)mapa$ pages/mapa.php [L]
+
 RewriteRule ^(.*)mapa$ pages/google_mapa.php [L]
+
 RewriteRule ^(.*)kontakt$ pages/contact.php [L]
+
 RewriteRule ^(.*)galerija$ pages/gallery_v1_page.php [L]
+
 #RewriteRule ^(.*)galerija$ pages/gallery_component_page.php [L]
+
 RewriteRule ^(.*)pitanja-i-odgovori$ pages/faq.php [L]
+
 RewriteRule ^(.*)o-nama$ pages/about.php [L]
-RewriteRule ^(.*)kastom$ pages/custom_page.php [L]
+
+RewriteRule ^(.)kastom$ pages/custom_page.php [L]
+
+
+
