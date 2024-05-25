@@ -261,7 +261,7 @@
                     </div>
                     
                     <div class="contact-info-content">
-                    <h2 class="title-h2">Phone</h2>
+                    <h2 class="title-h2">Telefon</h2>
                     <p><a href="tel:<?php echo $companyPhone; ?>"><?php echo $companyPhone; ?></a></p>
                     </div>
                 </div>
@@ -280,7 +280,7 @@
                 
                 <div class="contact-form">
                     <form id="contact-form" class="needs-validation" novalidate>
-                        <h2 class="title-h2">Posalji poruku</h2>
+                        <h2 class="title-h2">Pošalji poruku</h2>
                         <div class="input-box form-floating">
                             <input type="text" class="input-box" id="name" required name="name">
                             <span><label for="name">Ime i prezime</label></span>
@@ -305,7 +305,7 @@
 
                         <div class="input-box form-floating">
                             <textarea class="input-box" id="message" required name="message"></textarea>
-                            <span><label for="message">Kucajte vasu poruku</label></span>
+                            <span><label for="message">Kucajte vašu poruku</label></span>
                             <div class="valid-feedback">
                                 Poruka je dobra!
                             </div>
