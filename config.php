@@ -38,7 +38,7 @@ $domain_name = "https://www.sljivasavlasica.rs/";
 
 
 
-$defineTitle = "Šljiva - Kvalitet Sa Sela";
+$defineTitle = "Šljiva Sa Vlašića - Kvalitet Sa Sela";
 
 
 
@@ -56,9 +56,9 @@ $socialShareImage = "custom/gallery/gallery_1.jpg";
 
 
 
-$indexMetaDescription = "Šljiva sa Vlašića je porodična firma sa tradicijom dugom preko 40 godina, smeštena u srcu zapadne Srbije, uz ljubav i pažnju prema šljivi.";
+$indexMetaDescription = "Šljiva sa Vlašića je porodična firma sa tradicijom dugom preko 40 godina, smeštena u srcu zapadne Srbije blizu Osečine.";
 
-$indexMetaKeywords = "sljiva, suva sljiva, šljiva sa Vlašića, porodična firma, tradicija, šljive, stenlej, suve šljive, rakija, zapadna Srbija, Kolubarski okrug, Gornje Crniljevo, tradicionalne metode, kvalitet";
+$indexMetaKeywords = "sljiva, suva sljiva, šljiva sa Vlašića, porodična firma, tradicija, šljive, stenlej, suve šljive, rakija, zapadna Srbija, Kolubarski okrug, Gornje Crniljevo, Sajam sljiva, kvalitet, kvalitetna rakija, kvalitetna sljiva u osecini, Osecina";
 
 
 
@@ -68,7 +68,7 @@ $indexMetaKeywords = "sljiva, suva sljiva, šljiva sa Vlašića, porodična firm
 
 $aboutMetaDescription = "Šljiva sa Vlašića je porodična firma sa više od 40 godina tradicije u proizvodnji vrhunskih šljiva i rakija. Naša misija je da prenesemo bogatstvo ukusa i mirisa šljive sa obronaka planine Vlašić direktno na vaše stolove, koristeći tradicionalne metode i recepture.";
 
-$aboutMetaKeywords = "sljiva, suva sljiva, Šljiva sa Vlašića, tradicija, porodična firma, šljive, rakije, planina Vlašić, tradicionalne metode, kvalitet, ljubav prema zemlji, Kolubarski okrug, Gornje Crniljevo, zapadna Srbija, suve šljive, sveže šljive, stenlej.";
+$aboutMetaKeywords = "sljiva, suva sljiva, Šljiva sa Vlašića, tradicija, porodična firma, šljive, rakije, Vlašić, tradicionalne metode uzgoja sljive, kvalitetna rakija, Kolubarski okrug, Gornje Crniljevo, zapadna Srbija, suve šljive, sveže šljive, stenlej, najkvalitetnija sljiva u srbiji, sljiva u osecini, sajam sljiva";
 
 
 
@@ -88,7 +88,7 @@ $historyMetaKeywords = "";
 
 $mapMetaDescription = "Otkrijte nas na mapi, saznajte gde se nalazi Šljiva sa Vlašića proizvodnja najbolje suve šljive.";
 
-$mapMetaKeywords = "suva šljiva, najbolja šljiva";
+$mapMetaKeywords = "suva šljiva, najbolja šljiva, kvalitetna rakija";
 
 
 
@@ -96,9 +96,9 @@ $mapMetaKeywords = "suva šljiva, najbolja šljiva";
 
 
 
-$contactMetaDescription = "Kontaktirajte nas putem forme, pozivom, slanjem poruke ako vam trebaju neke informacije ili neki od nasih proizvoda.";
+$contactMetaDescription = "Kontaktirajte nas putem forme, pozivom, slanjem poruke ako vam trebaju neke informacije ili neki od naših proizvoda.";
 
-$contactMetaKeywords = "Kontaktirajte nas, informacije, proizvod";
+$contactMetaKeywords = "Gornje Crniljevo, Sljiva, Najbolja suva sljiva";
 
 
 
@@ -106,9 +106,9 @@ $contactMetaKeywords = "Kontaktirajte nas, informacije, proizvod";
 
 
 
-$galleryMetaDescription = "Pogledajte nase slike šljiva i način na koji obrađujemo.";
+$galleryMetaDescription = "Pogledajte naše slike šljiva i način na koji obrađujemo naš proizvod.";
 
-$galleryMetaKeywords = "Slike šljiva, način na koji obrađujemo , šljive";
+$galleryMetaKeywords = "otresena sljiva, prebiranje suve sljive , sljiva na lesi, rodne grane, suva sljiva";
 
 
 
@@ -116,9 +116,9 @@ $galleryMetaKeywords = "Slike šljiva, način na koji obrađujemo , šljive";
 
 
 
-$faqMetaDescription = "Pogledajte najcesca pitanja koje dobijamo i nase odgovore.";
+$faqMetaDescription = "Pogledajte najčesča pitanja koje dobijamo i naše odgovore.";
 
-$faqMetaKeywords = "Najcesca pitanja, odgovori";
+$faqMetaKeywords = "porodična firma, Šljiva,  Gornje Crniljevo, zapadna Srbija, Kolubarski okrug, Vlašić, proizvodnja rakije, sveža šljiva, stenlej,suva šljiva ";
 
 
 
@@ -1128,15 +1128,15 @@ $custom_slideshow_align = "center";
 
 //video url
 
-$video_url = "custom/sljiva_sa_vlasica.mp4";
+$video_url = "custom/cover_video.mp4";
 
 //video poster
 
-$video_poster = "custom/thumbnail.jpg";
+$video_poster = "custom/thumbnail_new.jpg";
 
 //if video have a sound
 
-$video_sound = true;
+$video_sound = false;
 
 #################################
 
@@ -1402,13 +1402,13 @@ $gallery_array = array(
 
     array("img" => "gallery_4.jpg" , "alt" => "ređanje šljive"),
 
-    // array("img" => "gallery_5.jpg" , "alt" => "bridge"),
+    array("img" => "suva_sljiva1.jpg" , "alt" => "bridge"),
 
-    // array("img" => "gallery_6.jpg" , "alt" => "view from top of building"),
+    array("img" => "suva_sljiva2.jpg" , "alt" => "view from top of building"),
 
-    // array("img" => "gallery_7.jpg" , "alt" => "beautiful natural"),
+    array("img" => "suva_sljiva3.jpg" , "alt" => "beautiful natural"),
 
-    // array("img" => "gallery_8.jpg" , "alt" => "salad")
+    array("img" => "prolece1.jpg" , "alt" => "salad")
 
 );
 
@@ -1766,7 +1766,7 @@ $simple_section_2_html = <<<HTML
 
     <p class=" mb-4">Šljiva za nas nije posao, to je nasleđe koje generacijski prenošeno kroz četiri decenije. Nikada sa našim proizvodom nismo išli na šire tržište, to želimo da promenimo. Unapredili smo sušaru pre samo 5 godina smo sušili jednu tonu a sad pet tona odjednom. Planiramo da povećamo zasade i da se proširimo na nivou države u odnosu na trenutno lokalno poslovanje. Takođe želimo da počnemo dublju preradu odnosno da izbijamo košpu i da pravimo druge prehrambene proizvode.<br />
 
-    Naši zasadi su pretežno sorte stenlej, ali imamo i nešto madzarke. Imamo sadnice takozvane ranovače šljive koje više da skoro i nema, ona je idealna za rakiju i dzem.<br />Locirani smo u selu Gornje Crniljevo koje je rodno mesto našeg heroja Milenka Pavlovića. Takođe kod nas se nalazi i izvor prirodne kisele vode. Kontaktirajte nas i sami se uverite u kvalitet sa sela. Spremni smo za svaki vid saradnje vezane za usluge koje nudimo. Možete nas kontaktirati putem forme, putem facebook stranice ili nas jednostavno pozovite na broj koji je na sajtu odnosno pošaljite poruku.</p>
+    Naši zasadi su pretežno sorte stenlej, ali imamo i nešto madžarke. Imamo sadnice takozvane ranovače šljive koje više da skoro i nema, ona je idealna za rakiju i dzem.<br />Locirani smo u selu Gornje Crniljevo koje je rodno mesto našeg heroja Milenka Pavlovića. Takođe kod nas se nalazi i izvor prirodne kisele vode. Kontaktirajte nas i sami se uverite u kvalitet sa sela. Spremni smo za svaki vid saradnje vezane za usluge koje nudimo. Možete nas kontaktirati putem forme, putem facebook stranice ili nas jednostavno pozovite na broj koji je na sajtu odnosno pošaljite poruku.</p>
 
 </div>
 
@@ -1842,7 +1842,7 @@ $simple_section_3_html = <<<HTML
 
 <div class="col-lg-8 mx-auto">
 
-    <p class=" mb-4">Mi smo porodična firma sa tradicijom dugom preko 40 godina, smeštena u srcu zapadne Srbije, tačnije u prelepom selu Gornje Crniljevo, u Kolubarskom okrugu. Od samih početaka, naša strast i predanost su usmerene ka proizvodnji najkvalitetnije šljive sorte stenlej, kao i proizvodnji vrhunske rakije.</p>
+    <p class=" mb-4">Mi smo porodična firma sa tradicijom dugom preko 40 godina, smeštena u srcu zapadne Srbije, tačnije u prelepom selu Gornje Crniljevo, u Kolubarskom okrugu nadomak Osečine, koja je poznata po manifestaciji "Sajam Šljiva" koji se organizuje svake godine krajem avgusta. Od samih početaka, naša strast i predanost su usmerene ka proizvodnji najkvalitetnije šljive sorte stenlej, kao i proizvodnji vrhunske rakije.</p>
 
 </div>
 
@@ -2707,21 +2707,29 @@ $faq_page_text_color = "#fff";
 
 
 $gallery_page_array = array(
-    array("img" => "gallery_1.jpg" , "alt" => "forest"),
+    array("img" => "gallery_1.jpg" , "alt" => "otresena sljiva"),
 
-    array("img" => "gallery_2.jpg" , "alt" => "city"),
+    array("img" => "gallery_2.jpg" , "alt" => "otresena sljiva druga"),
 
-    array("img" => "gallery_3.jpg" , "alt" => "rain"),
+    array("img" => "gallery_3.jpg" , "alt" => "sljiva u cvatu"),
 
-    array("img" => "gallery_4.jpg" , "alt" => "car"),
+    array("img" => "gallery_4.jpg" , "alt" => "redjanje sljive"),
 
-    array("img" => "gallery_5.jpg" , "alt" => "bridge"),
+    array("img" => "gallery_5.jpg" , "alt" => "slika sljive izbliza"),
 
-    array("img" => "gallery_6.jpg" , "alt" => "view from top of building"),
+    array("img" => "gallery_6.jpg" , "alt" => "suva sljiva u gajbi"),
 
-    array("img" => "gallery_7.jpg" , "alt" => "beautiful natural"),
+    array("img" => "gallery_7.jpg" , "alt" => "rodne grane"),
 
-    array("img" => "gallery_8.jpg" , "alt" => "salad")
+    array("img" => "gallery_8.jpg" , "alt" => "cvat"),
+
+    array("img" => "suva_sljiva1.jpg" , "alt" => "suva sljiva na lesi"),
+
+    array("img" => "suva_sljiva2.jpg" , "alt" => "sljiva na lesi"),
+
+    array("img" => "suva_sljiva3.jpg" , "alt" => "prebiranje suve sljive"),
+
+    # array("img" => "prolece1.jpg" , "alt" => "rani cvat")
 
 );
 
