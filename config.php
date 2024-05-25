@@ -652,7 +652,7 @@ $sideSocialIcons = true;
 
 //set social side from top
 
-$socialSideFromTop = "65%";
+$socialSideFromTop = "50%";
 
 // set left or right
 
