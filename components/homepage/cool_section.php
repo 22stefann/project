@@ -144,6 +144,9 @@
         text-transform: uppercase;
         font-size: 40px;
         color: <?php echo $cool_section_text_color; ?>;
+        width: fit-content;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
         }
         .el__close-btn {
         z-index: -1;
@@ -202,7 +205,7 @@
         height: 100%;
         min-height: 250px;
         text-align: center;
-        font-size: 20vw;
+        font-size: 2vw;
         line-height: 0.85;
         font-weight: bold;
         transition: transform 0.5s, opacity 0.3s 1.4s;
@@ -418,9 +421,9 @@
                     </div>
                 </div>
                 <div class="el__index">
-                    <div class="el__index-back"><?php echo $br; ?></div>
+                    <div class="el__index-back"><?php echo $image['text']; ?></div>
                     <div class="el__index-front">
-                    <div class="el__index-overlay" data-index="<?php echo $br; ?>"><?php echo $br++; ?></div>
+                    <div class="el__index-overlay" data-index="<?php echo $image['text']; ?>"><?php echo $image['text']; ?></div>
                     </div>
                 </div>
             </div>

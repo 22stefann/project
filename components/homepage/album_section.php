@@ -35,12 +35,11 @@
         <?php if ( !empty($album_section_title) ) : ?>
             <?php echo $album_section_title; ?>
         <?php endif; ?>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-12 g-3">
             <?php foreach( $album_section_items as $one_item ) : ?>
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card">
                         <div class="card-body">
-                            <img class="d-block mx-lg-auto img-fluid" src="custom/<?php echo $one_item["src"]; ?>" alt="<?php echo $one_item["alt"]; ?>" />
                             <p class="card-text"><?php echo $one_item["text"]; ?></p>
                         </div>
                     </div>

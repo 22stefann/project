@@ -12,33 +12,33 @@
 
 
 
-$companyName = "Šljiva sa Vlašića - Kvalitet sa sela";
+$companyName = "Rextrud Plast - Plastični Rezervoari";
 
 
 
-$shortCompanyName = "Šljiva sa Vlašića";
+$shortCompanyName = "Rextrud Plast";
 
 
 
-$companyAddress = "Gornje Crniljevo BB, <br /> 14253";
+$companyAddress = "Braće Nedić 69, <br /> 14253";
 
 
 
-$companyPhone = "+381695151702";
+$companyPhone = "+381655167522";
 
 
 
-$companyEmail = "sljivasavlasica@gmail.com";
+$companyEmail = "rextrudplast@gmail.com";
 
 
 
 //leave empty if website no hosted
 
-$domain_name = "https://www.sljivasavlasica.rs/";
+$domain_name = "";
 
 
 
-$defineTitle = "Šljiva Sa Vlašića - Kvalitet Sa Sela";
+$defineTitle = "Rextrud Plast - Plastični Rezervoari";
 
 
 
@@ -564,11 +564,11 @@ $all_section_animation_right = json_encode($all_section_animation_right);
 
 
 
-$waveBgColor = "#374151";
+$waveBgColor = "#2869b9";
 
 //set value in rgb();
 
-$waveBgColorFill = "222, 222, 222";
+$waveBgColorFill = "255, 255, 255";
 
 
 
@@ -612,11 +612,11 @@ $font_color_back_to_top_button = "#000";
 
 //set fb link
 
-$fbLink = "https://www.facebook.com/profile.php?id=61558884703777";
+$fbLink = "https://www.facebook.com/plasticnekace";
 
 //set instagram link
 
-$instaLink = "";
+$instaLink = "https://www.instagram.com/rextrud_plast";
 
 //set twitter link
 
@@ -624,7 +624,7 @@ $twitterLink = "";
 
 //set yt link
 
-$ytLink = "https://www.youtube.com/@SljivasaVlasicaKvalitetsasela";
+$ytLink = "";
 
 //whatsapp link
 
@@ -678,7 +678,7 @@ $socNavShow = false;
 
 //define logo width
 
-$widthLogo = "250px";
+$widthLogo = "90px";
 
 //logo resize value set in px
 
@@ -690,11 +690,11 @@ $navigation_container_padding = "3px 3px";
 
 //set nav bg color in top position
 
-$nabBgColor = "#dedede";
+$nabBgColor = "#fff";
 
 //set nav bg color in scroll position
 
-$navBgColorScroll = "#dedede";
+$navBgColorScroll = "#fff";
 
 //set padding between the tabs onlz custom navigation
 
@@ -702,11 +702,11 @@ $tabPadding = "20px";
 
 //set color of tabs in top position
 
-$navTabColor = "#374151";
+$navTabColor = "#2869b9";
 
 //set colors of tabs in scroll position
 
-$navTabScrollColor = "#374151";
+$navTabScrollColor = "#2869b9";
 
 //set color of tabs in hover state in top position
 
@@ -1002,7 +1002,10 @@ $homepageSection = array (
 
     "wave",
 
-    "simple_section_3",
+    
+    "album_section",
+
+    #"simple_section_3",
 
     #"simple_section_2",
 
@@ -1024,7 +1027,6 @@ $homepageSection = array (
 
     #"text_image_section",
 
-    #"album_section",
 
     "faq",
 
@@ -1052,7 +1054,7 @@ $homepageSection = array (
 
 //video, custom_cover, slideshow, slideshow_bootstrap, cover_html
 
-$cover_content ="video";
+$cover_content ="cover_html";
 
 //video, slideshow, custom section margin-top on desktop 
 
@@ -1230,19 +1232,19 @@ $underCoverBgImage = "";
 
 //under cover section bg color
 
-$underCoverBgColor = "#374151";
+$underCoverBgColor = "#2869b9";
 
 //under cover section text color
 
-$underCoverTextColor = "#dedede";
+$underCoverTextColor = "#fff";
 
 //under cover section h1 color
 
-$underCoverTitleColor = "#dedede";
+$underCoverTitleColor = "#fff";
 
 //under cover section h2 color
 
-$underCoverSubtitleColor = "#dedede";
+$underCoverSubtitleColor = "#fff";
 
 //svg top
 
@@ -1258,21 +1260,19 @@ $under_cover_bottom_svg = true;
 
 //bottom svg color
 
-$under_cover_bottom_svg_color = "#374151";
+$under_cover_bottom_svg_color = "#fff";
 
 $under_cover_section_html = <<<HTML
 
 <div class="">
 
-    <h1 class="subtitle-h2">ŠLJIVA SA VLAŠIĆA</h1>
+    <h1 class="subtitle-h2">Rextrud Plast</h1>
 
-    <h2 class="title-h3">kvalitet sa sela</h2>
+    <h2 class="title-h3">Izrada proizvoda od plastike</h2>
 
     <div class="col-lg-6 mx-auto">
 
-    <p class="">Proizvod koji već decenijama neguje naša porodica u selu Gornje Crniljevo nadomak Osečine.</p>
-
-    <p>Sa ponosom vam predstavljamo Šljivu sa Vlašića.</p>
+    <p class="">Rextrud Plast je porodična firma specijalizovana za proizvodnju plastičnih artikala kao što su rezervoari, kace i septičke jame, koristeći naprednu tehnologiju spiralne ekstruzije od polietilena i polipropilena.</p>
 
     <a href="{$about_link}#" class="btn btn-custom-style">više <span class="no-view-text">o našem proizvodu</span></a>
 
@@ -1626,19 +1626,19 @@ $gallery_swap_array = array(
 
 //simple section title color
 
-$simple_section_1_title_color = "#dedede";
+$simple_section_1_title_color = "#fff";
 
 //simple section subtitle color
 
-$simple_section_1_subtitle_color = "#dedede";
+$simple_section_1_subtitle_color = "#fff";
 
 //simple section text color
 
-$simple_section_1_text_color = "#dedede";
+$simple_section_1_text_color = "#fff";
 
 //simple section bg color
 
-$simple_section_1_bg_color = "#374151";
+$simple_section_1_bg_color = "#2869b9";
 
 //simple section image url
 
@@ -1679,16 +1679,19 @@ $simple_section_1_html = <<<HTML
 <div class="col-lg-8 mx-auto">
 
     
+<h2 class="subtitle-h2">Zašto izabrati nas ?</h2>
+<p></p>
 
-<p>Bavimo se proizvodnjom šljive stenlej, sušenjem iste i pečenjem rakije. Takođe sve te naše proizvode nudimo kao finalne i prodajemo ih po preporuci naših kupaca.</p>
+    <p>Rextrud Plast iz Osečine ponosno se ističe kao vodeća kompanija u proizvodnji plastičnih rezervoara, kaca i septičkih jama. Sa dugogodišnjim iskustvom i posvećenošću kvalitetu, pružamo proizvode koji zadovoljavaju najviše standarde u industriji. Nekoliko ključnih razloga zašto bi trebalo da izaberete Rextrud Plast za vaše potrebe:</p>
 
-    <p>Naš sajt ima za cilj upoznavanje ljudi sa značenjem šljive kao prirodni lek, odnosno upoznavanje ljudi sa svim benefitima sveže i suve šljive koliko dobrih stvari moze doneti samo par plodova ove biljke.</p>
-
-    <p>Takođe želimo da i drugi saznaju za nas i naš proizvod.</p>
-
-    <p>Iako je šljiva jedna od voćki koja se najviše gaji u našoj zemlji, mnogima se dešava da je zaborave u svojoj ishrani, posebno usled povećanja izbora voća koje se uvozi sa raznih meridijana.
-
-    Naravno, ni u kom slučaju ne želimo da kažemo kako drugo voće nije dobro – naprotiv, da bi organizam bio zdrav, u ishranu moramo uključiti što raznovrsnije namirnice, pre svega voće i povrće – ali želimo da podsetimo i na to koliko šljiva, sama po sebi, može biti korisna i lekovita namirnica.</p>
+    <ul>
+        <li><p>- Kvalitet Materijala i Tehnologije</p></li>
+        <li><p>- Ekološka Održivost</p></li>
+        <li><p>- Raznovrsnost Proizvoda</p></li>
+        <li><p>- Poverenje i Pouzdanost</p></li>
+        <li><p>- Stručna Podrška i Savetovanje</p></li>
+        <li><p>- Konkurentne Cene</p></li>
+    </ul>
 
 </div>
 
@@ -2216,15 +2219,15 @@ HTML;
 
 //section album title color
 
-$section_album_title_color = "#fff";
+$section_album_title_color = "#2869b9";
 
 //section album text color
 
-$section_album_text_color = "#000";
+$section_album_text_color = "#2869b9";
 
 //section album bg color
 
-$section_album_bg_color = "#11101d";
+$section_album_bg_color = "#fff";
 
 //section album image url
 
@@ -2236,7 +2239,7 @@ $section_card_bg_color = "transparent";
 
 //card text color
 
-$section_card_text_color = "#fff";
+$section_card_text_color = "#2869b9";
 
 //section album image attachment
 
@@ -2272,7 +2275,7 @@ $album_section_title = <<<HTML
 
 
 
-<h2 class="subtitle-h2">Selcija sa albumima</h2>
+<h2 class="subtitle-h2">Asortiman porizvoda</h2>
 
 
 
@@ -2282,11 +2285,29 @@ HTML;
 
 $album_section_items = array(
 
-    array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Plastični horizontalni rezervoari", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
 
-    array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Plastični vertikalni rezervoari", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
 
-    array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+    array("text" => "Plastične septičke jame", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Plastične kace", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Plastični čamci", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Plastični pontoni", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Cisterne", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Prečistači otpadnih voda", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Separatoti ulja i masti", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Cevi za ventilaciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Plastične šahte", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
+
+    array("text" => "Pravougaone kade", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
 
     #array("text" => "Ovde ide neki tekst za album sekciju", "src" => "gallery/gallery_7.jpg", "alt"=> "Bootstrap Themes"),
 
@@ -2594,25 +2615,25 @@ $item_slide_bottom_svg_color = "#000";
 
 ####################################################################
 
-$cool_section_bg_color = "#dedede";
+$cool_section_bg_color = "#fff";
 
-$cool_section_text_color = "#dedede";
+$cool_section_text_color = "#fff";
 
-$cool_section_height = "70vh";
+$cool_section_height = "88vh";
 
 
 
 $cool_array = array(
 
-    array("img" => "custom/gallery/gallery_8.jpg" , "text" => "šljiva u cvatu"),
+    array("img" => "custom/gallery/gallery_8.jpg" , "text" => "Horizontalni rezervoari"),
 
-    array("img" => "custom/about_left.jpg" , "text" => "šljiva u rodu"),
+    array("img" => "custom/gallery/gallery_8.1.jpg" , "text" => "Vertikalni rezervoari"),
 
-    array("img" => "custom/gallery/gallery_9.jpg" , "text" => "zasad šljive"),
+    array("img" => "custom/gallery/gallery_9.jpg" , "text" => "Rezervoari za otpadne vode"),
 
-    array("img" => "custom/gallery/gallery_10.jpg" , "text" => "početak kupljenja"),
+    array("img" => "custom/gallery/gallery_10.1.jpg" , "text" => "Cisterna za transport vode"),
 
-    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "rod šljive"),
+    array("img" => "custom/gallery/gallery_7.jpg" , "text" => "Horizontalni rezervoari"),
 
     #array("img" => "custom/gallery/gallery_8.jpg" , "text" => "salad")
 
@@ -2622,7 +2643,7 @@ $cool_array = array(
 
 //svg top
 
-$cool_top_svg = true;
+$cool_top_svg = false;
 
 //top svg color
 
@@ -2630,7 +2651,7 @@ $cool_top_svg_color = "#374151";
 
 //svg bottom
 
-$cool_bottom_svg = true;
+$cool_bottom_svg = false;
 
 //bottom svg color
 
