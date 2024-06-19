@@ -25,12 +25,11 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.elasticemail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'code.craft.mail.forwarder@gmail.com';
-    $mail->Password = '097AA3ED2B19936496B24B9BC6C8E75EBEDA';
+    $mail->Username = 'sljivasavlasica@gmail.com';
+    $mail->Password = 'D8D8065403F57A5B9E58A6D5C7381E710D8E';
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    
-    $mail->setFrom('code.craft.mail.forwarder@gmail.com', "Forma sa sajta");
+    $mail->setFrom($email, "Forma sa sajta");
     $mail->addAddress($email, $companyName);
     $mail->Subject = $fullName.' je popunio formu na sajtu.';
     $mail->isHTML(true);
